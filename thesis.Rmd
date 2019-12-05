@@ -8,7 +8,7 @@ advisor: 'Herman Schwartz'
 #altadvisor: 'Your Other Advisor'
 department: 'Political & Social Thought'
 degree: 'Bachelor of Arts'
-title: 'Political Effects of the Neighborhood Stabilization Program'
+title: 'How Foreclosure Relief Swung America Right'
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
