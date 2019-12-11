@@ -1,7 +1,11 @@
-<!--
-This is for including Chapter 1.  Notice that it's also good practice to name your chunk.  This will help you debug potential issues as you knit.  The chunk above is called intro and the one below is called chapter1.  Feel free to change the name of the Rmd file as you wish, but don't forget to change it here from chap1.Rmd.
--->
-
+---
+bibliography: bib/thesis.bib
+csl: csl/chicago-note-bibliography.csl
+output:
+  pdf_document: default
+  html_document: default
+  word_document: default
+---
 # An Unfurling Crisis {#actors-motive}
 
 When 10 million Americans---1 of every 20 adults---lost their homes,[@martinForeclosedAmerica2015] it was clear that homeowners needed an intervention. When Countrywide, which two years earlier had serviced 20% of the mortgages in the United States,[@seabrooke2009politics] collapsed in July 2008, it was clear that the real estate industry needed to change.
@@ -41,7 +45,7 @@ Falling prices thus meant homeowners were saddled with their current mortgage, o
 Atop the interest payments, living expenses (such as other debts) piled on to borrowers, where previously refinancing had arrived to supplement existing income with cash.
 Falling prices meant homeowners chose among food, water, and shelter, if they had enough income for that to even be a decision.
 
-``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE}
+``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, out.width='90%'}
 include_graphics("figure/caseshiller_1990_2018.png")
 ````
 
@@ -72,34 +76,91 @@ Readers should come away from this chapter understanding why federal foreclosure
 ## Why Homeowners were Unable to Organize {#homeowners}
 
 Reasons for the powerlessness of anti-foreclosure organizing can be shown through comparison with the most successful anti-foreclosure campaigns of the Great Depression.
-Legislative movements require a base of public opinion, a mouthpiece through which opinion can be articulated, and an audience to hear those articulated opinions and demands.
-Organizing in response to the subprime mortgage crisis had its mouthpiece, but foreclosed housing's base of public opinion was small in proportion to other economic interests, and its audience usurped by mortgage servicers.
-However, the Great Depression saw these factors come together in the Midwest, where farms were physically parched and thus, financially underwater.
-Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they reied on their land for its income.
-However, farmers in the Great Depression differed from early 2000s subprime borrowers in that farming did not *supplement* wage income, it wholesale *replaced* wage incomes.
+Legislative movements require a base of public opinion and support, a mouthpiece through which opinion can be articulated, and an powerful audience to hear those articulated opinions and demands.
+Foreclosed housing's base of public opinion and support was attenuated by geographic particularities of subprime mortgages which limited fora for communication, both internally and externally.
+In addition, the organizers' audience was blocked partially by other demands, including the presence of mortgage servicers.
+The Great Depression, however, saw these factors come together in the Midwest, where farms were physically parched and thus, financially underwater.
+Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they relied on their land for its income.
+However, farmers in the Great Depression differed from early 2000s subprime borrowers in that farming did not *supplement* wage income, it *replaced* wage incomes.
 In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting *per se* or *de facto* moratoria on foreclosures.[@wheelockChangingRulesState2008, 537]
 The lack of such conditions pitched the struggle for foreclosure legislation in the subprime mortgage crisis to a severe angle.
 
-First, farms are larger---physically and economically---than the homes that sit upon them.
-This means farms play a more direct role in other peoples' business, and raises the stakes for passing foreclosure relief policies.
+The most important differentiator between the foreclosure crisis in the Great Depression and that which preceded the Great Recession was the outsize effect of farm foreclosures.
+Farms were both the workplace and home of farmers.
+Unlike the foreclosure crisis in the 2000s, losing a home implied losing a job, though that job could be lost in other ways (drought, crop disease, low prices).
+This fact raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
+Of the 100,000 farmers who lost their farms each year between 1926 and 1940,[@alston1983farm] the Midwest saw the highest concentrations.
+\@ref(fig:wheelock-farms) shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
+In 1933, by far the worst year for farm mortgages, failure rates topped 3.7%; during the rest of 1926-1940, rates were often above 1.5%.[@wheelockChangingRulesState2008, 571]
+By contrast, U.S. residential foreclosures reached 1.8% in 2008, the worst year of the mortgage crisis.(REFRENCE NEEDED)
+In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
+In large part, however, the differences between farms and homes accounted for the scale.
 
-Second, farms determine to a great extent the activities of their residents.
-Combined with the point above, this leads to more interactions among farmers, and thus, opportunities for further recruitment and homogenization of beliefs.
+```{r wheelock-farms, fig.cap="Figure taken from @wheelockChangingRulesState2008", echo=FALSE, out.width='90%'}
+include_graphics("figure/wheelock.png")
+```
 
-Third, crop failures occurred independent of government policy, but in conjunction with nearby farms.
-This deepened the issues of particular areas.
+The geography of farmland created several features that made easier mass organizing.
+Lower population densities meant that fewer people exercised political power over a fixed-size jurisdiction, when compared to a densely-populated district.
+While this feature could not have played into U.S. Congressional politics, which are apportioned by population, it could make collusion easier in counties.
+Organization at the county level was important in the Great Depression, because foreclosed properties were sold by sheriffs, elected county officials.[@fliter2012fighting]
+Compounding the numerical ease of collusion was the congruency of interests.
+While farms produce a variety of crops, soil and climate particularities combine with federal agriculture policy to homogenize production locally.
+In other words, Tobler's first law of geography holds: "everything is related to everything else, but near things are more related than distant things."[@tobler1970computer, 236]
+In conversation with the realities of the foreclosure crisis in the 2000s, two conclusions---one ecological, the other sociological---emerge.
 
-Fourth, changes to foreclosure laws removed potential fora for resistance.
+On the side of ecology, crop failures occurred in conjunction with nearby farms.
+The same climate or disease that killed a neighbor's crops could not be stopped at the property line.
+Farmers in the Great Depression shared this feature with homeowners in the mortgage crisis: lowered property values on one side would spillover to the other side.
+For both populations, spatial correlations were imperfect, as some farmers planted different crops and some foreclosures occurred among conservative borrowers or wholly-owned homes, but the spillover effect matters.[@defusco2018role]
+Falling property values decreased the value of neighboring properties, deepening the mortgage crisis for farmers in the Depression and homeowners before the Recession.
+The conditions of localized, severe economic distress existed in both eras.
 
+But this comparison did not exist between the sociological features of farming and housing.
+Farming the same crops entails some degree of visiting the same market, buying the same tools, and asking the same people for advice.
+Farmers met their neighbors whether they liked them or not, creating a forum to talk shop with nearby people who shared interests.
+The simple fact of homeownership, however, tends to signify income, but little else, and the larger populations of suburbs facing home foreclosures meant more social and cultural institutions among which residents could choose.
+The higher density and absolute size of the suburbs separated struggling homeowners from each other, while the lack of farming meant that---even if they had bumped shoulders---their mortgage finances were less likely to be topics of discussion.
+While the suburban quality of foreclosures in the recent mortgage crisis could have drawn homeowners closer together through their homeowner association (HOA), HOAs were insignificant bulwarks against nearby foreclosures.[@cheung2014homeowners, 87]
+And more to the point of homeowner behavior, HOA fees were some of the first payments to stop once mortgage debt piled up,[@perkins2010privatopia, 561] suggesting that homeowners disengaged from their homeowner associations entirely.
+These divergent implications for farming and suburban housing could be added to Robert Putnam's argument of a secular (in both the economic and religious senses) decline in social capital[@putnam2001bowling] to argue that the sociological character of suburbs blocked organization around increasing mortgage delinquency and household foreclosures.
 
-<!--Why banks were unable or unwilling to limit foreclosures-->
-## Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
+As I mentioned above, the lack of local fora was important.
+In the Great Depression, not only were county sheriff offices the location of foreclosure sales, they were also the location of foreclosure sale stoppages.
+Midwest farmers tried boycotting markets and sabotaging crops in transport to grab attention and force up prices, but they "did not seriously threaten urban food supplies or raise prices or the cost of production".[@fliter2012fighting, 4]
+Rather, farmers succeeded through intimidation tactics.
+The "ropes under [farmers'] coats [...] stopped thousands more foreclosures than did" self-organized arbitration, according to the then-president of the Farmers' Holiday Association, Milo Reno.[@fliter2012fighting, 65]
+There were more than 100 recorded instances of farmers, sometimes numbering in the thousands, packing county sheriff offices to discourage any would-be buyers, allowing the borrower to re-purchase their farm in full for sometimes as little as a penny.[@fliter2012fighting, 63]
+Direct action of this nature was nowhere in the subprime mortgage crisis; \@ref(fig:tradingecon) shows the spike in existing home sales after several million foreclosures had been filed.
 
-The separation of investors from mortgage servicers constituted a separation of ownership from control.
-Following the neoclassical literature, this separation led to perverse incentives: while investors lose money from foreclosures, the trustees of mortgage-backed securities gain money from foreclosures.
-Securitization, an act of legal incorporation, severed the communicative link between investing and mortgage servicing.
-When their interests were pitted against one another, the legal priority fell to the trustee, in whose interest it was to foreclose.
-Before the separation of ownership from control in mortgages, a bank could decide---as many did in the Great Depression---not to foreclose in spite of its legal right.
+```{r tradingecon, fig.cap = "Existing versus New Home Sales, 2000-2014", echo=FALSE, out.width='90%'}
+include_graphics("figure/united-states-existing-home-sales@2x.png")
+```
+
+But organizing need not adopt the character of halting foreclosure sales; rather, the foreclosure itself could have been the point of action.
+Changes to bankruptcy laws made foreclosures less defensible by making judicial hearings an opt-in rather than mandatory system.
+The hearings provide both the legal forum to contest evidence, claims, and standing, as well as the social forum to support other defendants.[@dayenChainTitleHow2016]
+Courts' docket sizes also elongated the period a delinquent borrower could stay in their home, during which alternative remedies may be sought.[@cheung2014homeowners]
+@collins2011state found that even such vanilla advocacy as mailings to suggest loan modification were more effective in states with judicial foreclosures.
+However, evidence regarding the change of this process over time is a mixed bag.
+@cheung2014homeowners argues that the rights of residents have been eroded due to the increase in states where non-judicial foreclosure is the *norm*, though the actual number of states where non-judicial foreclosure is legally available has decreased.[@ghent2012historical, 22-23]
+
+Judicial foreclosure briefly entered the national news cycle in 2010, when former homeowners alleged fraud against several large mortgage servicers, termed foreclosure mills for their prolific business.
+Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,[@orolbreaks]
+The fraudulent documents meant that contestation in foreclosure courts was possible, against the assumptions for foreclosures.
+In fact, the New Jersey Supreme Court in 2010 ordered lower courts to stop hearing foreclosure cases due to the prevalence of fraudulent documents.[@comfort2010new]
+Organizers cited the political influence of foreclosure mills---particularly in hard-hit Florida, the only Sand State with mandatory judicial foreclosure---as cause for the inefficacy of activism around foreclosure fraud.
+In several cases, the Florida Attorney General and elected representatives backed out of supporting investigations after meeting with employees of mortgage servicers (who were, in two cases, also employees of the Attorney General).[@dayenChainTitleHow2016]
+Whatever the cause, the fraudulent mortgage documents offered a concrete opportunity for organizing that resulted in the dislocation of millions, and undermined a tradition of impeccably-kept land records that extended well before 1776.
+
+Geographic and economic features of farming compounded its larger-scale mortgage crisis to foment conditions ripe for organizing compared to the subprime housing crisis.
+The Internet forums where foreclosures were discussed and debated turned out to be silos, with arguments accumulating while few asked outside sought answers.
+In contrast, farming's power to determine social interactions pushed together those in distress, joining a long line of Progressive debtor's rights movements in the Midwest.
+These movements organized, articulating political demands most remarkably on March 22, 1933, when "a caravan of two to three thousand farmers descended upon St. Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol."[@fliter2012fighting]
+This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in *Blaisdell v. Home Building & Loan Association*, paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
+In contrast, each call for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on *Blaisdell*.
+More broadly, fewer government resources---legal or fiscal---were donated to the relief on individual debtors in the Great Recession than in the Great Depression.(REFERENCE NEEDED)
+To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
 
 <!--Why cities and states were unable to handle foreclosures-->
 ## Why Cities & States Could Not Handle Foreclosures {#cities-states}
@@ -108,6 +169,14 @@ The Commerce Clause was written, and did develop, with the express purpose of pr
 
 Municipal investment and debt dropped; these were indicators of municipal disinvestment. Cities and towns, for all their wants, did not possess the resources necessary to handle foreclosures.
 
+<!--Why banks were unable or unwilling to limit foreclosures-->
+## Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
+
+The separation of investors from mortgage servicers constituted a separation of ownership from control.
+Following the neoclassical literature, this separation led to perverse incentives: while investors lost money from foreclosures, the trustees of mortgage-backed securities gained money from foreclosures.
+Securitization, an act of legal incorporation, severed the communicative link between investing and mortgage servicing.
+When their interests were pitted against one another, the legal priority fell to the trustee, in whose interest it was to foreclose.
+Before the separation of ownership from control in mortgages, a bank could decide---as many did in the Great Depression---not to foreclose in spite of its legal right.
 
 ## How This Configuration Feeds a National Mythos of Desert {#impact}
 
