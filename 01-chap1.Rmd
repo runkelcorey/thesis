@@ -45,7 +45,7 @@ Falling prices thus meant homeowners were saddled with their current mortgage, o
 Atop the interest payments, living expenses (such as other debts) piled on to borrowers, where previously refinancing had arrived to supplement existing income with cash.
 Falling prices meant homeowners chose among food, water, and shelter, if they had enough income for that to even be a decision.
 
-``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, out.width='90%'}
+``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, out.width='90%', fig.align='center'}
 include_graphics("figure/caseshiller_1990_2018.png")
 ````
 
@@ -96,7 +96,7 @@ By contrast, U.S. residential foreclosures reached 1.8% in 2008, the worst year 
 In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
 
-```{r wheelock-farms, fig.cap="Figure taken from @wheelockChangingRulesState2008", echo=FALSE, out.width='90%'}
+```{r wheelock-farms, fig.cap="Figure taken from @wheelockChangingRulesState2008", echo=FALSE, out.width='90%', fig.align='center'}
 include_graphics("figure/wheelock.png")
 ```
 
@@ -133,7 +133,7 @@ The "ropes under [farmers'] coats [...] stopped thousands more foreclosures than
 There were more than 100 recorded instances of farmers, sometimes numbering in the thousands, packing county sheriff offices to discourage any would-be buyers, allowing the borrower to re-purchase their farm in full for sometimes as little as a penny.[@fliter2012fighting, 63]
 Direct action of this nature was nowhere in the subprime mortgage crisis; \@ref(fig:tradingecon) shows the spike in existing home sales after several million foreclosures had been filed.
 
-```{r tradingecon, fig.cap = "Existing versus New Home Sales, 2000-2014", echo=FALSE, out.width='90%'}
+```{r tradingecon, fig.cap = "Existing versus New Home Sales, 2000-2014", echo=FALSE, out.width='90%', fig.align='center'}
 include_graphics("figure/united-states-existing-home-sales@2x.png")
 ```
 
@@ -157,7 +157,7 @@ Geographic and economic features of farming compounded its larger-scale mortgage
 The Internet forums where foreclosures were discussed and debated turned out to be silos, with arguments accumulating while few asked outside sought answers.
 In contrast, farming's power to determine social interactions pushed together those in distress, joining a long line of Progressive debtor's rights movements in the Midwest.
 These movements organized, articulating political demands most remarkably on March 22, 1933, when "a caravan of two to three thousand farmers descended upon St. Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol."[@fliter2012fighting]
-This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in *Blaisdell v. Home Building & Loan Association*, paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
+This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in *Home Building & Loan Association v. Blaisdell*, paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
 In contrast, each call for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on *Blaisdell*.
 More broadly, fewer government resources---legal or fiscal---were donated to the relief on individual debtors in the Great Recession than in the Great Depression.(REFERENCE NEEDED)
 To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
@@ -166,14 +166,19 @@ To see why state resources went unspent, I look again to the legal history of ec
 ## Why Cities & States Could Not Handle Foreclosures {#cities-states}
 
 The Commerce Clause was written, and did develop, with the express purpose of pre-empting states' right to economic legislation.
-
-Municipal investment and debt dropped; these were indicators of municipal disinvestment. Cities and towns, for all their wants, did not possess the resources necessary to handle foreclosures.
+Indeed, it followed such a pattern in the 1800s and 1900s, upheld as constitutional essentially whenever business touched multiple states.
+The primary effect I analyze in later chapters is the spillover effect of foreclosures.
+These effects respect no legal boundary, and, as such, found themselves under federal jurisdiction by way of the Commerce Clause.
+This pre-emption by the federal government, when exercised, crowded out state and municipal investment.
+As investment declined, taxpayer organizations yanked the reins of state and municipal taxation.
+These efforts to balance budgets, and the altered expectation towards federal policy regulating economic matters, left only growth-oriented tax incentives and zoning regulations.
+This turn away from local economic regulation starved states and cities of the resources necessary to handle foreclosures.
 
 <!--Why banks were unable or unwilling to limit foreclosures-->
 ## Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
 
 The separation of investors from mortgage servicers constituted a separation of ownership from control.
-Following the neoclassical literature, this separation led to perverse incentives: while investors lost money from foreclosures, the trustees of mortgage-backed securities gained money from foreclosures.
+Following the neoclassical literature,(Berle & Means) this separation led to perverse incentives: while investors lost money from foreclosures, the trustees of mortgage-backed securities gained money from foreclosures.
 Securitization, an act of legal incorporation, severed the communicative link between investing and mortgage servicing.
 When their interests were pitted against one another, the legal priority fell to the trustee, in whose interest it was to foreclose.
 Before the separation of ownership from control in mortgages, a bank could decide---as many did in the Great Depression---not to foreclose in spite of its legal right.
