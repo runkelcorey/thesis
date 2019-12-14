@@ -59,7 +59,7 @@ Circling back to the original home-price dynamic, higher home values fund greate
 
 When prices rose, creditor and debtor interests laid at some angle, intersecting in the particular case of safe, two-year refinancing, but divergent in the general case of refinancing that took advantage of lower interest rates.
 On the other hand, falling housing prices conformed the immediate interests of creditors and debtors to one another, since delinquency and default eliminated any chance of extracting further rents.
-Fears of a debt spiral triggered by falling home prices also beset cities(NEED REFERENCE) (though those fears appear to be ultimately unjustified[NEED REFERENCE FOR FED ARTICLE]).
+Fears of a debt spiral triggered by falling home prices also beset cities,[@dennis2011falling; @muro1fiscal; @saulny2008financial] though there is some doubt that those fears were justified.[@gross2012local; @lutz2011housing]
 With these interests in syzygy, why didn't homeowners, investors, or cities assert solutions, even ones that were done chiefly in their own interest?
 I argue in this chapter first that homeowners remained quiet due to changes in the foreclosure process from the Great Depression, the differential character of housing versus farming, and narratives about mortgage debtors.
 Second, the incongruity---spurred by the demise of savings and loans---between incentives for principals in mortgage-backed securities and agents tasked with servicing the underlying mortgages, along with fraudulent mortgage transfers, resulted in foreclosures that may have otherwise been unwanted by creditors.
@@ -72,7 +72,7 @@ Second, it offers a story about why external actors may not have acted decisivel
 Third, this chapter buttresses the above theory of voting with more general insights from political economy literature.
 Readers should come away from this chapter understanding why federal foreclosure relief programs were necessary and how the subprime mortgage crisis challenges previous theories of asset-based voting.
 
-<!--What happened to homeowners and why they were unable to organize politically-->
+
 ## Why Homeowners were Unable to Organize {#homeowners}
 
 Reasons for the powerlessness of anti-foreclosure organizing can be shown through comparison with the most successful anti-foreclosure campaigns of the Great Depression.
@@ -157,24 +157,70 @@ Geographic and economic features of farming compounded its larger-scale mortgage
 The Internet forums where foreclosures were discussed and debated turned out to be silos, with arguments accumulating while few asked outside sought answers.
 In contrast, farming's power to determine social interactions pushed together those in distress, joining a long line of Progressive debtor's rights movements in the Midwest.
 These movements organized, articulating political demands most remarkably on March 22, 1933, when "a caravan of two to three thousand farmers descended upon St. Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol."[@fliter2012fighting]
-This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in *Home Building & Loan Association v. Blaisdell*, paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
+This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in @1934home, paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
 In contrast, each call for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on *Blaisdell*.
 More broadly, fewer government resources---legal or fiscal---were donated to the relief on individual debtors in the Great Recession than in the Great Depression.(REFERENCE NEEDED)
 To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
 
-<!--Why cities and states were unable to handle foreclosures-->
-## Why Cities & States Could Not Handle Foreclosures {#cities-states}
+
+## Why City & State Administrations Could Not Handle Foreclosures {#cities-states}
 
 The Commerce Clause was written, and did develop, with the express purpose of pre-empting states' right to economic legislation.
-Indeed, it followed such a pattern in the 1800s and 1900s, upheld as constitutional essentially whenever business touched multiple states.
-The primary effect I analyze in later chapters is the spillover effect of foreclosures.
-These effects respect no legal boundary, and, as such, found themselves under federal jurisdiction by way of the Commerce Clause.
-This pre-emption by the federal government, when exercised, crowded out state and municipal investment.
-As investment declined, taxpayer organizations yanked the reins of state and municipal taxation.
-These efforts to balance budgets, and the altered expectation towards federal policy regulating economic matters, left only growth-oriented tax incentives and zoning regulations.
-This turn away from local economic regulation starved states and cities of the resources necessary to handle foreclosures.
+Indeed, it's development in legal precedent followed such a pattern in the 1800s and 1900s, upholding regulation based on the Commerce Clause as constitutional essentially whenever business touched multiple states.
+This criterion is important to foreclosure policy because I analyze in later chapters the spillover effect of foreclosures.
+Spillover effects respect no legal boundary, and, as such, found themselves under federal jurisdiction by way of the Commerce Clause.
+Later in the twentieth century, taxpayer reform organizations yanked the reins of state and municipal budgets.
+This influence combined with the altered expectation of federal policy regulating economics, leaving only growth-oriented tax incentives and zoning regulations in the regulatory toolbox of cities and states.
+This turn away from local economic regulation starved states and cities of the resources needed to handle foreclosures.
 
-<!--Why banks were unable or unwilling to limit foreclosures-->
+Anyone who has heard those around them grumble about high property taxes may wonder why they are not mentioned in this section.
+After all, nearly one of every three municipal dollars springs from taxes assessed on real estate.[@gross2012local, 1]
+Yet anyone who has paid property taxes likely knows the reason for its exclusion here: home values are not assessed every year.
+In 2007, 2008, and 2009, this feature likely acted as the lower arm of a pair of price scissors---though they were *very* rusty, unable to close completely since property taxes rarely top 2%---holding stable as housing prices plummeted.
+For cities, however, the lag meant that, depending on their specific schedules, cities were initially cushioned from the housing bust, and may have actually seen increases in revenue.[@chernick2017effect, Fig. 5]
+There is little research on this effect, but more recent scholarship points to large decreases beginning in 2009 or 2010 and extending as late as 2013.[@chernick2017effect; @gross2012local]
+The size of this lag may account of the lack of consensus on the topic, with research by the Federal Reseve Board of Governors denying significant fiscal effects of foreclosures.[@lutz2011housing]
+At any rate, while property taxes did strain municipal budgets, cities did not feel the effects until after the foreclosure crisis elicited policy responses.
+
+Rather, features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in \@(fig:spending-shift).
+While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, @beardEconomicInterpretationConstitution1913 retains its value by its analysis of primary sources.
+In it, Beard argues that the United States has a long history of enforcing the rights of creditors over the sovereignty of states.
+Linking uprisings such as Shays Rebellion to foreign credit demands and the interests of individual urban bondholders, he suggests that the Constiution can be seen broadly as a struggle between farmers and bondholders, not unlike Depression-era rhetoric between Midwest farmers leaden with debts and their Eastern creditors.
+
+The primary result of this struggle was the Contract Clause:
+>No State shall [...] coin Money; emit Bills of Credit; make any Thing but gold and silver Coin a Tender in Payment of Debts; pass any Bill of Attainder, ex post facto Law, or Law impairing the Obligation of Contracts[@madison1788constitution]
+
+The Contract Clause limited state powers for economic regulation in three main ways.
+First, it removed from states the ability to print money, and, thus, to overprint money.
+While a central bank had not been created yet, the Contract Clause ensured that no state could chip away at debt by deflating their currency.
+Two, the Clause made standard payment in metal, limiting their purchasing power.
+Third, this bit of the Constitution, in its statements regarding "ex post facto Law" and "impairing the Obligation of Contracts", removed from states the ability to cancel debts by removing the ability to cancel any contracts at all.
+Debt cancellation or reduction was a primary aim of uprisings like Shays Rebellion and, more softly, wealthy planter political connections.[@beardEconomicInterpretationConstitution1913]
+
+In the Great Depression, the meaning of the Contract Clause was challenged, as mentioned, in @1934home.
+But scholarly opinion had soured on Chief Justice Charles Hughes' words that, "While emergency does not create power, emergency may furnish the occasion for the exercise of power."
+Richard Epstein, one of the Chicago School's leading legal scholars, writes that, "the police power exception has come to eviscerate the contracts clause,"[@epstein1984revitalization, 738] and he is not alone.
+Indeed, Tim Geithner's approach to the foreclosure policies emphasized legality as one of its tenets, and pointed to state usage of the Contract Clause as a grey area.[@mcnamara2019yale]
+Constitutional limits on state (and thereby local) economic regulation were bolstered by scholarly backlash and the significant influence of originalism and textualism on the Court.
+If Beard's interpretation of the Contract Clause is correct, then conservative justices would likely have blocked any such attempts to establish the foreclosure moratoria imposed during the Depression.
+
+The interpreted mandate to protect government interests coordinated with a pragmatist turn in Constitutional jurisprudence to authorize the federal goverment to enter state policy jurisdictions.[@horwitzTransformationAmericanLaw1992]
+
+New Deal policies wielded the Commerce Clause to implement its policies.
+
+For defendants, the burden of evidence fell on the extension of business effects to other states.
+
+```{r spending-shift, fig.cap = "While secular growth is present at all levels of government, note the spikes during the Great Depression and Recession, and of course in wars.", fig.align='center', out.width='90%', echo=FALSE}
+include_graphics("figure/spending-shift.png")
+```
+
+State investment had now been supplanted; this opened an opportunity for balanced-budget interest groups to organize around pruning back property taxes.[martin]
+
+Taxpaying voters were then adjusted to low tax receipts, leaving support for higher taxes thin.
+
+This movement starved states and cities of the resources necessary to handle foreclosure.[@stein2019capital]
+
+
 ## Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
 
 The separation of investors from mortgage servicers constituted a separation of ownership from control.
@@ -183,6 +229,19 @@ Securitization, an act of legal incorporation, severed the communicative link be
 When their interests were pitted against one another, the legal priority fell to the trustee, in whose interest it was to foreclose.
 Before the separation of ownership from control in mortgages, a bank could decide---as many did in the Great Depression---not to foreclose in spite of its legal right.
 
+Securitization is a complicated process, legally incorporating the collection of mortgages that back a residential mortgage-backed securities (MBS).
+
+Legal incorporation has historically been treated by U.S. courts as a way to separate ontologically the individual assets from their controlling parties.[dewey]
+
+The practical particularities of REMICs sever any remaining lines of communication by which investors could express their interests.
+
+By removing the principal from the process, MBS securitization granted the agent free[r] reign.
+
+Foreclosures were in the interests of the mortgage-servicing agents to mortgage-backed securities.
+
+Thus, investors' hands were tied.
+
+<!--This possibly should be chapter 2-->
 ## How This Configuration Feeds a National Mythos of Desert {#impact}
 
 In the Great Depression, newspapers small and large fawned over the troubled farmer.
@@ -194,3 +253,21 @@ The difference lies in that businesses, such as farms, supposedly repay debts by
 These narratives furthered the idea of the foreclosed-upon borrower as deserving of their fate.
 In discouraging sympathy from non-delinquent homeowners to delinquent homeowners, these narratives cleave political interests along the propertied/un-propertied distinction rather than the housed/un-housed line.
 This supports asset-based theories of voting, which explain voting as a rational choice logic operating on wealth rather than income.
+
+Media local and national supported the direct action and even intimidation campaigns of Minnesota farmers.[@fliter2012fighting]
+
+Negative views of borrowers prevailed during the subprime mortgage crisis.[@dayenChainTitleHow2016]
+
+The immediate negative connotation with 'subprime' played on one level, though this was incorrect since most of the foreclosed were prime borrowers.[@ferreira2015new]
+
+On a second level, these negative connotations resulted from American ideas about debt.[nietzsche?]
+
+These connotations apply only to individuals, since businesses by far take out more debt.
+The discrepancy can be ascribed to a distinction between use- and exchange-value borrowing.
+
+These narratives combined with government policy to cleave propertied interests from un-propertied interests, foisting a bourgeois conciousness on people fundamentally insecure about their finances.
+
+Voting then became a choice between the valence of the property tax--redistributive policy connection.[martin]
+
+This connection was most visible in the Tea Party Caucus' original incarnation before the 2010 Midterms.
+That election smoothed the texture of Republican-Democrat arguments into debates about taxation and redistributive housing policies.
