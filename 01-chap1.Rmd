@@ -2,9 +2,10 @@
 bibliography: bib/thesis.bib
 csl: csl/chicago-note-bibliography.csl
 output:
-  pdf_document: default
-  html_document: default
   word_document: default
+  html_document: default
+  pdf_document:
+    keep_tex: true
 ---
 # An Unfurling Crisis {#actors-motive}
 
@@ -25,8 +26,8 @@ Primarily, foreclosures tear people from their homes.
 On top of this comes the stigma of being a "deadbeat"[@dayenChainTitleHow2016] and mounds of fees---legal, cancellation, transportation-related.
 But once homeowners have been forced out, the neighborhood and municipality bear the financial weight of that foreclosure.
 
-To nearby homeowners, foreclosures cost $159,000 on average in decreased property values.[@immergluckPreventingNextMortgage2015]
-To the city or county that envelops the property, it costs on average $64,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.
+To nearby homeowners, foreclosures cost $159,000 on average in decreased property values.[@immergluck2011foreclosed, 151]
+To the city or county that envelops the property, it costs around $50,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.[@indiviglio2010housing]
 When property values drop, a home's [apparent] equity drops too.
 This figure, estimated constantly by market research firms such as Zillow and appraised periodically by taxing authorities, determines to a large extent the wealth and borrowing power of homeowners.
 If the value of an already-mortgaged home rises, homeowners can refinance.
@@ -91,7 +92,7 @@ This fact raised the stakes for farmers to plead for relief and enlarged the mac
 Of the 100,000 farmers who lost their farms each year between 1926 and 1940,[@alston1983farm] the Midwest saw the highest concentrations.
 \@ref(fig:wheelock-farms) shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
 In 1933, by far the worst year for farm mortgages, failure rates topped 3.7%; during the rest of 1926-1940, rates were often above 1.5%.[@wheelockChangingRulesState2008, 571]
-By contrast, U.S. residential foreclosures reached 1.8% in 2008, the worst year of the mortgage crisis.(REFRENCE NEEDED)
+By contrast, U.S. residential foreclosures reached 2.23% in 2010, the worst year of the foreclosure crisis.[@2019foreclosure]
 In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
 
@@ -158,7 +159,6 @@ In contrast, farming's power to determine social interactions pushed together th
 These movements organized, articulating political demands most remarkably on March 22, 1933, when "a caravan of two to three thousand farmers descended upon St. Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol."[@fliter2012fighting]
 This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in *Home Building & Loan Association v. Blaisdell*,[@1934home] paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
 In contrast, each call for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on *Blaisdell*.
-More broadly, fewer government resources---legal or fiscal---were donated to the relief on individual debtors in the Great Recession than in the Great Depression.(REFERENCE NEEDED)
 To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
 
 
@@ -172,7 +172,7 @@ Later in the twentieth century, taxpayer reform organizations yanked the reins o
 This influence combined with the altered expectation of federal policy regulating economics, leaving only growth-oriented tax incentives and zoning regulations in the regulatory toolbox of cities and states.
 This turn away from local economic regulation starved states and cities of the resources needed to handle foreclosures.
 
-Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in \@(fig:spending-shift).
+Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in \@ref(fig:spending-shift).
 While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, @beardEconomicInterpretationConstitution1913 retains its value by its analysis of primary sources.
 In it, Beard argues that the United States has a long history of enforcing the rights of creditors over the sovereignty of states.
 Linking uprisings such as Shays Rebellion to foreign credit demands and the interests of individual urban bondholders, he suggests that the Constiution can be seen broadly as a struggle between farmers and bondholders, not unlike Depression-era rhetoric between Midwest farmers leaden with debts and their Eastern creditors.
@@ -251,14 +251,17 @@ Securitization severed the communicative link between investing and mortgage ser
 When their interests were pitted against one another, the legal priority fell to the trustee, in whose interest it was to foreclose.
 Before the separation of ownership from control in mortgages, a bank could decide---as many did in the Great Depression---not to foreclose in spite of its legal right.
 
-Securitization is a complicated process, legally incorporating the collection of mortgages that back a residential mortgage-backed securities (MBS).
-First, a mortgage originator, such as Countrywide, brokers the original agreement between mortgagor and mortgagee.
-For the homeowner, this is most often all they ever see, and for the originator, this had been true until the 1970s.
+Securitization is a complicated process, pictured in \@ref(fig:immergluck) legally incorporating the collection of mortgages that back a residential mortgage-backed securities (MBS).
+First, a mortgage broker secures the original agreement between mortgagor and mortgagee.
+For the homeowner, this is most often all they ever see, and for the broker, this had been true until the 1970s.
 At that time, the Federal National Mortgage Association (Fannie Mae) and Federal Home Loan Mortgage Corporation (Freddie Mac) were spun off by the federal government into the government-sponsored entities that existed until the mortgage crisis.
-Fannie and Freddie issued mortgages to prime borrowers, those considered least likely to default.
-Yet the low risk could only the price of credit---interest rates---by so much.
-Securitization offered a second layer of insulation from the unpredictability of individuals.
-After originating a mortgage, Fannie Mae or Freddie Mac would then take a few thousand other mortgages and combine them into a mortgage pool; later these pools would contain mortgages originated by dozens of mortgage brokers, such as Countrywide, who would immediately sell them to securities firms.
+Fannie and Freddie brokered mortgages to prime borrowers, those considered least likely to default.
+Yet the low risk could only the price of credit (aka interest rates) by so much.
+Securitization offered a second layer of insulation from the unpredictability of individuals, leading to lower risk, and lower interest rates, making mortgages attractive to propsective homeowners.
+In this case it was the knowledge that investors would accept low interest rates---made acceptable by global disinflation and a massive supply of savings[@schwartz2009subprime]---which facilitated such attractive interest rates.
+After brokering a mortgage, Fannie Mae or Freddie Mac would then take a few thousand other mortgages and combine them into a mortgage pool.
+Later these pools would contain mortgages brokered by dozens, perhaps hundreds of firms, who would immediately sell them to originators.
+These two roles, broker and originator, seprated over time, and created the initial problems whereby bad loans were good business.[@immergluck2011foreclosed, 103]
 
 After pooling, the securitizer would then establish a special purpose vehicle (SPV) with the sole purpose of holding mortgages and issuing financial securities.
 Instead of issuing pieces of individual mortgages, the vehicle issued pieces of itself, a self that was fully composed of the cashflow from mortgages, in the form of claims on the pool's profits.
@@ -269,6 +272,10 @@ The special purpose vehicle took on the mortgage pool itself, thus obligating it
 SPVs, with no legal employees, designated companies in their founding documents to act as servicers, scheduling fees for particular services.
 While investors could open informal lines of communication with those tasked by securitizers to administer payments, there was no formal mechanism by which investors could exercise the kind of shareholder democracy that had become so near and dear to their hearts.
 
+```{r immergluck, fig.align='center', fig.cap="Taken from Immergluck, 2011", echo=FALSE, out.width="90%"}
+include_graphics("figure/immergluck.png")
+```
+
 The practical particularities of SPVs thus severed any remaining lines of communication by which investors could express their interests.
 While interests would not have been *congruent* with homeowners, they may have been coincident.
 During the Great Depression, Prudential, then the largest holder of farm debt in the country, ceased collection on farm mortgages.[@fliter2012fighting, 65]
@@ -278,17 +285,18 @@ But in a housing crisis, when flattening home values give way to falling, and th
 Securitization provided agents, the mortgage servicers, to escape the interests of the principals, investors.
 By removing the principal from the process, MBS securitization granted the agent free[r] reign.
 
-While foreclosures were certainly in the interests of the mortgage-servicing agents,[@goodman2009mortgage] they were less likely to be in the interests of investors.
-But investors' hands were tied.
+While foreclosures were in the interests of the mortgage-servicing agents,[@goodman2009mortgage] they were less likely to be in the interests of investors.
+Depending on their tranche in an MBS, some investors would have actually *preferred* to keep loan terms stringent in order to increase risk, and thus reward.
+These inter-investor squabbles meant that servicers that acted along informal lines of request "may be seen as instigating interparty litigation."[@immergluck2011foreclosed, 103]
 I do not argue that investors necessarily would have ceased foreclosure in times of crisis, but that, like banks in the Depression that were long in their own investments, they may have added extra time for payment had they the organizational mechanisms to do so.
 It is likely that the historical reality of American residential mortgage-backed security would have prevented this anyway: foreign capital held 20% of residential MBS in the United States.
 Where thrifts and even large retail banks in the Great Depression had a choice, the clauses in Pooling & Servicing Agreements ensured that the information flow only went in one direction, from mortgage to investor.
 Securitization, in separating ownership from control of the underlying mortgages, made bad loans good business, as detailed by Michael Lewis' bestseller *The Big Short*, but an overlooked aspect of securitization was its alignment of interests *after* loans had gone bad.
 
-I have detailed structural factors that explain why three of the four direct interests in housing---homeowners, cities and states, and investors in residential mortgage-backed securities---were unable or unwilling to organize large foreclosure relief efforts.
+I have identified structural factors that explain why three of the four direct interests in housing---homeowners, cities and states, and investors in residential mortgage-backed securities---were unable or unwilling to organize large foreclosure relief efforts.
 In the first and third cases, actors were unable to organize due to differences in the political economy (and often, geography) of the subprime mortgage crisis when compared to the Great Depression.
 In the case of cities and states, federal pre-emption and strained finances limited their legal and fiscal capabilities.
-None of these three arguments deliver the kind of logical suplex blow that they deserve, but they serve to quickly explain why federal intervention in foreclosure relief efforts was necessitated.
+None of these three arguments deliver the kind of logical suplex blow that they deserve, but they serve to quickly explain why federal intervention in foreclosure relief efforts was necessary.
 My next chapter will describe how this motivation crystallized into the raft of relief policies that the Bush administration delivered, including the Neighborhood Stabilization Program.
 It will then detail how the program was administered.
 I will bookend these discussions with theoretical and historical understandings of American party politics, for the crucial link between taxes, housing, and party politics aids explanations of why the Bush administration and Congress did what they did.

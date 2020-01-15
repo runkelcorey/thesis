@@ -1,29 +1,13 @@
-# Connecting Home Prices to Voting {#ideology}
+# Connecting Home Prices to Voting {#motive-opportunity}
 
-In the Great Depression, newspapers small and large fawned over the troubled farmer.
-This treatment was not reserved for homebuyers in 2008.
-Rather, they were termed "deadbeats", or, in CNBC reporter Rick Santelli's terms, "losers".
-The stigma surrounding foreclosed-upon borrowers was twofold: on one hand, they were labeled with the technical (and thus depoliticized) term "subprime"; on the other, they were denounced as irresponsible for multiple mortgages and refinancings.
-These labels came in spite of the fact that most foreclosures occurred to prime mortgages, not subprime, and that repeated borrowing against leverage increases as a trend among U.S. companies.
-The difference lies in that businesses, such as farms, supposedly repay debts by increasing use value, where in the housing bubble, debts were repaid by pure increases in exchange value.
-These narratives furthered the idea of the foreclosed-upon borrower as deserving of their fate.
-In discouraging sympathy from non-delinquent homeowners to delinquent homeowners, these narratives cleave political interests along the propertied/un-propertied distinction rather than the housed/un-housed line.
-This supports asset-based theories of voting, which explain voting as a rational choice logic operating on wealth rather than income.
+The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a hodgepodge of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
+This aim congrued with the Bush administration's "ownership society", which added moral heft to the legal onus placed on individuals to become solely responsible for their own property.
+By mitigating spillover effects, the Neighborhood Stabilization Program would attempt to isolate homes from the "animal spirits"[@keynes2007general] of the surrounding market(s), and focus success or failure of a person's finances on their own actions.
+However, despite the ideological congruence between the NSP and Bush's ownership society, the Neighborhood Stabilization Program departed from the Republican Party by privatizing government money for less (or even negatively) affluent people.
+In the United States, both Republican and Democratic parties have connected this action with higher taxation, and with the Democratic Party.
+So, while the policies fit with the Bush administration, their ideological dimension tended more towards the Democratic Party.
 
-Media local and national supported the direct action and even intimidation campaigns of Minnesota farmers.[@fliter2012fighting]
-
-Negative views of borrowers prevailed during the subprime mortgage crisis.[@dayenChainTitleHow2016]
-
-The immediate negative connotation with 'subprime' played on one level, though this was incorrect since most of the foreclosed were prime borrowers.[@ferreira2015new]
-
-On a second level, these negative connotations resulted from American ideas about debt.[nietzsche?]
-
-These connotations apply only to individuals, since businesses by far take out more debt.
-The discrepancy can be ascribed to a distinction between use- and exchange-value borrowing.
-
-These narratives combined with government policy to cleave propertied interests from un-propertied interests, foisting a bourgeois conciousness on people fundamentally insecure about their finances.
-
-Voting then became a choice between the valence of the property tax--redistributive policy connection.[martin]
-
-This connection was most visible in the Tea Party Caucus' original incarnation before the 2010 Midterms.
-That election smoothed the texture of Republican-Democrat arguments into debates about taxation and redistributive housing policies.
+But, as mentioned early in \@ref(actors-motive), opposing the leftward pull of ideology is the rightward push of rational choice.
+The Neighborhood Stabilization Program, in addressing spillover effects, raised---or arrested the fall of---neighboring home values.
+Theoretically, I associate this movement with personal consumption in the same way that I associate pre-crisis home price increases with personal consumption: homeowners know that the (apparent) value of a home can be converted into a real stream of income.
+By preserving home equity, the Neighborhood Stabilization Program buoyed owners through tumultuous labor conditions, or even provided supplementary income.
