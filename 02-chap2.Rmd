@@ -1,3 +1,12 @@
+---
+bibliography: bib/thesis.bib
+csl: csl/chicago-note-bibliography.csl
+output:
+  word_document: default
+  html_document: default
+  pdf_document:
+    keep_tex: true
+---
 # Connecting Home Prices to Voting {#motive-opportunity}
 
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a hodgepodge of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
@@ -7,7 +16,33 @@ However, despite the ideological congruence between the NSP and Bush's ownership
 In the United States, both Republican and Democratic parties have connected this action with higher taxation, and with the Democratic Party.
 So, while the policies fit with the Bush administration, their ideological dimension tended more towards the Democratic Party.
 
-But, as mentioned early in \@ref(actors-motive), opposing the leftward pull of ideology is the rightward push of rational choice.
+But, as mentioned early in \@ref(actors-motive), opposing the leftward pull of ideology is the rightward push of rising wealth.
+Higher levels of wealth and income are colloquially associated with conservatism, but there is little research on the mechanisms beyond class that push such people towards their political decisions.
+As such, the rightward push of rising wealth was not a given: after World War II, taxation was not a weighty political issue,[@campbell2009how, 160] let alone a wedge issue.
+Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans "to define themselves and their party in opposition to taxes."[@martin2008welcome, 128]
+Third Way Democrats, led by President Bill Clinton, accepted tax cuts in their successful political bids---it was only in the 2000s that Democrats on a national level united (more or less) in opposition to lower taxation.
+
+The mortgage crisis hit at a moment in American politics when the two parties agreed that---along with wars in the Middle East---taxation and visible, means-tested welfare were the political issues of the day; the only difference was the moral valence each party attached to the issues.
+The connection between taxation, welfare, and party platforms came to a head in the late 2000s.
+After the mortgage crisis ushered in a financial crisis and the Great Recession, economic policy adopted a militant vocabulary.
+In response, grassroots anti-tax movements (thoroughly astroturfed by conservative non-profits) took up equally rhetorical arms, with CNBC reporter Rick Santelli sounding the battle cry of the Tea Party Movement.
+
+The Tea Party Movement sharpened the debate over taxes.
+What had been salient in the decades before the trauma of the financial and mortgage crises re-emerged as the guiding issue of the Republican Party.
+The salience of taxation, and the formalization of candidates into members of the Tea Party Caucus, provide a theoretical underpinning to this study.
+Without the self-professed and much-discussed focus on taxation during the 2010 midterm elections, analyzing voters' awareness of candidates' tax positions would be required in order to effectively argue that voting behavior ran with tax policies.
+The focus on taxation, and the clear connection between expenditures on visible welfare programs and higher taxation, make possible the aggregation of individual tax preferences into party voting.
+
+In this chapter, I dive into how the Neighborhood Stabilization Program fit ideologically with the Bush administration, and the Republican Party between 2008 and 2010.
+I argue that the NSP hewed more closely to the ideology of the Democratic Party than of the Republican Party between 2008 and 2010.
+Further, the snugness of this fit was not a given, but was contingent on a tax protest movement like that of the Tea Party.
+American party politics were crucial to corralling the effects of foreclosure relief programs into legible distinctions for vote analysts.
+
+
+##
+
 The Neighborhood Stabilization Program, in addressing spillover effects, raised---or arrested the fall of---neighboring home values.
 Theoretically, I associate this movement with personal consumption in the same way that I associate pre-crisis home price increases with personal consumption: homeowners know that the (apparent) value of a home can be converted into a real stream of income.
-By preserving home equity, the Neighborhood Stabilization Program buoyed owners through tumultuous labor conditions, or even provided supplementary income.
+By preserving home equity, the Neighborhood Stabilization Program buoyed owners through tumultuous labor conditions, or supplemented income as it may have before the mortgage crisis.
+This thesis asks how voters prioritize these opposing forces.
+
