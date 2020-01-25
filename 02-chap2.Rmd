@@ -9,6 +9,8 @@ output:
 ---
 # Connecting Home Prices to Voting {#motive-opportunity}
 
+>"We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property."[@klein2008disowned]
+
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a hodgepodge of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim congrued with the Bush administration's "ownership society", which added moral heft to the legal onus placed on individuals to become solely responsible for their own property.
 By mitigating spillover effects, the Neighborhood Stabilization Program would attempt to isolate homes from the "animal spirits"[@keynes2007general] of the surrounding market(s), and focus success or failure of a person's finances on their own actions.
@@ -17,7 +19,7 @@ In the United States, both Republican and Democratic parties have connected this
 So, while the policies fit with the Bush administration, their ideological dimension tended more towards the Democratic Party.
 
 But, as mentioned early in \@ref(actors-motive), opposing the leftward pull of ideology is the rightward push of rising wealth.
-Higher levels of wealth and income are colloquially associated with conservatism, but there is little research on the mechanisms beyond class that push such people towards their political decisions.
+Higher levels of wealth and income are colloquially associated with conservatism, but there is little research on the economic mechanisms beyond class that push such people towards their political decisions. THIS IS NOT TRUE
 As such, the rightward push of rising wealth was not a given: after World War II, taxation was not a weighty political issue,[@campbell2009how, 160] let alone a wedge issue.
 Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans "to define themselves and their party in opposition to taxes."[@martin2008welcome, 128]
 Third Way Democrats, led by President Bill Clinton, accepted tax cuts in their successful political bids---it was only in the 2000s that Democrats on a national level united (more or less) in opposition to lower taxation.
@@ -41,21 +43,70 @@ American party politics were crucial to corralling the effects of foreclosure re
 
 ## The Neighborhood Stabilization Program, Ideologically
 
-Legal/congressional background of the NSP
+Section 2301(a) of the Housing and Economic Recovery Act of 2008 appropriates $3,920,000,000
 
-Purpose of the NSP
+>for assistance to States and units of general local government (as such terms are defined in section 102 of the Housing and Community Development Act of 1974 (42 U.S.C. 5302)) for the redevelopment of abandoned and foreclosed upon homes and residential properties.
 
-What the NSP did
+Due to the size of the bill passed and the extent of modifications by a range of members, it is unclear who inserted the provision.
+However, a select few news sources picked up on the insertion, including a Reuters piece which claimed "The White House had originally opposed a provision that offers $4 billion in grants to states to buy and repair foreclosed homes."[@pelofsky2008bush]
+The opposition by the Bush administration of the $4 billion outlay, a mere 1.3% of the \$300 billion ensured to Fannie Mae, indicates that the amender likely belonged to the Democratic Party.
+Albeit brief, this opposition---the only opposition mentioned in an article awash in hundred-billion-dollar outlays---is surprising given its size and the power held by the federal government.
 
-How the NSP served individualism
+The Department of Housing and Urban Development (HUD) administered the funds through its Community Development Block Grant program, a core piece of HUD's community investment apparatus.
+By routing the funding through a pre-existing program, the bill's writers sought to leverage established lines of communication between HUD and the several states.
+This provision also avoided long-term commitments by HUD to far-flung localities, pushing the purchase and selling of properties to an arms-length.
+But, while the bill collected information and decision-making at the local level, its compliance regulations were still onerous.
+Dan Immergluck argues in @immergluckPreventingNextMortgage2015 that ensuing language in HERA, which limits localities to purchase properties at a discount from market price, lessened the program's efficacy.
+Much like a buyer of used cars, houses at a discount are more likely, *a priori*, to be lemons, since the seller wouldn't take less than market price for an above-average quality home.
+Beyond that, federal oversight of localities was intense, as the administration took an extremely risk-averse approach to mismanagement of funds, fitting the image pushed by conservatives in Bush's party of housing programs as loci of graft and inefficiency.
 
-Individualism as foundational to ownership society
+Funds were originally calculated by a need-based formula factoring in rates of foreclosure, subprime borrowing, and payment delinquency in order to address areas "identified by the State or unit of general local government as likely to face a significant rise in the rate of home foreclosures."[@pelosi2008housing]
+In doing so, the legislation aimed to use the buying power of the federal government to bid up prices in neighborhoods by taking housing stock off the market (at least temporarily), recording purchase prices close to (but, as per requirement, lower than) market levels, and reselling said housing stock after capital investments (in the form of maintenance and repairs).
+The political import of this plan is difficult to understand in the vacuum of it and its party supporters.
+At the time, dispossessed homeowners and their coalitions called for principal reductions, a common decision in courts of equity and bankruptcy cases, or immediate relief to homeowners currently in default.
+Rather than direct cash transfers, which would have enhanced individual freedom by loosening budget constraints, or pass-through payments to debt holders, which would have promoted rent-seeking by those debt holders, the Neighborhood Stabilization Program advocated for indirect pushes on home equity.
 
-Ownership society as something different than what Democrats were pushing
+The NSP attempted to cosset homeowners from endogenous shocks, recognizing the social dislocation caused by such a stupid destruction of private wealth.
+While some homeowners could be painted as the kind of irresponsible, purely-speculating "deadbeats" characterized in @dayenChainTitleHow2016 and Michael Lewis' *The Big Short*, it is important to remember that the majority of those foreclosed upon were prime borrowers.[@ferreira2015new]
+Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in @ref(fig:distress) (though that is partially because there was more "fuel left to burn" in the sense that the number subprime borrowers, around 20% of the market, had already been slashed).
+These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which fits in the narrative of responsible, well-to-do homeowners forced into foreclosure by their subprime neighbors.
 
-Ownership society as something different than what the Republicans were doing
+```{r distress, fig.cap= "Left: Total foreclosures and short sales by owner type. Right: Probability of home loss by owner type.", echo = FALSE, out.width='45s0%', fig.align='center'}
+include_graphics(c("figure/ferreira_absolute.png", "figure/ferreira_distress.png"))
+```
 
-Taxation as policy in the 2000s
+Protected from the shocks to home prices (and thus home equity), the success or failure of borrowers' real estate investment would then depend purely on their payments.
+To maintain the idea of a meritocratic path to the American Dream, from time to time the route must be cleared of such hazards.
+The Neighborhood Stabilization Program did not aim, like its administrative superstructure does, to develop communities in any meaningful way.
+Rescuing communities from visual blight were incidental effects of the policy and tied only to blight's impact on home prices.
+Rather, the NSP aimed at a lower, more foundational goal of saving the plunging home equities of several million individuals.
+
+This individuation, this buffer from the market, is a privilege long conferred upon the American home in law and policy.
+The private-public distinction is made much sharper for homeowners than for renters.
+Consider for instance 4th Amendment cases, where property law still dominates legal interpretations despite the impact of *Katz v. United States*, which expanded what the 4th Amendment shielded to include more person-centric concepts.[@sternInviolateHomeHousing2010]
+Or consider the HOMEOWNER TAX CREDIT, the largest subsidy in all of America (REFERENCE NEEDED), which may only be applied to owner-occupied properties.
+The history of American housing policy---both as centralized legislation and decentralized legal interpretation---has conferred on homeowners (who are by construction also land owners) additional rights when compared to renters, expanding the legal extent of their individual selves.
+
+These privileges made up much of the popular appeal of George W. Bush's "ownership society".
+While it lived a larger life in the media than in Bush's own remarks, the philosophy backed up much of Bush's domestic policy.
+The definition is almost self-evident: an America where as much is owned and controlled by individuals as is feasible. Bush explained the logic guiding this idea by claiming that "The more ownership there is in America, the more vitality there is in America, and the more people have a vital stake in the future of this country."[@2004fact]
+With this claim came a raft of policies demonstrating the promise of an ownership society.
+Under this capacious roof, the administration enclosed health savings accounts, more individualized retirement options, and policies aimed at increasing homeownership.
+These policies included the American Dream Downpayment Initiative, which tied homeownership explicitly to the American Dream, and the Single-Family Affordable Housing Tax Credit.[@2002homeownership]
+By encouraging single-family homes in the "Nation’s inner cities", thinning the density of apartment complexes and tenements, this last provision harkened back to FHA(CHECK) marketing after the Great Depression, which idealized the home as a "refuge from urban corruption."[@sternInviolateHomeHousing2010]
+Bush's ownership society provisions also included a "tripling of funding"[@2002homeownership] for a program that swapped personal or volunteer labor for housing assistance, known in low-income housing development as "sweat equity".
+These programs in aggregate, pushed a narrative of meritocratic access to consumer credit spurring individual ownership.
+The NSP, in turn, slotted into this story by insulating responsible (*i.e.* those who have not yet defaulted)---if low-income---debtors from the vagaries of wily housing markets.
+
+Such a conformity with Bush's animating philosophy, despite the program's brief opposition by the president, places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.
+If voters were unable to locate programs like the NSP within Democratic or Republican platforms, then there would be no reason why pro--home price policies translate into Republican votes.
+Bush's ownership society performed an entirely unrevolutionary act by presenting homeownership as a bedrock of ideal (and idyllic) America, as such a message had been pushed by presidents on both sides of the aisle since at least the Great Depression.[@stollerHousingCrashEnd2016]
+But while the values cherished by Bush's ownership society aligned with American conservatism, its distinctive policies were afield of the contemporaneous Republican platform.
+Instead, the policies looked like a [more] moralistic version of Democratic plans for affordable housing and access to credit.
+
+Republican focus on taxation and opposition to visible, continuing welfare assistance crowded out other domestic policy issues, like the politics of debt that had been so visible to midwest farmers in the 1930s, Massachussetts farmers in the 1780s, and opponents of the Cross of Gold in the late 19th century.
+What talk there was surrounded general regulations on assets, aftershocks of Ronald Reagan's liberalization of finance that included liberalizing the role of multinational creditors in mortgage markets and (perhaps incidental) quashing of savings and loans by interest rates set during Volcker's short-lived reign over the Federal Reserve.[@stollerHousingCrashEnd2016]
+TOMORROW I MUST FLESH OUT THIS STATEMENT. I HAVE NOT PROVEN THAT REPUBLICANS REFUSED TO CONSIDER ANYTHING BUT TAXES. THE SINGLE-FAMILY AFFORDABLE HOUSING TAX CREDIT IN FACT IS EVIDENCE AGAINST ME. MY APPROACH WILL BE TO PIVOT TO I.W. MARTIN'S WORK ON TAX DEBATES, MATT STOLLER'S ARGUMENT THAT LIBERALIZATION OF FINANCE ENABLED A VIABLE ARGUMENT BY REPUBLICANS THAT SOCIAL INSURANCE WAS UNNECESSARY DUE TO RISING ASSET PRICES / TAX CUTS WERE NEEDED TO REDUCE THE NOW-OUTMODED SOCIAL INSURANCE AND LABOR PROVISIONS THAT HURT SHAREHOLDERS. DEMOCRATS AGREED ON THIS NARRATIVE, BUT LOST BECAUSE THEY---ASIDE FROM BILL CLINTON---COULD NOT SEE THAT HOMEOWNERSHIP DROVE THE ECONOMY AND GENERATION-OLD VALUES REGARDING LABOR PROVISIONS WERE JUST NOT NEEDED IN THIS POLITICAL ECONOMY AND WITH THESE HOUSING PRICES BUOYING TUMULTUOUS WAGES. IN SUCH A WAY, POLITICIANS ON BOTH SIDES LEVERAGED RISING ASSET PRICES (CAUSED BY REAGAN-ERA LIBERALIZATION AS WELL AS SCHWARTZ' DETERMINANTS) TO ARGUE FOR TAX CUTS, TRAINING VOTERS TO EXPECT TAX CUTS. INTERESTINGLY, THOUGH LEVELS OF HOMEOWNERSHIP---AND THUS MORTGAGE DEBT---ROSE, SINCE THE SKIES WERE BLUE, THIS MEANT THAT DEBT-RELIEF WAS RENDERED ILLEGIBLE WHILE TAXES AND EVERMORE UNNECESSARY WELFARE EXPENDITURES WERE THE TALK OF THE TOWN.
 
 ## Centering of Tax Policy by the Republican Party (somewhere in here a connection between taxes and spending)
 

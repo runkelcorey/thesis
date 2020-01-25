@@ -2,10 +2,10 @@
 bibliography: bib/thesis.bib
 csl: csl/chicago-note-bibliography.csl
 output:
-  word_document: default
-  html_document: default
   pdf_document:
     keep_tex: true
+  html_document: default
+  word_document: default
 ---
 # An Unfurling Crisis {#actors-motive}
 
@@ -39,8 +39,8 @@ Homes stand increasingly in the position of pension plans and 401ks; a wise move
 These wise moves seemd to occur constantly from September 1992 until March 2006.
 As \@ref(fig:caseshiller) shows, the intervening 14 years never once saw a drop in the industry's standard home-price metric, the Case-Shiller U.S. National Home Price Index.
 As prices rose, homeowners refinanced, effectively paying back the first mortgage while taking out the second.
-To investors in mortgage-backed securities (MBS), pre-payment from refinancing is usually seen as a risk, but constant and predictable refinance added to the safety of securitization, playing into investors risk-reward calculus.
-But when prices fell---or even flatlined---this safety evaporated.
+To investors in mortgage-backed securities (MBS), pre-payment from refinancing is usually seen as a risk, but constant and predictable refinancing added to the safety of securitization, playing into investors risk-reward calculus.
+However, when prices fell---or even flatlined---this safety evaporated.
 Without the increased [apparent] home equity, refinancing did nothing.
 Falling prices thus meant homeowners were saddled with their current mortgage, often one whose interest rates reset after two years, climbing an interest-rate staircase for the next 28 years.
 Atop the interest payments, living expenses (such as other debts) piled on to borrowers, where previously refinancing had arrived to supplement existing income with cash.
@@ -51,7 +51,7 @@ include_graphics("figure/caseshiller_1990_2018.png")
 ````
 
 These factors make homeowners *very* sensitive to falling or stagnant home prices.
-In their sensitivity, they may have voted for parties, candidates, and policies they believed would drive up home prices, such as property tax cuts, musucular code enforcement, and spacious zoning regulations.
+In their sensitivity, they may have voted for parties, candidates, and policies they believed would drive up home prices, such as property tax cuts, muscular code enforcement, and spacious zoning regulations.
 Each of these policies reduces the resources available for non-homeowners, pitting homeowners against renters, the homeless, and anyone else without a direct financial stake in the asset.
 For example, tax cuts, take they the form of directly-decreased property taxes or the homeowner tax credit, reduce the monies available to fund public goods.
 In the United States, party ideology also ties higher taxes with explicitly redistributive policies, though Democrats and Republicans archetypically differ as to whether high taxes--more redistribution is good or bad.
