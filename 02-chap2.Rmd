@@ -161,7 +161,7 @@ Answering this question offers more than colorful background; understanding how 
 My answer also connects taxes with expenditures, a non-trivial connection that will become very popular when individual preferences for social insurance are considered in the next chapter.
 
 
-## Centering of Tax Policy by the Republican Party (somewhere in here a connection between taxes and spending)
+## Centering of Tax Policy by the Republican Party
 
 I argue that the tax "revolts"^[To use Isaac Williams Martin's term.] kicked off by Proposition 13 in California brought to the fore the question of taxes.
 Reagan's presidential campaign then finalized the centering of taxation in Republican domestic policy.
@@ -197,20 +197,50 @@ Before, he had been convinced that tax limits would just shift the burden of tax
 This belief came from a connection made between revenue and expenditure, a logic of reaping what one sows.
 In California, however, local governments did not collapse, and what changes did occur to the provision of social services evidently did not summon a pro-tax backlash; in other words, "you could cut taxes deeply without worrying about deficits."[@martin2008welcome, 130]
 The reality about this de-coupling is very important to my argument.
-There has *always* been large chunks of the federal budget that could legally be trimmed.
+There have *always* been large chunks of the federal budget that could legally be trimmed.
 Yet, the focus of balancing the deficit rarely falls (and rarely fell) on this most massive discretionary chunk, military spending.
 The purported want to balance budgets---echoed by every recent president---does not imply a need to contain visible (or invisible) welfare programs and transfers to local governments.
 Rather, it is by political construction that programs like the Neighborhood Stabilization Program end up in budget debates.
 
-Picked up by Reagan, landslide defeats Carter
+Reagan's 1980 presidential campaign picked up on the Proposition 13 rhetoric, mentioning taxes in more times than any previous candidate had in his nomination acceptance speech.[@campbell2009what]
+He offered tax cuts within a larger theory, connecting the private economic conditions with larger social problems.
+These would respond, not to the popular New Deal provisions, but to the increase in expenditure caused by Lyndon Johnson's Great Society, not yet 20 years old.
+Taxes were certainly not the only issue on his platform, but they are that for which he is remembered: the Iranian hostage situation and antidote to Jimmy Carter's "Crisis of Confidence" sermon were contingencies where taxes were a certainty.
+And his signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---led to a huge contemporary and lingering spike in popularity.(REFERENCE NEEDED)
 
-Response to Great Society, Carter moralizing
+After the reforms of the first term, the campaign ramped up its tax rhetoric.
+\@ref(fig:acceptance) shows the massive spike in tax mentions in nomination acceptance speeches (left) and general election television ads (right), aligning with the 1984 election.
+Bolstered by the knowledge that one could uncouple taxes from spending, Reagan was able to fend off Democratic challenger Walter Mondale's criticism that, "Mr. Reagan will raise taxes and so will I. He won't tell you."[@raines1984party]
+Ronald Reagan would go on to win every state except Minnesota, Mondale's home.
 
-Gingrich's Republican Revolution
+```{r acceptance, fig.align='center', out.width='45%', fig.cap="Number of tax mentions by party in presidential nomination acceptance speeches (left); percentage of general election TV ads to feature taxation (right). Both charts from @campbell2009what."}
+include_graphics(c("figure/campbell.png", "figure/campbell2.png"))
+```
 
-Clinton's Third Way as concession
+After Ronald Reagan, it was the House Republicans who fueled the drive towards lower taxes.
+Isaac William Martin takes over here:
 
-Democrat search for identity and righting of wrongs
+>Gingrich derided [balanced-budget Republicans'] argument afor tax increases as an "automatic, old-time Republican answer." He thereby implied that the *new* Republican answer was to cut taxes even when there was a deficit. After President Reagan signed tax increases in 1982 and 1983, Gingrich was instrumental in rewriting the Republican Party platform in 1984 to repudiate further tax increases. In 1990, he broke ranks with President George H. W. Bush and led House Republicans in voting down the president's budget---because it included a tax increase.[@martin2008welcome, 133]
+
+I dwelt on Ronald Reagan's tenure because it was an inflection point in national politics.
+The breakdown of Fordism in the United States, and its replacement by asset-backed political economy, was aided by Reagan's policies.
+In contrast, the crystallization of taxation as dominant Republican issue, while crucial to telling the story of how past became present, is less important to understanding how housing and taxation function conceptually in American politics.
+
+As such, I will race through Clinton's presidency with equal pace.
+Notable in the Campbell graphs are the mentions of taxation by Democrats in the Clinton era.
+So, while Gingrich drove legislation such as the Contract with America and the Personal Responsibility and Work Opportunity Act through Congress, it was not he---nor Republicans---alone.
+In addition, Clinton co-opted what had been Republican positions on welfare, and his labelling as a Third Way or New Democrat can be seen as trying to distance his politics from those of the party generally.
+Clinton's focus on budget balance differed from what Reagan and Gingrich had pushed, re-coupling revenue with expenditure, but the expenditure in focus was (as always) welfare.
+By "end[ing] welfare as we know it," Clinton coupled preference for social insurance with preference for higher taxes.
+After Clinton, the presidential campaigns of Barack Obama and John Kerry would return Democratic campaigns to emphasizing the need for higher taxes and more supportive (visible) welfare programs.
+
+Following Isaac William Martin's argument about the importance of Proposition 13, I have argued that tax activism propelled Republican victories in the 1980s.
+Successive legislative and electoral efforts would then de-couple taxes from government spending, leaving a narrow set of discretionary spending over which candidates and legislators could argue.
+This set emphasized visible welfare programs (such as Temporary Assistance for Needy Families) that socialized insurance across teh tax base.
+By centering taxes in the national conversation, debt politics became increasingly illegible to voters.
+Additionally, the connection between welfare spending and taxes meant that those who felt secure financially would opt to keep otherwise-taxed income instead of the social insurance policies those funds were supposedly directed towards.
+The connection between spending and taxation, however, fades from view somewhat in the early 21st century, as massive funds are appropriated for the War on Terror.
+Reconnecting those threads are the work of anti-tax organizations and their allies in Congress.
 
 ## Emergence of the Tea Party
 
@@ -224,7 +254,7 @@ Made legible to republican mainstream
 
 Suddenly tax choices, even about debt relief, find their place within political narratives and as planks in party platforms
 
-Astroturfing begets fundraising
+Astroturfing begets fundraising (Monica Prasad how perception of grassroots helped)
 
 A self-identifying movement is born
 
