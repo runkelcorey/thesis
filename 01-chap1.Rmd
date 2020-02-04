@@ -19,7 +19,7 @@ Additionally, the long-term trend of municipal disinvestment emphasized the need
 library(knitr)
 ```
 
-In reponse, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute $3.9 billion to state and local governments for the purchase and repair of foreclosed properties.[@pelosiHousingEconomicRecovery2008]
+In reponse, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute $3.9 billion to state and local governments for the purchase and repair of foreclosed properties.[@pelosi2008housing]
 This program, later termed the Neighborhood Stabilization Program (NSP), is my focus.
 In purchasing, repairing, and in most cases reselling foreclosed properties, the NSP sought to mitigate the effects of foreclosures on their surroundings.
 Primarily, foreclosures tear people from their homes.
