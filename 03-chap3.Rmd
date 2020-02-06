@@ -10,7 +10,12 @@ output:
 
 # Asset Prices, Individual Preferences, and Foreclosure Relief {#methods}
 
-This chapter moves from groups to individuals.
+How do asset prices affect voter decisions in extremis?
+Political economy has investigated the impacts of income on voter behavior, labor market risk on social insurance preferences, housing on voter behavior, and home value on welfare demand.
+But it has not investigated how such policy preferences represent themselves in political decision-making, nor the priority of relative changes in home price versus the absolute level of home prices.
+This thesis seeks to untie these last two knots by modeling vote outcomes.
+
+In doing so, this chapter moves from groups to individuals.
 The politics of organizations and masses is not well-understood analytically---the obvious point of a group is that is not reducible to its parts.
 For individuals, however, a different approach is plausible which understands people severally instead of jointly.
 In this outlook, the transcription of people as a nexus of preferences allows for the large-scale use of counting machines to achieve precision and speed.
@@ -19,3 +24,4 @@ Despite the prominence of organizations and masses in legislation, person-by-per
 This chapter moves from groups to individuals by reviewing the relevant literature on asset-based social insurance preferences, psychology of lost and gained wealth, and American voting behavior.
 It works towards a model of voting that will be used to analyze returns from the 2010 midterm elections, when the Tea Party experienced its first and greatest victories.
 To give handles which readers can grasp, I will simultaneously describe the measures and data used for my analysis.
+
