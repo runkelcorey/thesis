@@ -10,18 +10,62 @@ output:
 
 # Asset Prices, Individual Preferences, and Foreclosure Relief {#methods}
 
-How do asset prices affect voter decisions in extremis?
+How do asset prices affect voter decisions *in extremis*?
 Political economy has investigated the impacts of income on voter behavior, labor market risk on social insurance preferences, housing on voter behavior, and home value on welfare demand.
-But it has not investigated how such policy preferences represent themselves in political decision-making, nor the priority of relative changes in home price versus the absolute level of home prices.
-This thesis seeks to untie these last two knots by modeling vote outcomes.
-
-In doing so, this chapter moves from groups to individuals.
-The politics of organizations and masses is not well-understood analytically---the obvious point of a group is that is not reducible to its parts.
-For individuals, however, a different approach is plausible which understands people severally instead of jointly.
-In this outlook, the transcription of people as a nexus of preferences allows for the large-scale use of counting machines to achieve precision and speed.
-Despite the prominence of organizations and masses in legislation, person-by-person voting determines the raw material of policy-making who occupy Congress' houses.
+But it has not investigated how such policy preferences represent themselves in political decision-making, nor the priority of relative changes in home price versus the absolute level of home prices, dynamics relevant to the Neighborhood Stabilization Program, which aimed to affect neighborhoods in greatest need.
+This thesis seeks to untie these last two knots by modeling vote outcomes, while this chapter moves from groups to individuals.
 
 This chapter moves from groups to individuals by reviewing the relevant literature on asset-based social insurance preferences, psychology of lost and gained wealth, and American voting behavior.
 It works towards a model of voting that will be used to analyze returns from the 2010 midterm elections, when the Tea Party experienced its first and greatest victories.
 To give handles which readers can grasp, I will simultaneously describe the measures and data used for my analysis.
+This chapter stands logically between my last two.
+It describes how the financial crisis---whose characteristics were explored in \@ref(actors-motive)---mutated individual preferences, preferences which could then be located in the political landscape described in \@ref(motive-opportunity).
 
+At base, I describe individual consumption preferences from a life cycle/permanent income perspective.
+
+Housing, in addition to being a home, can be used as a financial "buffer stock" against emergencies.
+
+And housing can complement income even in times of stability, beyond the supplementary insurance function.
+
+These understandings of housing as an asset are not foreign to homeowners.
+
+In fact, these understandings shape homeowners' political decisions.
+
+These effects are not unique to housing, but they are most significant in housing.
+
+This importance is due to the sheer size and volatility of housing since 1981.
+
+Additionally, housing in the United States is a particularly salient issue politically.
+
+Subsidizing housing and home mortgages privatizes government spending we would otherwise recognize as welfare.
+
+By privatizing, these subsidies individualize housing gains, differentiating this form of "invisible welfare" from the bureaucratic programs debated by the Republican and Democratic parties.
+
+Nonetheless, I argue they are substitutable for homeowners: preference for this private form of insurance reduces the demand for social insurance programs.
+
+Interesting to note is a sociological perspective of this phenomenon not as life-cycle analysis via Friedman, but as *embourgeoisiement*.
+
+Under the narrative pushed around 2010, income and spending are connected.
+Therefore, lower preference for social insurance expenditure justifies preferences for lower taxation.
+
+As I explained in \@ref(motive-opportunity), these preferences represent as votes for Republican candidates, especially those in the Tea Party.
+
+It is important to understand that, just like the contingencies of party platforms, there are contingencies in how individuals process economic data.
+Partisanship affects how this process plays out; therefore, not all voters *could* (let alone *would*) be affected by asset prices.
+
+Therefore, my model aims at marginal voters, THOSE LIKELY TO SWING ELECTIONS.
+
+And I expect the effects to be marginal, as the Neighborhood Stabilization Program likely enriched no one.
+
+But the NSP featured little advertisement and received little press in return.
+
+While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value an equal amount of money lost and gained.
+
+This confusion collides with the ambiguity between the change in wealth and the absolute value of wealth.
+
+Additionally, the intimacy with foreclosure and bankruptcy both financially and sociologically may factor into this analysis.
+
+Is it likely that those nearing foreclosure understand the precarity of their financial position and the benefits of social insurance?
+
+Further, the Neighborhood Stabilization Program targeted neighborhoods rife with foreclosure---not individual homes.
+Could physical distance alter voting decisions, regardless of wealth?
