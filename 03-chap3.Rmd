@@ -15,6 +15,11 @@ Political economy has investigated the impacts of income on voter behavior, labo
 But it has not investigated how such policy preferences represent themselves in political decision-making, nor the priority of relative changes in home price versus the absolute level of home prices, dynamics relevant to the Neighborhood Stabilization Program, which aimed to affect neighborhoods in greatest need.
 This thesis seeks to untie these last two knots by modeling vote outcomes, while this chapter moves from groups to individuals.
 
+```{r}
+library(knitr)
+```
+
+
 This chapter moves from groups to individuals by reviewing the relevant literature on asset-based social insurance preferences, psychology of lost and gained wealth, and American voting behavior.
 It works towards a model of voting that will be used to analyze returns from the 2010 midterm elections, when the Tea Party experienced its first and greatest victories.
 To give handles which readers can grasp, I will simultaneously describe the measures and data used for my analysis.
@@ -22,12 +27,30 @@ This chapter stands logically between my last two.
 It describes how the financial crisis---whose characteristics were explored in \@ref(actors-motive)---mutated individual preferences, preferences which could then be located in the political landscape described in \@ref(motive-opportunity).
 
 At base, I describe individual consumption preferences from a life cycle/permanent income perspective.
+Milton Friedman opened his foundational work in life-cycle analysis by noting "Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income."[@friedman1957introduction, 1]
+Keynes understood economic fluctuations and crises as products of the past and present, as gluts or dearths of savings.[@keynes2007general]
+What future tense factored into his understanding was almost immediate---the momentary "animal spirits", for instance, or the undulations of the business cycle which trigger liquidity traps---rather than the long patterns highlighted by Kuznets.
+Friedman addressed the idea that individuals' income derives not simply from current income, or previous savings, but from all future earnings.
+In an extreme example, a toddler able to form "rational" (some fuzziness on this term's definition) expectations of future income could finance their upbringing and education by borrowing aginst those predictions, this would be a rational choice for both toddler and financier.
+This framework sees wealth, and therefore housing, as potentially permanent income.
 
-Housing, in addition to being a home, can be used as a financial "buffer stock" against emergencies.
-
-And housing can complement income even in times of stability, beyond the supplementary insurance function.
+But housing can also be used as a financial "buffer stock" against emergencies.
+This refinement is motivated by historical facts about American saving habits.[@carroll1997bufferstock, 1]
+57% of respondents to the Federal Reserve's 2016 Survey of Household Economics and Decisionmaking (SHED) who reported saving, saved for retirement or unexpected expenses, a slowly rising trend.
+And when 2016's figures are disaggregated by income, they change substantially.
+Under $40,000, 53% of respondents saved for unexpected expenses, compared to just 37% who saved for retirement.(UPDATE TO 2007)
+In addition, more than half of respondents with household income below $40,000 a year, and a quarter of those between \$40,000 and \$100,000 did not save at all.[@buchholz2016federal, 64-65]
 
 These understandings of housing as an asset are not foreign to homeowners.
+1982, the year following Reagan's Economic Recovery Tax Act, simultaneously saw a 35-year high for personal savings and 35-year low for mortgage equity withdrawal (MEW), as a percentage of disposable income.
+By 2005, these lows and highs had flipped.
+\@ref(fig:mew) shows the outstanding inverse relationship between the ratios of personal saving and MEW to disposable income.
+Further, mortgage equity has greater wealth effects than investments in stocks or bonds: XXXX found YYY more cents of every dollar of morgtage equity withdrawn.
+There is disagreement among economists as to the cause and level of this wealth effect, but the fact that this effect is greater than other financial holding is broadly agreed upon, and fits into the view that America has transitioned into a consumption- and import-oriented economy.
+
+```{r mew, fig.align='center', echo=FALSE, fig.cap="Personal saving and mortgage equity withdrawal as a percentage of disposable income."}
+include_graphics("figure/mew.png")
+```
 
 In fact, these understandings shape homeowners' political decisions.
 
