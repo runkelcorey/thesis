@@ -40,45 +40,73 @@ This refinement is motivated by historical facts about American saving habits.[@
 And when 2016's figures are disaggregated by income, they change substantially.
 Under $40,000, 53% of respondents saved for unexpected expenses, compared to just 37% who saved for retirement.(UPDATE TO 2007)
 In addition, more than half of respondents with household income below $40,000 a year, and a quarter of those between \$40,000 and \$100,000 did not save at all.[@buchholz2016federal, 64-65]
+Regardless of whatever official statistics can show the trends in labor market risk to be, it is the perception of homeowners that such risks necessitate savings.
 
-These understandings of housing as an asset are not foreign to homeowners.
+I argue that understanding the home doubly as an asset shapes homeowners' political decisions in light of their perceptions regarding risk, that how one plans to pay for such emergencies feeds into a person's politics.
+This claim is supported in no small part by the fact that homeowners are represented worldwide by conservative political parties.(REFERENCE NEEDED FROM ANSELL)
+Of course, it could simply be the case that high-income people, those who are more likely to own a home, tend to be more conservative.
+Or, perhaps those who own homes value its refuge from urban corruption, but the idea of leveraging one's home instrumentally for financial gain is equally vulgar to such a person's traditional social values.
+But these alternative narratives cannot embrace certain data points.
+
+Understandings of housing as an asset are not foreign to homeowners.
 1982, the year following Reagan's Economic Recovery Tax Act, simultaneously saw a 35-year high for personal savings and 35-year low for mortgage equity withdrawal (MEW), as a percentage of disposable income.
 By 2005, these lows and highs had flipped.
 \@ref(fig:mew) shows the outstanding inverse relationship between the ratios of personal saving and MEW to disposable income.
-Further, mortgage equity has greater wealth effects than investments in stocks or bonds: XXXX found YYY more cents of every dollar of morgtage equity withdrawn.
-There is disagreement among economists as to the cause and level of this wealth effect, but the fact that this effect is greater than other financial holding is broadly agreed upon, and fits into the view that America has transitioned into a consumption- and import-oriented economy.
+For at least the XX% of Americans who use home equity to finance personal consumption, housing expands opportunities.
 
 ```{r mew, fig.align='center', echo=FALSE, fig.cap="Personal saving and mortgage equity withdrawal as a percentage of disposable income."}
 include_graphics("figure/mew.png")
 ```
 
-In fact, these understandings shape homeowners' political decisions.
+While these effects are not unique to housing, they are most significant in housing.
+Mortgage equity exhibits greater wealth effects than investments in stocks or bonds: in other words, XXXX found households spend YYY more cents of every dollar of morgtage equity withdrawn compared to sales of traded financial assets.
+Economists disagree as to the cause and level of this wealth effect, but the fact that this effect is greater than other financial holdings is broadly agreed upon, and fits into the view that America has transitioned into a consumption- and import-oriented economy.
+Compounding the significance of housing wealth was the sheer size and volatility of housing.
+The American housing market is the largest consumer debt market in the world.
+From YEAR1 to YEAR2, American home prices grew X times faster than the stock market, with XX% the standard deviation.(ANSELL OR SCHWARTZ)
 
-These effects are not unique to housing, but they are most significant in housing.
+Subsidizing housing and home mortgages privatizes government spending otherwise recognizable as welfare.
+In doing so, the policies and implementations change how citizens view the state's role in their personal finances.
+More specifically, individuals' preferences for welfare depend "on how existing policies shape their experience of individual risk."[@gingrich2012preferences]
+A stronger claim would be that policies *train* beneficiaries, a view held by Emily Zackin and Isaac William Martin.
+He uses this mechanism to explain the great political diversity of organizers for Proposition 13 in California: HOMEOWNERS PROTECT THEIR WELFARE.(MARTIN 2008)
+At the local level, homeowners have long lobbied as a class, enclosing their neighborhoods from Black applicants, breaking fervent upzoning factions, and rejecting otherwise welcome industry.
+Thus, it should come as no surprise that homeowners react to direct and indirect subsidies in similar ways as they react to THINGS that would change their home values or lifestyles.
 
-This importance is due to the sheer size and volatility of housing since 1981.
-
-Additionally, housing in the United States is a particularly salient issue politically.
-
-Subsidizing housing and home mortgages privatizes government spending we would otherwise recognize as welfare.
-
-By privatizing, these subsidies individualize housing gains, differentiating this form of "invisible welfare" from the bureaucratic programs debated by the Republican and Democratic parties.
-
-Nonetheless, I argue they are substitutable for homeowners: preference for this private form of insurance reduces the demand for social insurance programs.
+By privatizing government spending, the subsidies offered by the Neighborhood Stabilization Program individualize housing gains, differentiating this form of "invisible welfare" from the bureaucratic programs debated by the Republican and Democratic parties.
+Visible welfare programs transfer individual risk to social risk,[@gingrich2012preferences] and make more equitable[@prasad2012land, 229] the public goods of a society (in the Rawlsian sense).
+These two features distinguish the welfare that is argued about on television from the welfare that is argued about in journals.
+The political scientist's point is that they are substitutable: preference for this private form of insurance reduces the demand for social insurance programs.
 
 Interesting to note is a sociological perspective of this phenomenon not as life-cycle analysis via Friedman, but as *embourgeoisiement*.
 
-Under the narrative pushed around 2010, income and spending are connected.
-Therefore, lower preference for social insurance expenditure justifies preferences for lower taxation.
+Then, the task for the individual political actor is simply to follow these preferences to their political implications by stepping back through the argument in \@ref(motive-opportunity).
+This argument says that, under the narrative of balanced budgets and concerns over the national debt, lower expenditure makes possible lower revenue.
+Therefore, lower preference for social insurance justifies preferences for lower taxation.
+Tea Party candidates espoused this logic, clearing a spot into which voter preferences could fit.
 
-As I explained in \@ref(motive-opportunity), these preferences represent as votes for Republican candidates, especially those in the Tea Party.
+However, it is important to understand that, just like the contingencies of party platforms, there are contingencies in how individuals process economic data and political propositions.
+Larry Bartels (2002) accepts this basic assumption while rejecting the idea that ideology or partisanship are static filters through which people see selectively.
+Rather, he argues, partisanship is a dynamic negotiation between partisanship as exogenous or endogenous variable.
+His Bayesian learning model presents a different model: people update beliefs as new information becomes available, but people also selectively intake information according to beliefs.[@bartels2002running]
+Disentangling the two sub-routines is difficult, if not impossible, but the rule of thumb is that long-held beliefs require [relatively] huge inconsistencies to catalyze change.
 
-It is important to understand that, just like the contingencies of party platforms, there are contingencies in how individuals process economic data.
-Partisanship affects how this process plays out; therefore, not all voters *could* (let alone *would*) be affected by asset prices.
+While the mortgage crisis, financial meltdown, and ensuing Great Recession delivered onto unsuspecting citizens heaps of information---much of it likely inconsistent with individual beliefs about meritocracy, personal financial stability, and government oversight---survey data suggests that the government response delivered similarly-sized heaps of information.
+Pew Research's American Values polling series has tracked opposition and support of various political positions since the late 1980s.[@kohut2012partisan]
+This longitudinal sureying shows sharp divergence between the economic beliefs of Democrats and Republicans *as well as* between independents who lean either way.
+For partisan divides, \@ref(fig:partisan_social) shows how Republican beliefs regarding social insurance regress to a conservative ideal more aggressively than both Democrats and independents.
+I split hairs over this behavior with Ansell (2012), that maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.[@ansellPoliticalEconomyOwnership2014, 387]
+This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle section) falls relative to Democratic support after 2007, independent support for maintaining (left section) or expanding (right section) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
+When these are combined with the polling on ideological slant, the Pew research offers a coherent picture of independent voting behavior between 2007 and 2012.
 
-Therefore, my model aims at marginal voters, THOSE LIKELY TO SWING ELECTIONS.
+\@ref(fig:ideological_social) shows how independents who lean towards a party compare with those parties on a number of political positions.
+The larger variance in positions for both sets of "leaners" shows how independents less consistently assimilate perceptions of evolving economic realities into their political positions.
+Those who identify as Republicans or Democrats are not swayed in their support for social safety net provisions by the eruption of financial and economic turmoil.
+In contrast, leaners towards both parties are strongly affected by its event, and even more strongly affected by the subsequent increase in spending and its surrounding rhetoric.
+Partisanship affects how individuals fit economic perceptions into their political positions; not all voters *could* (let alone *would*) be affected by something like rising home prices.
+Therefore, my model aims at marginal voters, those independents whose picture of the world is more open to alteration.
 
-And I expect the effects to be marginal, as the Neighborhood Stabilization Program likely enriched no one.
+And I expect the effects to be marginal, as the Neighborhood Stabilization Program really enriched no one.
 
 But the NSP featured little advertisement and received little press in return.
 
@@ -90,5 +118,5 @@ Additionally, the intimacy with foreclosure and bankruptcy both financially and 
 
 Is it likely that those nearing foreclosure understand the precarity of their financial position and the benefits of social insurance?
 
-Further, the Neighborhood Stabilization Program targeted neighborhoods rife with foreclosure---not individual homes.
+Further, the Neighborhood Stabilization Program targeted neighborhoods rife with foreclosure, not individual homes.
 Could physical distance alter voting decisions, regardless of wealth?
