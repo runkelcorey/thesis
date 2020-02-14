@@ -107,14 +107,44 @@ Partisanship affects how individuals fit economic perceptions into their politic
 Therefore, my model aims at marginal voters, those independents whose picture of the world is more open to alteration.
 
 And I expect the effects to be marginal, as the Neighborhood Stabilization Program really enriched no one.
+If each foreclosure costs, on average, $159,000 in decreased property values,[@immergluck2011foreclosed, 151] then each surrounding home value decreases by only a fraction of that number.
+Conversely, if a vacant property is fixed and resold, surrounding home values would only increase by a fraction.
+Additionally, the hefty oversight on the NSP targeted profiteering by local actors, preventing any get-rich-quick schemes.
+The Neighborhood Stabilization Program receives high marks methodologically from its under-the-radar nature: if voters knew, and could filter, their wealth gains through an ideological sieve, it could skew results.
+Rather, its small effects and lack of advertising[@2010guide, 5] (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
 
-But the NSP featured little advertisement and received little press in return.
+While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value equal amounts of money lost and gained.
+In behavioral economics and cognitive psychology, the endowment effect describes the premium that individuals place on ownership.
+Asked to trade one object given to them for another of equivalent exchange value, people demonstrate a marked preference for the object assigned to them.
+The endowment effect is tied to loss aversion, which is that people experience a dollar lost much more acutely than a dollar gained.[@kahneman1991anomalies]
+In the permanent income hypothesis, this behavior is not well integrated.
+Even with "buffer shocks" added in, the hypothesis asserts that wealth shocks will affect spending linearly.
 
-While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value an equal amount of money lost and gained.
+To give a concrete example, consider a home worth $100,000 in 2000.
+If that home increased in value \$50,000, a marginal propensity to consume (MPC)---the economist's term for the extra spending per dollar---of .06 would predict that $.06 \times \$50,000 = \$3,000$ of extra consumption would result.
+However, what if that home decresed in value $50,000?
+Would spending decrease $3,000?
+It seems unlikely that, in the midst of an event labeled as a 'crisis' or the 'Great Recession', spending would not decrease even more dramatically, and would be reluctant to rise for fear that momentary gains would be washed away by another crashing wave of home prices.
+Or, maybe contractions exhibit a linear relationship with the *rate* of price changes, but a second relationship results from the endowment effect.
+In this second case, consumption is a function not only of price changes, but also of net positions: a homeowner spends freely so long as their home is worth more than their original purchase price, but is averse or highly-sensitive to dips below the original price.
+Sorting out these ambiguities will be the focus of the rest of this chapter.
 
-This confusion collides with the ambiguity between the change in wealth and the absolute value of wealth.
+Angrisani et al. (2019) demonstrated that the marginal propensity to consume changed during the recession (2008-2010) from its run-up (2005-2008).
+That these dates do not align perfectly with those of the foreclosure crisis (2007-2012) is not significant; these dates contain the three phases of the Neighborhood Stabilization Program as well as the 2010 midterms, and overlap significantly with the foreclosure crisis.
+Angrisani et al. used an instrumental variables approach to estimate the MPC of non-recessionary periods to be statistically insignificant, while that of the recession to be 0.062.[@angrisani2019effect, 986]
+His finding that non-recessionary periods exhibit no marginal propensity to consume is suspect---indeed, this effect underpins most of the work on housing wealth effects pre- and post-crisis.[@greenspan2007sources; @lasky2007housing; @mianPoliticalEconomyUS2010; @schwartz2009subprime]
+However, Angrisani et al. is the only approach I have found that disaggregates housing wealth MPC before and after the crisis in the familiar permanent income hypothesis framework.
+
+Further, its findings are buttressed by two other pieces of literature.
+The first is the body of work on endowment effects and the psychological costs of loss versus gain.
+Angrisani et al. acknowledges this by saying "If, as documented in previous work, wealth losses are more likely to induce changes in behavior than gains, our estimates may reflect a more pronounced sensitivity of household spending to falling house values."[@angrisani2019effect, 987]
+The second piece is the work done by Berger et al.
+This paper understands data that points to large consumption effects as running contrary to the permanent income hypothesis, which predicts that wealth shocks will be amortized over an individuals' lifetime.
+They then build a new model that attempts to model homeowener expectations based on realistic features of the housng market such as debt levels, collateralization, and variable home price expectations.
+These features result in larger marginal propensities to consume, and larger effects of lost wealth than gained wealth.[@berger2016house]
 
 Additionally, the intimacy with foreclosure and bankruptcy both financially and sociologically may factor into this analysis.
+- social contact
 
 Is it likely that those nearing foreclosure understand the precarity of their financial position and the benefits of social insurance?
 
