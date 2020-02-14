@@ -143,6 +143,13 @@ This paper understands data that points to large consumption effects as running 
 They then build a new model that attempts to model homeowener expectations based on realistic features of the housng market such as debt levels, collateralization, and variable home price expectations.
 These features result in larger marginal propensities to consume, and larger effects of lost wealth than gained wealth.[@berger2016house]
 
+The upshot this literature yields for my analysis is that neighborhoods not targeted by the Neighborhood Stabilization Program should see consumption decrease greater from the bust than consumption increased from the boom.
+This behavior should heighten labor market risk, meaning that, in untargeted areas, lower Republican support should be present.
+An additional---but less controversial---tension to consider is the relationship between change of wealth and total position of wealth.
+In general, the marginal propensity of wealth decreases as individuals get wealthier.[@arrondel2015wealth]
+While there is some squirreliness regarding housing MPC at the very high end of the wealth distribution (second and third homes may truly be just assets, so the purpose would be extra consumption), given the size and location of such high wealth individuals, it is unlikely the Neighborhood Stabilization Program affected those individuals' houses.
+This result implies that those tracts targeted by the NSP should be especially sensitive to its marginal price increases and therefore exhibit higher Republican voting returns.
+
 Additionally, the intimacy with foreclosure and bankruptcy both financially and sociologically may factor into this analysis.
 - social contact
 
