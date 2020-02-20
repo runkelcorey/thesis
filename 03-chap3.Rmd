@@ -26,6 +26,7 @@ To give handles which readers can grasp, I will simultaneously describe the meas
 This chapter stands logically between my last two.
 It describes how the financial crisis---whose characteristics were explored in \@ref(actors-motive)---mutated individual preferences, preferences which could then be located in the political landscape described in \@ref(motive-opportunity).
 
+## The Role of Home Prices {#home-prices}
 At base, I describe individual consumption preferences from a life cycle/permanent income perspective.
 Milton Friedman opened his foundational work in life-cycle analysis by noting "Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income."[@friedman1957introduction, 1]
 Keynes understood economic fluctuations and crises as products of the past and present, as gluts or dearths of savings.[@keynes2007general]
@@ -127,7 +128,6 @@ Would spending decrease $3,000?
 It seems unlikely that, in the midst of an event labeled as a 'crisis' or the 'Great Recession', spending would not decrease even more dramatically, and would be reluctant to rise for fear that momentary gains would be washed away by another crashing wave of home prices.
 Or, maybe contractions exhibit a linear relationship with the *rate* of price changes, but a second relationship results from the endowment effect.
 In this second case, consumption is a function not only of price changes, but also of net positions: a homeowner spends freely so long as their home is worth more than their original purchase price, but is averse or highly-sensitive to dips below the original price.
-Sorting out these ambiguities will be the focus of the rest of this chapter.
 
 Angrisani et al. (2019) demonstrated that the marginal propensity to consume changed during the recession (2008-2010) from its run-up (2005-2008).
 That these dates do not align perfectly with those of the foreclosure crisis (2007-2012) is not significant; these dates contain the three phases of the Neighborhood Stabilization Program as well as the 2010 midterms, and overlap significantly with the foreclosure crisis.
@@ -150,10 +150,59 @@ In general, the marginal propensity of wealth decreases as individuals get wealt
 While there is some squirreliness regarding housing MPC at the very high end of the wealth distribution (second and third homes may truly be just assets, so the purpose would be extra consumption), given the size and location of such high wealth individuals, it is unlikely the Neighborhood Stabilization Program affected those individuals' houses.
 This result implies that those tracts targeted by the NSP should be especially sensitive to its marginal price increases and therefore exhibit higher Republican voting returns.
 
-Additionally, the intimacy with foreclosure and bankruptcy both financially and sociologically may factor into this analysis.
-- social contact
+<!--Additionally, the intimacy with foreclosure and bankruptcy both financially and sociologically may factor into this analysis.
+- social contact theory
+- need price data in order to disaggregate presence of foreclosure from wealth effects of foreclosure?
+-- could use same density X foreclosure statistic to get at that
+-->
 
-Is it likely that those nearing foreclosure understand the precarity of their financial position and the benefits of social insurance?
+## Controlling Characteristics {#controls}
 
-Further, the Neighborhood Stabilization Program targeted neighborhoods rife with foreclosure, not individual homes.
-Could physical distance alter voting decisions, regardless of wealth?
+I turn now to more general models of American congressional voting.
+Congressional voting returns will be the object of analysis in my next chapter, so it is important to isolate the effects of the Neighborhood Stabilization Program.
+These variables will control for much of the variation in voting between districts.
+I lump these variables broadly into three categories: visible identity, including race and age; economic identity, including income and unemployment; and cultural identity, including measures of urbanicity as well as religion.
+This breakdown acts purely for organizational purposes as the blur between visible, economic, and cultural should make clear.
+
+
+### Visible Identity
+
+Visible identities are those which are involuntarily imposed upon subjects.
+They press, as Kwame Anthony Appiah, notes, as WALLS ON A SELF.
+Since many of these identities have become legally protected categories in the United States, their records are kept precisely and publicly.
+The upshot of this feature is that records are easily available, but this availability may lead to an overestimation of their effects on voting, as researchers look where the light shines instead of where their object of interest may be found.
+On the other hand, while Republican voting support may have counter-intuitive logic that necessitates complex research methodologies, rational explanations for identity-based support are often at hand in visible identities.
+
+Support by a preponderance of the members of a race can deliver many examples of rational support.
+For instance, Black voters long supported the Republican Party as the party of Abraham Lincoln, Congress' first Black legislators, and as proponents of programs benefitting African Americans.
+This support changed decisively with the Civil Rights Movement.
+Some of the United States' pre-eminent segregationists were staunch Democrats, but federal action by Lyndon B. Johnson and subsequent campaigning by Richard Nixon effectively broke the South.
+In the contemporary Democratic Party, redistributionist welfare programs aligned with integration to remedy both the economic and social disparities between white and Black Americans, turning the Democratic Party towards the majority of African Americans.
+This rational support has been born out in historical voting data.
+INSERT HISTORICAL VOTING DATA
+
+A similar story cannot be told for American Indians, Asian Americans, or ethnically Hispanic Americans, but each has their *own* story with the Republican or Democratic parties.
+While American Indians have comprised a small percentage of the United States voting population, a fact owing to their legal disenfranchisement and decimation by civilian and military forces, their vote swings heavily Democratic.
+This behavior is not due to historical reasons---no party has represented Indian issues at the national scale---but to reactions for the supply of social welfare programs.
+XX% of reservation residents receive some form of direct benefits from the federal government, while the income gap between those who self-identify as American Indian and not--American Indian stands at Y:Y.
+While their turnout rates and absolute population size is low, including a variable for their population could explain the voting behavior of census tracts where reservations are located.
+
+The stories of Asian Americans and ethnically Hispanic Americans are perhaps the most fractured among racial political narratives.
+The "Hispanic vote" is often pointed to as a core aspirational piece of the Democratic coalition, though Democratic candidates maintain a checkered record in attracting and serving ethnically Hispanic voters.
+Nonetheless, there are compelling reasons to include a measure of Hispanic voters.
+Until a certain point, an increased Hispanic population raises fears of white job loss, increasing conservative---and especially Tea Party---voting.(REFERENCE NEEDED)
+Interestingly, Republicans used housing policy as a way to attract Hispanic voters.
+With more than XX% of Hispanic people living in America identifying themselves as Catholic, adding government transfers to conservative social values would further cement the YY% of the "Hispanic vote" achieved by Republicans in the 2004 presidential election.
+
+
+
+-race
+--Black
+--Hispanic
+--Asian
+-religion
+-age
+--median vs. old ppl
+-urbanicity?
+
+## A Model of Voting {#model}
