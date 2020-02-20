@@ -96,7 +96,7 @@ While the mortgage crisis, financial meltdown, and ensuing Great Recession deliv
 Pew Research's American Values polling series has tracked opposition and support of various political positions since the late 1980s.[@kohut2012partisan]
 This longitudinal sureying shows sharp divergence between the economic beliefs of Democrats and Republicans *as well as* between independents who lean either way.
 For partisan divides, \@ref(fig:partisan_social) shows how Republican beliefs regarding social insurance regress to a conservative ideal more aggressively than both Democrats and independents.
-I split hairs over this behavior with Ansell (2012), that maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.[@ansellPoliticalEconomyOwnership2014, 387]
+I split hairs over this behavior with Ansell (2014), that maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.[@ansellPoliticalEconomyOwnership2014, 387]
 This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle section) falls relative to Democratic support after 2007, independent support for maintaining (left section) or expanding (right section) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
 When these are combined with the polling on ideological slant, the Pew research offers a coherent picture of independent voting behavior between 2007 and 2012.
 
@@ -185,24 +185,64 @@ A similar story cannot be told for American Indians, Asian Americans, or ethnica
 While American Indians have comprised a small percentage of the United States voting population, a fact owing to their legal disenfranchisement and decimation by civilian and military forces, their vote swings heavily Democratic.
 This behavior is not due to historical reasons---no party has represented Indian issues at the national scale---but to reactions for the supply of social welfare programs.
 XX% of reservation residents receive some form of direct benefits from the federal government, while the income gap between those who self-identify as American Indian and not--American Indian stands at Y:Y.
-While their turnout rates and absolute population size is low, including a variable for their population could explain the voting behavior of census tracts where reservations are located.
+While their turnout rates and absolute population size is low, including a variable for their population could explain the voting behavior of Census Tracts where reservations are located.
+I will employ a binary cut-off metric: should a Census Tract contain a large population of Native Americans (25%, for instance, compared to the national average of 0.9%), then that tract would be labeled as such.
 
 The stories of Asian Americans and ethnically Hispanic Americans are perhaps the most fractured among racial political narratives.
 The "Hispanic vote" is often pointed to as a core aspirational piece of the Democratic coalition, though Democratic candidates maintain a checkered record in attracting and serving ethnically Hispanic voters.
 Nonetheless, there are compelling reasons to include a measure of Hispanic voters.
 Until a certain point, an increased Hispanic population raises fears of white job loss, increasing conservative---and especially Tea Party---voting.(REFERENCE NEEDED)
+As white voters compose between 60% and 70% of the national electorate, fears inflected through them lead to significant effects.
 Interestingly, Republicans used housing policy as a way to attract Hispanic voters.
 With more than XX% of Hispanic people living in America identifying themselves as Catholic, adding government transfers to conservative social values would further cement the YY% of the "Hispanic vote" achieved by Republicans in the 2004 presidential election.
+Therefore, while the motives for voting Republican by Hispanics are complex, the reasons do not cancel out one another.
 
+On the other hand, Asian Americans have pushed back against the "Model Minority" myth to contextualize the fact that Asian Americans---come their families (or they) from India, China, Vietnam, Japan, Korea, Iran, Uzbekistan, or the Philippines---make on average $Z,ZZZ more than the average white household.
+Across historical, religious, and cultural factors, it is arguable that Asian Americans are the most heterogeneous group of immigrants, which makes their inclusion in Ben Ansell's 2014 paper puzzling.
+Given the contemporaneous heterogeneity of voting patterns by Asian Americans, and the shifting patterns of ethnicities throughout time, I find little reason for their inclusion in this model.
 
+Lastly, age comes into play as a proxy for an invisible identity, that of retiree.
+Fixed-income voters are highly sensitive to home price increases, because asset prices are the only variable piece of their budget.
+Additionally, a wealth change amortized over a shorter lifespan will present as higher average income, and therefore consumption.
+Rather than use the median or average age of the U.S. population, the decennial Census tracks the number of people in five-year bins.
+Therefore, I use the percentage of people 60 years of age or older---401(k) plans can be cashed out tax-free after age 59 1/2---to estimate the amount of retirees (or those whose thoughts are largely on retirement).
+Additionally, older Americans generally hold more conservative social views.
+In my view, these forces cannot be disentangled without microdata on labor force participation, which could distinguish a retiree from an old person.
 
--race
---Black
---Hispanic
---Asian
--religion
--age
---median vs. old ppl
--urbanicity?
+### Economic Identity
+
+To isolate labor market risk from income, I will use both the median household income as well as the *change* in median household income.
+The change offers a truer picture of employment becoming underemployment and resolves a problem presented by using the unemployment rate: the HUD estimates of foreclosure rate use the unemployment rate as a predictor of foreclosures.
+Inclusion in the model would re-isolate unemployment from the estimated foreclosure rate, and bias the estimation of the foreclosure rate's significance on voting in an indeterminate manner.
+However, the 2010 Neighborhood Stabilization Program uses only the *change* in unemployment rate, leaving open the unemployment rate as a predictor.
+The inclusion of this predictor captures effects contemporaneous to the election while avoiding the modeling problems described above.
+
+Additionally, the Census Bureau tracks homeownership rate.
+At first glance, the inclusion of the 2010 homeownership rate would appear to come at an inopportune time, as the very fluctuations in the homeownership rate are captured in the foreclosure rate.
+But this capture is only partial, and, furthermore, the foreclosure rate tells nothing about the absolute levels of homeownership.
+Homeownership is associated with conservative voting around the world, and the effects of social capital are well-researched.[@stern2013dark]
+
+### Cultural Identity
+
+Three primary factors flavor voting at the cultural level: religion, urbanicity, and highest level of education attained.
+Within these factors, which are so grouped because they are in some sense voluntarily elected by the person to which the characteristics are attached, specific levels are significantly associated with Republican voting, while other levels are a mixed bag.
+Religion exemplifies this relationship.
+Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion.
+The U.S. Religion Census reports county-level data on adherents to a huge number of denominations, and is the only sub-national source for all fifty states.
+Conducted contemporaneously with the decennial census (though not connected, organizationally), I will join county-level statistics regarding the level of evangelical Protestants and members of LDS to the Census Tract level.
+
+Additionally, the urban-rural divide has been noted as a political cleavage.
+Lower-density areas provide fewer international transportation options, educational/translation resources, and less name recognition than do large cities.
+The populations of many rural areas is implicitly limited by agricultural or industrial land holdings that prevent large turnover of residents.
+And on the side of push factors, residents of rural areas are often more religious than their urban counterparts, find traditional social institutions more important, and are generally older than cities and suburbs.
+These factors do not imply that those areas are in stasis, but rather that the rigidity of beliefs is compounded by the institutions and political economy of rural areas.
+These beliefs, in long historical sweep, are generally better represented by conservative legislators currently residing in the Republican party.
+
+Lastly, the highest level of education attained is a huge predictor of one's party affiliation.
+Pew Research has tracked party identification by education level, indicating that the white vote cleaves once introducing education level.
+Pursuant to this fact, I will puruse both education level multiplied by percentage of population white as a predictor.
 
 ## A Model of Voting {#model}
+
+The discussion above leaves me with a model of Republican voting:
+$rep_i = \beta_0 + \beta_1forq_i + \beta_2Black_i  + \beta_3AmerIndian_i + \beta_4urbanicity_i + \beta_5evang_i + \beta_6lds_i + \beta_7Hispanic_i + \beta_8medHHI_i + \beta_9chgHHI_i + \beta_{10}ownhome_i + \beta_{11}unem10_i + \beta_{12}old_i + \beta_{13}(somecol_i \times white_i) + \epsilon$
