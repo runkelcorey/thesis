@@ -253,4 +253,4 @@ Due to the racial nature of this variable, I will puruse education level *multip
 ## A Model of Voting {#model}
 
 The discussion above leaves me with a model of Republican voting:
-$rep_i = \beta_0 + \beta_1forq_i + \beta_2Black_i  + \beta_3AmerIndian_i + \beta_4urbanicity_i + \beta_5evang_i + \beta_6lds_i + \beta_7Hispanic_i + \beta_8medHHI_i + \beta_9chgHHI_i + \beta_{10}ownhome_i + \beta_{11}unem10_i + \beta_{12}old_i + \beta_{13}(somecol_i \times white_i) + \epsilon_i$
+$rep_i = \beta_0 + \beta_1forq_i + \beta_2Black_i  + \beta_3AmerIndian_i + \beta_4density_i + \beta_5evang_i + \beta_6lds_i + \beta_7Hispanic_i + \beta_8Hispanic^2_i + \beta_9medHHI_i + \beta_{10}ownhome_i + \beta_{11}unemchange_i + \beta_{12}old_i + \beta_{13}(somecol_i \times white_i) + \epsilon_i$
