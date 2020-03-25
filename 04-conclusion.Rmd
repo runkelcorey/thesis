@@ -17,7 +17,7 @@ It imputed that, if there existed sentiments favoring less social insurance, fol
 While Ansell's assumption that there were no significant confounding factors may have been correct, his methodology was not rigorous, as it neglected the middle step of actually voting for politicians inclined towards such measures.
 My approach searches for just that---votes associated with housing prices and/or foreclosure relief policies.
 
-Data complete with every variable in my model was available for 53.7% of the populated census tracts of 24 states, including 54.8% of those census tracts where a self-described member of the Tea Party ran for election.
+Data complete with every variable in my model was available for 53.7% of the inhabited census tracts of 24 states, including 54.8% of those census tracts where a self-described member of the Tea Party ran for election.
 Most of the remaining census tracts belonged to states where it was not feasible to connect voting returns with census geography.
 For instance, Michigan does not make clear the links between a voting tabulation district (VTD) as the Census Bureau defines it, and the county-precinct-ward system the state uses to publicize its results.
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
@@ -30,7 +30,8 @@ To understand the construction of this novel dataset, it is important to first u
 
 ## Relationships between statistical geographies {#census-geography}
 The basic Census geography runs as follows (see Figure \@ref(fig:geography) for the Census Bureau's graphical representation).
-The basic unit, blocks, are designed for Census takers to walk; they are optimized for population but constrained by physical boundaries difficult or illogical to cross.
+The basic unit, blocks, were originally designed for Census takers to walk, and were constrained by physical boundaries difficult or illogical to cross.
+However, since the Bureau undertook to cover the *entire* United States with census blocks, there are millions of census blocks with no inhabitants, covering lakes, parks, and barren landscapes; this fact will become important shortly.
 Blocks are then aggregated into census tracts (my unit of analysis): tracts contain between 1,200 and 8,000 people, and are the smallest unit for which American Community Survey data---such as median household income and educational attainment---are published.
 Census tracts sit inside counties and then inside states; unlike tracts and blocks, county boundaries are also legal jurisdictions and therefore rarely change.
 
@@ -69,9 +70,56 @@ Collecting and translating precinct-level voting data to census tracts proved to
 I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA),[@ansolabehere2014precinctlevel] started in 2008 by political science researchers.
 This database compiled voting returns from most states and reported results for state and national races in a standardized format.
 
-I then wedded these figures to files specifying the geographic boundaries of each voting precinct within a state.
-At this stage saw the complete loss of several states' data as the system used to identify precincts at the state-level was inconsistent with Census Bureau naming conventions.
-For each state, I looked for an isomorphic mapping between geographic specifications and voting returns, and only for links where the match was clear were the data used.
+These figures were then wedded to files specifying the geographic boundaries of each voting precinct within a state.
+At this stage saw the complete loss of several states' data as some systems used to identify precincts at the state-level were inconsistent with Census Bureau naming conventions.
+For each state, I looked for an isomorphic mapping from state-level naming to the standardized naming of the Census Bureau or Harvard Election Data Archive, and only for links where the match was clear were the data used.
 Case in point was Maryland: the voting returns data clearly contained every single specified tract in Maryland, but matching algorithms could only identify a few hundred of the several thousand voting districts.
-Geographic files came primarily from the Census Bureau's TIGER/Line redistricting project, the official database for all Census geography,[@20122010] via the Election-Geodata mapping project, an open-source repository for redistricting data.[@kelso2020nvkelso]
+Geographic files came primarily from the Census Bureau's TIGER/Line redistricting project, the official database for all Census geography,[@20122010] via the Election-Geodata mapping project, an open-source repository for redistricting data,[@kelso2020nvkelso] though, as alluded to above, some states' geographic files were also compiled by HEDA.
 
+Translating the voting precincts to Census geography was a complicated process of decomposition and recomposition.
+Since Census tracts often straddle two voting precincts, distributing votes to particular tracts relies on ecological methods, essentially peeling off the part of a precinct lying in one tract and stitching it together with parts of the other precincts that also coincide with a tract.
+This process generates Frankenstein tracts, where 20% of one precinct's votes are summed with 100% of a second precinct's votes and 3% of a third precinct's votes, depending on how much of a precinct coincides with a tract.
+Since the voting records of these tracts are purely statistical constructions, it is perfectly fine that one have fractions of votes.
+Take again, for example, our tract 12099005947 in Palm Beach County Florida: it recorded 732.00 Repulican votes out of 3114.00 total votes in the 2010 Congressional race.
+But it's neighbor, tract 12099005949, recorded 461.85 Republican votes against 1414.25 total votes.
+Figure \@ref(fig:palmbeach) shows how this geometry is possible.
+
+There are, however, more than one ways to cut a census tract.
+The obvious way to slice census tracts is by geography: the spatial intersection forms the basis for dividing up votes.
+The better way to slice census tracts is by voting-age population: the intersection of eligible people forms the basis for dividing up votes.
+This method better leverages even more granular data that the Census Bureau publishes to partially overcome ecological approximations and account for differing population densities *within* tracts.
+The way tracts in exurban and coastal areas are created necessitates this approach.
+Ideal census tracts *are* fairly homogenous in terms of density, as it is the goal of the Census Bureau to preserve neighborhoods and actual street blocks where possible.
+In contrast, tracts containing blocks where population density begins to shift can be quite irregular.
+Since tract size is constrained by population, tracts not only *can* subsume those zero-population blocks I mentioned earlier, but *must* subsume some uninhabited blocks.
+
+Public Law 94-171 (PL 94-171) ensures that the Congressional districting mandate of equally-populated districts be met with small-area population counts.
+In addition, requirements of the Voting Rights Act pressed states to consider the racial makeup of their Congressional districts.
+Since these are governmental tabulations, the population counts were required to be public.
+I drew from these data tables, comprising every block in the United States, in order to divide up census tracts.
+The advantage from data granularity is large: half of the 11,166,336 census blocks in 2010 were smaller than a tenth of a square mile---Charlottesville itself contains XXX census blocks.
+
+Then, to distribute portions of voting precincts to tracts, I counted how many census blocks from each particular tract lay within each precinct.
+For computational reasons, the relevant statistic here was the block's spatial center rather than its nuanced boundaries.
+Since blocks are so small, and voting precincts are supposed to be fashioned from census blocks (known exceptions exist in a handful of states), using the entire boundaries of a block would likely have generated errors that had more to do with the resolution of downloadable mapping files than actual, in-practice boundaries.
+Summing up the voting-age population (the census does not ask about citizenship status or felonius histories) of those blocks that lay within a particular precinct, and then comparing that figure to the total voting-age population of said precinct, allocates the percentage of votes from a precinct to a tract.
+This method is represented formally in \@ref(eq:vtd), where t represents a particular tract, p a precinct from the set P of precincts intersecting with that particular tract, and b a block from the set B of blocks within that particular precinct:
+
+\begin{equation}
+votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_b}{\sum_{b=1}^{B}}
+(\#eq:vtd)
+\end{equation}
+
+To recap, this process first decomposes precincts P into blocks B, and then recomposes precincts from tracts T each with particular allocations of votes according to their relative share of the total precinct population.
+
+In this dataset, each tract's votes were calculated by this method, with the exception of Californian tracts.
+The Redistricting Database for the State of California, hosted at the University of California Berkeley School of Law, had already performed a more precise version of this process using voting registration records.[@20112010]
+Voter registration records allow researchers to locate each address---and thus each resident voter---precisely within tracts and precincts.
+A more careful version of my analysis would implement such methods, as the time required to aggregate each state's registration records exceeded my timeframe.
+
+A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure and unemployment data,[@2008neighborhood; @cody2010neighborhood; @defilippo2009nsp2] which was tabulated at the 2000 tract- and block group--level.
+The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
+I first decomposed 2000 tracts by the percentage of housing units intersecting with a particular 2010 tract, and then recomposed those 2010 tract figures by allocating foreclosure starts and total housing units according to the percentage each 2010 tract contained.
+
+Lastly, data from the 2010 US Religion Census: Religious Congregations and Membership Study is collected only at the county-level.
+Since tract geography follows county geography, I simply joined those county figures to each tract, taking the county average as the tract-level average.
