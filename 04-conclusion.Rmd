@@ -97,7 +97,7 @@ Public Law 94-171 (PL 94-171) ensures that the Congressional districting mandate
 In addition, requirements of the Voting Rights Act pressed states to consider the racial makeup of their Congressional districts.
 Since these are governmental tabulations, the population counts were required to be public.
 I drew from these data tables, comprising every block in the United States, in order to divide up census tracts.
-The advantage from data granularity is large: half of the 11,166,336 census blocks in 2010 were smaller than a tenth of a square mile---Charlottesville itself contains XXX census blocks.
+The advantage from data granularity is large: half of the 11,166,336 census blocks in 2010 were smaller than a tenth of a square mile[@2015fcc, 1]---Charlottesville itself contains 803 census blocks, averaging 54.14 persons.[@20112010b]
 
 Then, to distribute portions of voting precincts to tracts, I counted how many census blocks from each particular tract lay within each precinct.
 For computational reasons, the relevant statistic here was the block's spatial center rather than its nuanced boundaries.
@@ -121,5 +121,23 @@ A similar process of decomposition followed by recomposition was used for the De
 The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
 I first decomposed 2000 tracts by the percentage of housing units intersecting with a particular 2010 tract, and then recomposed those 2010 tract figures by allocating foreclosure starts and total housing units according to the percentage each 2010 tract contained.
 
-Lastly, data from the 2010 US Religion Census: Religious Congregations and Membership Study is collected only at the county-level.
-Since tract geography follows county geography, I simply joined those county figures to each tract, taking the county average as the tract-level average.
+Lastly, data from the 2010 US Religion Census is collected only at the county-level.[@grammich2018religion]
+Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average is used.
+All other data used were native to the 2010 tract level, without translation.
+These data were primarily from the 2010 decennial census, with some additional information from the 2005-2009 American Community Survey.
+American Community Survey data comes attached with margins of error, but, no other variables had these margins of error.
+In the interest of time and observations, I took the Census Bureau at their word that errors were distributed evenly.
+
+The only data natively at the 2010 tract level from outside the Census Bureau were house price indices calculated by the Federal Housing Finance Agency.
+Those data were constructed from tens of millions of federally-financed home loans.
+By virtue of that source, the indices are *only* composed of prime mortgages.
+However, two factors work in my favor here.
+First, significantly more prime mortgages than subprime mortgages defaulted during the foreclosure crisis.[@ferreira2015new]
+Second, the FHFA's index only considers properties with at least 100 sales (and purchases).
+This feature matters because housing prices are strongly spatial dependent: nearby homes with nonconforming mortgages will likely sell for similar amounts as homes with conforming mortgages.
+Still, this limitation means that some tracts with high levels of nonconforming loans were ommitted.
+There are many neighborhoods, for instance, with complete homogeneity of conforming or nonconforming loans, enclaves
+often connected by mortgage brokers who handled large numbers of subprime loans or specific developments.[@dayenChainTitleHow2016]
+The political behavior of these developments is interesting due to their uniformity, but beside the aims of this thesis.
+
+## Data Analysis {#analysis}
