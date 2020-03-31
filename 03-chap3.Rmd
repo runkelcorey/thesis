@@ -94,7 +94,7 @@ I split hairs over this behavior with Ansell (2014), that maintains it is self-i
 This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle section) falls relative to Democratic support after 2007, independent support for maintaining (left section) or expanding (right section) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
 When these are combined with the polling on ideological slant, the Pew research offers a coherent picture of independent voting behavior between 2007 and 2012.
 
-\@ref(fig:ideological_social) shows how independents who lean towards a party compare with those parties on a number of political positions.
+Figure \@ref(fig:ideological_social) shows how independents who lean towards a party compare with those parties on a number of political positions.
 The larger variance in positions for both sets of "leaners" shows how independents less consistently assimilate perceptions of evolving economic realities into their political positions.
 Those who identify as Republicans or Democrats are not swayed in their support for social safety net provisions by the eruption of financial and economic turmoil.
 In contrast, leaners towards both parties are strongly affected by its event, and even more strongly affected by the subsequent increase in spending and its surrounding rhetoric.
