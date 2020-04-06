@@ -10,6 +10,7 @@
 % May 2005 Patrick Carlisle Table of contents chapter definition
 % 2004-2005 Ben Salzberg (BTS) a variety of tweaks here and in the template
 % 2015 Chester Ismay (CII) modified to create R Markdown template
+% 2020 Corey Runkel modified to create UVA R Markdown template
 %
 % Oddities:
 %
@@ -24,7 +25,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{reedthesis}[2004/01/27 The Reed College Thesis Class]
+\ProvidesClass{psthesis}[2020/04/20 University of Virginia PST Thesis Class]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 \LoadClass{book}
@@ -32,6 +33,8 @@
 % Added by CII to produce nice looking code in BeginVerbatimEnvironment
 \RequirePackage{fancyvrb}
 
+% Added by Corey Runkel to get the width of line under which the advisor name sits
+\usepackage{calc}
 % Added by CII
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
@@ -104,12 +107,13 @@
 % This gives us rules below the headers
 \AtBeginDocument{%
   \fancyhf{}
-  \fancyhead[LE,RO]{\thepage}
+  \fancyhead[R]{\thepage}
 %  \fancyhead[RE]{\slshape \leftmark}
 %  \fancyhead[LO]{\slshape \rightmark}
 %	The above makes your headers in all caps. If you would like different headers, choose one of the following options (be sure to remove the % symbol from both the right and left headers):
-	 \fancyhead[RE]{\slshape \nouppercase \leftmark} % This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
-	\fancyhead[LO]{\slshape \nouppercase \rightmark} % This does the same thing to the LEFT side pages
+	 \fancyhead[L]{\slshape \nouppercase{Runkel}}
+	 \fancyhead[C]{\slshape \nouppercase \leftmark}% This makes the headers on the RIGHT side pages be italic and use lowercase With Capitals When Specified.
+%	\fancyhead[LO]{\slshape \nouppercase \leftmark} % This does the same thing to the LEFT side pages
 %	or
 %	\fancyhead[RE]{\scshape \leftmark} % The RIGHT headers will be in small caps.
 %	\fancyhead[LO]{\scshape \rightmark} %  And so will the LEFT headers
@@ -174,13 +178,14 @@
 \renewcommand{\cleardoublepage}{\RTcleardoublepage}
 
 % adjust margins for binding  (changed 2007-04-24 tgp)
-\setlength{\oddsidemargin}{.5in}
-\setlength{\evensidemargin}{0in}
+\setlength{\oddsidemargin}{.25in}
+\setlength{\evensidemargin}{1.25in}
 \setlength{\textwidth}{6.0in}
-\setlength{\textheight}{9.0in}
-\setlength\topmargin{0in}
+\setlength{\textheight}{8.5in}
+%\setlength\topmargin{0.5in}
 \addtolength\topmargin{-\headheight}
 \addtolength\topmargin{-\headsep}
+\setlength{\footnotesep}{2pt}
 
 %\setlength{\oddsidemargin}{.6in}
 %\setlength{\evensidemargin}{0in}
@@ -201,6 +206,8 @@
 \def\@division{\@latex@warning@no@line{No \noexpand\division given}}
 \def\department#1{\gdef \@department{#1}}
 \def\@department{\@latex@warning@no@line{No \noexpand\department given}}
+\def\computingid#1{\gdef \@computingid{#1}}
+\def\@computingid{\@latex@warning@no@line{No \noexpand\computingid given}}
 \def\thedivisionof#1{\gdef \@thedivisionof{#1}}
 \def\@thedivisionof{The Division of}
 \def\approvedforthe#1{\gdef \@approvedforthe{#1}}
@@ -230,27 +237,6 @@
     \endgroup
   \fi}
 
-%%% Added by CII
-\newenvironment{acknowledgements}{%
-  \if@twocolumn
-    \@restonecoltrue\onecolumn
-  \else
-    \@restonecolfalse
-  \fi
-  \chapter*{Acknowledgements}
-  \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
-
-\newenvironment{preface}{%
-  \if@twocolumn
-    \@restonecoltrue\onecolumn
-  \else
-    \@restonecolfalse
-  \fi
-  \chapter*{Preface}
-  \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
-% End of CII add
 
 \newenvironment{abstract}{%
   \if@twocolumn
@@ -262,23 +248,13 @@
   \fontsize{12}{14}\selectfont
 }{\clearpage \if@restonecol\twocolumn\fi}%
 
-\newenvironment{dedication}{%
-  \if@twocolumn
-    \@restonecoltrue\onecolumn
-  \else
-    \@restonecolfalse
-  \fi
-  \chapter*{Dedication}
-  \fontsize{12}{14}\selectfont
-}{\clearpage \if@restonecol\twocolumn\fi}%
-
 
 \ifx\@pdfoutput\@undefined
   \newcommand{\RTpercent}{\@percentchar\space}
-  \AtBeginDvi{\special{!\RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
-  \AtBeginDvi{\special{rawpostscript \RTpercent Reed College LaTeX Thesis Class 2001/12/04 SN}}
+  \AtBeginDvi{\special{!\RTpercent University of Virginia PST Thesis Class 2020/04/20}}
+  \AtBeginDvi{\special{rawpostscript \RTpercent University of Virginia PST Thesis Class 2020/04/20}}
 \else
-  \AtEndDocument{\pdfinfo{/Creator	(Reed College LaTeX Thesis Class 2001/12/04 SN)}}
+  \AtEndDocument{\pdfinfo{/Creator	(University of Virginia PST Thesis Class 2020/04/20 CR)}}
 \fi
 
 % I hacked the title page to all be the same font size
@@ -286,7 +262,7 @@
 
 \renewcommand{\maketitle}{%
   {\pagestyle{empty}
-  \fontsize{12}{14}\selectfont
+  \fontsize{14}{16}\selectfont
   \begin{titlepage}
   \newpage
   \let\footnotesize\small
@@ -294,55 +270,30 @@
   \let \footnote \thanks
 
   \baselineskip = 1.4\baselineskip
-  \setbox0=\hbox{of the Requirements for the Degree}
 
   \begin{center}
     \setcounter{page}{1}
     \null\vfil
-    {\fontsize{12}{14}\selectfont \@title}
+    {\fontsize{16}{19}\selectfont \textbf \@title}
     \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    {\fontsize{12}{14}\selectfont A thesis presented to the}
     \vfil
-    A Thesis \\
-    Presented to \\
-    \@thedivisionof \ \@division \\
+    {\@department} at the \\
     \@institution
     \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    by
     \vfil
-    In Partial Fulfillment \\
-    of the Requirements for the Degree \\
-    \@degree
+    \@author \\
+    (\@computingid)
     \vfil
-    \centerline{\hbox to \wd0 {\hbox{}\hrulefill\hbox{}}}
+    {\fontsize{12}{14}\selectfont in partial fulfillment of the requirements for the degree of \@degree .}
+    \vfil
+    \@date \\
     \bigskip
-    \centerline{}
-    \bigskip
-    {\fontsize{12}{14}\selectfont \lineskip .75em
-    \begin{tabular}[t]{c}%
-      \@author
-    \end{tabular}\par}
-    \vskip 1.5em
-    {\fontsize{12}{14}\selectfont \@date \par}
+    Advisor: \makebox[\widthof{\@advisor}]{\hrulefill} \\
+    \hspace*{0cm}\phantom{Advisor:} \@advisor
   \end{center}\par
   \end{titlepage}
-
-%% Approved for the division page
-  \cleardoublepage
-  {\fontsize{12}{14}
-  \setbox0=\hbox{Approved for the \@approvedforthe}
-  \thispagestyle{empty}
-  \null\vfil		% just below center of page
-  \par\vskip 6cm	% below center, not center
-  \centerline{\copy0}	% approved
-  \centerline{(\@department)} %major
-  \vskip 1cm		%space to sign
-  \centerline{\makebox[\wd0][c]{\hrulefill}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\hrulefill} \fi}
-  \centerline{\makebox[\wd0][c]{\@advisor}
-	\if@altadvisor \makebox[.5in]{} \makebox[\wd0][c]{\@altadvisor} \fi}
-  \par\vfil\null}
-  \cleardoublepage
   }
 }
 
@@ -354,7 +305,7 @@
 \newcommand{\Abstract}[1]{\def\@Abstract{#1}}
 %\newcommand{\Keywords}[1]{\def\@Keywords{#1}}
 %\newcommand{\Plainkeywords}[1]{\def\@Plainkeywords{#1}}
-\newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
-\newcommand{\Dedication}[1]{\def\@Dedication{#1}}
-\newcommand{\Preface}[1]{\def\@Preface{#1}}
+%\newcommand{\Acknowledgements}[1]{\def\@Acknowledgements{#1}}
+%\newcommand{\Dedication}[1]{\def\@Dedication{#1}}
+%\newcommand{\Preface}[1]{\def\@Preface{#1}}
 % End of CII add

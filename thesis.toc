@@ -1,0 +1,25 @@
+\contentsline {chapter}{Chapter 1: An Unfurling Crisis}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Why Homeowners were Unable to Organize}{6}{section.1.1}
+\contentsline {section}{\numberline {1.2}Why City \& State Administrations Could Not Handle Foreclosures}{13}{section.1.2}
+\contentsline {section}{\numberline {1.3}Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures}{19}{section.1.3}
+\contentsline {chapter}{Chapter 2: Connecting Home Prices to Voting}{24}{chapter.2}
+\contentsline {section}{\numberline {2.1}The Neighborhood Stabilization Program, Ideologically}{27}{section.2.1}
+\contentsline {section}{\numberline {2.2}Shifting Priorities in the Grand Old Party}{32}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}The Centering of Tax Policy}{37}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Emergence of the Tea Party}{44}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Conclusion}{51}{section.2.3}
+\contentsline {chapter}{Chapter 3: Asset Prices, Individual Preferences, and Foreclosure Relief}{53}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Role of Home Prices}{54}{section.3.1}
+\contentsline {section}{\numberline {3.2}Control Variables}{63}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Visible Identity}{64}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Economic Identity}{68}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Cultural Identity}{68}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}A Model of Voting}{70}{section.3.3}
+\contentsline {chapter}{Chapter 4: Effects of the Neighborhood Stabilization Program on Voting}{71}{chapter.4}
+\contentsline {section}{\numberline {4.1}Relationships between statistical geographies}{72}{section.4.1}
+\contentsline {section}{\numberline {4.2}Data collection and aggregation}{75}{section.4.2}
+\contentsline {section}{\numberline {4.3}Data Analysis}{80}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Linear models}{81}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Limitations and proposed refinements}{86}{subsection.4.3.2}
+\contentsline {section}{\numberline {4.4}Conclusion}{88}{section.4.4}
+\contentsline {chapter}{Appendix A: Data Quality}{90}{appendix.A}

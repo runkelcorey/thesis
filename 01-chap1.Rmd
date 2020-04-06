@@ -9,7 +9,7 @@ output:
 ---
 # An Unfurling Crisis {#actors-motive}
 
-When 10 million Americans---1 of every 20 adults---lost their homes,[@martinForeclosedAmerica2015] it was clear that homeowners needed an intervention. When Countrywide, which two years earlier had serviced 20% of the mortgages in the United States,[@seabrooke2009politics] collapsed in July 2008, it was clear that the real estate industry needed to change.
+When 10 million Americans---1 of every 20 adults---lost their homes,[@martin2015foreclosed] it was clear that homeowners needed an intervention. When Countrywide, which two years earlier had serviced 20% of the mortgages in the United States,[@seabrooke2009politics] collapsed in July 2008, it was clear that the real estate industry needed to change.
 When cities and counties around California, Florida, Nevada, and Arizona trembled at a declining tax base, it was clear that municipalities needed a break.
 Yet, none of these actors wielded much power in the response to the subprime mortgage crisis.
 Unlike the Great Depression, homeowners barely organized their political power and financial institutions imposed very modest debtor-relief programs.
@@ -17,6 +17,7 @@ Additionally, the long-term trend of municipal disinvestment emphasized the need
 
 ``` {r setup, include=FALSE}
 library(knitr)
+options(knitr.graphics.auto_pdf = TRUE)
 ```
 
 In reponse, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute $3.9 billion to state and local governments for the purchase and repair of foreclosed properties.[@pelosi2008housing]
@@ -25,6 +26,18 @@ In purchasing, repairing, and in most cases reselling foreclosed properties, the
 Primarily, foreclosures tear people from their homes.
 On top of this comes the stigma of being a "deadbeat"[@dayenChainTitleHow2016] and mounds of fees---legal, cancellation, transportation-related.
 But once homeowners have been forced out, the neighborhood and municipality bear the financial weight of that foreclosure.
+
+This thesis considers two lines of analysis, the first a question of method and mechanism, the second a question of politics and historical contingency.
+These two lines converge with the Neighborhood Stabilization Program amid the rise of the Tea Party.
+The first attempts to add to the political science and sociology literature around the connections between housing, political preferences, and voting.
+This line of analysis is motivated by the opportunity presented by the Neighborhood Stabilization Program, 2010 decennial census, and 2010 midterm elections to bridge a gap in the measurement of political behavior.
+While the first two components offer unusually granular and contemporary data, the midterm elections posed a unique brand of politics to American voters.
+This brand of politics was neither usual nor inevitable, an observation I take great pains to make in Chapter \@ref(motive-opportunity).
+Rather, it was a product of the political and economic mechanisms investigated by the literature I engage methodologically in my first line of analysis.
+The historical claims are not new; they have been fashioned directly from the work of others.
+I zoom in on a particular corner of political economy and housing, however, to beef up my methodological assumptions.
+The relationship between these two lines of analysis is complex but understanding it is imperative to comprehending the validity of my argument about the impact of the Neighborhood Stabilization Program.
+To that end, I have provided Figure \@ref(fig:analysis) to aid readers.
 
 To nearby homeowners, foreclosures cost $159,000 on average in decreased property values.[@immergluck2011foreclosed, 151]
 To the city or county that envelops the property, it costs around $50,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.[@indiviglio2010housing]
@@ -37,7 +50,7 @@ This use of refinancing reflected a shift in how Americans approached housing, f
 Homes stand increasingly in the position of pension plans and 401ks; a wise move can transform forty years into four-hundred thousand dollars.
 
 These wise moves seemd to occur constantly from September 1992 until March 2006.
-As \@ref(fig:caseshiller) shows, the intervening 14 years never once saw a drop in the industry's standard home-price metric, the Case-Shiller U.S. National Home Price Index.
+As Figure \@ref(fig:caseshiller) shows, the intervening 14 years never once saw a drop in the industry's standard home-price metric, the Case-Shiller U.S. National Home Price Index.
 As prices rose, homeowners refinanced, effectively paying back the first mortgage while taking out the second.
 To investors in mortgage-backed securities (MBS), pre-payment from refinancing is usually seen as a risk, but constant and predictable refinancing added to the safety of securitization, playing into investors risk-reward calculus.
 However, when prices fell---or even flatlined---this safety evaporated.
@@ -46,7 +59,7 @@ Falling prices thus meant homeowners were saddled with their current mortgage, o
 Atop the interest payments, living expenses (such as other debts) piled on to borrowers, where previously refinancing had arrived to supplement existing income with cash.
 Falling prices meant homeowners chose among food, water, and shelter, if they had enough income for that to even be a decision.
 
-``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, out.width='90%', fig.align='center'}
+``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, out.width='90%', fig.align='center', dev='pdf'}
 include_graphics("figure/caseshiller_1990_2018.png")
 ````
 
@@ -60,7 +73,7 @@ Circling back to the original home-price dynamic, higher home values fund greate
 
 When prices rose, creditor and debtor interests laid at some angle, intersecting in the particular case of safe, two-year refinancing, but divergent in the general case of refinancing that took advantage of lower interest rates.
 On the other hand, falling housing prices conformed the immediate interests of creditors and debtors to one another, since delinquency and default eliminated any chance of extracting further rents.
-Fears of a debt spiral triggered by falling home prices also beset cities,[@muro1fiscal] though there is some doubt that those fears were justified.[@gross2012local; @lutz2011housing]
+Fears of a debt spiral triggered by falling home prices also beset cities,[@muro2009fiscal] though there is some doubt that those fears were justified.[@gross2012local; @lutz2011housing]
 With these interests in syzygy, why didn't homeowners, investors, or cities assert solutions, even ones that were done chiefly in their own interest?
 I argue in this chapter first that homeowners remained quiet due to changes in the foreclosure process from the Great Depression, the differential character of housing versus farming, and narratives about mortgage debtors.
 Second, the incongruity---spurred by the demise of savings and loans---between incentives for principals in mortgage-backed securities and agents tasked with servicing the underlying mortgages, along with fraudulent mortgage transfers, resulted in foreclosures that may have otherwise been unwanted by creditors.
@@ -90,13 +103,13 @@ Farms were both the workplace and home of farmers.
 Unlike the foreclosure crisis in the 2000s, losing a home implied losing a job, though that job could be lost in other ways (drought, crop disease, low prices).
 This fact raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
 Of the 100,000 farmers who lost their farms each year between 1926 and 1940,[@alston1983farm] the Midwest saw the highest concentrations.
-\@ref(fig:wheelock-farms) shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
+Figure \@ref(fig:wheelock-farms) shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
 In 1933, by far the worst year for farm mortgages, failure rates topped 3.7%; during the rest of 1926-1940, rates were often above 1.5%.[@wheelockChangingRulesState2008, 571]
 By contrast, U.S. residential foreclosures reached 2.23% in 2010, the worst year of the foreclosure crisis.[@2019foreclosure]
 In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
 
-```{r wheelock-farms, fig.cap="Figure taken from @wheelockChangingRulesState2008", echo=FALSE, out.width='90%', fig.align='center'}
+```{r wheelock-farms, fig.cap="Figure taken from Wheelock (2008).", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
 include_graphics("figure/wheelock.png")
 ```
 
@@ -131,9 +144,9 @@ Midwest farmers tried boycotting markets and sabotaging crops in transport to gr
 Rather, farmers succeeded through intimidation tactics.
 The "ropes under [farmers'] coats [...] stopped thousands more foreclosures than did" self-organized arbitration, according to the then-president of the Farmers' Holiday Association, Milo Reno.[@fliter2012fighting, 65]
 There were more than 100 recorded instances of farmers, sometimes numbering in the thousands, packing county sheriff offices to discourage any would-be buyers, allowing the borrower to re-purchase their farm in full for sometimes as little as a penny.[@fliter2012fighting, 63]
-Direct action of this nature was nowhere in the subprime mortgage crisis; \@ref(fig:tradingecon) shows the spike in existing home sales after several million foreclosures had been filed.
+Direct action of this nature was nowhere in the subprime mortgage crisis; Figure \@ref(fig:tradingecon) shows the spike in existing home sales after several million foreclosures had been filed.
 
-```{r tradingecon, fig.cap = "Existing versus New Home Sales, 2000-2014", echo=FALSE, out.width='90%', fig.align='center'}
+```{r tradingecon, fig.cap = "Existing Home Sales versus New Home Sales, 2000-2014", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
 include_graphics("figure/united-states-existing-home-sales@2x.png")
 ```
 
@@ -172,8 +185,8 @@ Later in the twentieth century, taxpayer reform organizations yanked the reins o
 This influence combined with the altered expectation of federal policy regulating economics, leaving only growth-oriented tax incentives and zoning regulations in the regulatory toolbox of cities and states.
 This turn away from local economic regulation starved states and cities of the resources needed to handle foreclosures.
 
-Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in \@ref(fig:spending-shift).
-While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, @beardEconomicInterpretationConstitution1913 retains its value by its analysis of primary sources.
+Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in Figure \@ref(fig:spending-shift).
+While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, @beard1913economic retains its value by its analysis of primary sources.
 In it, Beard argues that the United States has a long history of enforcing the rights of creditors over the sovereignty of states.
 Linking uprisings such as Shays Rebellion to foreign credit demands and the interests of individual urban bondholders, he suggests that the Constiution can be seen broadly as a struggle between farmers and bondholders, not unlike Depression-era rhetoric between Midwest farmers leaden with debts and their Eastern creditors.
 
@@ -186,7 +199,7 @@ First, it removed from states the ability to print money, and, thus, to overprin
 While a central bank had not been created yet, the Contract Clause ensured that no state could chip away at debt by deflating their currency.
 Two, the Clause made standard payment in metal, limiting their purchasing power.
 Third, this bit of the Constitution, in its statements regarding "ex post facto Law" and "impairing the Obligation of Contracts", removed from states the ability to cancel debts by removing the ability to cancel any contracts at all.
-Debt cancellation or reduction was a primary aim of uprisings like Shays Rebellion and, more softly, wealthy planter political connections.[@beardEconomicInterpretationConstitution1913]
+Debt cancellation or reduction was a primary aim of uprisings like Shays Rebellion and, more softly, wealthy planter political connections.[@beard1913economic]
 
 In the Great Depression, the meaning of the Contract Clause was challenged, as mentioned, in *Blaisdell*.
 But scholarly opinion had soured on Chief Justice Charles Hughes' words that, "While emergency does not create power, emergency may furnish the occasion for the exercise of power."
@@ -215,7 +228,7 @@ Home construction, and possibly foreclosure, given their spillover effects, cert
 Effectively, I argue that a coincidence of responsibility, and a history of the federal government taking on responsibility in times of crisis, meant that states presumed the ball was in Washington's court.
 This stands in contrast to the Contract Clause, the interpretation of which has limited state options.
 
-```{r spending-shift, fig.cap = "While secular growth is present at all levels of government, note the spikes during the Great Depression and Recession, and of course in wars.", fig.align='center', out.width='90%', echo=FALSE}
+```{r spending-shift, fig.cap = "While secular growth is present at all levels of government, note the spikes during the Great Depression and Recession, and of course in wars.", fig.align='center', out.width='90%', echo=FALSE, dev='pdf'}
 include_graphics("figure/spending-shift.png")
 ```
 
@@ -240,7 +253,7 @@ I have outlined structural forces that limited the legal and fiscal capacities o
 While the structural forces clearly affect much more than housing, the funding of American states and towns is heavily indebted towards property taxes, bringing one of every three municipal dollars.[@gross2012local, 1]
 While property taxes had not yet declined when the foreclosure crisis hit its lows, anxieties were rising, and taxpayer reform movements had already bit large chunks out of the ability to raise money.
 These forces starved states and cities of the resources necessary to handle foreclosure.
-Endowed only with powers to issue zoning regulations, tax *incentives*, and other growth-oriented policies,[@stein2019capital] cities and states were less able to handle the wave of foreclosures that pushed one of every twenty American adults out of their home.[@martinForeclosedAmerica2015, 5]
+Endowed only with powers to issue zoning regulations, tax *incentives*, and other growth-oriented policies,[@stein2019capital] cities and states were less able to handle the wave of foreclosures that pushed one of every twenty American adults out of their home.[@martin2015foreclosed, 5]
 
 
 ## Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
@@ -251,7 +264,7 @@ Securitization severed the communicative link between investing and mortgage ser
 When their interests were pitted against one another, the legal priority fell to the trustee, in whose interest it was to foreclose.
 Before the separation of ownership from control in mortgages, a bank could decide---as many did in the Great Depression---not to foreclose in spite of its legal right.
 
-Securitization is a complicated process, pictured in \@ref(fig:immergluck) legally incorporating the collection of mortgages that back a residential mortgage-backed securities (MBS).
+Securitization is a complicated process, pictured in Figure \@ref(fig:immergluck) legally incorporating the collection of mortgages that back a residential mortgage-backed securities (MBS).
 First, a mortgage broker secures the original agreement between mortgagor and mortgagee.
 For the homeowner, this is most often all they ever see, and for the broker, this had been true until the 1970s.
 At that time, the Federal National Mortgage Association (Fannie Mae) and Federal Home Loan Mortgage Corporation (Freddie Mac) were spun off by the federal government into the government-sponsored entities that existed until the mortgage crisis.
@@ -272,7 +285,7 @@ The special purpose vehicle took on the mortgage pool itself, thus obligating it
 SPVs, with no legal employees, designated companies in their founding documents to act as servicers, scheduling fees for particular services.
 While investors could open informal lines of communication with those tasked by securitizers to administer payments, there was no formal mechanism by which investors could exercise the kind of shareholder democracy that had become so near and dear to their hearts.
 
-```{r immergluck, fig.align='center', fig.cap="Taken from Immergluck, 2011", echo=FALSE, out.width="90%"}
+```{r immergluck, fig.align='center', fig.cap="Taken from Immergluck (2011).", echo=FALSE, out.width="90%", dev='pdf'}
 include_graphics("figure/immergluck.png")
 ```
 

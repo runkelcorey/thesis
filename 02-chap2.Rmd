@@ -9,7 +9,7 @@ output:
 ---
 # Connecting Home Prices to Voting {#motive-opportunity}
 
->"We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property."[@klein2008disowned]
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.[@klein2008disowned]}
 
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim ran parallel with the Bush administration's "ownership society", which added moral heft to the legal responsibilities associated with private property.
@@ -83,7 +83,7 @@ Further, the distress of prime borrowers came somewhat after that of subprime bo
 These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.(TOOZE? MIAN & SUFI?)
 The political stigmata came when XXX fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclsoure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
 
-```{r distress, fig.cap= "Left: Total foreclosures and short sales by owner type. Right: Probability of home loss by owner type.", echo = FALSE, out.width='45%', fig.align='center'}
+```{r distress, fig.cap="Measures of homeowner distress timing.", fig.subcap=c("Total foreclosures and short sales by owner type","Probability of home loss by owner type."), echo = FALSE, out.width='45%', fig.align='center', dev='pdf', fig.ncol=2}
 include_graphics(c("figure/ferreira_absolute.png", "figure/ferreira_distress.png"))
 ```
 
@@ -95,7 +95,7 @@ Rather, the NSP aimed at the more foundational goal of saving the plunging home 
 
 This individuation, this buffer from the market, is a privilege long constructed for the American home by law and policy.
 Specifically, the private-public distinction is made much sharper for homeowners than for renters.
-Consider for instance 4th Amendment cases, where [English] property law still dominates legal interpretation (despite the impact of *Katz v. United States*, which expanded what the 4th Amendment shielded to include more person-centric concepts).[@sternInviolateHomeHousing2010]
+Consider for instance 4th Amendment cases, where [English] property law still dominates legal interpretation (despite the impact of *Katz v. United States*, which expanded what the 4th Amendment shielded to include more person-centric concepts).[@stern2010inviolate]
 Or consider the mortgage interest deduction, a large subsidy applied to owner-occupied properties.
 The history of American housing policy---both as centralized legislation and decentralized legal interpretation---has conferred on homeowners (who, in the case of single-family housing, are also land owners) additional rights when compared to renters, expanding the legal extent of their individual selves.
 
@@ -107,7 +107,7 @@ With this claim came a raft of policies demonstrating the promise of an ownershi
 
 Under this capacious roof, the administration housed health savings accounts, more individuated retirement options, and policies aimed at boosting homeownership.
 These policies included the American Dream Downpayment Initiative (fairly self-explanatory) and the Single-Family Affordable Housing Tax Credit.[@2002homeownership]
-By encouraging single-family homes in the "Nation’s inner cities", thinning the density of apartment complexes and tenements, this last provision hearkened back to New Deal marketing, which idealized the home as a Romantic "refuge from urban corruption"[@sternInviolateHomeHousing2010, 910] associated with a high-density cityscape and the web of problems spun around public housing complexes.
+By encouraging single-family homes in the "Nation’s inner cities", thinning the density of apartment complexes and tenements, this last provision hearkened back to New Deal marketing, which idealized the home as a Romantic "refuge from urban corruption"[@stern2010inviolate, 910] associated with a high-density cityscape and the web of problems spun around public housing complexes.
 Bush's ownership society provisions also included a "tripling of funding"[@2002homeownership] for a program that swapped personal or volunteer labor for housing assistance, known in low-income housing development as "sweat equity".
 These programs in aggregate, pushed a narrative of meritocratic access to consumer credit spurring individual ownership.
 The NSP, in turn, slotted into this story by insulating responsible (i.e. those who have not yet defaulted) debtors from wily housing markets.
@@ -139,7 +139,7 @@ Global disinflation resulted partially from the sheer supply of credit, in turn 
 This process fueled itself for a while: lower interest rates meant that buyers could afford more expensive homes on the same monthly payments, bidding up the prices of homes; when nearby home prices appreciated, homeowners could refinance, paying off the first mortgage, marginally lowering the risk and thus interest rate for the next mortgagee in the market.
 This process played out in every country able to profitably securitize mortgages, but the Reagan administration's reconfiguration of credit enabled the United States to reap the world's largest benefits---Schwartz credits this system with driving the United States' differential growth above the rich Organization for Economic Cooperation and Development (OECD) countries between 1991 and 2005.[@schwartz2009subprime, 4]
 
-```{r hhdebt, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Outstanding US residential mortgage debt as a percentage of US gross domestic product."}
+```{r hhdebt, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Outstanding US residential mortgage debt as a percentage of US gross domestic product.", dev='pdf'}
 include_graphics("figure/residential_debt_gdp.png")
 ```
 
@@ -160,7 +160,7 @@ Despite 1991's brief negative sojourn, this social contract was contingent on ri
 Housing, often couched in the language of the American Dream, garnered vaguely nonpartisan support at the national level: while there were differences between Republican and Democratic housing policies, their approaches were united by a vocabulary of taxation and credit, not debt.
 Despite the rich history of debt politics among American farmers, parties focused on expanding access to credit and limiting the toll to government expenditures, rather than limiting the burden of debt and expanding government revenues.
 
-```{r minsky, fig.align='center', out.width='90%', fig.cap="Minsky cycle, theorized by Hyman Minsky.", echo=FALSE}
+```{r minsky, fig.align='center', out.width='90%', fig.cap="Minsky cycle, theorized by Hyman Minsky.", echo=FALSE, dev='pdf'}
 include_graphics("figure/minsky.png")
 ```
 
@@ -228,11 +228,11 @@ Taxes were certainly not the only issue on his platform, but they are that for w
 And his signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---led to a huge contemporary and lingering spike in popularity.(REFERENCE NEEDED)
 
 After the reforms of the first term, the campaign ramped up its tax rhetoric.
-Figure \@ref(fig:acceptance) shows the massive spike in tax mentions in nomination acceptance speeches (left) and general election television ads (right), aligning with the 1984 election.
+Figure \@ref(fig:taxation) shows the massive spike in tax mentions in nomination acceptance speeches (\@ref(fig:acceptance)) and general election television ads (\@ref(fig:ads)) aligning with the 1984 election.
 Bolstered by the knowledge that one could uncouple taxes from spending, Reagan was able to fend off Democratic challenger Walter Mondale's criticism that, "Reagan will raise taxes and so will I. He won't tell you."[@raines1984party]
 Ronald Reagan would go on to win every state except Minnesota, Mondale's home.
 
-```{r acceptance, fig.align='center', out.width='45%', fig.cap="Number of tax mentions by party in presidential nomination acceptance speeches (left); percentage of general election TV ads to feature taxation (right).", echo=FALSE}
+```{r taxation, fig.align='center', out.width='45%', fig.cap="Taxation mentions by presidential campaigns.", fig.subcap=c("Number of tax mentions by party in presidential nomination acceptance speeches.\\label{fig:acceptance}", "Percentage of general election TV ads to feature taxation.\\label{fig:ads}"), echo=FALSE, dev='pdf', fig.ncol=2}
 include_graphics(c("figure/campbell.png", "figure/campbell2.png"))
 ```
 
@@ -267,7 +267,7 @@ The Tea Party rejuvenated the connection between spending and taxes in response 
 The American Reinvestment and Recovery Act of 2009 (ARRA) injected $787 billion into the United States economy via direct federal spending and indirect transfers to states and localities, [re-]authorizing a range of programs including the Neighborhood Stabilization Program.
 Until then, debate about the national debt had fallen slack as the War on Terror justified huge amounts of spending to Republicans (and Democrats, at first), while Democrats since the New Deal have accommodated larger deficits in return for social insurance programs.
 With a Democrat in the White House, anti-tax organizers pointed to the increase in welfare spending as an unconsented-to burden on the American taxpayer and steps down the road to federal bankruptcy.
-This movement came to knock on the doors of troubled American homeowners when Rick Santelli, a reporter for CNBC, launched into an tirade from the trading floor of the Chicago Mercantile Exchange at the thought of the American taxpayer "subsidizing the losers' mortgages," calling for a "Chicago Tea Party in July."[@ricksantelliCNBCRickSantelli2009]
+This movement came to knock on the doors of troubled American homeowners when Rick Santelli, a reporter for CNBC, launched into an tirade from the trading floor of the Chicago Mercantile Exchange at the thought of the American taxpayer "subsidizing the losers' mortgages," calling for a "Chicago Tea Party in July."[@santelli2009cnbc]
 
 The rant transfigured debt relief into a taxation issue, bundling it with ARRA's other increases, and making debt relief suddenly legible to the Republican party.
 In the following days, prominent conservative and anti-tax organizations, such as the Heritage Foundation and Americans for Tax Relief, convened conference calls to capitalize on the opportunity.
@@ -284,7 +284,7 @@ An ill-informed question about the effects of the national debt on the candidate
 This example serves only to highlight the importance of the question in 1992, and more broadly in the late 1990s and early 2000s, when concerns about America's economic power were heightened by the growth of Japanese and Chinese foreign direct investment.
 The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan spending cuts were able to pass both houses of Congress.
 
-```{r, publicdebt, fig.align='center', out.width='90%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE}
+```{r publicdebt, fig.align='center', out.width='90%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
 include_graphics("figure/publicdebt.png")
 ```
 
@@ -299,7 +299,7 @@ Figure \@ref(fig:deficit) shows this trend by political party affiliation.
 Republican-affiliated respondents in 2002, who by the turn of the millennium differ little in number from Democrats and Independents, distance themselves from both affiliations, registering the smallest number of respondents who prioritize the budget deficit between 1994 and 2016.
 Priorities of the two parties reconvene in 2009, when the economic woes of Bush are inherited by Obama (Pew conducted the poll in mid-January), but diverge once again in 2011, as the new Congress is sworn in following 2010's midterm elections.
 
-```{r deficit, fig.align='center', out.width='90%', fig.cap="Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.", echo=FALSE}
+```{r deficit, fig.align='center', out.width='90%', fig.cap="Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.", echo=FALSE, dev='pdf'}
 include_graphics("figure/deficit.png")
 ```
 
@@ -319,7 +319,7 @@ Santelli's speech recasts the foreclosures of millions---and the mortgage debt o
 Standing on the trading floor of the Chicago Mercantile Exchange, Santelli opens with the claim that "The government is promoting bad behavior!" seeing crises as openings through which moral hazard creeps.
 In his eyes, the goal of American economic and social policy is to promote personal responsibility and combat theories of change used by countries like Cuba, where they "moved from the individual to the collective."
 The foreclosure crisis is not about "subsidize[ing] the losers' mortgages," but using market forces to weed out those who make irresponsible or unprofitable investments "and give 'em (the foreclosed houses) to people that might have a chance to actually prosper down the road and reward people that could carry the water instead of drink the water."
-Santelli latches on to personal responsibility and strong property rights against a "want to pay for your neighbor's mortgage that has an extra bathroom and can't pay their bills."[@ricksantelliCNBCRickSantelli2009]
+Santelli latches on to personal responsibility and strong property rights against a "want to pay for your neighbor's mortgage that has an extra bathroom and can't pay their bills."[@santelli2009cnbc]
 His speech leverages Republican enemies (Communist-controlled Cuba, irresponsible debtors, economic inefficiencies) and friends (the individual, the entrepreneur, personal wealth) to slot this unfamiliar mortgage default problem into a more familiar narrative about personal responsibility and taxpayer burdens.
 
 This moment coincided with burgeoning anti-tax organizations around the country.

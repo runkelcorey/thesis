@@ -16,31 +16,28 @@ set.seed(22903)
 r <- lm(RPCT ~ FORQ3*DENSITY + PRICECHG + UNEM10 + VAP_B + VAP_NA + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + OLD + WHITESOMECOL + NSP, wide)
 
 #spatial dependence check
-spwide <- st_read("data/voting/display/wide.gpkg") %>%
-  na.omit() %>%
-  st_as_sf() %>%
-  as_Spatial(IDs = GEOID10) #return to sp object
+spwide <- as_Spatial(wide, IDs = GEOID10) #return to sp object
 
 ##regression
 s <- lm(RPCT ~ FORQ3*DENSITY + PRICECHG + UNEM10 + VAP_B + VAP_NA + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + OLD + WHITESOMECOL + NUMROUNDS, spwide@data)
 
 ##create neighbors list
-nbwide <- poly2nb(spwide, row.names = spwide$GEOID10)
+nbwide <- tri2nb(spwide, row.names = spwide$GEOID10)
 
 ##create weights lists
 standardized <- nb2listw(nbwide, style = "W", zero.policy = TRUE)
 binary <- nb2listw(nbwide, style = "B", zero.policy = TRUE)
 
 ##spaital dependence tests on PCTR: all three reject conclusively the idea of no spatial dependence and indicate positive spatial correlation of RPCT
-lm.morantest(s, standardized, alternative = "two.sided", zero.policy = T)
+lm.morantest(mod1, standardized, alternative = "two.sided", zero.policy = T)
 geary.test(spwide@data$RPCT, binary, zero.policy = T, alternative = "two.sided")
 
 #spatial regression models
 ##lag
-slag <- lagsarlm(RPCT ~ FORQ3*DENSITY + PRICECHG + UNEM10 + VAP_B + VAP_NA + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + OLD + WHITESOMECOL + NUMROUNDS, spwide@data, standardized, type = "lag", zero.policy = TRUE, method = "MC")
+slag <- lagsarlm(RPCT ~ NSP1*PRICECHG0810 + NSP2*PRICECHG0810 + SDQ*HICOST  + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, spwide@data, standardized, type = "lag", zero.policy = FALSE)
 
 #models
-mod1 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, wide)
+mod1 <- lm(RPCT ~ NSP1*PRICECHG0810 + NSP2*PRICECHG0810 + SDQ*HICOST + DISTNSP1 + DISTNSP2 + DISTNSP3 + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM05 + OLD + WHITESOMECOL*VAP_W + STATE, wide)
 mod2 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, spwide@data)
 
 mod3 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, filter(spwide@data, RESULT != "EXTRA-TP"))

@@ -24,25 +24,30 @@
 %% Preamble
 %%
 % \documentclass{<something>} must begin each LaTeX document
-\documentclass[12pt,twoside]{reedthesis}
+\documentclass[12pt,oneside]{psthesis}
 % Packages are extensions to the basic LaTeX functions. Whatever you
 % want to typeset, there is probably a package out there for it.
 % Chemistry (chemtex), screenplays, you name it.
 % Check out CTAN to see: http://www.ctan.org/
 %%
 \usepackage{graphicx,latexsym}
+\usepackage{subfig}
 \usepackage{amsmath}
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
+\usepackage[none]{hyphenat}
 \usepackage[hyphens]{url}
 % Added by CII
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
+\usepackage{breakurl}
 \usepackage{lmodern}
 \usepackage{float}
+\usepackage{titlesec}
 \floatplacement{figure}{H}
 % End of CII addition
 \usepackage{rotating}
+\usepackage{epigraph}
 
 % Next line commented out by CII
 %%% \usepackage{natbib}
@@ -62,8 +67,8 @@
 % End of CII addition
 
 % Added by CII
-\usepackage{caption}
-\captionsetup{width=5in}
+\usepackage[font=singlespacing]{caption}
+\captionsetup{margin=10pt}
 % End of CII addition
 
 % \usepackage{times} % other fonts are available like times, bookman, charter, palatino
@@ -76,9 +81,9 @@ $endif$
 % To pass between YAML and LaTeX the dollar signs are added by CII
 \title{$title$}
 \author{$author$}
+\computingid{$computingid$}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
 \date{$date$}
-\division{$division$}
 \advisor{$advisor$}
 \institution{$institution$}
 \degree{$degree$}
@@ -127,17 +132,6 @@ $endif$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-\Acknowledgements{
-$acknowledgements$
-}
-
-\Dedication{
-$dedication$
-}
-
-\Preface{
-$preface$
-}
 
 \Abstract{
 $abstract$
@@ -160,22 +154,10 @@ $if(title)$
 $endif$
 
 \frontmatter % this stuff will be roman-numbered
-\pagestyle{empty} % this removes page numbers from the frontmatter
-
-$if(acknowledgements)$
-  \begin{acknowledgements}
-    $acknowledgements$
-  \end{acknowledgements}
-$endif$
-
-$if(preface)$
-  \begin{preface}
-    $preface$
-  \end{preface}
-$endif$
+\pagenumbering{roman} % this removes page numbers from the frontmatter
 
 $if(toc)$
-  \hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$black$endif$}
+  \hypersetup{linkcolor=black}
   \setcounter{tocdepth}{$toc-depth$}
   \tableofcontents
 $endif$
@@ -190,18 +172,19 @@ $endif$
 
 $if(abstract)$
   \begin{abstract}
+  \doublespacing
     $abstract$
   \end{abstract}
 $endif$
 
-$if(dedication)$
-  \begin{dedication}
-    $dedication$
-  \end{dedication}
-$endif$
 
 \mainmatter % here the regular arabic numbering starts
 \pagestyle{fancyplain} % turns page numbering back on
+\doublespacing
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries\singlespacing}{\chaptertitlename\ \thechapter}{40pt}{\huge}
+\titleformat{\section}{\singlespacing\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}{\singlespacing\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\singlespacing\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
 $body$
 

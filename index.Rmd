@@ -1,0 +1,33 @@
+---
+author: 'Corey Runkel'
+computingid: 'cnr3cg@virginia.edu'
+date: '20 April 2020'
+institution: 'University of Virginia'
+advisor: 'Herman M. Schwartz'
+# If you have more two advisors, un-silence line 7
+#altadvisor: 'Your Other Advisor'
+department: 'Program in Political & Social Thought'
+degree: 'Bachelor of Arts with honors'
+title: 'How Foreclosure Relief Swung America Right'
+knit: "bookdown::render_book"
+#site: bookdown::bookdown_site
+output: 
+  thesisdown::thesis_pdf: default
+#  thesisdown::thesis_gitbook: default
+#  thesisdown::thesis_word: default
+#  thesisdown::thesis_epub: default
+# If you are creating a PDF you'll need to write your preliminary content (e.g., abstract, acknowledgements) here or
+# use code similar to line 22-23 for the .RMD files. If you are NOT producing a PDF, you can delete or silence lines 21-32 in this YAML header.
+abstract: |
+ `r if(knitr:::is_latex_output()) paste(readLines("00-abstract.Rmd"), collapse = '\n  ')`
+# If you'd rather include the preliminary content in files instead of inline
+# like below, use a command like that for the abstract above.  Note that a tab is 
+# needed on the line after the `|`.
+# Specify the location of the bibliography below
+bibliography: bib/thesis.bib
+# Download your specific csl file and refer to it in the line below.
+csl: csl/chicago-note-bibliography.csl
+lot: true
+lof: true
+# If you prefer blank lines between paragraphs, un-silence lines  40-41 (this requires package tikz)
+---

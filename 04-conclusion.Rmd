@@ -2,10 +2,10 @@
 bibliography: bib/thesis.bib
 csl: csl/chicago-note-bibliography.csl
 output:
-  word_document: default
-  html_document: default
   pdf_document:
     keep_tex: true
+  html_document: default
+  word_document: default
 ---
 # Effects of the Neighborhood Stabilization Program on Voting {#outcome}
 
@@ -17,13 +17,14 @@ It imputed that, if there existed sentiments favoring less social insurance, fol
 While Ansell's assumption that there were no significant confounding factors may have been correct, his methodology was not rigorous, as it neglected the middle step of actually voting for politicians inclined towards such measures.
 My approach searches for just that---votes associated with housing prices and/or foreclosure relief policies.
 
-```{r setup, include=FALSE}
+```{r libs, include=FALSE}
 library(tidyverse)
 library(knitr)
 library(stargazer)
+library(kableExtra)
 library(sf)
 library(betareg)
-options(tigris_class = "sf", scipen = 9999, digits = 2)
+options(tigris_class = "sf", scipen = 9999, digits = 2, knitr.graphics.auto_pdf = TRUE)
 knit_hooks$set(inline = function(x) {
   prettyNum(x, big.mark = ",")
 })
@@ -37,10 +38,6 @@ For instance, Michigan does not make clear the links between a voting tabulation
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
 A full tabulation of data coverage is available in Table \@ref(tab:coverage).
 
-```{r coverage, echo=FALSE}
-#kable(read_csv("data/voting/display/tract_coverage.csv"))
-```
-
 Most of the data came by way of the US Census Bureau.
 Since 1990, the Census Bureau has delineated census blocks covering the entire United States, standardizing units of analysis and making trivial the aggregation of data at various granularity.
 However, some key variables in this analysis come from outside the Census Bureau, from state governments, other federal agencies, and independent researchers, each of which uses different geographical units.
@@ -53,7 +50,7 @@ However, since the Bureau undertook to cover the *entire* United States with cen
 Blocks are then aggregated into census tracts (my unit of analysis): tracts contain between 1,200 and 8,000 people, and are the smallest unit for which American Community Survey data---such as median household income and educational attainment---are published.
 Census tracts sit inside counties and then inside states; unlike tracts and blocks, county boundaries are also legal jurisdictions and therefore rarely change.
 
-```{r geography, out.width='45%', fig.align='center', fig.cap="Left: To-scale breakdown of nested census geography, with street names. Right: Organizational hierarchy of different geographies.", echo=FALSE}
+```{r geography, out.width=c('50%','45%'), fig.align='center', fig.cap="Census geography relationships.", fig.subcap=c("To-scale breakdown of nested census geography, with street names.", "Organizational hierarchy of different geographies."), echo=FALSE, dev='pdf'}
 include_graphics(c("figure/census_small_area_geography2.jpg", "figure/geo_hierarchy.png"))
 ```
 
@@ -106,6 +103,11 @@ Take again, for example, our tract 12099005947 in Palm Beach County Florida: it 
 But it's neighbor, tract 12099005949, recorded 461.85 Republican votes against 1414.25 total votes.
 Figure \@ref(fig:palmbeach) shows how this geometry is possible.
 
+```{r palmbeach, out.width='45%', fig.align='center', fig.cap="Voting precincts and census tracts in Palm Beach County, Florida.", fig.subcap=c("Without census tracts.", "With census tracts."), echo=FALSE, dev='pdf'}
+include_graphics(c("figure/wotracts.png", "figure/withtracts.png"))
+```
+
+
 There are, however, more than one ways to cut a census tract.
 The obvious way to slice census tracts is by geography: the spatial intersection forms the basis for dividing up votes.
 The better way to slice census tracts is by voting-age population: the intersection of eligible people forms the basis for dividing up votes.
@@ -128,7 +130,7 @@ Summing up the voting-age population (the census does not ask about citizenship 
 This method is represented formally in Equation \@ref(eq:vtd), where t represents a particular tract, p a precinct from the set P of precincts intersecting with that particular tract, and b a block from the set B of blocks within that particular precinct:
 
 \begin{equation}
-votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_b}{\sum_{b=1}^{B}}
+votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_b}{\sum_{b=1}^{B} VAP_b}
 (\#eq:vtd)
 \end{equation}
 
@@ -169,11 +171,11 @@ In addition, I aim to persuade readers of the validity of these models, building
 
 ### Linear models
 
-```{r fullsample, echo=FALSE, results='asis', eval=FALSE}
+```{r fullsample, echo=FALSE, results='asis', eval=TRUE}
 wide <- st_drop_geometry(stwide) #drop geometry for fast calculation
 mod1 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, wide)
 mod2 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, wide) #run models
-stargazer(mod1, mod2, type = "latex", title = "Full-sample linear models", omit = "^STATE", label = "tab:fullsample", font.size = "small", column.sep.width = "3pt", df = F) #write table output
+stargazer(mod1, mod2, type = "latex", title = "Full-sample linear models", omit = "^STATE", label = "tab:fullsample", font.size = "small", column.sep.width = "3pt", df = F, report = "vc*", header = F) #write table output
 ```
 
 Table \@ref(tab:fullsample) lists the results of the full-sample linear models with and without state-level fixed effects.
@@ -211,12 +213,12 @@ While the signs of coefficients attached to the NSP rounds remain the same, thei
 This variance is likely due to sample size, as the number of tracts with winning candidates contained little more than a tenth of the total observations.
 Throughout these models, most control variables remained entirely stable, with the unemployment rate and the proportion of residents 65 and older respectively losing and gaining statistical significance among models.
 
-```{r justp, echo=FALSE, results='asis', eval=FALSE}
+```{r justp, echo=FALSE, results='asis', eval=TRUE}
 mod3 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, filter(wide, RESULT != "EXTRA-TP"))
 mod4 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT != "EXTRA-TP"))
 mod5 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT == "LOSE"))
 mod6 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT == "WIN"))
-stargazer(mod3, mod4, mod5, mod6, type = "latex", title = "Tea-Party linear models", omit = "^STATE", label = "tab:justp", font.size = "small", column.sep.width = "3pt", df = F)
+stargazer(mod3, mod4, mod5, mod6, type = "latex", title = "Tea-Party linear models", omit = "^STATE", label = "tab:justp", font.size = "small", column.sep.width = "3pt", df = F, report = "vc*", header = F)
 ```
 
 The variables of interest were a mixed bag.
@@ -234,14 +236,14 @@ Additionally, individual-level observations would have avoided the ecological as
 
 The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
-On that count, the attached .40-.62 R^2 values are not concerning.
+On that count, the attached .40-.62 R^{2} values are not concerning.
 However, analysis of residuals leaves something to be desired.
 Figure \@ref(fig:linearesid) shows the residuals against fitted values for the full-sample, fixed-effects model.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
 Here, there is a clear inverse relationship framed by the bounds of the Republican voting share at 0 and 100 percent.
 Linear models are not built to handle bounded response variables, though I used one for the ease of computation and interpretation.
 
-``` {r linear, echo=FALSE, out.width='45%', fig.align='center', fig.cap="Left: Residuals of full linear model. Right: Acutal vs. fitted quantiles of full linear model."}
+``` {r linear, echo=FALSE, out.width='45%', fig.align='center', fig.cap="Diagnostic plots of the linear models.", fig.subcap=c("Residuals of full linear model.\\label{fig:linearesid}","Acutal vs. fitted quantiles of full linear model.\\label{fig:linearquant}")}
 include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
 ```
 
@@ -264,7 +266,7 @@ wide <- mutate(wide, RPCT = ifelse(RPCT < .05, RPCT + .05, ifelse(RPCT > .95, RP
 mod7 <- betareg(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, wide)
 mod8 <- betareg(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, dplyr::filter(wide, RESULT != "EXTRA-TP"))
 mod9 <- betareg(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT == "LOSE"))
-stargazer(mod7, mod8, mod9, type = "latex", title = "Beta regressions", omit = "^STATE", label = "tab:beta", font.size = "small", column.sep.width = "3pt", df = FALSE)
+stargazer(mod7, mod8, mod9, type = "latex", title = "Beta regressions", omit = "^STATE", label = "tab:beta", font.size = "small", column.sep.width = "3pt", df = FALSE, report = "vc*", no.space = T, header = F)
 ```
 
 Lastly, as mentioned, I believe these models were spatially-dependent, with biased the estimation of the home price effect on voting behavior.
@@ -279,7 +281,7 @@ Table \@ref(tab:spdep) displays the results of these tests, all of which reject 
 
 ```{r spdep, echo=FALSE, message=FALSE}
 spdep <- read_csv("data/voting/display/spdep.csv")
-kable(spdep)
+kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spatial dependence. In all tests, the null hypothesis is spatially-independent.", align = 'c')
 ```
 
 ## Conclusion
