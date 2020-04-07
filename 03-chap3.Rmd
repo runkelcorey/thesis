@@ -219,16 +219,18 @@ In my view, these forces cannot be disentangled without microdata on labor force
 
 ### Economic Identity
 
-To isolate labor market risk from income, I will use both the median household income as well as the *change* in median household income.
-The change offers a truer picture of employment becoming underemployment and resolves a problem presented by using the unemployment rate: the HUD estimates of foreclosure rate use the unemployment rate as a predictor of foreclosures.
-Inclusion in the model would re-isolate unemployment from the estimated foreclosure rate, and bias the estimation of the foreclosure rate's significance on voting in an indeterminate manner.
-However, the 2010 Neighborhood Stabilization Program uses only the *change* in unemployment rate, leaving open the unemployment rate as a predictor.
-The inclusion of this predictor captures effects contemporaneous to the election while avoiding the modeling problems described above.
+A key feature of the housing-as-insurance model is the lever of labor market risk.
+Labor market risk acts to increase the demand for insurance.
+Home equity can replace welfare programs when unstable employment is present.
+We should thus expect that higher levels of these two factors magnify the effects of price changes.
+Specifically, price increases---which Ansell's research has shown dampens demand for social insurance policies---should have even greater conservatizing effects when refracted through high employment risk or low equity (proxied by the foreclosure rate).
+If home equity acts as a buffer against lost wages, then lower levels of home equity make individuals more sensitive to price shocks just as lower employment expectations would shift the income-generating burden onto housing speculation.
+Regression techniques known as interaction effects can calculate how variables---in this case, labor market risk or foreclosure rates paired with recent price changes---refract through one another.
+In this analysis, the interactions between labor market risk, foreclosure rates, and price changes should be significant and positive, regardless of the coefficients attached to labor market risk and foreclosure rates.
 
-Additionally, the Census Bureau tracks homeownership rate.
-At first glance, the inclusion of the 2010 homeownership rate would appear to come at an inopportune time, as the very fluctuations in the homeownership rate are captured in the foreclosure rate.
-But this capture is only partial, and, furthermore, the foreclosure rate tells nothing about the absolute levels of homeownership.
-Homeownership is associated with conservative voting around the world, and the effects of social capital are well-researched.[@stern2013dark]
+To measure labor market risk, I took the variance of monthly unemployment rates from 2005 to 2010 for every sampled county.
+This value is an index of *gross* changes in unemployment, separate from whether such a county is currently in a employment glut or rut, an aspect captured by the *net* change in unemployment from 2005 to 2010.
+Additionally, I included median household income to control for variations in class.
 
 ### Cultural Identity
 
@@ -249,9 +251,13 @@ These beliefs, in long historical sweep, are generally better represented by con
 Lastly, the highest level of education attained is a huge predictor of one's party affiliation, but only for white voters.
 A 15-point gap persists between white voters with and without a college degree: 45% percent of college-educated white voters cast their ballots for Republicans, while more than 60% of those with a college degree did the same.[@harris2018america]
 This trait has worsened since George H. W. Bush's presidency, before which educated and uneducated voters were more or less aligned.
-Due to the racial nature of this variable, I will puruse education level *multiplied* by percentage of population white as a predictor.
+I weight the importance of this variable by its frequency: a tract with a single white voter who is not college educated is far less significant than one with 2,000 white voters, 45% of whom are not college educated.
 
 ## A Model of Voting {#model}
 
 The discussion above leaves me with a model of Republican voting:
-$rep_i = \beta_0 + \beta_1forq_i + \beta_2Black_i  + \beta_3AmerIndian_i + \beta_4density_i + \beta_5evang_i + \beta_6lds_i + \beta_7Hispanic_i + \beta_8Hispanic^2_i + \beta_9medHHI_i + \beta_{10}ownhome_i + \beta_{11}unemchange_i + \beta_{12}old_i + \beta_{13}(somecol_i \times white_i) + \epsilon_i$
+
+\begin{equation}
+rep_i = \beta_0 + \beta_1NSP_i + \beta_2{pricechg_i \times LaborRisk_i \times Equity_i}  + \beta_3UnemploymentChange_i + \beta_4density_i + \beta_5evang_i + \beta_6LDS_i + \beta_7Hispanic_i + \beta_8Hispanic^2_i + \beta_9medHHI_i + \beta_{10}Black_i + \beta_{11}old_i + \beta_{12}(somecol_i \times white_i) + \beta_{13}state_i + \epsilon_i
+(\#eq:model)
+\end{equation}

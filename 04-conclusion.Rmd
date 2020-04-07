@@ -14,8 +14,22 @@ My approach is simple but intensive: connect the votes for Republican House of R
 Logically, this approach nestles within that of Ansell 2014.
 That paper connected home prices to local sentiments regarding government policies, and then looked at policies after those sentiment polls were conducted.
 It imputed that, if there existed sentiments favoring less social insurance, followed by policies which enacted less social insurance, then those sentiments filtered through the voting and public opinion apparatus to produce those policies.
-While Ansell's assumption that there were no significant confounding factors may have been correct, his methodology was not rigorous, as it neglected the middle step of actually voting for politicians inclined towards such measures.
+While Ansell's assumption that there were no significant confounding factors may have been correct, his methodology neglected the connective tissue between preferences and voting.
 My approach searches for just that---votes associated with housing prices and/or foreclosure relief policies.
+
+Preferences present in polling may be absent in voting for several reasons.
+First, voters may not be faced with choices that reflect their preferences.
+For instance, voters wishing to elect candidates focused on mortgage mortatoria may have had a suitable choice in 1930s Minnesota, but by 2010 that politics had all but disappeared.
+Second, preferences may disappear under budget constraints.
+Majoritarian voting asks the electorate to weigh preferences, as a single candidate in a two-party race is not likely to support every single preference that an individual would have.
+
+Voter choice can thus be understood as a type of revealed preference: it obscures less-important preferences in favor of important distinctions.
+Because of this fact, vote analysis is prone to false negatives---results that fail to detect preferences that actually exist.
+Understanding these limitations will contextualize the conclusions I draw.
+I cannot, for instance, reject the existence of preferences for more or less social insurance even among the sampled population; such preferences may be eclipsed by greater cultural or political factors.
+I can, however, attempt to draw conclusions about the primacy of such preferences.
+If there is robust evidence that housing prices affect voter behavior, then a conclusion may be that expected impacts to wealth play a *primary* role in deciding an individual's voting decisions, eclipsing other cultural or political factors.
+Therefore, this argument cannot speak to Ansell's first step---that home prices affect social insurance preferences---but only to his second step---that such preferences affect policy outcomes---and only insofar as homeowners influence policy through voting (which is far from the only channel[@stern2011reassessing]).
 
 ```{r libs, include=FALSE}
 library(tidyverse)
@@ -32,11 +46,10 @@ stwide <- st_read("data/voting/display/wide.gpkg") %>%
   st_set_crs(4269)
 ```
 
-Data complete with every variable in my model was available for 53.7% of the inhabited census tracts of 24 states, including 54.8% of those census tracts where a self-described member of the Tea Party ran for election.
+Data complete with every variable in my model was available for more than half of the inhabited census tracts of 24 states, and greater than half of those census tracts where a self-described member of the Tea Party ran for election.
 Most of the remaining census tracts belonged to states where it was not feasible to connect voting returns with census geography.
 For instance, Michigan does not make clear the links between a voting tabulation district (VTD) as the Census Bureau defines it, and the county-precinct-ward system the state uses to publicize its results.
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
-A full tabulation of data coverage is available in Table \@ref(tab:coverage).
 
 Most of the data came by way of the US Census Bureau.
 Since 1990, the Census Bureau has delineated census blocks covering the entire United States, standardizing units of analysis and making trivial the aggregation of data at various granularity.
@@ -79,7 +92,7 @@ I again rely on the granularity of this data for its validity, but without a sec
 
 The last principle is that data should be extensive.
 This idea is native to all statistical inquiry, with the logic being that evenly-distributed errors will sort themselves out in large enough groups.
-In this regard I have succeeded, with a 1/2 sample of the relevant elections totaling 26,550 census tracts.
+In this regard I have succeeded, with a 1/2 sample of the relevant elections totaling 27,618 census tracts.
 To be fully open to criticism, however, I will describe the data aggregation and de/recomposition methods for each variable in my analysis.
 
 ## Data collection and aggregation
