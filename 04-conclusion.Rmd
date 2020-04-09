@@ -9,28 +9,6 @@ output:
 ---
 # Effects of the Neighborhood Stabilization Program on Voting {#outcome}
 
-With this model in hand, I turn now to its application.
-My approach is simple but intensive: connect the votes for Republican House of Representatives candidates to foreclosure rates---taken with other variables as a rough proxy of home equity---at the Census tract level.
-Logically, this approach nestles within that of Ansell 2014.
-That paper connected home prices to local sentiments regarding government policies, and then looked at policies after those sentiment polls were conducted.
-It imputed that, if there existed sentiments favoring less social insurance, followed by policies which enacted less social insurance, then those sentiments filtered through the voting and public opinion apparatus to produce those policies.
-While Ansell's assumption that there were no significant confounding factors may have been correct, his methodology neglected the connective tissue between preferences and voting.
-My approach searches for just that---votes associated with housing prices and/or foreclosure relief policies.
-
-Preferences present in polling may be absent in voting for several reasons.
-First, voters may not be faced with choices that reflect their preferences.
-For instance, voters wishing to elect candidates focused on mortgage mortatoria may have had a suitable choice in 1930s Minnesota, but by 2010 that politics had all but disappeared.
-Second, preferences may disappear under budget constraints.
-Majoritarian voting asks the electorate to weigh preferences, as a single candidate in a two-party race is not likely to support every single preference that an individual would have.
-
-Voter choice can thus be understood as a type of revealed preference: it obscures less-important preferences in favor of important distinctions.
-Because of this fact, vote analysis is prone to false negatives---results that fail to detect preferences that actually exist.
-Understanding these limitations will contextualize the conclusions I draw.
-I cannot, for instance, reject the existence of preferences for more or less social insurance even among the sampled population; such preferences may be eclipsed by greater cultural or political factors.
-I can, however, attempt to draw conclusions about the primacy of such preferences.
-If there is robust evidence that housing prices affect voter behavior, then a conclusion may be that expected impacts to wealth play a *primary* role in deciding an individual's voting decisions, eclipsing other cultural or political factors.
-Therefore, this argument cannot speak to Ansell's first step---that home prices affect social insurance preferences---but only to his second step---that such preferences affect policy outcomes---and only insofar as homeowners influence policy through voting (which is far from the only channel[@stern2011reassessing]).
-
 ```{r libs, include=FALSE}
 library(tidyverse)
 library(knitr)
@@ -38,40 +16,41 @@ library(stargazer)
 library(kableExtra)
 library(sf)
 library(betareg)
-options(tigris_class = "sf", scipen = 9999, digits = 2, knitr.graphics.auto_pdf = TRUE)
+options(scipen = 9999, digits = 2, knitr.graphics.auto_pdf = TRUE)
 knit_hooks$set(inline = function(x) {
   prettyNum(x, big.mark = ",")
 })
-stwide <- st_read("data/voting/display/wide.gpkg") %>%
-  st_set_crs(4269)
+wide <- read_csv("wide.csv")
 ```
 
-Data complete with every variable in my model was available for more than half of the inhabited census tracts of 24 states, and greater than half of those census tracts where a self-described member of the Tea Party ran for election.
-Most of the remaining census tracts belonged to states where it was not feasible to connect voting returns with census geography.
+Complete data were available for 27,098 census tracts, covering more than half of the inhabited census tracts of 24 states, and more than half of the tracts where a self-described member of the Tea Party sought election.
+Most of the census tracts missing belonged to states where connecting voting returns with census geography was infeasible.
 For instance, Michigan does not make clear the links between a voting tabulation district (VTD) as the Census Bureau defines it, and the county-precinct-ward system the state uses to publicize its results.
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
 
-Most of the data came by way of the US Census Bureau.
 Since 1990, the Census Bureau has delineated census blocks covering the entire United States, standardizing units of analysis and making trivial the aggregation of data at various granularity.
-However, some key variables in this analysis come from outside the Census Bureau, from state governments, other federal agencies, and independent researchers, each of which uses different geographical units.
-To understand the construction of this novel dataset, it is important to first understand the relationships between different statistical geographies.
+While much of this analysis relies on data collected in 2010 census geographies, some key variables---including voting returns---were originally collected at a different geography.
+Translating these data to the census-tract level was fundamental to my analysis, so it is important that I describe the relationships between statistical geographies as well as my process of translation.
 
 ## Relationships between statistical geographies {#census-geography}
-The basic Census geography runs as follows (see Figure \@ref(fig:geography) for the Census Bureau's graphical representation[@lemery2020united]).
-The basic unit, blocks, were originally designed for Census takers to walk, and were constrained by physical boundaries difficult or illogical to cross.
+
+Census geography runs as follows.
+The basic unit, blocks, were originally designed just for Census takers to walk, and were constrained by physical boundaries difficult or illogical to cross.
 However, since the Bureau undertook to cover the *entire* United States with census blocks, there are millions of census blocks with no inhabitants, covering lakes, parks, and barren landscapes; this fact will become important shortly.
-Blocks are then aggregated into census tracts (my unit of analysis): tracts contain between 1,200 and 8,000 people, and are the smallest unit for which American Community Survey data---such as median household income and educational attainment---are published.
+Blocks are then aggregated into census tracts containing between 1,200 and 8,000 people.
+Tracts are the smallest unit for which American Community Survey data---a continuously-run telephone survey that collects additional demographic data such as median household income and educational attainment---are published.
 Census tracts sit inside counties and then inside states; unlike tracts and blocks, county boundaries are also legal jurisdictions and therefore rarely change.
+See Figure \@ref(fig:geography) for the Census Bureau's graphical representation.[@lemery2020united]
 
 ```{r geography, out.width=c('50%','45%'), fig.align='center', fig.cap="Census geography relationships.", fig.subcap=c("To-scale breakdown of nested census geography, with street names.", "Organizational hierarchy of different geographies."), echo=FALSE, dev='pdf'}
 include_graphics(c("figure/census_small_area_geography2.jpg", "figure/geo_hierarchy.png"))
 ```
 
-While tracts and blocks were *designed* to be semi-permanent, and to act as the basis for other, non-Census areas, in practice their shapes shift with population changes.
-These shifts mean that: not all 2000 tracts and 2010 tracts are exactly the same (though many are); and non-Census areas (such as state-designed VTDs) can cut census blocks.
+While tracts and blocks were *designed* to be semi-permanent, acting as the basis for other, non-Census areas, in practice their shapes shift with population changes.
+These shifts mean that: (a) not all 2000 tracts and 2010 tracts are congruent (though many are); and (b) non-Census areas (such as state-designed voting precincts) can cut census blocks.
 Since these Census Bureau does not make public the responses of individual persons or homes until several decades after, placing each record in its appropriate area is impossible.
 Rather, ecological methods approximate the distribution of persons, votes, or homes among geographies.
-Ecological methods assume that persons, votes, or homes are equally distributed throughout an area: ecological methods would assume, for instance, that since six percent of Americans are millionaires, then six out of every hundred persons sampled---no matter their neighborhood---would be millionaires.
+Ecological methods assume that persons, votes, or homes are equally distributed throughout an area: ecological methods would assume, for instance, that since six percent of Americans are millionaires, then six out of every hundred persons sampled---no matter their neighborhood---would also be millionaires.
 Strictly speaking, ecological methods are logical fallacies of de-composition, of taking the whole for the part.
 However, guided by the right principles, ecological methods can be perfectly valid statistical tools.
 
@@ -79,28 +58,25 @@ The first principle is that smaller geographies are better.
 Take for example tract 12099005947, a nearly-optimal tract of 4,406 people in Palm Beach County.
 The owner occupation rate is 97%, and 88% of the residents are aged 65 or older.
 However, Palm Beach County entire contains tracts with as low as 4% 65-and-up, and owner occupancy rates around 33%.
-Taking the county for the tract would poorly represent the diversity of life within Palm Beach, smoothing out the nuances that differentiate one neighborhood's politics from the next.
-Zooming in on census tracts improves the accuracy of ecological methods, allowing for a better picture
+Taking the county for the tract would poorly represent the diversity within Palm Beach, smoothing out the nuances that differentiate one neighborhood's politics from the next.
+Zooming in on census tracts improves the accuracy of ecological methods, allowing for a fuller picture.
 
 The second principle is that errors should be distributed evenly.
-Errors here refers to the process by which some geographies must be decomposed and recomposed in order to translate non--2010 Census geography into 2010 Census geography.
+Errors here refer mainly to one party's votes that are misplaced among another party's voters, a result of the process by which voter tabulation districts must be decomposed and recomposed in order to translate non--2010 Census geography into 2010 Census geography.
 This assumption may not always hold in my data: the history of American urban planning has shown that physical barriers---the same used to bound census blocks---often bind communities in more ways than one.
-That being said, the supposed problem of partisan gerrymandering should be a moot point.
-Gerrymandering operates on the state level, assigning particular voting precincts to particular Congressional districts.
-Since my analysis deals with already-made and locally-created voting precincts, it skirts this particular problem.
-I again rely on the granularity of this data for its validity, but without a secondary source of data (such as Zillow's or Redfin's proprietary sources), the accurate distribution of Neighborhood Stabilization Program data (which was enumerated in 2000 Census geography) will remain unknown.
-
-The last principle is that data should be extensive.
-This idea is native to all statistical inquiry, with the logic being that evenly-distributed errors will sort themselves out in large enough groups.
-In this regard I have succeeded, with a 1/2 sample of the relevant elections totaling 27,618 census tracts.
-To be fully open to criticism, however, I will describe the data aggregation and de/recomposition methods for each variable in my analysis.
+But since census tracts are also (if more weakly) constrained by physical boundaries, the aggregation of census blocks into tracts ought to be roughly consistent with the physical construction of communities by planners.
+Additionally, most voting precincts do not cut tracts.
+This means that the nightmare problem of gerrymandering deliberately undermining the assumption of evenly-distributed errors should be a moot point.
+Gerrymandering divides *districts* into a biased collection of precincts, it does not redraw precinct lines.
+Since my analysis deals with already-made and locally-created voting precincts, it skirts this particular problem potentially befalling analyses that begin at the county or Congressional-district level.
 
 ## Data collection and aggregation
+
 I built my data almost exclusively from official statistics and estimates.
 Given that most of my sources would eventually lead back to the Census Bureau, which covers the entire United States, I knew that the factors limiting my coverage would lie outside the Census Bureau.
 Collecting and translating precinct-level voting data to census tracts proved to be the most limited and time-consuming aspect of this process.
-I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA),[@ansolabehere2014precinctlevel] started in 2008 by political science researchers.
-This database compiled voting returns from most states and reported results for state and national races in a standardized format.
+I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA).[@ansolabehere2014precinctlevel]
+Started in 2008 by political scientists, this database compiled voting returns from most states and reported results for state and national races in a standardized format.
 
 These figures were then wedded to files specifying the geographic boundaries of each voting precinct within a state.
 At this stage saw the complete loss of several states' data as some systems used to identify precincts at the state-level were inconsistent with Census Bureau naming conventions.
@@ -119,7 +95,6 @@ Figure \@ref(fig:palmbeach) shows how this geometry is possible.
 ```{r palmbeach, out.width='45%', fig.align='center', fig.cap="Voting precincts and census tracts in Palm Beach County, Florida.", fig.subcap=c("Without census tracts.", "With census tracts."), echo=FALSE, dev='pdf'}
 include_graphics(c("figure/wotracts.png", "figure/withtracts.png"))
 ```
-
 
 There are, however, more than one ways to cut a census tract.
 The obvious way to slice census tracts is by geography: the spatial intersection forms the basis for dividing up votes.
@@ -154,12 +129,12 @@ The Redistricting Database for the State of California, hosted at the University
 Voter registration records allow researchers to locate each address---and thus each resident voter---precisely within tracts and precincts.
 A more careful version of my analysis would implement such methods, as the time required to aggregate each state's registration records exceeded my timeframe.
 
-A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure and unemployment data,[@2008neighborhood; @cody2010neighborhood; @defilippo2009nsp2] which was tabulated at the 2000 tract- and block group--level.
+A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure data,[@2008neighborhood; @cody2010neighborhood; @defilippo2009nsp2] which was tabulated at the 2000 tract- and block group--level.
 The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
 I first decomposed 2000 tracts by the percentage of housing units intersecting with a particular 2010 tract, and then recomposed those 2010 tract figures by allocating foreclosure starts and total housing units according to the percentage each 2010 tract contained.
 
-Lastly, data from the 2010 US Religion Census is collected only at the county-level.[@grammich2018religion]
-Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average is used.
+Lastly, data from the 2010 US Religion Census[@grammich2018religion] and the Bureau of Labor Statistics[@2020local] is collected at the county-level.
+Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average was used.
 All other data used were native to the 2010 tract level, without translation.
 These data were primarily from the 2010 decennial census, with some additional information from the 2005-2009 American Community Survey.
 American Community Survey data comes attached with margins of error, but, no other variables had these margins of error.
@@ -179,19 +154,64 @@ The political behavior of these developments is interesting due to their uniform
 
 ## Data Analysis {#analysis}
 
-My approach will be simple: I will model the full sample under the parameters specified in \@ref(model), and then compare it to models of Tea Party--candidate tracts, with the intent to whittle conclusions down to an appropriate level of generality.
-In addition, I aim to persuade readers of the validity of these models, building on the case just made for why the underlying data should be accepted.
+My approach will be simple: I will test my assumption that the Neighborhood Stabilization Program increased housing prices; then, I will model the effect of the NSP on voting with and without home price controls.
+If the NSP did raise home prices, then its presence ought to be associated with an increase in Republican voting over the model that controls for home prices.
+A HUD evaluation of the second NSP round did not find strong evidence for an price increase, so I will only examine the effects of NSP1.
+Additionally, I allow for the possibility that impacts on voting only occurred where housing was politically stigmatized by a Tea Party candidate, as Chapter \@ref(motive-opportunity) suggested.
+To evaluate localized effects, I run additional models using only the Tea Party tracts.
 
-### Linear models
+### Did NSP1 increase home prices?
 
-```{r fullsample, echo=FALSE, results='asis', eval=TRUE}
-wide <- st_drop_geometry(stwide) #drop geometry for fast calculation
-mod1 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, wide)
-mod2 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, wide) #run models
-stargazer(mod1, mod2, type = "latex", title = "Full-sample linear models", omit = "^STATE", label = "tab:fullsample", font.size = "small", column.sep.width = "3pt", df = F, report = "vc*", header = F) #write table output
+``` {r nsprice, echo=FALSE, results='asis', eval=TRUE}
+mod1 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ + STATE, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
+mod2 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
+mod3 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
+stargazer(mod1, mod2, mod3, type = "latex", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "N")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density (per sq.mi.)", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change `05--`10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010")
 ```
 
-Table \@ref(tab:fullsample) lists the results of the full-sample linear models with and without state-level fixed effects.
+Table \@ref(tab:prices) lists the effects of NSP1 on prices.
+Additional models remove state-level fixed effects and variables that were included in the allocation formula for NSP1, and thus covary highly with which tracts actually received NSP1 funding.
+To avoid price spillovers from interfering with measurement, I only included tracts which were at least 1 mile away from a tract receiving NSP1 funding.
+The results are plain and robust to several possible covariates: tracts receiving NSP1 funding were associated with statistically significant home prices declines, estimated between one and two points lower, compared to tracts not receiving aid.
+
+Results (not shown) of these models for NSP2 funding, allocated competitively within at-risk tracts, are similarly sobering.
+The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.[@spader2015evaluation]
+Further, these models appear to be good predictors of home prices, acounting for 79% to 85% of total price variations among the 12,234 tracts included.
+Diagnostic plots of the best model are available in Figures \@ref(fig:priceresid) and \@ref(fig:priceqq).
+
+While this evidence drives a nail into the coffin of foreclosure relief programs directly supporting anti-relief candidates, it still leaves open questions about the validity of the labor risk--equity model of voting explored in Chapters \@ref(motive-opportunity) and \@ref(methods).
+Continuing the approach laid out above yields answers to two questions.
+First, *could* relief programs directly aid the efforts of anti-relief candidates?
+Second, in more general terms, are the effects of housing price changes magnified by low levels of home equity or high levels of labor risk?
+
+### Could relief programs directly aid anti-relief campaigns?
+
+Table \@ref(tab:fullsample) lists the results of the full-sample models with and without accounting for prices.
+If the NSP's primary effect was lowering prices, then we should expect that tracts targeted by the first round of the Neighborhood Stabilization Program saw lower levels of Republican voting after taking into account other related factors except price changes.
+Then, in the model *including* the price data, there should be no significant impact of NSP funding, as the only targets of the program were home prices.
+For the labor risk--equity model, in all trials there should be positive correlations between price changes and Republican voting, with augmented values where price changes refract through economic anxiety, as measured by high foreclosure rates (i.e. low equity) or risky employment (a.k.a. high unemployment variance).
+
+```{r fullsample, echo=FALSE, results='asis', eval=FALSE}
+mod4 <- lm(RPCT ~ NSP1 + ANXIETY + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
+mod5 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
+stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
+```
+
+However, in both models the presence of the Neighborhood Stabilization Program is associated with more than a percentage point higher Republican voting.
+This fact is in spite of the negative price effects of the NSP.
+There are two different conclusions to draw from this result.
+On the one hand, one could reject the model's capacity to describe the impacts of specific economic and demographic variables on majoritarian voting behavior.
+
+On the other hand, one could accept the model's validity, opening up the possibility that the NSP's primary political effect is not in its home equity impacts.
+Here the question of model validity is important.
+The point is not to predict vote outcomes, but to infer the effects of certain variables.
+While prediction would be nice (and would be sufficient to validate its inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
+For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[REFERENCE NEEDED] since race is also associated with Republican voting, I have included descriptive variables in my models.
+For this reason I am not worried about fact that only half of the variation in Republican voting share is explained by my model.
+
+With this understanding of model validity, 
+
+Table \@ref(tab:fullsample) lists the results of the model with and without prices
 Fixed effects are a sort of catch-all method to deal with unobserved characteristics particular to certain levels.
 For instance, state laws governing taxation or the shape of voting precincts are not present in my dataset, so I employ state-level fixed effects to try and isolate these effects.
 Mechanically, this method groups all observations belonging to each state as a single regressor.^[Due to the fact that 24 states are included in this analysis, I truncated the output in light of space. Almost all states had statistically-significant associated effects.]
@@ -226,12 +246,10 @@ While the signs of coefficients attached to the NSP rounds remain the same, thei
 This variance is likely due to sample size, as the number of tracts with winning candidates contained little more than a tenth of the total observations.
 Throughout these models, most control variables remained entirely stable, with the unemployment rate and the proportion of residents 65 and older respectively losing and gaining statistical significance among models.
 
-```{r justp, echo=FALSE, results='asis', eval=TRUE}
-mod3 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W + STATE, filter(wide, RESULT != "EXTRA-TP"))
-mod4 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT != "EXTRA-TP"))
-mod5 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT == "LOSE"))
-mod6 <- lm(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT == "WIN"))
-stargazer(mod3, mod4, mod5, mod6, type = "latex", title = "Tea-Party linear models", omit = "^STATE", label = "tab:justp", font.size = "small", column.sep.width = "3pt", df = F, report = "vc*", header = F)
+```{r justp, echo=FALSE, results='asis', eval=FALSE}
+mod6 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
+mod7 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
+stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:justp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
 
 The variables of interest were a mixed bag.
@@ -275,11 +293,11 @@ Results of the beta regressions can be seen in Table \@ref(tab:beta).
 Coefficients are altogether similar to what the linear models predict, making me more secure in my belief of their validity.
 
 ```{r beta, echo=FALSE, results='asis', eval=FALSE}
-wide <- mutate(wide, RPCT = ifelse(RPCT < .05, RPCT + .05, ifelse(RPCT > .95, RPCT - .05, RPCT))/100)
-mod7 <- betareg(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, wide)
-mod8 <- betareg(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, dplyr::filter(wide, RESULT != "EXTRA-TP"))
-mod9 <- betareg(RPCT ~ NSP + FORQ3*DENSITY + PRICECHG + VAP_B + EVANRATE + LDSRATE + VAP_H + VAP_H2 + MEDHHI + OWNEROCC + UNEM10 + OLD + WHITESOMECOL*VAP_W, filter(wide, RESULT == "LOSE"))
-stargazer(mod7, mod8, mod9, type = "latex", title = "Beta regressions", omit = "^STATE", label = "tab:beta", font.size = "small", column.sep.width = "3pt", df = FALSE, report = "vc*", no.space = T, header = F)
+mod8 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
+mod9 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, filter(wide, RESULT != "EXTRA-TP"))
+mod8$coefficients <- mod8$coefficients$mean*100
+mod9$coefficients <- mod9$coefficients$mean*100
+stargazer(mod8, mod9, type = "latex", title = "Beta regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:beta", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
 
 Lastly, as mentioned, I believe these models were spatially-dependent, with biased the estimation of the home price effect on voting behavior.
