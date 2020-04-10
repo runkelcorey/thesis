@@ -184,7 +184,7 @@ Continuing the approach laid out above yields answers to two questions.
 First, *could* relief programs directly aid the efforts of anti-relief candidates?
 Second, in more general terms, are the effects of housing price changes magnified by low levels of home equity or high levels of labor risk?
 
-### Could relief programs directly aid anti-relief campaigns?
+### Voting Impacts of the NSP and Price Change {#impacts}
 
 Table \@ref(tab:fullsample) lists the results of the full-sample models with and without accounting for prices.
 If the NSP's primary effect was lowering prices, then we should expect that tracts targeted by the first round of the Neighborhood Stabilization Program saw lower levels of Republican voting after taking into account other related factors except price changes.
@@ -194,22 +194,37 @@ For the labor risk--equity model, in all trials there should be positive correla
 ```{r fullsample, echo=FALSE, results='asis', eval=FALSE}
 mod4 <- lm(RPCT ~ NSP1 + ANXIETY + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
 mod5 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
-stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
+stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
 
-However, in both models the presence of the Neighborhood Stabilization Program is associated with more than a percentage point higher Republican voting.
+However, in both models the presence of the Neighborhood Stabilization Program is associated with approximately one percentage point higher Republican voting.
 This fact is in spite of the negative price effects of the NSP.
 There are two different conclusions to draw from this result.
 On the one hand, one could reject the model's capacity to describe the impacts of specific economic and demographic variables on majoritarian voting behavior.
+But doing so would reject the other results of this model that conform to theoretical expecations as well as prior research.
+Down the line, from residential tenure through the weighted portion of white people with less education than a college degree, demographic factors identified by prior research as impacting the outcome of elections in particular directions were similarly associated in my model.
 
-On the other hand, one could accept the model's validity, opening up the possibility that the NSP's primary political effect is not in its home equity impacts.
+Moreover, key features of the labor risk--equity model of political behavior found strong evidence in model 2.
+The interaction effects between price changes, foreclosure rates, and labor risk are of interest here (uninteracted forms are provided for completeness and their effects are not predicted by the labor risk--equity literature).
+The magnifying effects of labor risk and foreclosure rate on price changes were directly proportional.
+They were---in addition to most every other variable---statistically-significant at the 1% level.
+For instance, in our Palm Beach County tract 12099005947, my model estimated a 5.7-point increase in Republican vote share due to the combination of home price decline, foreclosure rate, and variance of employment, all in a non--Tea Party district that voted heavily Democratic.
+Both the triple interaction between prices, foreclosures, and labor risk, as well as the price change--foreclosure rate interaction hold positve coefficients, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
+
+But curiously, the interaction between price change and labor risk carries an inverse relationship with Republican voting.
+In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
+This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
+I account for this with post-crisis literature which additional difficulties associted with securing home equity lines of credit (HELOCs) for individuals with risky occupations.[@mota2015spatial, Table 1]
+Thus, rather than this negative association representing an inconsistency between predicted and actual effects of increased equity, it could be the case that incomplete credit markets prevented individuals with highly-risky employment from behaving as they would prefer.
+Nonetheless, even if this phenomena is not occurring, the labor risk--equity model and prior literature on Republican voting behavior agree elsewhere with my regression results.
+
+On the other hand, one could accept the model's capacity, opening up the possibility that the NSP's primary political effect is not in its home equity impacts.
 Here the question of model validity is important.
 The point is not to predict vote outcomes, but to infer the effects of certain variables.
 While prediction would be nice (and would be sufficient to validate its inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
 For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[REFERENCE NEEDED] since race is also associated with Republican voting, I have included descriptive variables in my models.
 For this reason I am not worried about fact that only half of the variation in Republican voting share is explained by my model.
 
-With this understanding of model validity, 
 
 Table \@ref(tab:fullsample) lists the results of the model with and without prices
 Fixed effects are a sort of catch-all method to deal with unobserved characteristics particular to certain levels.
@@ -247,7 +262,7 @@ This variance is likely due to sample size, as the number of tracts with winning
 Throughout these models, most control variables remained entirely stable, with the unemployment rate and the proportion of residents 65 and older respectively losing and gaining statistical significance among models.
 
 ```{r justp, echo=FALSE, results='asis', eval=FALSE}
-mod6 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
+mod6 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
 mod7 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
 stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:justp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
