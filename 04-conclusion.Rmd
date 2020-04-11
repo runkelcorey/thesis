@@ -213,7 +213,7 @@ Both the triple interaction between prices, foreclosures, and labor risk, as wel
 But curiously, the interaction between price change and labor risk carries an inverse relationship with Republican voting.
 In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
 This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
-I account for this with post-crisis literature which additional difficulties associated with securing home equity lines of credit (HELOCs) for individuals with risky occupations.[@mota2015spatial, Table 1]
+I account for this with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).[@mota2015spatial, Table 1]
 Thus, rather than this negative association representing an inconsistency between predicted and actual effects of increased equity, it could be the case that incomplete credit markets prevented individuals with highly-risky employment from behaving as they would prefer.
 In sum, the labor risk--equity model and prior literature on Republican voting behavior broadly agree with my regression results on the full sample of observations.
 
@@ -222,7 +222,6 @@ Here it is important to understand this specific sense of model validity.
 The point here is not to predict vote outcomes, but to infer the effects of certain variables.
 While prediction would be nice (and would be sufficient to validate a model's inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
 For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[@dymski2013race; @faber2013race] since race is also associated with Republican voting, I have included descriptive variables in my models.
-Elsewhere, research has identified household factors---namely size, and age of parents---that push Evangelical and Mormon applicants to become early, unqualified entrants to the mortgage market, and therefore more susceptible to application rejections and subprime lending.[@lown2005educating]
 Though I am somewhat worried about data quality with regards to ecological methods, the care taken to remove unobserved variable bias and the congruence of my results with expectations leads me to confidence in my *model*, and explains why I do not worry about fact that only half of the variation in Republican voting share is explained by my model.
 
 As such, attention should be directed instead towards the NSP.

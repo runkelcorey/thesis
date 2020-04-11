@@ -151,27 +151,24 @@ In general, the marginal propensity of wealth decreases as individuals get wealt
 While there is some squirreliness regarding housing MPC at the very high end of the wealth distribution (second and third homes may truly be just assets, so the purpose would be extra consumption), given the size and location of such high wealth individuals, it is unlikely the Neighborhood Stabilization Program affected those individuals' houses.
 This result implies that those tracts targeted by the NSP should be especially sensitive to its marginal price increases and therefore exhibit higher Republican voting returns.
 
-<!--Additionally, the intimacy with foreclosure and bankruptcy both financially and sociologically may factor into this analysis.
-- social contact theory
-- need price data in order to disaggregate presence of foreclosure from wealth effects of foreclosure?
--- could use same density X foreclosure statistic to get at that
--->
 
 ## Control Variables {#controls}
 
 I turn now to more general models of American congressional voting.
 Little is made of the controlling variables in academic publications, but anyone who has toyed around with regression analysis knows that the exclusion or inclusion of one or two variables can make or break a hypothesis.
 Often variables are included without apparent reason, leading to suspicions about the robustness of statistical inference.
-It is therefore important for the statisical analyst to offer two ways for readers to inspect one's work.
+It is therefore important for the statistical analyst to offer multiple ways for readers to inspect one's work.
 The first way is to explain the inclusion---or sometimes, exclusion---of particular variables used to disaggregate the effects of contributory forces.
-The second way, shown in the next chapter, is to present analyses that include or exclude particular variables; the common belief that if a significant association can be made despite the inclusion or exclusion of several variables, than the constancy of the association effectively verifies its ability to predict behavior.
+The second way, shown in the next chapter, is to present analyses that include or exclude particular variables; then differences, if they are significant, can decompose a particular effect.
+For instance, the NSP supposedly has a positive effect on prices.
+Then look at the differences between a regression of Republican voting on tracts designated as NSP without taking into account price changes and a regression with price changes included.
+The difference in the coefficients between the two trials would show how much of the NSP's effects on voting were due to its influence on prices.
 
 As Congressional voting returns will be the object of analysis in my next chapter, it is important to isolate the effects of the Neighborhood Stabilization Program.
-To do so, I opt to include several variables that also impact a Republican vote.
-These variables are lumped broadly into three categories: visible identity, including race and age; economic identity, including income and unemployment; and cultural identity, including measures of urbanicity as well as religion.
+To do so, I will include several variables that may covary with both NSP allocations---defined by risk of further foreclosure---and Republican voting behavior.
+These variables are lumped into three broad categories: visible identity, including race and age; economic identity, including income and unemployment; and cultural identity, including measures of urbanicity as well as religion.
 This breakdown acts purely for organizational purposes as the blur between visible, economic, and cultural should make clear, but they nonetheless reflect a view that voting decisions can be reduced to observable characteristics.
-As the predictive power of my model will make clear, this status is not the case: indiviudal forces cannot explain even half of the variation in voting returns.
-Nonetheless, without polling microdata, the demographic features provided by the decennial census offer the best chance at understanding voter behavior.
+Absent individual polling, the demographic features provided by the decennial census offer the best chance at understanding voter behavior.
 
 
 ### Visible Identity
@@ -229,7 +226,19 @@ Regression techniques known as interaction effects can calculate how variables--
 In this analysis, the interactions between labor market risk, foreclosure rates, and price changes should be significant and positive, regardless of the coefficients attached to labor market risk and foreclosure rates.
 
 To measure labor market risk, I took the variance of monthly unemployment rates from 2005 to 2010 for every sampled county.
-This value is an index of *gross* changes in unemployment, separate from whether such a county is currently in a employment glut or rut, an aspect captured by the *net* change in unemployment from 2005 to 2010.
+This value is an index of *gross* changes in unemployment, separate from whether such a county is currently in a employment glut or rut, an aspect captured by the *net* change in unemployment from 2005 to 2010, as well as the level of unemployment in 2010.
+The foreclosure rate is a key piece of the labor risk--equity model, as high foreclosure rates depress prices of surrounding homes, shrinking the amount of equity much as a declining stock price shrinks the value of individual portfolios holding said stock.
+As described in Chapters \@ref(actors-motive) and \@ref(motive-opportunity), foreclosures may also trigger animosity among neighbors, who label dispossessed homeowners as "deadbeats".
+Since foreclosures play directly into the allocation formula for the NSP, as well as possibly into Republican voting, the foreclosure rate is an important covariate to include in this analysis.
+
+A possible---though not thoroughly supported---connection between length of tenure in home and conservative preferences leads me to include it as well as its square.
+The longer someone lives in a single area, the less they may come in contact with conditions, ideas, people outside that local area, and could indicate that they believe their place of residence to be in no need of change.
+While these lines of reasoning connect tenure to Republican voting, they do not account for their connection to the NSP.
+The formula allocation takes into account the amount of high-cost, high-leverage mortgages in an area.
+Someone who moved into their home in 1969 would be unlikely to have a mortgage at all, let alone a subprime mortgage.
+One should expect relatively few mortgages held by people who have lived in the same residence for more than 30 years, but conservative effects as outlined above.
+Conversely, recent residents may be highly-leveraged, recently employed, and highly-susceptible to price changes.
+So tenure may be positively associated in its square term with Republican voting but negatively associated linearly.
 Additionally, I included median household income to control for variations in class.
 
 ### Cultural Identity
@@ -237,7 +246,8 @@ Additionally, I included median household income to control for variations in cl
 Three primary factors flavor voting at the cultural level: religion, urbanicity, and highest level of education attained.
 Within these factors, which are so grouped because they are in some sense voluntarily elected by the person to which the characteristics are attached, specific levels are significantly associated with Republican voting, while other levels are a mixed bag.
 Religion exemplifies this relationship.
-Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion.[@2015deep]
+Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion,[@2015deep] while prior literature has identified household factors---namely size, and age of parents---that push Mormon applicants to become early, unqualified entrants to the mortgage market, and therefore more susceptible to application rejections and subprime lending.[@lown2005educating]
+While that analysis was conducted exclusively on LDS adherents, the logic extends as well to evangelical adherents, prompting the inclusion of both.
 The U.S. Religion Census reports county-level data on adherents to a huge number of denominations, and is the only sub-national source for all fifty states.
 Conducted contemporaneously with the decennial census (though not connected, organizationally), I will join county-level statistics regarding the level of evangelical Protestants and members of LDS to the Census Tract level.
 
@@ -257,7 +267,9 @@ I weight the importance of this variable by its frequency: a tract with a single
 
 The discussion above leaves me with a model of Republican voting:
 
-\begin{equation}
-rep_i = \beta_0 + \beta_1NSP_i + \beta_2{pricechg_i \times LaborRisk_i \times Equity_i}  + \beta_3UnemploymentChange_i + \beta_4density_i + \beta_5evang_i + \beta_6LDS_i + \beta_7Hispanic_i + \beta_8Hispanic^2_i + \beta_9medHHI_i + \beta_{10}Black_i + \beta_{11}old_i + \beta_{12}(somecol_i \times white_i) + \beta_{13}state_i + \epsilon_i
+\begin{multiline}
+rep_i = \beta_0 + \beta_1NSP_i + \beta_2{PriceChg_i \times LaborRisk_i \times ForeclosureRate_i}  + \beta_3UnemploymentChg_i + \\ \beta_4UnemploymentRate_i + \beta_5medHHI_i + \beta_6Density_i + \beta_7Tenure_i + \\
+\beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\
+\beta_{12}Hispanic^2_i + \beta_{13}(White_i + SomeCol_i) + \beta_{13}Evangelical_i + \beta_{14}LDS_i + \epsilon_i
 (\#eq:model)
-\end{equation}
+\end{multiline}

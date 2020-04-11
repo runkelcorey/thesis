@@ -37,8 +37,8 @@ standardized <- nb2listw(nbwide, style = "W", zero.policy = TRUE)
 binary <- nb2listw(nbwide, style = "B", zero.policy = TRUE)
 
 ##spaital dependence tests on PCTR: all three reject conclusively the idea of no spatial dependence and indicate positive spatial correlation of RPCT
-lm.morantest(mod1, standardized, alternative = "two.sided", zero.policy = T)
-geary.test(mod1$residuals, binary, zero.policy = T, alternative = "two.sided")
+lm.morantest(mod1, standardized, alternative = "greater", zero.policy = T)
+geary.test(mod1$residuals, binary, zero.policy = T, alternative = "greater")
 
 moran.test(mod3$residuals, standardized, alternative = "greater", zero.policy = T)
 geary.test(mod3$residuals, binary, alternative = "greater", zero.policy = T)
