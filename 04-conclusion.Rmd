@@ -199,9 +199,8 @@ stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voti
 
 However, in both models the presence of the Neighborhood Stabilization Program is associated with approximately one percentage point higher Republican voting.
 This fact is in spite of the negative price effects of the NSP.
-There are two different conclusions to draw from this result.
-On the one hand, one could reject the model's capacity to describe the impacts of specific economic and demographic variables on majoritarian voting behavior.
-But doing so would reject the other results of this model that conform to theoretical expecations as well as prior research.
+There are two different conclusions to draw from this result: one could either accept the model's validity and direct attention to the Neighborhood Stabilization Program's progress by 2010; or one could  reject the model's capacity to describe the impacts of specific economic and demographic variables on majoritarian voting behavior.
+But doing the latter would also reject the findings of this model that conform to theoretical expectations as well as prior research.
 Down the line, from residential tenure through the weighted portion of white people with less education than a college degree, demographic factors identified by prior research as impacting the outcome of elections in particular directions were similarly associated in my model.
 
 Moreover, key features of the labor risk--equity model of political behavior found strong evidence in model 2.
@@ -209,57 +208,25 @@ The interaction effects between price changes, foreclosure rates, and labor risk
 The magnifying effects of labor risk and foreclosure rate on price changes were directly proportional.
 They were---in addition to most every other variable---statistically-significant at the 1% level.
 For instance, in our Palm Beach County tract 12099005947, my model estimated a 5.7-point increase in Republican vote share due to the combination of home price decline, foreclosure rate, and variance of employment, all in a non--Tea Party district that voted heavily Democratic.
-Both the triple interaction between prices, foreclosures, and labor risk, as well as the price change--foreclosure rate interaction hold positve coefficients, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
+Both the triple interaction between prices, foreclosures, and labor risk, as well as the price change--foreclosure rate interaction hold positive coefficients, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
 
 But curiously, the interaction between price change and labor risk carries an inverse relationship with Republican voting.
 In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
 This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
-I account for this with post-crisis literature which additional difficulties associted with securing home equity lines of credit (HELOCs) for individuals with risky occupations.[@mota2015spatial, Table 1]
+I account for this with post-crisis literature which additional difficulties associated with securing home equity lines of credit (HELOCs) for individuals with risky occupations.[@mota2015spatial, Table 1]
 Thus, rather than this negative association representing an inconsistency between predicted and actual effects of increased equity, it could be the case that incomplete credit markets prevented individuals with highly-risky employment from behaving as they would prefer.
-Nonetheless, even if this phenomena is not occurring, the labor risk--equity model and prior literature on Republican voting behavior agree elsewhere with my regression results.
+In sum, the labor risk--equity model and prior literature on Republican voting behavior broadly agree with my regression results on the full sample of observations.
 
-On the other hand, one could accept the model's capacity, opening up the possibility that the NSP's primary political effect is not in its home equity impacts.
-Here the question of model validity is important.
-The point is not to predict vote outcomes, but to infer the effects of certain variables.
-While prediction would be nice (and would be sufficient to validate its inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
-For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[REFERENCE NEEDED] since race is also associated with Republican voting, I have included descriptive variables in my models.
-For this reason I am not worried about fact that only half of the variation in Republican voting share is explained by my model.
+Because of these reasons, I urge acceptance of the model's capacity to understand the effects of certain economic variables on partisan voting behavior.
+Here it is important to understand this specific sense of model validity.
+The point here is not to predict vote outcomes, but to infer the effects of certain variables.
+While prediction would be nice (and would be sufficient to validate a model's inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
+For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[@dymski2013race; @faber2013race] since race is also associated with Republican voting, I have included descriptive variables in my models.
+Elsewhere, research has identified household factors---namely size, and age of parents---that push Evangelical and Mormon applicants to become early, unqualified entrants to the mortgage market, and therefore more susceptible to application rejections and subprime lending.[@lown2005educating]
+Though I am somewhat worried about data quality with regards to ecological methods, the care taken to remove unobserved variable bias and the congruence of my results with expectations leads me to confidence in my *model*, and explains why I do not worry about fact that only half of the variation in Republican voting share is explained by my model.
 
-
-Table \@ref(tab:fullsample) lists the results of the model with and without prices
-Fixed effects are a sort of catch-all method to deal with unobserved characteristics particular to certain levels.
-For instance, state laws governing taxation or the shape of voting precincts are not present in my dataset, so I employ state-level fixed effects to try and isolate these effects.
-Mechanically, this method groups all observations belonging to each state as a single regressor.^[Due to the fact that 24 states are included in this analysis, I truncated the output in light of space. Almost all states had statistically-significant associated effects.]
-While fixed-effects are standard fare in econometric analysis, I include both models because the assumptions of this fixed-effects model may not be met.
-Namely, it presumes that all directly-relevant and observable predictors are present; as I will show later, these data may be too limited to fully explain the spatial correlation among the voting results.
-
-The coefficients of most every control predictor are consistent with prior research, with two caveats.
-Of particular importance, this model conforms with the literature connecting homeownership to conservative voting around the world, as the owner-occupied homeownership rate is positively associated with Republican vote share.
-The 2010 unemployment rate and population density have the opposite signs that were expected: in my model, as the unemployment rate climbs, the Republican voting percentage falls; conversely, as the population density increases, so to does the vote share.
-That being said, these are small effects; a (massive) 10-point rise in unemployment is associated here with just a 2.3-point rise in vote share.
-For population density the impacts are even smaller.
-The consistency of these impacts acts as a kind of eye test for the validity of this model, with the argument being that here are simply added predictors to an already-solid model.
-
-Of interest to this thesis are the coefficients attached to the Neighborhood Stabilization Program, 2010 foreclosure rate, and change in home prices.
-Against my hypothesis that foreclosure rates---a proxy for negative equity---would be negatively associated with Republican vote share, while home-price changes would be positively linked to Republican vote share, each regressor displays the *opposite* behavior.
-Part of the price-change behavior seems to be absorbed by the state-level fixed effects, however.
-The logic here is that there is correlation between Republican voting shares in nearby census tracts that covaries both with the particular state and with prices.
-The nearness (or farness) of tracts is unobserved by this model, but may nonetheless contain important information linked to---but distinct from---price changes.
-It is ambiguous what that information may be, however: it could align with financial data on equity or rates of seriously-delinquent mortgage payments, but alternatively, it could be socio-cultural, relating instead to irrational exuberance over price changes or perceptions of fortunate homeowners.
-
-Separate from the effects of price changes and foreclosure rates, the Neighborhood Stabilization Program had a chronologically-dependent effect on Republican vote share.
-Tracts targeted with the first round of grants (NSP1) were associated with a 1.75-point increase in Republican vote share, while the later rounds---NSP2 and NSP3---were associated with decreases in Republican vote shares after taking account of race, educational attainment, religious, and economic factors.
-Since properties could not be purchased (let alone repaired or resold) before funds were granted, NSP3 (and to a lesser extent NSP2) tracts could not have seen financial benefit from the program.
-I interpret this result as a strong evidence for the conclusion that the Neighborhood Stabilization Program, by supporting homeowner wealth, push voters rightward.
-Why, though, would NSP2 and NSP3---without a robust advertising effort or partisan attachment---be associated with Democratic votes?
-My theory is, again, unobserved variable bias.
-NSP1 and NSP3 were targeted due to the risk of further foreclosures, associated with high-cost, high-leverage loans (most of which were subprime) and, therefore, mortgagees at the financial margins, who tend to vote more Democratic.
-
-The effects of the Neighborhood Stabilization Program are sharpened by the presence of Tea Party politics.
-Table \@ref(tab:justp) lists the results with and without state-level fixed effects for different subsets of the full sample, all of which saw races between self-avowed Tea Party candidates.
-While the signs of coefficients attached to the NSP rounds remain the same, their significances vary.
-This variance is likely due to sample size, as the number of tracts with winning candidates contained little more than a tenth of the total observations.
-Throughout these models, most control variables remained entirely stable, with the unemployment rate and the proportion of residents 65 and older respectively losing and gaining statistical significance among models.
+As such, attention should be directed instead towards the NSP.
+It seems that, since the NSP is associated with higher rates of Republican voting in the face of negative price effects, cultural (rather than economic) factors may have been at play.
 
 ```{r justp, echo=FALSE, results='asis', eval=FALSE}
 mod6 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
