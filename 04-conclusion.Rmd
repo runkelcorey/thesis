@@ -315,7 +315,7 @@ I first constructed a matrix of neighboring census tracts using geographic tract
 I then ran the residuals of each model (from a positivist interpretation, these are the unobserved variables) through Moran's I and Geary's C tests.
 The similar tests look for spatial dependence respectively at the global and local levels.
 Since this dataset is fractured, containing large discontiguities, Geary's C test will be the more appropriate measure; both are retained because the calculations are quick and similar.
-Table \@ref(tab:spdep) displays the results of these tests, all of which reject the null hypothesis of no spatial dependence at the highest precision level **R** offers.
+Table \@ref(tab:spdep) displays the results of these tests, all of which reject the null hypothesis of no spatial dependence **R**.
 
 ```{r spdep, echo=FALSE, message=FALSE}
 spdep <- read_csv("data/voting/display/spdep.csv")
@@ -323,6 +323,19 @@ kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spat
 ```
 
 ## Conclusion
-In sum, there is strong evidence that recipients of the Neighborhood Stabilization Program's first round of grants voted more conservative in the 2010 elections, while subsequent rounds voted more liberal.
-This fact can be explained by the timescale that the NSP operated on.
-Other heretofore unexamined factors, such as home price level and foreclosure rate, show mixed results, though the strongest effects came as Tea Party politics stigmatized homeownership, foreclosure, and government relief programs.
+In sum, 2010 prices were negatively associated with the Neighborhood Stabilization Program's first round of funding.
+This fact may be due to unobserved variable bias, but, given the normalcy of regression diagnostics, it may instead be due to the NSP's timeline.
+Due to the mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
+My results indicate that the NSP reduced prices between 1.3% and 2.0%, a small reduction keeping with size of the mandated discount.
+Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.[@185682010hud; @hud2013hud]
+The negative impact had by the first round of the Neighborhood Stabilization Program (the only round mature enough to even consider) on prices means that the NSP could not have had the effect in question in 2010.
+
+The labor risk--equity model was evaluated despite this fact, and evidence suggested the theorized effects were present in the 2010 midterms, especially when only Tea Party tracts are considered.
+Economic anxiety, composed of low equity---represented by high foreclosure rates---and risky employment---represented by high variance of unemployment rate---magnified the conservatizing effects of increased home prices.
+These results were statistically significant and robust to several covariates.
+Still to be explained are the mechanisms by which labor risk propagates through mortgage markets, HELOCs, and political behavior.
+These variables provided "liberalizing" effects on voters (though not when combined with high foreclosure rates), confounding prior literature on the subject.
+
+Limitations of the measurement and statistical methods were explored, with strong evidence that further work is needed to extricate the impacts studied from spatial dependence and bounded response assumptions.
+Beta distribution regression was employed to correct for the latter issue, with slightly more ideal measures of model fitness and similarly strong evidence for the labor risk--equity model's capacity to explain voter behavior in the full sample as well as the Tea Party tracts in particular.
+These results build towards consensus with empirical literature, girding Ansell (2014) with voting results to provide a crucial middle step in his argument.
