@@ -184,7 +184,7 @@ Continuing the approach laid out above yields answers to two questions.
 First, *could* relief programs directly aid the efforts of anti-relief candidates?
 Second, in more general terms, are the effects of housing price changes magnified by low levels of home equity or high levels of labor risk?
 
-### Voting Impacts of the NSP and Price Change {#impacts}
+### Voting Impacts of the NSP and Price Changes {#impacts}
 
 Table \@ref(tab:fullsample) lists the results of the full-sample models with and without accounting for prices.
 If the NSP's primary effect was lowering prices, then we should expect that tracts targeted by the first round of the Neighborhood Stabilization Program saw lower levels of Republican voting after taking into account other related factors except price changes.
@@ -242,25 +242,40 @@ Table \@ref(tab:justp) shows the results of the same model above, but applied on
 In these trials, more pronounced home price effects should be expected, though it may also be possible that "deadbeat" homeowners are further stigmatized by Tea Party candidates, leading to more conservatizing effects of increased foreclosure rates.
 
 ```{r justp, echo=FALSE, results='asis', eval=FALSE}
-mod6 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
-mod7 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
+mod6 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, filter(wide, RESULT != "EXTRA-TP"))
+mod7 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, filter(wide, RESULT != "EXTRA-TP"))
 stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:justp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
 
+These trials offer promising results but less statistical significance.
+First, the evidence that NSP1 had any effect on voting is far from conclusive, with statistically insignificant associations between round one funding and Republican vote shares.
+Second, home price interaction terms are significant and carry the same signs as in trials run on the full slate of observations, but insignificant when uninteracted.
+Third, the foreclosure rate switches signs when combined with the effects of home prices.
+This switch means that *apart from their effects on prices* foreclosures are associated with increased Republican voting, but when those [negative] price effects are included, voters choose Democratic candidates more.
+This finding agrees with the narrative that Tea Party candidates cast foreclosed homeowners as irresponsible and blame-worthy neighbors.
+
+Explaining the cultural dynamics of this phenomenon (and teasing out its existence) opens opportunities for further research, but I present one theory now.
+Eagle-eyed readers will have noted that, while the foreclosure rate and population density were included in Section \@ref(model), the interaction between them was left unexplained.
+I have included this term to measure sociological effects of foreclosures, namely social contact theory, which posits that contact with an Other causes members of the in-group to sympathize with said Other.
+In this case, that Other is foreclosed homeowners.
+Where density is low, it may be possible to avoid seeing or knowing one of these "deadbeats", but as densities (and foreclosure rates) rise, it becomes less and less possible to assimilate ideas of irresponsibility and blame with people that one knows personally.
+While the coefficient attached to the foreclosure rate--population density interaction term is small, it was statistically significant in every trial I ran.
+Further, population density carries an enormous range of values; while most of these predictors are bounded between 0 and 100 percent, population density ranges from 0 to nearly 80,000.
+As such, the interaction term ranges from 0 to `range(wide$ADJ_FORQ*wide$DENSITY)[2]`, meaning that effects could be quite large at the upper end.
 
 
 ### Limitations and proposed refinements {#limitations}
 
-As stated above, these models were limited by several factors.
-The three areas I focus on as most important are data quality, model fitness, and spatial dependence.
+However, even with all these statistically-significant terms, there are questions of model adequacy that I am poorly-equipped to address.
+These models were limited by several factors, but the three areas I focus on as most important are data quality, model fitness, and spatial dependence.
 My data quality concerns are ever-present in natural-experiment methodologies.
 In short, individual voting characteristics, more granular price data, and a fuller spread of census tracts could have aided the conclusivity of this evidence.
-Additionally, individual-level observations would have avoided the ecological assumptions this analysis rests on.
+Additionally, using individual-level demographics and vote results would have avoided the ecological assumptions this analysis rests on.
 
 The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
-On that count, the attached .40-.62 R^{2} values are not concerning.
-However, analysis of residuals leaves something to be desired.
+On that count, the attached .49-.64 $R^{2}$ values are not concerning.
+However, further analysis of the residuals demonstrates weaknesses in model selection.
 Figure \@ref(fig:linearesid) shows the residuals against fitted values for the full-sample, fixed-effects model.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
 Here, there is a clear inverse relationship framed by the bounds of the Republican voting share at 0 and 100 percent.
@@ -284,19 +299,19 @@ In contrast, the behavior of Figure \@ref(fig:betaresid) conforms more closely t
 Results of the beta regressions can be seen in Table \@ref(tab:beta).
 Coefficients are altogether similar to what the linear models predict, making me more secure in my belief of their validity.
 
+
 ```{r beta, echo=FALSE, results='asis', eval=FALSE}
-mod8 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
-mod9 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, filter(wide, RESULT != "EXTRA-TP"))
-mod8$coefficients <- mod8$coefficients$mean*100
-mod9$coefficients <- mod9$coefficients$mean*100
+mod8 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, mutate_at(wide, vars(ADJ_PRICE07, ANXIETY, ADJ_FORQ, EMPLOYRISK, UNEMCHG, UNEM10, MEDHHI, DENSITY, TENURE, TENURE2, OLD, VAP_B, VAP_H, VAP_H2, VAP_W, WHITESOMECOL, EVANRATE, LDSRATE), funs(./100)))
+mod9 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, mutate_at(filter(wide, RESULT != "EXTRA-TP"), vars(ADJ_PRICE07, ANXIETY, ADJ_FORQ, EMPLOYRISK, UNEMCHG, UNEM10, MEDHHI, DENSITY, TENURE, TENURE2, OLD, VAP_B, VAP_H, VAP_H2, VAP_W, WHITESOMECOL, EVANRATE, LDSRATE), funs(./100)))
 stargazer(mod8, mod9, type = "latex", title = "Beta regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:beta", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
 
-Lastly, as mentioned, I believe these models were spatially-dependent, with biased the estimation of the home price effect on voting behavior.
-I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as my own facility with such approaches, quashed that opportunity.
-Nonetheless, I can virtually prove its existence in my models using standard tests of spatial correlation.
+Lastly, as mentioned, I believe these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
+Using state-level fixed effects and tract-level housing prices corrected some of this behavior, but the local nature of politics cannot be underestimated.
+I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as a lack of remote access to better hardware, quashed that opportunity.[^This chapter was completed during 2020's novel coronavirus pandemic, which restricted access to University resources.]
+Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.
 
-I first constructed a neighbor's matrix from geographic census tract files; this matrix tells **R** which tracts share an edge.
+I first constructed a matrix of neighboring census tracts using geographic tract files; this matrix tells **R** which tracts are neighbors by triangulating their population-weighted geographic centers.
 I then ran the residuals of each model (from a positivist interpretation, these are the unobserved variables) through Moran's I and Geary's C tests.
 The similar tests look for spatial dependence respectively at the global and local levels.
 Since this dataset is fractured, containing large discontiguities, Geary's C test will be the more appropriate measure; both are retained because the calculations are quick and similar.
