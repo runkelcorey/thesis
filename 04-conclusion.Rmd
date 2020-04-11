@@ -227,6 +227,19 @@ Though I am somewhat worried about data quality with regards to ecological metho
 
 As such, attention should be directed instead towards the NSP.
 It seems that, since the NSP is associated with higher rates of Republican voting in the face of negative price effects, cultural (rather than economic) factors may have been at play.
+One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
+Table \@ref(tab:compnsp) compares how each of the NSP rounds fared with respect to Republican votes.
+The first round saw increased levels of Republican voting, while rounds two and three saw decreases in Republican vote share.
+I excluded the second and third NSP rounds because, as of July 2011, respectively 20.6% and 0.4% of funds had been expended from NSP2 and NSP3.[@2011hud; @2011huda]
+Thus, any perceived effects could not been due to the price effects sought by the program.
+Though NSP1 had expended 43.4% of funds and fully committed its allocations to grantees by September 2010,[@hud2010] the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
+The distinctive characteristics of the three rounds, then, may not have been their efficacy, but rather their association with administrations: NSP1 was authorized by the George W. Bush administration, while NSP2 and NSP3 were administered by the Barack Obama administration.
+Further research is required to understand these phenomena, if they are in fact present.[^Admittedly it seems unlikely that such neighborhoods---likely already targeted by other government programs---would feel such attachment to a presidential administration due to the Neighborhood Stabilization Program]
+
+A possible reason for the primacy of cultural factors here is that social insurance and taxation were not so politically salient in non--Tea Party districts.
+This possibility is readily assimilable to the work done in previous chapters, as it simply would be a matter of degree separating the behavior of Tea Party and non--Tea Party districts.
+Table \@ref(tab:justp) shows the results of the same model above, but applied only to tracts in which a self-described member of the Tea Party ran for election.
+In these trials, more pronounced home price effects should be expected, though it may also be possible that "deadbeat" homeowners are further stigmatized by Tea Party candidates, leading to more conservatizing effects of increased foreclosure rates.
 
 ```{r justp, echo=FALSE, results='asis', eval=FALSE}
 mod6 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE, filter(wide, RESULT != "EXTRA-TP"))
@@ -234,10 +247,7 @@ mod7 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE0
 stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:justp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
 
-The variables of interest were a mixed bag.
-NSP1 in each model showed strong statistical basis for rejecting the null hypothesis in favor of a positive effect on Republican voting, while the second and third rounds of the Neighborhood Stabilization Program consistently showed a negative association with Republican voting shares, though with inconsistent significance.
-Due to the ever-shrinking size of the dataset, I lean towards chalking this result up to an issue of size.
-The price change and foreclosure rates never delivered a statistically-significant pair consistent with expectations, with little evidence that either has a determinate effect on voting.
+
 
 ### Limitations and proposed refinements {#limitations}
 
