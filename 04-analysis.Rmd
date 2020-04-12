@@ -314,7 +314,7 @@ I first constructed a matrix of neighboring census tracts using geographic tract
 I then ran the residuals of each model (from a positivist interpretation, these are the unobserved variables) through Moran's I and Geary's C tests.
 The similar tests look for spatial dependence respectively at the global and local levels.
 Since this dataset is fractured, containing large discontiguities, Geary's C test will be the more appropriate measure; both are retained because the calculations are quick and similar.
-Table \@ref(tab:spdep) displays the results of these tests, all of which reject the null hypothesis of no spatial dependence **R**.
+Table \@ref(tab:spdep) displays the results of these tests, all of which reject the null hypothesis of no spatial dependence, affirming Tobler's first law of geography that "everything is related to everything else, but near things are more related than distant things."[@tobler1970computer, 236]
 
 ```{r spdep, echo=FALSE, message=FALSE}
 spdep <- read_csv("data/voting/display/spdep.csv")

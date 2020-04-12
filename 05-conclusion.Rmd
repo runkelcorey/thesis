@@ -16,10 +16,16 @@ In the face of stagnating wages, outsourced manufacturing, and uncertain career 
 
 The structures that facilitated this unprecedented growth were scaffolded with a "social compact" ushered in by the New Deal.
 This compact promised subsidized, predictable home mortgages and organized employment in return for the political support of the subset who profited most from these homes and jobs.[@stoller]
-These policies responded to
+These policies responded to general economic turmoil and, I believe, learned from the lessons of farm foreclosures in the Midwest.
+Flunking crop prices and the ecological devastation of the Dust Bowl bore epidemiological resemblance to the foreclosure crisis: the diseases and dust storms in the 1920s and 1930s concentrated geographically much as the foreclosures in master planned developments (or close-knit neighborhoods) did in the 2000s and 2010s.
+But the responses of farmers bore little resemblance to the responses of homeowners.
+Farmers had been trained in debt politics, going back all the way to Shay's Rebellion.[@beard]
+Moreover, sociological forces made talking shop a respectable subject among farmers, rather than the shame that foreclosure connoted in the 2000s.
+The system to emerge subsidized long-term fixed-rate mortgages at what then were low interest rates and small downpayments.
+These policies increased demand for homeownership and fixed people in their suburban communities.[@crabgrassfrontier]
 
 However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.[@schwartz]
-This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of the {fhfa?fha?fannie mae?} and local savings and loan banks.[@lewis?]
+This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.[@lewis]
 Meanwhile, taxation became a national political discussion.
 After the tax rates of top-bracket earners were cut in the 1960s from above 90%, homeowners in California awoke to a rationalized and modern property tax system that edged assessed property values higher.
 These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.[@martin]
@@ -54,9 +60,12 @@ The Crisis, in turn, began with plateauing home buying (and thus speculation and
 As prices evened out, equity to borrow against disintegrated, and foreclosures increased.
 With vacant properties and increased housing stock, prices fell nationally by 20% from February 2007 to May 2009, ultimately settling 26% down in February 2012.[@caseshiller]
 
-Declining tax rev -> cities couldn't
-Too far from borrowers + perverse incentives -> banks couldn't
-Homeowners had long-forgotten debt politics and had been retrained as tax activists and positive direct benefits
+Declining prices meant declining property tax revenues (or at least the future threat of such changes), which hamstrung cities, already shorn of much of their expected responsibility by state and federal governments.
+As for banks, the process of mortgage-backed securitization separated lines of communication from creditors who would rather take haircuts or extend loan maturities than foreclose.
+Home mortgages are usually backed by one party (a bank with a good name), and then serviced by another.
+This legal relationship rewarded prompt and reliable servicing of loans, even if such servicing meant foreclosure.
+Meanwhile, homeowners had long-forgotten the debt politics practiced by Midwestern farmers.
+They had been retrained as tax activists and expected positive direct benefits, not interference with private contracts.
 
 A federal response would be required.
 In addition to the X trillion authorized by the Troubled Asset Relief Program (TARP), the Economic Stimulus Act of 2008 (ESA), and the other stimulating acronyms, George W. Bush enacted the Housing and Economic Recovery Act of 2008 (HERA), which authorized $3.9 billion in funds for, among other channels, the Neighborhood Stabilization Program.
@@ -68,4 +77,35 @@ Its visibility may have made the financial health of neighborhoods legible to vo
 
 This political movement---tied to the same mechanisms that created cheap credit---allows for the examination of the labor risk--equity model proposed in political economy literature to be analyzed through vote returns.
 I matched 27,098 census tracts to the returns of voting precincts, foreclosure rates, home price changes, and several key demographic covariates in order to suss out these theorized effects, including attempting to measure the *political* impact of the NSP.
-My results agreed with the theory on most, but not all levels.
+My results agreed with the theory's predictions on most, but not all levels.
+The negative price effects of NSP1 undermined a theoretical justification for its association with increased Republican voting among all sampled tracts.
+This association was rendered insignificant in trials on the subset of tracts in which a self-described member of the Tea Party sought election.
+Across the board, however, the combination of high foreclosure rates and high variance of unemployment magnified the positive association between home price change and Republican voting.
+This more general result conforms with the labor risk--equity model and opens the possibility that foreclosure relief, or indirect subsidies of housing prices of any sort, could have conservatizing effects on American political behavior.
+
+However, such subsidies may have to be large in magnitude or sustained over many years to make real differences.
+Despite lowering prices, the first round of the NSP seemed to raise Republican voting shares, and the interactions between price changes and labor risk on the one hand (possibly accounted for by the difficulty of securing HELOCs), and foreclosure rates and density on the other hand, suggest that cultural factors may weigh more heavily on voting behavior.
+While this conclusion would surprise almost no one who works on American political behavior, the sheer magnitude of homeownership as a personal financial and emotional concept would nonetheless render such a conclusion nontrivial.
+Additionally, there were questions of model selection and spatial dependence, which could be remedied by more sophisticated statistical techniques.
+
+An alternative possibility is that housing politics concentrates at the municipal level.
+Planning departments, which operate mostly at the city or county level in the United States, say a great deal about which properties profit.
+Urban planners today are much closer to wealth managers as they are to architects.[@stein]
+The responsivity of localities, in conjunction with the lower profiles of city government affairs, make cities prime targets for activist voices and more extreme voting behaviors.
+As I write this thesis, rent strikes---unheard of even during the Great Recession---are igniting in cities and counties around the United States.
+America's first recession since the foreclosure crisis has been met with much greater ferocity.
+Mostly, this ferocity comes as a result of the suddenness, ubiquity, and consensus that Americans are blameless.
+These factors trigger a sympathy and unity not unlike that which swept through the Midwest in the Great Depression.
+But the rejuvenation of local, anti-capitalist organizing cannot be underestimated.
+The Tea Party's counterpart on the left was Occupy Wall Street, a failure by any measure, but one that spelled out the seriousness of economic issues in a country with an aging labor movement, and the occupants of which went on to become leaders in antifascist organizations and the Democratic Socialists of America, as of writing the largest socialist organization in America since at least the 1930s.
+
+The subsequent election of Donald Trump in 2016 is associated with the death of the Tea Party.
+What had been a rhetorically-negative movement (anti-tax, anti-welfare, anti-immigrant) spurred the politics that elected Trump, but left little new foundation on which a broader realignment could be built.
+A socially conservative but economically left-wing movement has begun to emerge from the Republican party.
+This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain Capital, speak out against private equity.[@letter]
+It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization, which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.[@news]
+And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.[@stoller]
+
+While the sharpest political moment may have passed, he financial and political forces at work during the foreclosure crisis and its reaction continue to influence American politics.
+I have elaborated on other scholars' theoretical and empirical work with an analysis of the 2010 midterms, concluding that economic anxiety can magnify the impacts of housing prices on political behavior.
+While there is yet more work to be done towards refining and measuring these behaviors, the general thesis that policies can alter and train preferences---a logic somewhat the obverse of what is normally said about policymaking---is reiterated in this thesis.
