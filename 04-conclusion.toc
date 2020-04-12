@@ -1,7 +1,0 @@
-\contentsline {section}{\numberline {1}Effects of the Neighborhood Stabilization Program on Voting}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}Relationships between statistical geographies}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Data collection and aggregation}{4}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Data Analysis}{7}{subsection.1.3}
-\contentsline {subsubsection}{\numberline {1.3.1}Linear models}{7}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Limitations and proposed refinements}{9}{subsubsection.1.3.2}
-\contentsline {subsection}{\numberline {1.4}Conclusion}{12}{subsection.1.4}

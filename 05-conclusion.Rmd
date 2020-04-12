@@ -1,0 +1,71 @@
+---
+bibliography: bib/thesis.bib
+csl: csl/chicago-note-bibliography.csl
+output:
+  pdf_document:
+    keep_tex: true
+  html_document: default
+  word_document: default
+---
+
+# Conclusion {#conclusion}
+
+Between 2008 and 2012, more than 10 million Americans lost their homes.[@martin2015foreclosed]
+While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.[@ferreira]
+In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,[@mew] or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.[@fed]
+
+The structures that facilitated this unprecedented growth were scaffolded with a "social compact" ushered in by the New Deal.
+This compact promised subsidized, predictable home mortgages and organized employment in return for the political support of the subset who profited most from these homes and jobs.[@stoller]
+These policies responded to
+
+However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.[@schwartz]
+This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of the {fhfa?fha?fannie mae?} and local savings and loan banks.[@lewis?]
+Meanwhile, taxation became a national political discussion.
+After the tax rates of top-bracket earners were cut in the 1960s from above 90%, homeowners in California awoke to a rationalized and modern property tax system that edged assessed property values higher.
+These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.[@martin]
+
+The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
+In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.[@campbell]
+At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay] while simultaneously with increasing military expenditure.
+In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@???]
+Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.[@lewis]
+Better positioned in the market, and with fewer competitors, investment banks ramped up production of home mortgages.
+
+This acceleration was aided by successive federal policies from George H. W. Bush and Bill Clinton aimed at boosting affordability.
+For current homeowners, this sustained demand meant that home prices seemed to be stably increasing, and that eventual sale would bring certain profits.
+For prospective homeowners lured by the good fortune currently being enjoyed, global disinflation (partially due to outsourced manufacturing) meant that home mortgages, now packaged into mortgage-backed securities, offered enough return on investment to persuade international capital to provide the financial supply.[@schwartz2009subprime]
+Once this demand and supply saw consistency in each other, they became apparently dependent on one another: increased demand let in more investors on these assets made riskless by yet more demand, allowing homeowners to borrow against their inflated home prices.
+This mechanism crystallized a successive, asset-backed social compact.
+Instead of organized employment, citizens received organized credit with relatively predictable gains while accepting uncertain wage employment.[@stoller]
+
+Whether as social compact or opportunism, these political and financial swings made homeowners sensitive to real estate deflation as their parents, parties to the previous compact, were sensitive to inflation in the basket of everyday goods.
+When employment was unpredictable, or wages flat, homeowners relied on surging home prices to smooth their consumption.
+When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills[@scf] or necessary expenses.
+Home equity and increasing prices (that could be realized as income) acted as a form of private insurance, replacing unemployment benefits and welfare provisions.
+Dropping demand for those programs would also agree with lower taxation to further loosen households' financial constraints.
+The conservatizing effects of this logic on political behavior have been thoroughly theorized[schwartz, seabrooke, who else?] but somewhat less-thoroughly observed.
+Empirical work has focused on the existence of preferences rather than their priority,[@ansell] as data on individual home wealth and bespoke polling are expensive.
+
+This thesis has exploited the coincidence of unusually-precise data with political changes that sharpened (and possibly made explicit) the connections between homeownership, unstable employment, and taxation.
+In the former category, the decennial census and the first wave of nationwide efforts at precinct-level voting returns happened to occur in 2010.
+In the latter category, Americans processed nationally the depth of the Great Recession, with the Tea Party movement making great noise about lower taxation and welfare spending, especially as it regarded homeownership.
+The Great Recession was triggered by the Global Financial Crisis, which saw liquidity frozen in place and financiers around the North Atlantic thoroughly traumatized.
+The Crisis, in turn, began with plateauing home buying (and thus speculation and prices) in the mid-2000s.
+As prices evened out, equity to borrow against disintegrated, and foreclosures increased.
+With vacant properties and increased housing stock, prices fell nationally by 20% from February 2007 to May 2009, ultimately settling 26% down in February 2012.[@caseshiller]
+
+Declining tax rev -> cities couldn't
+Too far from borrowers + perverse incentives -> banks couldn't
+Homeowners had long-forgotten debt politics and had been retrained as tax activists and positive direct benefits
+
+A federal response would be required.
+In addition to the X trillion authorized by the Troubled Asset Relief Program (TARP), the Economic Stimulus Act of 2008 (ESA), and the other stimulating acronyms, George W. Bush enacted the Housing and Economic Recovery Act of 2008 (HERA), which authorized $3.9 billion in funds for, among other channels, the Neighborhood Stabilization Program.
+HERA included titles that tried to ease mortgage payments and incentivize resolution aside from foreclosure.
+While its benefits were far below what foreclosure activists considered adequate,[@dayen2016chain] actors on the right saw HERA as emblematic of the profligate welfare state that would burden the nation (as a collection of individual taxpayers) with perpetual debt.
+This narrative was essentialized in the profligate spending of highly-leveraged homeowners---the losers attached to "losers' mortgages".[@santelli]
+Though short-lived, the Tea Party effectively wove subprime borrowing into the larger Republican animus of higher taxation and more subsidies.
+Its visibility may have made the financial health of neighborhoods legible to voters as voting issues.
+
+This political movement---tied to the same mechanisms that created cheap credit---allows for the examination of the labor risk--equity model proposed in political economy literature to be analyzed through vote returns.
+I matched 27,098 census tracts to the returns of voting precincts, foreclosure rates, home price changes, and several key demographic covariates in order to suss out these theorized effects, including attempting to measure the *political* impact of the NSP.
+My results agreed with the theory on most, but not all levels.
