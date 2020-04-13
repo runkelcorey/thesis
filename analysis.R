@@ -28,17 +28,22 @@ mod9 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + A
 
 #spatial dependence check
 spwide <- as_Spatial(st_as_sf(wide, coords = c("LONGITUDE", "LATITUDE"), crs = 4269), IDs = GEOID10) #return to sp object
+tpwide <- as_Spatial(st_as_sf(filter(wide, RESULT != "EXTRA-TP"), coords = c("LONGITUDE", "LATITUDE"), crs = 4269), IDs = GEOID10)
 
 ##create neighbors list
 nbwide <- tri2nb(spwide)
+nbwidetp <- tri2nb(tpwide)
 
 ##create weights lists
 standardized <- nb2listw(nbwide, style = "W", zero.policy = TRUE)
 binary <- nb2listw(nbwide, style = "B", zero.policy = TRUE)
 
-##spaital dependence tests on PCTR: all three reject conclusively the idea of no spatial dependence and indicate positive spatial correlation of RPCT
-lm.morantest(mod1, standardized, alternative = "greater", zero.policy = T)
-geary.test(mod1$residuals, binary, zero.policy = T, alternative = "greater")
+standardizedtp <- nb2listw(nbwidetp, style = "W", zero.policy = TRUE)
+binarytp <- nb2listw(nbwidetp, style = "B", zero.policy = TRUE)
 
-moran.test(mod3$residuals, standardized, alternative = "greater", zero.policy = T)
-geary.test(mod3$residuals, binary, alternative = "greater", zero.policy = T)
+##spaital dependence tests on PCTR: all three reject conclusively the idea of no spatial dependence and indicate positive spatial correlation of RPCT
+lm.morantest(mod7, standardizedtp, alternative = "greater", zero.policy = T)
+geary.test(mod7$residuals, binarytp, zero.policy = T, alternative = "greater")
+
+moran.test(mod9$residuals, standardizedtp, alternative = "greater", zero.policy = T)
+geary.test(mod9$residuals, binarytp, alternative = "greater", zero.policy = T)

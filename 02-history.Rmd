@@ -9,7 +9,7 @@ output:
 ---
 # Connecting Home Prices to Voting {#motive-opportunity}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.[@klein2008disowned]}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}
 
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim ran parallel with the Bush administration's "ownership society", which added moral heft to the legal responsibilities associated with private property.
@@ -26,7 +26,7 @@ options(knitr.graphics.auto_pdf = TRUE)
 
 
 But, as mentioned early in Chapter \@ref(actors-motive), opposing the leftward pull of ideology was the rightward push of rising wealth.
-While higher levels of wealth and income are colloquially associated with conservatism, but there is little research on how asset ownership pushes people towards their political decisions.(BRING IN EMBOURGEOISIEMENT HERE?)
+While higher levels of wealth and income are colloquially associated with conservatism, but there is less research on how asset ownership pushes people towards their political decisions.<!--(BRING IN EMBOURGEOISIEMENT HERE?)-->
 And, historically, the political effects of taxation were not a given: after World War II, taxation was not a weighty political issue,[@campbell2009how, 160] let alone a wedge issue.
 Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans "to define themselves and their party in opposition to taxes."[@martin2008welcome, 128]
 Politicians of all stripes followed, with Third Way Democrats, led by President Bill Clinton, accepted tax cuts in their successful political bids; it was only in the 2000s that Democrats united (more or less) in warning against lower taxation.
@@ -80,8 +80,8 @@ Rather than direct cash transfers, which would have enhanced individual freedom 
 The NSP attempted to cosset homeowners from endogenous shocks, recognizing the social dislocation caused by such a stupid destruction of private wealth.
 While some homeowners could be painted as the kind of irresponsible, purely-speculating "deadbeats" characterized in Dayen (2016) and Michael Lewis' *The Big Short*, it is important to remember that the majority of those foreclosed upon were prime borrowers.[@ferreira2015new]
 Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \@ref(fig:distress).^[Though that lag was partially because there was more "fuel left to burn" in the sense that the number of subprime borrowers, already only 20% of the market, had already been slashed.]
-These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.(TOOZE? MIAN & SUFI?)
-The political stigmata came when XXX fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclsoure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
+These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.[@toozeCrashedHowDecade2018; @mianPoliticalEconomyUS2010]
+The political stigmata came when Santelli (among others) fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclsoure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
 
 ```{r distress, fig.cap="Measures of homeowner distress timing.", fig.subcap=c("Total foreclosures and short sales by owner type","Probability of home loss by owner type."), echo = FALSE, out.width='45%', fig.align='center', dev='pdf', fig.ncol=2}
 include_graphics(c("figure/ferreira_absolute.png", "figure/ferreira_distress.png"))
@@ -148,7 +148,7 @@ In conjunction with liberalized finance, norms and regulations were repealed tha
 While these repeals have wrought huge blows to bargaining power, their perceived impact was aided---and perhaps eclipsed---by the spatial and international movements of manufacturing jobs away from the organized mid-Atlantic and Midwest, to the unorganized American South, and ultimately to the Global South.
 In any case, labor markets became increasingly volatile in the United States, necessitating some form of insurance.
 Matt Stoller argues that the exaltation of finance, subordination of labor, and mitigation of social insurance policies can be viewed macrosocially as a renegotiation of the American social contract inaugurated by the New Deal.[@stollerHousingCrashEnd2016]
-Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy^[Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than $2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars)[@poterba1995stock, 321]] discarded with the need for stable, steadily increasing salaries.(CHECK WITH SCHWARTZ ON THIS. HIS COMMENT SEEMS TO BE IN TENSION WITH WHAT HE TAUGHT IN PLCP 4315 ABOUT THE NORMALCY OF SLACK WAGES)
+Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy^[Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than $2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars)[@poterba1995stock, 321]] discarded with the need for stable, steadily increasing salaries.<!--(CHECK WITH SCHWARTZ ON THIS. HIS COMMENT SEEMS TO BE IN TENSION WITH WHAT HE TAUGHT IN PLCP 4315 ABOUT THE NORMALCY OF SLACK WAGES)-->
 These jobs, salaries, and benefits then acted as dragnets on profits, ultimately to be jettisoned at the behest of shareholders.
 In return, the asset-backed social contract offered cheap credit and the Minskyan promise of speculative returns to supplement, or supplant, income.
 
@@ -225,7 +225,7 @@ Reagan's 1980 presidential campaign picked up on the Proposition 13 rhetoric, me
 He offered tax cuts within a larger theory, connecting the private economic conditions with larger social problems.
 These would respond, not to the popular New Deal provisions, but to the increases in expenditure caused by Lyndon Johnson's Great Society, not yet 20 years old.
 Taxes were certainly not the only issue on his platform, but they are that for which he is remembered: the Iranian hostage situation and antidote to Jimmy Carter's "Crisis of Confidence" sermon were contingencies where taxes were a certainty.
-And his signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---led to a huge contemporary and lingering spike in popularity.(REFERENCE NEEDED)
+His signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---was not as fortunate when enacted, but became a key feature of his popularity as the economy rebounded before the 1984 presidential election and has lingered in his public image.[@robert2016reaganomics]
 
 After the reforms of the first term, the campaign ramped up its tax rhetoric.
 Figure \@ref(fig:taxation) shows the massive spike in tax mentions in nomination acceptance speeches (\@ref(fig:acceptance)) and general election television ads (\@ref(fig:ads)) aligning with the 1984 election.
@@ -280,11 +280,11 @@ Figure \@ref(fig:publicdebt) shows the total federal public debt as a percentage
 With the exception of Bill Clinton's second term from 1997 to 2001, it grew at various rates since the Economic Recovery Tax Act of 1981.
 And until Obama's stimulus bill, debt politics entered the national conversation exclusively as *the* national debt.
 The debate about the debt shaped the presidential race most dramatically: a nationally-televised town hall debate between Clinton, George H. W. Bush, and Ross Perot in 1992.
-An ill-informed question about the effects of the national debt on the candidates' lives is cited by campaign advisers and political analysts as an inflection point in the race when Clinton could connect and Bush could not.(REFERENCE NEEDED)
+An ill-informed question about the effects of the national debt on the candidates' lives is cited by campaign advisers and political analysts as an inflection point in the race when Clinton could connect and Bush could not.[@albright2017clinton]
 This example serves only to highlight the importance of the question in 1992, and more broadly in the late 1990s and early 2000s, when concerns about America's economic power were heightened by the growth of Japanese and Chinese foreign direct investment.
 The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan spending cuts were able to pass both houses of Congress.
 
-```{r publicdebt, fig.align='center', out.width='90%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
+```{r publicdebt, fig.align='center', out.width='30%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
 include_graphics("figure/publicdebt.png")
 ```
 

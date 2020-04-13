@@ -9,6 +9,8 @@ output:
 ---
 # Effects of the Neighborhood Stabilization Program on Voting {#outcome}
 
+\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt}
+
 ```{r libs, include=FALSE}
 library(tidyverse)
 library(knitr)
@@ -192,7 +194,7 @@ Then, in the model *including* the price data, there should be no significant im
 For the labor risk--equity model, in all trials there should be positive correlations between price changes and Republican voting, with augmented values where price changes refract through economic anxiety, as measured by high foreclosure rates (i.e. low equity) or risky employment (a.k.a. high unemployment variance).
 
 ```{r fullsample, echo=FALSE, results='asis', eval=FALSE}
-mod4 <- lm(RPCT ~ NSP1 + ANXIETY + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
+mod4 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
 mod5 <- lm(RPCT ~ NSP1 + ADJ_PRICE07*ANXIETY + ADJ_PRICE07*ADJ_FORQ + ADJ_PRICE07*EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
 stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", omit = c("^STATE"), label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Home price index change, 2007-2010", "Economic anxiety", "2010 forelcosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage")
 ```
@@ -318,7 +320,7 @@ Table \@ref(tab:spdep) displays the results of these tests, all of which reject 
 
 ```{r spdep, echo=FALSE, message=FALSE}
 spdep <- read_csv("data/voting/display/spdep.csv")
-kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spatial dependence. In all tests, the null hypothesis is spatially-independent.", align = 'c')
+kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spatial dependence. In all tests, the null hypothesis is spatial independence.", align = 'c')
 ```
 
 ## Conclusion

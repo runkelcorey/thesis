@@ -9,7 +9,9 @@ output:
 ---
 # An Unfurling Crisis {#actors-motive}
 
-When 10 million Americans---1 of every 20 adults---lost their homes,[@martin2015foreclosed] it was clear that homeowners needed an intervention. When Countrywide, which two years earlier had serviced 20% of the mortgages in the United States,[@seabrooke2009politics] collapsed in July 2008, it was clear that the real estate industry needed to change.
+Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.[@martin2015foreclosed]
+It was clear then that homeowners needed an intervention.
+When Countrywide, which two years earlier had serviced 20% of the mortgages in the United States,[@seabrooke2009politics] collapsed in July 2008, it was clear that the real estate industry needed to change.
 When cities and counties around California, Florida, Nevada, and Arizona trembled at a declining tax base, it was clear that municipalities needed a break.
 Yet, none of these actors wielded much power in the response to the subprime mortgage crisis.
 Unlike the Great Depression, homeowners barely organized their political power and financial institutions imposed very modest debtor-relief programs.
@@ -37,7 +39,7 @@ Rather, it was a product of the political and economic mechanisms investigated b
 The historical claims are not new; they have been fashioned directly from the work of others.
 I zoom in on a particular corner of political economy and housing, however, to beef up my methodological assumptions.
 The relationship between these two lines of analysis is complex but understanding it is imperative to comprehending the validity of my argument about the impact of the Neighborhood Stabilization Program.
-To that end, I have provided Figure \@ref(fig:analysis) to aid readers.
+<!-- To that end, I have provided Figure \@ref(fig:analysis) to aid readers. -->
 
 To nearby homeowners, foreclosures cost $159,000 on average in decreased property values.[@immergluck2011foreclosed, 151]
 To the city or county that envelops the property, it costs around $50,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.[@indiviglio2010housing]
