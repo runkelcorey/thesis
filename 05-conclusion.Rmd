@@ -33,7 +33,7 @@ These homeowners revolted, reorienting politicians on both sides of the aisle to
 The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
 In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.[@campbell2009what]
 At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay201613th] while simultaneously with increasing military expenditure.
-In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@???]
+In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@stollerHousingCrashEnd2016]
 Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.[@lewis2010fat]
 Better positioned in the market, and with fewer competitors, investment banks ramped up production of home mortgages.
 
@@ -68,7 +68,7 @@ Meanwhile, homeowners had long-forgotten the debt politics practiced by Midweste
 They had been retrained as tax activists and expected positive direct benefits, not interference with private contracts.
 
 A federal response would be required.
-In addition to the X trillion authorized by the Troubled Asset Relief Program (TARP), the Economic Stimulus Act of 2008 (ESA), and the other stimulating acronyms, George W. Bush enacted the Housing and Economic Recovery Act of 2008 (HERA), which authorized $3.9 billion in funds for, among other channels, the Neighborhood Stabilization Program.
+In addition to the trillions authorized by the Troubled Asset Relief Program (TARP), the Economic Stimulus Act of 2008 (ESA), and the other stimulating acronyms, George W. Bush enacted the Housing and Economic Recovery Act of 2008 (HERA), which authorized $3.9 billion in funds for, among other channels, the Neighborhood Stabilization Program.
 HERA included titles that tried to ease mortgage payments and incentivize resolution aside from foreclosure.
 While its benefits were far below what foreclosure activists considered adequate,[@dayenChainTitleHow2016] actors on the right saw HERA as emblematic of the profligate welfare state that would burden the nation (as a collection of individual taxpayers) with perpetual debt.
 This narrative was essentialized in the profligate spending of highly-leveraged homeowners---the losers attached to "losers' mortgages".[@santelli2009cnbc]

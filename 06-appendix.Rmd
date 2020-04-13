@@ -1,21 +1,24 @@
-`r if(knitr:::is_latex_output()) '\\appendix'`
+\\\appendix
 
-`r if(!knitr:::is_latex_output()) '# (APPENDIX) Appendix {-}'` 
+# Data Quality
 
-```{r compnsp, echo=FALSE, message=FALSE}
+```{r appendixsetup, echo=FALSE, message=FALSE}
 library(knitr)
 library(kableExtra)
 library(stargazer)
 mod4 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
 mod10 <- lm(RPCT ~ NSP2 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
 mod11 <- lm(RPCT ~ NSP3 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
-stargazer(mod4, mod5, type = "latex", title = "Comparison of NSP Rounds", omit = c("^STATE"), label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Economic anxiety", "2010 foreclosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", notes = "Unemployment change `05--`10 was used in the allocation formula for NSP3.", notes.append = T)
 ```
 
-```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the regression of prices on NSP1.", fig.subcap=c("Residuals on fitted.\label{fig:priceresid}", "Quantile-quantile distribution.\label{fig:priceqq}"), dev='pdf'}
+```{r compnsp, echo=FALSE, message=FALSE, results='asis'}
+stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Rounds", omit = c("^STATE"), label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Economic anxiety", "2010 foreclosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "3pt")
+```
+
+```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the regression of prices on NSP1.", fig.subcap=c("Residuals on fitted.\\label{fig:priceresid}", "Quantile-quantile distribution.\\label{fig:priceqq}"), dev='pdf'}
 include_graphics(c("figure/priceresid.png", "figure/priceqq.png"))
 ```
 
-```{r resids, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Comparison of residuals between the linear and beta regressions by subset.", dev='pdf', fig.ncol=2}
+```{r resids, echo=FALSE, message=FALSE, fig.align='center', out.width='40%', fig.cap="Comparison of residuals between the linear and beta regressions by subset.", dev='pdf', fig.ncol=2}
 include_graphics(c("figure/linearesid.png", "figure/betaresid.png", "figure/lineartpresid.png", "figure/betatpresid.png"))
 ```

@@ -35,12 +35,10 @@
 \usepackage{amsmath}
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
-\usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 \usepackage[none]{hyphenat}
 \usepackage[hyphens]{url}
 % Added by CII
 \usepackage[hidelinks]{hyperref}
-\usepackage{breakurl}
 \usepackage{lmodern}
 \usepackage{float}
 \usepackage{titlesec}
@@ -48,6 +46,7 @@
 % End of CII addition
 \usepackage{rotating}
 \usepackage{epigraph}
+\usepackage{dcolumn}
 
 % Next line commented out by CII
 %%% \usepackage{natbib}
@@ -76,7 +75,7 @@
 % Syntax highlighting #22
 
 % To pass between YAML and LaTeX the dollar signs are added by CII
-\title{How Foreclosure Relief Swung America Right}
+\title{Political Impacts of Residential Mortgages in Crisis}
 \author{Corey Runkel}
 \computingid{\href{mailto:cnr3cg@virginia.edu}{\nolinkurl{cnr3cg@virginia.edu}}}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
@@ -124,14 +123,14 @@
 
 
 \Abstract{
-The mortgage crisis of 2007--2012 the foreclosure of some 10 million American homes.
+The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
 In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
 The program operated by purchasing, repairing, and re-selling vacant homes in neighborhoods at high risk of even more foreclosures.
 Though this program resembled Democrat-supported welfare programs, there are theoretical questions about the impacts it may have had on voting.
 Broadly, political economists have predicted that increased home equity leads to preferences for less social insurance, while early 21st-century American politics consistently connected less social insurance with lower taxation.
 These features would suggest that the Neighborhood Stabilization Program pushed voters towards Republican candidates, especially towards self-avowed members of the Tea Party Caucus, which sharpened the taxation--social insurance connection and derided the subsidy of home mortgages.
 I create a novel dataset connecting NSP target areas, 2010 midterm vote returns, home prices, and a range of demographic information in order to analyze this question.
-I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a more broad feature of Republican support.
+I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a broader feature of Republican support.
 }
 
 	\usepackage{booktabs}
@@ -158,8 +157,8 @@ I find some evidence that the behavior theorized did occur among races featuring
 % Everything below added by CII
   \maketitle
 
-\frontmatter % this stuff will be roman-numbered
 \pagenumbering{roman} % this removes page numbers from the frontmatter
+\frontmatter % this stuff will be roman-numbered
 
   \hypersetup{linkcolor=black}
   \setcounter{tocdepth}{2}
@@ -170,14 +169,14 @@ I find some evidence that the behavior theorized did occur among races featuring
   \listoffigures
   \begin{abstract}
   \doublespacing
-    The mortgage crisis of 2007--2012 the foreclosure of some 10 million American homes.
+    The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
     In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
     The program operated by purchasing, repairing, and re-selling vacant homes in neighborhoods at high risk of even more foreclosures.
     Though this program resembled Democrat-supported welfare programs, there are theoretical questions about the impacts it may have had on voting.
     Broadly, political economists have predicted that increased home equity leads to preferences for less social insurance, while early 21st-century American politics consistently connected less social insurance with lower taxation.
     These features would suggest that the Neighborhood Stabilization Program pushed voters towards Republican candidates, especially towards self-avowed members of the Tea Party Caucus, which sharpened the taxation--social insurance connection and derided the subsidy of home mortgages.
     I create a novel dataset connecting NSP target areas, 2010 midterm vote returns, home prices, and a range of demographic information in order to analyze this question.
-    I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a more broad feature of Republican support.
+    I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a broader feature of Republican support.
   \end{abstract}
 
 \mainmatter % here the regular arabic numbering starts
@@ -191,7 +190,9 @@ I find some evidence that the behavior theorized did occur among races featuring
 \hypertarget{actors-motive}{%
 \chapter{An Unfurling Crisis}\label{actors-motive}}
 
-When 10 million Americans---1 of every 20 adults---lost their homes,\footnote{Martin and Niedt, \emph{Foreclosed America}.} it was clear that homeowners needed an intervention. When Countrywide, which two years earlier had serviced 20\% of the mortgages in the United States,\footnote{Seabrooke, \emph{The Politics of Housing Booms and Busts}.} collapsed in July 2008, it was clear that the real estate industry needed to change.
+Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.\footnote{Martin and Niedt, \emph{Foreclosed America}.}
+It was clear then that homeowners needed an intervention.
+When Countrywide, which two years earlier had serviced 20\% of the mortgages in the United States,\footnote{Seabrooke, \emph{The Politics of Housing Booms and Busts}.} collapsed in July 2008, it was clear that the real estate industry needed to change.
 When cities and counties around California, Florida, Nevada, and Arizona trembled at a declining tax base, it was clear that municipalities needed a break.
 Yet, none of these actors wielded much power in the response to the subprime mortgage crisis.
 Unlike the Great Depression, homeowners barely organized their political power and financial institutions imposed very modest debtor-relief programs.
@@ -214,7 +215,6 @@ Rather, it was a product of the political and economic mechanisms investigated b
 The historical claims are not new; they have been fashioned directly from the work of others.
 I zoom in on a particular corner of political economy and housing, however, to beef up my methodological assumptions.
 The relationship between these two lines of analysis is complex but understanding it is imperative to comprehending the validity of my argument about the impact of the Neighborhood Stabilization Program.
-To that end, I have provided Figure \ref{fig:analysis} to aid readers.
 
 To nearby homeowners, foreclosures cost \$159,000 on average in decreased property values.\footnote{Immergluck, \emph{Foreclosed}, 151.}
 To the city or county that envelops the property, it costs around \$50,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.\footnote{Indiviglio, ``The Housing Stabilization Program You Haven't Heard About.''}
@@ -226,7 +226,7 @@ Lending institutions willingly converted apparent value into real value, and as 
 This use of refinancing reflected a shift in how Americans approached housing, from the home as an utterly private good, to the home as an asset.
 Homes stand increasingly in the position of pension plans and 401ks; a wise move can transform forty years into four-hundred thousand dollars.
 
-These wise moves seemd to occur constantly from September 1992 until March 2006.
+These wise moves seemed to occur constantly from September 1992 until March 2006.
 As Figure \ref{fig:caseshiller} shows, the intervening 14 years never once saw a drop in the industry's standard home-price metric, the Case-Shiller U.S. National Home Price Index.
 As prices rose, homeowners refinanced, effectively paying back the first mortgage while taking out the second.
 To investors in mortgage-backed securities (MBS), pre-payment from refinancing is usually seen as a risk, but constant and predictable refinancing added to the safety of securitization, playing into investors risk-reward calculus.
@@ -508,7 +508,7 @@ I will bookend these discussions with theoretical and historical understandings 
 \hypertarget{motive-opportunity}{%
 \chapter{Connecting Home Prices to Voting}\label{motive-opportunity}}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.[@klein2008disowned]}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}
 
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim ran parallel with the Bush administration's ``ownership society'', which added moral heft to the legal responsibilities associated with private property.
@@ -519,7 +519,7 @@ Recently in the United States, both Republican and Democratic parties have conne
 So, while the policies fit with the Bush administration, their ideological dimension tended more towards the Democratic Party.
 
 But, as mentioned early in Chapter \ref{actors-motive}, opposing the leftward pull of ideology was the rightward push of rising wealth.
-While higher levels of wealth and income are colloquially associated with conservatism, but there is little research on how asset ownership pushes people towards their political decisions.(BRING IN EMBOURGEOISIEMENT HERE?)
+While higher levels of wealth and income are colloquially associated with conservatism, but there is less research on how asset ownership pushes people towards their political decisions.
 And, historically, the political effects of taxation were not a given: after World War II, taxation was not a weighty political issue,\footnote{Campbell, ``How Americans Think About Taxes,'' 160.} let alone a wedge issue.
 Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans ``to define themselves and their party in opposition to taxes.''\footnote{Martin, ``Welcome to the Tax Cutting Party,'' 128.}
 Politicians of all stripes followed, with Third Way Democrats, led by President Bill Clinton, accepted tax cuts in their successful political bids; it was only in the 2000s that Democrats united (more or less) in warning against lower taxation.
@@ -573,8 +573,8 @@ Rather than direct cash transfers, which would have enhanced individual freedom 
 The NSP attempted to cosset homeowners from endogenous shocks, recognizing the social dislocation caused by such a stupid destruction of private wealth.
 While some homeowners could be painted as the kind of irresponsible, purely-speculating ``deadbeats'' characterized in Dayen (2016) and Michael Lewis' \emph{The Big Short}, it is important to remember that the majority of those foreclosed upon were prime borrowers.\footnote{Ferreira and Gyourko, ``A New Look at the U.S. Foreclosure Crisis.''}
 Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \ref{fig:distress}.\footnote{Though that lag was partially because there was more ``fuel left to burn'' in the sense that the number of subprime borrowers, already only 20\% of the market, had already been slashed.}
-These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.(TOOZE? MIAN \& SUFI?)
-The political stigmata came when XXX fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclsoure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
+These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.\footnote{Tooze, \emph{Crashed}; Mian, Sufi, and Trebbi, ``The Political Economy of the US Mortgage Default Crisis.''}
+The political stigmata came when Santelli (among others) fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclsoure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
 \begin{figure}
 
 {\centering \subfloat[Total foreclosures and short sales by owner type\label{fig:distress1}]{\includegraphics[width=0.45\linewidth]{figure/ferreira_absolute} }\subfloat[Probability of home loss by owner type.\label{fig:distress2}]{\includegraphics[width=0.45\linewidth]{figure/ferreira_distress} }
@@ -647,7 +647,7 @@ In conjunction with liberalized finance, norms and regulations were repealed tha
 While these repeals have wrought huge blows to bargaining power, their perceived impact was aided---and perhaps eclipsed---by the spatial and international movements of manufacturing jobs away from the organized mid-Atlantic and Midwest, to the unorganized American South, and ultimately to the Global South.
 In any case, labor markets became increasingly volatile in the United States, necessitating some form of insurance.
 Matt Stoller argues that the exaltation of finance, subordination of labor, and mitigation of social insurance policies can be viewed macrosocially as a renegotiation of the American social contract inaugurated by the New Deal.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
-Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy\footnote{Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than \$2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars), Poterba et al., ``Stock Ownership Patterns, Stock Market Fluctuations, and Consumption,'' 321} discarded with the need for stable, steadily increasing salaries.(CHECK WITH SCHWARTZ ON THIS. HIS COMMENT SEEMS TO BE IN TENSION WITH WHAT HE TAUGHT IN PLCP 4315 ABOUT THE NORMALCY OF SLACK WAGES)
+Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy\footnote{Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than \$2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars), Poterba et al., ``Stock Ownership Patterns, Stock Market Fluctuations, and Consumption,'' 321} discarded with the need for stable, steadily increasing salaries.
 These jobs, salaries, and benefits then acted as dragnets on profits, ultimately to be jettisoned at the behest of shareholders.
 In return, the asset-backed social contract offered cheap credit and the Minskyan promise of speculative returns to supplement, or supplant, income.
 
@@ -727,7 +727,7 @@ Reagan's 1980 presidential campaign picked up on the Proposition 13 rhetoric, me
 He offered tax cuts within a larger theory, connecting the private economic conditions with larger social problems.
 These would respond, not to the popular New Deal provisions, but to the increases in expenditure caused by Lyndon Johnson's Great Society, not yet 20 years old.
 Taxes were certainly not the only issue on his platform, but they are that for which he is remembered: the Iranian hostage situation and antidote to Jimmy Carter's ``Crisis of Confidence'' sermon were contingencies where taxes were a certainty.
-And his signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---led to a huge contemporary and lingering spike in popularity.(REFERENCE NEEDED)
+His signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---was not as fortunate when enacted, but became a key feature of his popularity as the economy rebounded before the 1984 presidential election and has lingered in his public image.\footnote{Robert, ```Reaganomics'.''}
 
 After the reforms of the first term, the campaign ramped up its tax rhetoric.
 Figure \ref{fig:taxation} shows the massive spike in tax mentions in nomination acceptance speeches (\ref{fig:acceptance}) and general election television ads (\ref{fig:ads}) aligning with the 1984 election.
@@ -786,12 +786,12 @@ Figure \ref{fig:publicdebt} shows the total federal public debt as a percentage 
 With the exception of Bill Clinton's second term from 1997 to 2001, it grew at various rates since the Economic Recovery Tax Act of 1981.
 And until Obama's stimulus bill, debt politics entered the national conversation exclusively as \emph{the} national debt.
 The debate about the debt shaped the presidential race most dramatically: a nationally-televised town hall debate between Clinton, George H. W. Bush, and Ross Perot in 1992.
-An ill-informed question about the effects of the national debt on the candidates' lives is cited by campaign advisers and political analysts as an inflection point in the race when Clinton could connect and Bush could not.(REFERENCE NEEDED)
+An ill-informed question about the effects of the national debt on the candidates' lives is cited by campaign advisers and political analysts as an inflection point in the race when Clinton could connect and Bush could not.\footnote{``Clinton.''}
 This example serves only to highlight the importance of the question in 1992, and more broadly in the late 1990s and early 2000s, when concerns about America's economic power were heightened by the growth of Japanese and Chinese foreign direct investment.
 The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan spending cuts were able to pass both houses of Congress.
 \begin{figure}
 
-{\centering \includegraphics[width=0.9\linewidth]{figure/publicdebt} 
+{\centering \includegraphics[width=0.3\linewidth]{figure/publicdebt} 
 
 }
 
@@ -858,7 +858,7 @@ I counter its ahistoricism with this chapter, which also serves as sort of a mac
 \hypertarget{methods}{%
 \chapter{Asset Prices, Individual Preferences, and Foreclosure Relief}\label{methods}}
 
-\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.[@friedman1957introduction, 1]}
+\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{A Theory of the Consumption Function \\ Milton Friedman}
 
 How do asset prices affect voter decisions \emph{in extremis}?
 Political economists have investigated the impacts of wealth on welfare preferences and labor market risk on welfare preferences, but it has not investigated how such policy preferences are represented in political decision-making, nor how such preferences change along the wealth distribution.
@@ -887,7 +887,7 @@ Regardless of whatever official statistics can show the trends in labor market r
 
 I argue that understanding the home doubly as an asset shapes homeowners' political decisions.
 In light of their perceptions regarding risk, how one plans to pay for emergencies feeds into that person's politics.
-This claim is supported in no small part by the fact that homeowners are represented worldwide by conservative political parties.\footnote{Ansell, ``The Political Economy of Ownership,'' 387.}
+This claim is supported in no small part by the fact that homeowners are represented worldwide by conservative political parties.\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014, 387.}
 Of course, it could simply be the case that high-income people, those who are more likely to own a home, tend to be more conservative.
 Or, perhaps those who own homes value it as ``a refuge from urban corruption,''\footnote{Stern, ``The Inviolate Home.''} and the idea of leveraging one's home instrumentally for financial gain is vulgar to such a person's traditional social values.
 But these alternative narratives cannot embrace the facts of American household finances.
@@ -909,7 +909,7 @@ While these effects are not unique to housing, they are most significant in hous
 Mortgage equity exhibits greater wealth effects than investments in stocks: research by Case, Shiller, and Quigley (2005) found statistically significant increases in the consumption patterns of housing welath over stock market wealth.
 Specifically, every new dollar of housing income generated 6 cents of new consumption over the same dollar in stock market income.
 Economists disagree as to the cause and level of this wealth effect, but its primacy over other financial holdings is broadly agreed upon,\footnote{Lasky and Gisselquist, ``Housing Wealth and Consumer Spending.''} and fits into the view that America has transitioned into a consumption- and import-oriented economy.
-Compounding the significance of housing wealth was the sheer size and volatility of housing: Ansell notes that, ``between 1985 and 2006, real house price inflation was three times greater than between 1970 and 1985, with a standard deviation almost twice as large.''\footnote{Ansell, ``The Political Economy of Ownership,'' 383.}
+Compounding the significance of housing wealth was the sheer size and volatility of housing: Ansell notes that, ``between 1985 and 2006, real house price inflation was three times greater than between 1970 and 1985, with a standard deviation almost twice as large.''\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014, 383.}
 
 Subsidizing housing and home mortgages privatizes government spending otherwise recognizable as welfare.
 In doing so, the policies and implementations change how citizens view the state's role in their personal finances.
@@ -939,7 +939,7 @@ While the mortgage crisis, financial meltdown, and ensuing Great Recession deliv
 Pew Research's American Values polling series has tracked opposition and support of various political positions since the late 1980s.\footnote{Kohut et al., ``Partisan Polarization Surges in Bush, Obama Years.''}
 This longitudinal sureying shows sharp divergence between the economic beliefs of Democrats and Republicans \emph{as well as} between independents who lean either way.
 For partisan divides, Figure \ref{fig:partisan} shows how Republican beliefs regarding social insurance regress to a conservative ideal more aggressively than both Democrats and independents.
-I split hairs over this behavior with Ansell (2014), who maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.\footnote{Ansell, ``The Political Economy of Ownership,'' 387.}
+I split hairs over this behavior with Ansell (2014), who maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014, 387.}
 This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle section) falls relative to Democratic support after 2007, independent support for maintaining (left section) or expanding (right section) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
 When these are combined with the polling on ideological slant, the Pew research offers a coherent picture of independent voting behavior between 2007 and 2012.
 
@@ -962,7 +962,7 @@ If each foreclosure costs, on average, \$159,000 in decreased property values,\f
 Conversely, if a vacant property is fixed and resold, surrounding home values would only increase by a fraction.
 Additionally, the hefty oversight on the NSP targeted profiteering by local actors, preventing any get-rich-quick schemes.
 The Neighborhood Stabilization Program receives high marks methodologically from its under-the-radar nature: if voters knew, and could filter, their wealth gains through an ideological sieve, it could skew results.
-Rather, its small effects and lack of advertising\footnote{``Guide to Marketing and Selling NSP Homes,'' 5.} (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
+Rather, its small effects and lack of advertising\footnote{Gass, ``Guide to Marketing and Selling NSP Homes,'' 5.} (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
 
 While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value equal amounts of money lost and gained.
 In behavioral economics and cognitive psychology, the endowment effect describes the premium that individuals place on ownership.
@@ -1008,16 +1008,18 @@ This result implies that those tracts targeted by the NSP should be especially s
 I turn now to more general models of American congressional voting.
 Little is made of the controlling variables in academic publications, but anyone who has toyed around with regression analysis knows that the exclusion or inclusion of one or two variables can make or break a hypothesis.
 Often variables are included without apparent reason, leading to suspicions about the robustness of statistical inference.
-It is therefore important for the statisical analyst to offer two ways for readers to inspect one's work.
+It is therefore important for the statistical analyst to offer multiple ways for readers to inspect one's work.
 The first way is to explain the inclusion---or sometimes, exclusion---of particular variables used to disaggregate the effects of contributory forces.
-The second way, shown in the next chapter, is to present analyses that include or exclude particular variables; the common belief that if a significant association can be made despite the inclusion or exclusion of several variables, than the constancy of the association effectively verifies its ability to predict behavior.
+The second way, shown in the next chapter, is to present analyses that include or exclude particular variables; then differences, if they are significant, can decompose a particular effect.
+For instance, the NSP supposedly has a positive effect on prices.
+Then look at the differences between a regression of Republican voting on tracts designated as NSP without taking into account price changes and a regression with price changes included.
+The difference in the coefficients between the two trials would show how much of the NSP's effects on voting were due to its influence on prices.
 
 As Congressional voting returns will be the object of analysis in my next chapter, it is important to isolate the effects of the Neighborhood Stabilization Program.
-To do so, I opt to include several variables that also impact a Republican vote.
-These variables are lumped broadly into three categories: visible identity, including race and age; economic identity, including income and unemployment; and cultural identity, including measures of urbanicity as well as religion.
+To do so, I will include several variables that may covary with both NSP allocations---defined by risk of further foreclosure---and Republican voting behavior.
+These variables are lumped into three broad categories: visible identity, including race and age; economic identity, including income and unemployment; and cultural identity, including measures of urbanicity as well as religion.
 This breakdown acts purely for organizational purposes as the blur between visible, economic, and cultural should make clear, but they nonetheless reflect a view that voting decisions can be reduced to observable characteristics.
-As the predictive power of my model will make clear, this status is not the case: indiviudal forces cannot explain even half of the variation in voting returns.
-Nonetheless, without polling microdata, the demographic features provided by the decennial census offer the best chance at understanding voter behavior.
+Absent individual polling, the demographic features provided by the decennial census offer the best chance at understanding voter behavior.
 
 \hypertarget{visible-identity}{%
 \subsection{Visible Identity}\label{visible-identity}}
@@ -1066,16 +1068,30 @@ In my view, these forces cannot be disentangled without microdata on labor force
 \hypertarget{economic-identity}{%
 \subsection{Economic Identity}\label{economic-identity}}
 
-To isolate labor market risk from income, I will use both the median household income as well as the \emph{change} in median household income.
-The change offers a truer picture of employment becoming underemployment and resolves a problem presented by using the unemployment rate: the HUD estimates of foreclosure rate use the unemployment rate as a predictor of foreclosures.
-Inclusion in the model would re-isolate unemployment from the estimated foreclosure rate, and bias the estimation of the foreclosure rate's significance on voting in an indeterminate manner.
-However, the 2010 Neighborhood Stabilization Program uses only the \emph{change} in unemployment rate, leaving open the unemployment rate as a predictor.
-The inclusion of this predictor captures effects contemporaneous to the election while avoiding the modeling problems described above.
+A key feature of the housing-as-insurance model is the lever of labor market risk.
+Labor market risk acts to increase the demand for insurance.
+Home equity can replace welfare programs when unstable employment is present.
+We should thus expect that higher levels of these two factors magnify the effects of price changes.
+Specifically, price increases---which Ansell's research has shown dampens demand for social insurance policies---should have even greater conservatizing effects when refracted through high employment risk or low equity (proxied by the foreclosure rate).
+If home equity acts as a buffer against lost wages, then lower levels of home equity make individuals more sensitive to price shocks just as lower employment expectations would shift the income-generating burden onto housing speculation.
+Regression techniques known as interaction effects can calculate how variables---in this case, labor market risk or foreclosure rates paired with recent price changes---refract through one another.
+In this analysis, the interactions between labor market risk, foreclosure rates, and price changes should be significant and positive, regardless of the coefficients attached to labor market risk and foreclosure rates.
 
-Additionally, the Census Bureau tracks homeownership rate.
-At first glance, the inclusion of the 2010 homeownership rate would appear to come at an inopportune time, as the very fluctuations in the homeownership rate are captured in the foreclosure rate.
-But this capture is only partial, and, furthermore, the foreclosure rate tells nothing about the absolute levels of homeownership.
-Homeownership is associated with conservative voting around the world, and the effects of social capital are well-researched.\footnote{Stern, ``The Dark Side of Town.''}
+To measure labor market risk, I took the variance of monthly unemployment rates from 2005 to 2010 for every sampled county.
+This value is an index of \emph{gross} changes in unemployment, separate from whether such a county is currently in a employment glut or rut, an aspect captured by the \emph{net} change in unemployment from 2005 to 2010, as well as the level of unemployment in 2010.
+The foreclosure rate is a key piece of the labor risk--equity model, as high foreclosure rates depress prices of surrounding homes, shrinking the amount of equity much as a declining stock price shrinks the value of individual portfolios holding said stock.
+As described in Chapters \ref{actors-motive} and \ref{motive-opportunity}, foreclosures may also trigger animosity among neighbors, who label dispossessed homeowners as ``deadbeats''.
+Since foreclosures play directly into the allocation formula for the NSP, as well as possibly into Republican voting, the foreclosure rate is an important covariate to include in this analysis.
+
+A possible---though not thoroughly supported---connection between length of tenure in home and conservative preferences leads me to include it as well as its square.
+The longer someone lives in a single area, the less they may come in contact with conditions, ideas, people outside that local area, and could indicate that they believe their place of residence to be in no need of change.
+While these lines of reasoning connect tenure to Republican voting, they do not account for their connection to the NSP.
+The formula allocation takes into account the amount of high-cost, high-leverage mortgages in an area.
+Someone who moved into their home in 1969 would be unlikely to have a mortgage at all, let alone a subprime mortgage.
+One should expect relatively few mortgages held by people who have lived in the same residence for more than 30 years, but conservative effects as outlined above.
+Conversely, recent residents may be highly-leveraged, recently employed, and highly-susceptible to price changes.
+So tenure may be positively associated in its square term with Republican voting but negatively associated linearly.
+Additionally, I included median household income to control for variations in class.
 
 \hypertarget{cultural-identity}{%
 \subsection{Cultural Identity}\label{cultural-identity}}
@@ -1083,7 +1099,8 @@ Homeownership is associated with conservative voting around the world, and the e
 Three primary factors flavor voting at the cultural level: religion, urbanicity, and highest level of education attained.
 Within these factors, which are so grouped because they are in some sense voluntarily elected by the person to which the characteristics are attached, specific levels are significantly associated with Republican voting, while other levels are a mixed bag.
 Religion exemplifies this relationship.
-Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion.\footnote{``A Deep Dive into Party Affiliation.''}
+Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion,\footnote{``A Deep Dive into Party Affiliation.''} while prior literature has identified household factors---namely size, and age of parents---that push Mormon applicants to become early, unqualified entrants to the mortgage market, and therefore more susceptible to application rejections and subprime lending.\footnote{Lown, ``Educating and Empowering Consumers to Avoid Bankruptcy.''}
+While that analysis was conducted exclusively on LDS adherents, the logic extends as well to evangelical adherents, prompting the inclusion of both.
 The U.S. Religion Census reports county-level data on adherents to a huge number of denominations, and is the only sub-national source for all fifty states.
 Conducted contemporaneously with the decennial census (though not connected, organizationally), I will join county-level statistics regarding the level of evangelical Protestants and members of LDS to the Census Tract level.
 
@@ -1097,44 +1114,42 @@ These beliefs, in long historical sweep, are generally better represented by con
 Lastly, the highest level of education attained is a huge predictor of one's party affiliation, but only for white voters.
 A 15-point gap persists between white voters with and without a college degree: 45\% percent of college-educated white voters cast their ballots for Republicans, while more than 60\% of those with a college degree did the same.\footnote{Harris, ``America Is Divided by Education.''}
 This trait has worsened since George H. W. Bush's presidency, before which educated and uneducated voters were more or less aligned.
-Due to the racial nature of this variable, I will puruse education level \emph{multiplied} by percentage of population white as a predictor.
+I weight the importance of this variable by its frequency: a tract with a single white voter who is not college educated is far less significant than one with 2,000 white voters, 45\% of whom are not college educated.
 
 \hypertarget{model}{%
 \section{A Model of Voting}\label{model}}
 
 The discussion above leaves me with a model of Republican voting:
-\(rep_i = \beta_0 + \beta_1forq_i + \beta_2Black_i + \beta_3AmerIndian_i + \beta_4density_i + \beta_5evang_i + \beta_6lds_i + \beta_7Hispanic_i + \beta_8Hispanic^2_i + \beta_9medHHI_i + \beta_{10}ownhome_i + \beta_{11}unemchange_i + \beta_{12}old_i + \beta_{13}(somecol_i \times white_i) + \epsilon_i\)
-
+\begin{multline}
+rep_i = \beta_0 + \beta_1NSP_i + \beta_2{PriceChg_i \times LaborRisk_i \times ForeclosureRate_i}  + \\ \beta_3UnemploymentChg_i + \beta_4UnemploymentRate_i + \beta_5medHHI_i + \beta_6Density_i + \\
+\beta_7Tenure_i + \beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\
+\beta_{12}Hispanic^2_i + \beta_{13}(White_i + SomeCol_i) + \beta_{13}Evangelical_i + \beta_{14}LDS_i + \epsilon_i
+\label{eq:model}
+\end{multline}
 \hypertarget{outcome}{%
-\chapter{Effects of the Neighborhood Stabilization Program on Voting}\label{outcome}}
+\chapter{The Neighborhood Stabilization Program and Voting}\label{outcome}}
 
-With this model in hand, I turn now to its application.
-My approach is simple but intensive: connect the votes for Republican House of Representatives candidates to foreclosure rates---taken with other variables as a rough proxy of home equity---at the Census tract level.
-Logically, this approach nestles within that of Ansell 2014.
-That paper connected home prices to local sentiments regarding government policies, and then looked at policies after those sentiment polls were conducted.
-It imputed that, if there existed sentiments favoring less social insurance, followed by policies which enacted less social insurance, then those sentiments filtered through the voting and public opinion apparatus to produce those policies.
-While Ansell's assumption that there were no significant confounding factors may have been correct, his methodology was not rigorous, as it neglected the middle step of actually voting for politicians inclined towards such measures.
-My approach searches for just that---votes associated with housing prices and/or foreclosure relief policies.
+\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt}
 
-Data complete with every variable in my model was available for 53.7\% of the inhabited census tracts of 24 states, including 54.8\% of those census tracts where a self-described member of the Tea Party ran for election.
-Most of the remaining census tracts belonged to states where it was not feasible to connect voting returns with census geography.
+Complete data were available for 27,098 census tracts, covering more than half of the inhabited census tracts of 24 states, and more than half of the tracts where a self-described member of the Tea Party sought election.
+Most of the census tracts missing belonged to states where connecting voting returns with census geography was infeasible.
 For instance, Michigan does not make clear the links between a voting tabulation district (VTD) as the Census Bureau defines it, and the county-precinct-ward system the state uses to publicize its results.
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
-A full tabulation of data coverage is available in Table \ref{tab:coverage}.
 
-Most of the data came by way of the US Census Bureau.
 Since 1990, the Census Bureau has delineated census blocks covering the entire United States, standardizing units of analysis and making trivial the aggregation of data at various granularity.
-However, some key variables in this analysis come from outside the Census Bureau, from state governments, other federal agencies, and independent researchers, each of which uses different geographical units.
-To understand the construction of this novel dataset, it is important to first understand the relationships between different statistical geographies.
+While much of this analysis relies on data collected in 2010 census geographies, some key variables---including voting returns---were originally collected at a different geography.
+Translating these data to the census-tract level was fundamental to my analysis, so it is important that I describe the relationships between statistical geographies as well as my process of translation.
 
 \hypertarget{census-geography}{%
 \section{Relationships between statistical geographies}\label{census-geography}}
 
-The basic Census geography runs as follows (see Figure \ref{fig:geography} for the Census Bureau's graphical representation\footnote{Lemery, ``LibGuides.''}).
-The basic unit, blocks, were originally designed for Census takers to walk, and were constrained by physical boundaries difficult or illogical to cross.
+Census geography runs as follows.
+The basic unit, blocks, were originally designed just for Census takers to walk, and were constrained by physical boundaries difficult or illogical to cross.
 However, since the Bureau undertook to cover the \emph{entire} United States with census blocks, there are millions of census blocks with no inhabitants, covering lakes, parks, and barren landscapes; this fact will become important shortly.
-Blocks are then aggregated into census tracts (my unit of analysis): tracts contain between 1,200 and 8,000 people, and are the smallest unit for which American Community Survey data---such as median household income and educational attainment---are published.
+Blocks are then aggregated into census tracts containing between 1,200 and 8,000 people.
+Tracts are the smallest unit for which American Community Survey data---a continuously-run telephone survey that collects additional demographic data such as median household income and educational attainment---are published.
 Census tracts sit inside counties and then inside states; unlike tracts and blocks, county boundaries are also legal jurisdictions and therefore rarely change.
+See Figure \ref{fig:geography} for the Census Bureau's graphical representation.\footnote{Lemery, ``LibGuides.''}
 \begin{figure}
 
 {\centering \subfloat[To-scale breakdown of nested census geography, with street names.\label{fig:geography1}]{\includegraphics[width=0.5\linewidth]{figure/census_small_area_geography2} }\subfloat[Organizational hierarchy of different geographies.\label{fig:geography2}]{\includegraphics[width=0.45\linewidth]{figure/geo_hierarchy} }
@@ -1143,11 +1158,11 @@ Census tracts sit inside counties and then inside states; unlike tracts and bloc
 
 \caption{Census geography relationships.}\label{fig:geography}
 \end{figure}
-While tracts and blocks were \emph{designed} to be semi-permanent, and to act as the basis for other, non-Census areas, in practice their shapes shift with population changes.
-These shifts mean that: not all 2000 tracts and 2010 tracts are exactly the same (though many are); and non-Census areas (such as state-designed VTDs) can cut census blocks.
+While tracts and blocks were \emph{designed} to be semi-permanent, acting as the basis for other, non-Census areas, in practice their shapes shift with population changes.
+These shifts mean that: (a) not all 2000 tracts and 2010 tracts are congruent (though many are); and (b) non-Census areas (such as state-designed voting precincts) can cut census blocks.
 Since these Census Bureau does not make public the responses of individual persons or homes until several decades after, placing each record in its appropriate area is impossible.
 Rather, ecological methods approximate the distribution of persons, votes, or homes among geographies.
-Ecological methods assume that persons, votes, or homes are equally distributed throughout an area: ecological methods would assume, for instance, that since six percent of Americans are millionaires, then six out of every hundred persons sampled---no matter their neighborhood---would be millionaires.
+Ecological methods assume that persons, votes, or homes are equally distributed throughout an area: ecological methods would assume, for instance, that since six percent of Americans are millionaires, then six out of every hundred persons sampled---no matter their neighborhood---would also be millionaires.
 Strictly speaking, ecological methods are logical fallacies of de-composition, of taking the whole for the part.
 However, guided by the right principles, ecological methods can be perfectly valid statistical tools.
 
@@ -1155,21 +1170,17 @@ The first principle is that smaller geographies are better.
 Take for example tract 12099005947, a nearly-optimal tract of 4,406 people in Palm Beach County.
 The owner occupation rate is 97\%, and 88\% of the residents are aged 65 or older.
 However, Palm Beach County entire contains tracts with as low as 4\% 65-and-up, and owner occupancy rates around 33\%.
-Taking the county for the tract would poorly represent the diversity of life within Palm Beach, smoothing out the nuances that differentiate one neighborhood's politics from the next.
-Zooming in on census tracts improves the accuracy of ecological methods, allowing for a better picture
+Taking the county for the tract would poorly represent the diversity within Palm Beach, smoothing out the nuances that differentiate one neighborhood's politics from the next.
+Zooming in on census tracts improves the accuracy of ecological methods, allowing for a fuller picture.
 
 The second principle is that errors should be distributed evenly.
-Errors here refers to the process by which some geographies must be decomposed and recomposed in order to translate non--2010 Census geography into 2010 Census geography.
+Errors here refer mainly to one party's votes that are misplaced among another party's voters, a result of the process by which voter tabulation districts must be decomposed and recomposed in order to translate non--2010 Census geography into 2010 Census geography.
 This assumption may not always hold in my data: the history of American urban planning has shown that physical barriers---the same used to bound census blocks---often bind communities in more ways than one.
-That being said, the supposed problem of partisan gerrymandering should be a moot point.
-Gerrymandering operates on the state level, assigning particular voting precincts to particular Congressional districts.
-Since my analysis deals with already-made and locally-created voting precincts, it skirts this particular problem.
-I again rely on the granularity of this data for its validity, but without a secondary source of data (such as Zillow's or Redfin's proprietary sources), the accurate distribution of Neighborhood Stabilization Program data (which was enumerated in 2000 Census geography) will remain unknown.
-
-The last principle is that data should be extensive.
-This idea is native to all statistical inquiry, with the logic being that evenly-distributed errors will sort themselves out in large enough groups.
-In this regard I have succeeded, with a 1/2 sample of the relevant elections totaling 26,550 census tracts.
-To be fully open to criticism, however, I will describe the data aggregation and de/recomposition methods for each variable in my analysis.
+But since census tracts are also (if more weakly) constrained by physical boundaries, the aggregation of census blocks into tracts ought to be roughly consistent with the physical construction of communities by planners.
+Additionally, most voting precincts do not cut tracts.
+This means that the nightmare problem of gerrymandering deliberately undermining the assumption of evenly-distributed errors should be a moot point.
+Gerrymandering divides \emph{districts} into a biased collection of precincts, it does not redraw precinct lines.
+Since my analysis deals with already-made and locally-created voting precincts, it skirts this particular problem potentially befalling analyses that begin at the county or Congressional-district level.
 
 \hypertarget{data-collection-and-aggregation}{%
 \section{Data collection and aggregation}\label{data-collection-and-aggregation}}
@@ -1177,8 +1188,8 @@ To be fully open to criticism, however, I will describe the data aggregation and
 I built my data almost exclusively from official statistics and estimates.
 Given that most of my sources would eventually lead back to the Census Bureau, which covers the entire United States, I knew that the factors limiting my coverage would lie outside the Census Bureau.
 Collecting and translating precinct-level voting data to census tracts proved to be the most limited and time-consuming aspect of this process.
-I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA),\footnote{Ansolabehere, Palmer, and Lee, ``Precinct-Level Election Data, 2002-2012.''} started in 2008 by political science researchers.
-This database compiled voting returns from most states and reported results for state and national races in a standardized format.
+I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA).\footnote{Ansolabehere, Palmer, and Lee, ``Precinct-Level Election Data, 2002-2012.''}
+Started in 2008 by political scientists, this database compiled voting returns from most states and reported results for state and national races in a standardized format.
 
 These figures were then wedded to files specifying the geographic boundaries of each voting precinct within a state.
 At this stage saw the complete loss of several states' data as some systems used to identify precincts at the state-level were inconsistent with Census Bureau naming conventions.
@@ -1232,12 +1243,12 @@ The Redistricting Database for the State of California, hosted at the University
 Voter registration records allow researchers to locate each address---and thus each resident voter---precisely within tracts and precincts.
 A more careful version of my analysis would implement such methods, as the time required to aggregate each state's registration records exceeded my timeframe.
 
-A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure and unemployment data,\footnote{``Neighborhood Level Foreclosure Data''; Cody, ``Neighborhood Stabilization Program Data''; ``NSP2 Data and Methodology.''} which was tabulated at the 2000 tract- and block group--level.
+A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure data,\footnote{Bucholtz, ``Neighborhood Level Foreclosure Data''; Cody, ``Neighborhood Stabilization Program Data''; Richardson, ``NSP2 Data and Methodology.''} which was tabulated at the 2000 tract- and block group--level.
 The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
 I first decomposed 2000 tracts by the percentage of housing units intersecting with a particular 2010 tract, and then recomposed those 2010 tract figures by allocating foreclosure starts and total housing units according to the percentage each 2010 tract contained.
 
-Lastly, data from the 2010 US Religion Census is collected only at the county-level.\footnote{Grammich et al., ``U.S. Religion Census Religious Congregations and Membership Study, 2010 (County File).''}
-Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average is used.
+Lastly, data from the 2010 US Religion Census\footnote{Grammich et al., ``U.S. Religion Census Religious Congregations and Membership Study, 2010 (County File).''} and the Bureau of Labor Statistics\footnote{``LAUCN.''} is collected at the county-level.
+Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average was used.
 All other data used were native to the 2010 tract level, without translation.
 These data were primarily from the 2010 decennial census, with some additional information from the 2005-2009 American Community Survey.
 American Community Survey data comes attached with margins of error, but, no other variables had these margins of error.
@@ -1258,189 +1269,239 @@ The political behavior of these developments is interesting due to their uniform
 \hypertarget{analysis}{%
 \section{Data Analysis}\label{analysis}}
 
-My approach will be simple: I will model the full sample under the parameters specified in \ref{model}, and then compare it to models of Tea Party--candidate tracts, with the intent to whittle conclusions down to an appropriate level of generality.
-In addition, I aim to persuade readers of the validity of these models, building on the case just made for why the underlying data should be accepted.
+My approach will be simple: I will test my assumption that the Neighborhood Stabilization Program increased housing prices; then, I will model the effect of the NSP on voting with and without home price controls.
+If the NSP did raise home prices, then its presence ought to be associated with an increase in Republican voting over the model that controls for home prices.
+A HUD evaluation of the second NSP round did not find strong evidence for an price increase, so I will only examine the effects of NSP1.
+Additionally, I allow for the possibility that impacts on voting only occurred where housing was politically stigmatized by a Tea Party candidate, as Chapter \ref{motive-opportunity} suggested.
+To evaluate localized effects, I run additional models using only the Tea Party tracts.
 
-\hypertarget{linear-models}{%
-\subsection{Linear models}\label{linear-models}}
+\hypertarget{did-nsp1-increase-home-prices}{%
+\subsection{Did NSP1 increase home prices?}\label{did-nsp1-increase-home-prices}}
 \begin{table}[!htbp] \centering 
-  \caption{Full-sample linear models} 
+  \caption{Effect of NSP1 on Prices} 
+  \label{tab:prices} 
+\begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-4} D{.}{.}{-4} D{.}{.}{-4} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Home price index change, 2007-2010} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ NSP1 & -1.5715^{***} & -2.0434^{***} & -1.2847^{***} \\ 
+  Labor risk & 0.3818^{***} & -0.0917^{**} & 0.7484^{***} \\ 
+  2010 unemployment rate & 0.6901^{***} & 1.6545^{***} & 0.8910^{***} \\ 
+  Median household income & 0.0379^{***} & -0.0621^{***} & 0.0556^{***} \\ 
+  2009 foreclosure rate & -0.7794^{***} & -1.1952^{***} & -0.9982^{***} \\ 
+  Mortgaged occupancy rate & -14.1759^{***} & -2.2096^{*} & -20.0585^{***} \\ 
+  2010 forelcosure rate & -0.7523^{***} & -1.2888^{***} & 0.0317 \\ 
+  Population density (per sq.mi.) & 0.0002^{***} & 0.0001^{***} & 0.0001^{***} \\ 
+  65-and-up \% & 0.0093 & -0.0796^{***} & -0.0187 \\ 
+  Tenure in home & 0.7062^{***} & 0.9509^{***} & 0.7315^{***} \\ 
+  Squared tenure & -0.0120^{***} & -0.0169^{***} & -0.0136^{***} \\ 
+  White \% & 0.6383^{***} & 0.8572^{***} & 0.4031^{***} \\ 
+  Black \% & 0.5950^{***} & 0.8950^{***} & 0.3685^{***} \\ 
+  Hispanic \% & 0.4677^{***} & 0.6302^{***} & 0.2438^{***} \\ 
+  Asian \% & 0.6205^{***} & 0.7857^{***} & 0.3278^{***} \\ 
+  Unemployment change `05--`10 & -0.9948^{***} & -3.6583^{***} & -1.4502^{***} \\ 
+  High-cost mortgage rate & 0.6159^{***} &  & 0.5584^{***} \\ 
+  Seriously delinquent rate & -1.9065^{***} &  & -2.2411^{***} \\ 
+  Constant & -78.9542^{***} & -86.0479^{***} & -54.7618^{***} \\ 
+ \hline \\[-1.8ex] 
+State fixed Effects? & Y & N & Y \\ 
+Observations & \multicolumn{1}{c}{11,992} & \multicolumn{1}{c}{11,992} & \multicolumn{1}{c}{3,683} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.8319} & \multicolumn{1}{c}{0.7851} & \multicolumn{1}{c}{0.8320} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.8316} & \multicolumn{1}{c}{0.7848} & \multicolumn{1}{c}{0.8310} \\ 
+Residual Std. Error & \multicolumn{1}{c}{7.3044} & \multicolumn{1}{c}{8.2569} & \multicolumn{1}{c}{7.7767} \\ 
+F Statistic & \multicolumn{1}{c}{2,819.9000$^{***}$} & \multicolumn{1}{c}{2,429.8210$^{***}$} & \multicolumn{1}{c}{863.3943$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+Table \ref{tab:prices} lists the effects of NSP1 on prices.
+Additional models remove state-level fixed effects and variables that were included in the allocation formula for NSP1, and thus covary highly with which tracts actually received NSP1 funding.
+To avoid price spillovers from interfering with measurement, I only included tracts which were at least 1 mile away from a tract receiving NSP1 funding.
+The results are plain and robust to several possible covariates: tracts receiving NSP1 funding were associated with statistically significant home prices declines, estimated between one and two points lower, compared to tracts not receiving aid.
+
+Results (not shown) of these models for NSP2 funding, allocated competitively within at-risk tracts, are similarly sobering.
+The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.\footnote{Spader et al., ``The Evaluation of the Neighborhood Stabilization Program.''}
+Further, these models appear to be good predictors of home prices, acounting for 79\% to 85\% of total price variations among the 12,234 tracts included.
+Diagnostic plots of the best model are available in Figures \ref{fig:priceresid} and \ref{fig:priceqq}.
+
+While this evidence drives a nail into the coffin of foreclosure relief programs directly supporting anti-relief candidates, it still leaves open questions about the validity of the labor risk--equity model of voting explored in Chapters \ref{motive-opportunity} and \ref{methods}.
+Continuing the approach laid out above yields answers to two questions.
+First, \emph{could} relief programs directly aid the efforts of anti-relief candidates?
+Second, in more general terms, are the effects of housing price changes magnified by low levels of home equity or high levels of labor risk?
+
+\hypertarget{impacts}{%
+\subsection{Voting Impacts of the NSP and Price Changes}\label{impacts}}
+
+Table \ref{tab:fullsample} lists the results of the full-sample models with and without accounting for prices.
+If the NSP's primary effect was lowering prices, then we should expect that tracts targeted by the first round of the Neighborhood Stabilization Program saw lower levels of Republican voting after taking into account other related factors except price changes.
+Then, in the model \emph{including} the price data, there should be no significant impact of NSP funding, as the only targets of the program were home prices.
+For the labor risk--equity model, in all trials there should be positive correlations between price changes and Republican voting, with augmented values where price changes refract through economic anxiety, as measured by high foreclosure rates (i.e.~low equity) or risky employment (a.k.a. high unemployment variance).
+\begin{table}[!htbp] \centering 
+  \caption{Linear regression of NSP1 on Voting} 
   \label{tab:fullsample} 
-\small 
-\begin{tabular}{@{\extracolsep{3pt}}lcc} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-4} D{.}{.}{-4} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-3} 
-\\[-1.8ex] & \multicolumn{2}{c}{RPCT} \\ 
-\\[-1.8ex] & (1) & (2)\\ 
+\\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
 \hline \\[-1.8ex] 
- NSP1 & 1.800$^{***}$ & 0.110 \\ 
-  & & \\ 
- NSP2 & $-$1.100$^{**}$ & $-$1.500$^{***}$ \\ 
-  & & \\ 
- NSP3 & $-$5.700$^{***}$ & $-$7.500$^{***}$ \\ 
-  & & \\ 
- FORQ3 & 0.480$^{***}$ & 1.100$^{***}$ \\ 
-  & & \\ 
- DENSITY & 0.0002$^{***}$ & 0.0003$^{***}$ \\ 
-  & & \\ 
- PRICECHG & $-$0.038$^{***}$ & 0.018$^{**}$ \\ 
-  & & \\ 
- VAP\_B & $-$0.180$^{***}$ & $-$0.140$^{***}$ \\ 
-  & & \\ 
- EVANRATE & 0.560$^{***}$ & 0.900$^{***}$ \\ 
-  & & \\ 
- LDSRATE & 2.500$^{***}$ & 0.750$^{***}$ \\ 
-  & & \\ 
- VAP\_H & 0.290$^{***}$ & 0.490$^{***}$ \\ 
-  & & \\ 
- VAP\_H2 & $-$0.003$^{***}$ & $-$0.005$^{***}$ \\ 
-  & & \\ 
- MEDHHI & 0.130$^{***}$ & 0.130$^{***}$ \\ 
-  & & \\ 
- OWNEROCC & 0.094$^{***}$ & 0.110$^{***}$ \\ 
-  & & \\ 
- UNEM10 & 0.230$^{***}$ & $-$0.046 \\ 
-  & & \\ 
- OLD & 0.045$^{***}$ & 0.058$^{***}$ \\ 
-  & & \\ 
- WHITESOMECOL & 0.110$^{***}$ & 0.042$^{***}$ \\ 
-  & & \\ 
- VAP\_W & 0.220$^{***}$ & 0.220$^{***}$ \\ 
-  & & \\ 
- FORQ3:DENSITY & $-$0.00004$^{***}$ & $-$0.0001$^{***}$ \\ 
-  & & \\ 
- WHITESOMECOL:VAP\_W & 0.001$^{***}$ & 0.001$^{***}$ \\ 
-  & & \\ 
- Constant & $-$21.000$^{***}$ & $-$11.000$^{***}$ \\ 
-  & & \\ 
-\hline \\[-1.8ex] 
-Observations & 26,550 & 26,550 \\ 
-R$^{2}$ & 0.490 & 0.440 \\ 
-Adjusted R$^{2}$ & 0.490 & 0.430 \\ 
-Residual Std. Error & 15.000 & 15.000 \\ 
-F Statistic & 609.000$^{***}$ & 1,079.000$^{***}$ \\ 
+ NSP1 & -0.8423^{***} & -0.5692^{**} \\ 
+  Home price index change, 2007-2010 &  & 0.3491^{***} \\ 
+  Economic anxiety & 0.0660^{***} & 0.3285^{***} \\ 
+  2010 forelcosure rate & 0.8911^{***} & 1.4348^{***} \\ 
+  Labor risk & 0.2970^{***} & -0.9921^{***} \\ 
+  Unemployment change `05--`10 & -0.3946^{***} & -0.1877 \\ 
+  2010 unemployment rate & -0.0023 & -0.2233^{***} \\ 
+  Median household income (000s) & 0.1699^{***} & 0.1656^{***} \\ 
+  Population density (per sq.mi.) & 0.0002^{***} & 0.0003^{***} \\ 
+  Tenure in home & -2.1548^{***} & -1.9720^{***} \\ 
+  Squared tenure & 0.0531^{***} & 0.0481^{***} \\ 
+  65-and-up \% & 0.1962^{***} & 0.1578^{***} \\ 
+  Black \% & -0.1056^{***} & -0.1201^{***} \\ 
+  Hispanic \% & 0.4606^{***} & 0.4107^{***} \\ 
+  Hispanic \% squared & -0.0043^{***} & -0.0041^{***} \\ 
+  White \% & 0.2178^{***} & 0.2033^{***} \\ 
+  White: some college or less \% & 0.0962^{***} & 0.0923^{***} \\ 
+  Evangelical \% & 0.7693^{***} & 0.7789^{***} \\ 
+  L.D.S. \% & 0.6369^{***} & 0.7223^{***} \\ 
+  Price change $\times$ anxiety &  & 0.0133^{***} \\ 
+  Price change $\times$ foreclosure rate &  & 0.0354^{***} \\ 
+  Price change $\times$ labor risk &  & -0.1016^{***} \\ 
+  Foreclosure rate $\times$ density & -0.0001^{***} & -0.0001^{***} \\ 
+  White \% $\times$ some college or less & 0.0013^{***} & 0.0012^{***} \\ 
+  Constant & 6.7980^{***} & 11.5823^{***} \\ 
+ \hline \\[-1.8ex] 
+State fixed effects? & Y & Y \\ 
+Observations & \multicolumn{1}{c}{27,098} & \multicolumn{1}{c}{27,098} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.4338} & \multicolumn{1}{c}{0.4485} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.4334} & \multicolumn{1}{c}{0.4480} \\ 
+Residual Std. Error & \multicolumn{1}{c}{15.1571} & \multicolumn{1}{c}{14.9599} \\ 
+F Statistic & \multicolumn{1}{c}{987.9295$^{***}$} & \multicolumn{1}{c}{880.7758$^{***}$} \\ 
 \hline 
 \hline \\[-1.8ex] 
 \textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
 \end{table}
-Table \ref{tab:fullsample} lists the results of the full-sample linear models with and without state-level fixed effects.
-Fixed effects are a sort of catch-all method to deal with unobserved characteristics particular to certain levels.
-For instance, state laws governing taxation or the shape of voting precincts are not present in my dataset, so I employ state-level fixed effects to try and isolate these effects.
-Mechanically, this method groups all observations belonging to each state as a single regressor.\footnote{Due to the fact that 24 states are included in this analysis, I truncated the output in light of space. Almost all states had statistically-significant associated effects.}
-While fixed-effects are standard fare in econometric analysis, I include both models because the assumptions of this fixed-effects model may not be met.
-Namely, it presumes that all directly-relevant and observable predictors are present; as I will show later, these data may be too limited to fully explain the spatial correlation among the voting results.
+Consistent with expecations, in both models the presence of the Neighborhood Stabilization Program is associated with a half- to full percentage point lower Republican voting.
+I will shortly detail reasons why \emph{not} to accept this model's validity, but, the consistency of the expectations with the model---and prior literature---is a good reason (though not sufficient) to accept the model's capacity to describe the impacts of specific economic and demographic variables on majoritarian voting behavior.
+Down the line, from residential tenure through the weighted portion of white people with less education than a college degree, demographic factors identified by prior research as impacting the outcome of elections in particular directions were similarly associated in my model.
 
-The coefficients of most every control predictor are consistent with prior research, with two caveats.
-Of particular importance, this model conforms with the literature connecting homeownership to conservative voting around the world, as the owner-occupied homeownership rate is positively associated with Republican vote share.
-The 2010 unemployment rate and population density have the opposite signs that were expected: in my model, as the unemployment rate climbs, the Republican voting percentage falls; conversely, as the population density increases, so to does the vote share.
-That being said, these are small effects; a (massive) 10-point rise in unemployment is associated here with just a 2.3-point rise in vote share.
-For population density the impacts are even smaller.
-The consistency of these impacts acts as a kind of eye test for the validity of this model, with the argument being that here are simply added predictors to an already-solid model.
+Moreover, key features of the labor risk--equity model of political behavior found strong evidence in model 2.
+The interaction effects between price changes, foreclosure rates, and labor risk are of interest here (uninteracted forms are provided for completeness and their effects are not predicted by the labor risk--equity literature).
+The magnifying effects of labor risk and foreclosure rate on price changes were directly proportional.
+They were---in addition to most every other variable---statistically-significant at the 1\% level.
+For instance, in our Palm Beach County tract 12099005947, my model estimated a 5.7-point increase in Republican vote share due to the combination of home price decline, foreclosure rate, and variance of employment, all in a non--Tea Party district that voted heavily Democratic.
+Both the triple interaction between prices, foreclosures, and labor risk, as well as the price change--foreclosure rate interaction hold positive coefficients, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
 
-Of interest to this thesis are the coefficients attached to the Neighborhood Stabilization Program, 2010 foreclosure rate, and change in home prices.
-Against my hypothesis that foreclosure rates---a proxy for negative equity---would be negatively associated with Republican vote share, while home-price changes would be positively linked to Republican vote share, each regressor displays the \emph{opposite} behavior.
-Part of the price-change behavior seems to be absorbed by the state-level fixed effects, however.
-The logic here is that there is correlation between Republican voting shares in nearby census tracts that covaries both with the particular state and with prices.
-The nearness (or farness) of tracts is unobserved by this model, but may nonetheless contain important information linked to---but distinct from---price changes.
-It is ambiguous what that information may be, however: it could align with financial data on equity or rates of seriously-delinquent mortgage payments, but alternatively, it could be socio-cultural, relating instead to irrational exuberance over price changes or perceptions of fortunate homeowners.
+But curiously, the interaction between price change and labor risk carries an inverse relationship with Republican voting.
+In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
+This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
+I account for this with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).\footnote{Mota, ``Spatial Features of Labor Markets and Links to the Housing Market,'' Table 1.}
+Thus, rather than this negative association representing an inconsistency between predicted and actual effects of increased equity, it could be the case that incomplete credit markets prevented individuals with highly-risky employment from behaving as they would prefer.
+In sum, the labor risk--equity model and prior literature on Republican voting behavior broadly agree with my regression results on the full sample of observations.
 
-Separate from the effects of price changes and foreclosure rates, the Neighborhood Stabilization Program had a chronologically-dependent effect on Republican vote share.
-Tracts targeted with the first round of grants (NSP1) were associated with a 1.75-point increase in Republican vote share, while the later rounds---NSP2 and NSP3---were associated with decreases in Republican vote shares after taking account of race, educational attainment, religious, and economic factors.
-Since properties could not be purchased (let alone repaired or resold) before funds were granted, NSP3 (and to a lesser extent NSP2) tracts could not have seen financial benefit from the program.
-I interpret this result as a strong evidence for the conclusion that the Neighborhood Stabilization Program, by supporting homeowner wealth, push voters rightward.
-Why, though, would NSP2 and NSP3---without a robust advertising effort or partisan attachment---be associated with Democratic votes?
-My theory is, again, unobserved variable bias.
-NSP1 and NSP3 were targeted due to the risk of further foreclosures, associated with high-cost, high-leverage loans (most of which were subprime) and, therefore, mortgagees at the financial margins, who tend to vote more Democratic.
+Because of these reasons, I urge acceptance of the model's capacity to understand the effects of certain economic variables on partisan voting behavior.
+Here it is important to understand this specific sense of model validity.
+The point here is not to predict vote outcomes, but to infer the effects of certain variables.
+While prediction would be nice (and would be sufficient to validate a model's inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
+For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;\footnote{Dymski, Hernandez, and Mohanty, ``Race, Gender, Power, and the US Subprime Mortgage and Foreclosure Crisis''; Faber, ``Racial Dynamics of Subprime Mortgage Lending at the Peak.''} since race is also associated with Republican voting, I have included descriptive variables in my models.
+Though I am somewhat worried about data quality with regards to ecological methods, the care taken to remove unobserved variable bias and the congruence of my results with expectations leads me to confidence in my \emph{model}, and explains why I do not worry about fact that only half of the variation in Republican voting share is explained by my model.
 
-The effects of the Neighborhood Stabilization Program are sharpened by the presence of Tea Party politics.
-Table \ref{tab:justp} lists the results with and without state-level fixed effects for different subsets of the full sample, all of which saw races between self-avowed Tea Party candidates.
-While the signs of coefficients attached to the NSP rounds remain the same, their significances vary.
-This variance is likely due to sample size, as the number of tracts with winning candidates contained little more than a tenth of the total observations.
-Throughout these models, most control variables remained entirely stable, with the unemployment rate and the proportion of residents 65 and older respectively losing and gaining statistical significance among models.
+How then did this model fare in Tea Party tracts?
+In these next trials, more pronounced home price effects should be expected, though it may also be possible that ``deadbeat'' homeowners are further stigmatized by Tea Party candidates, leading to more conservatizing effects of increased foreclosure rates.
+Table \ref{tab:justp} shows the results of the same model above, but applied only to tracts in which a self-described member of the Tea Party ran for election.
 \begin{table}[!htbp] \centering 
-  \caption{Tea-Party linear models} 
+  \caption{Linear regression of NSP1 on Voting} 
   \label{tab:justp} 
-\small 
-\begin{tabular}{@{\extracolsep{3pt}}lcccc} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-4} D{.}{.}{-4} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
- & \multicolumn{4}{c}{\textit{Dependent variable:}} \\ 
-\cline{2-5} 
-\\[-1.8ex] & \multicolumn{4}{c}{RPCT} \\ 
-\\[-1.8ex] & (1) & (2) & (3) & (4)\\ 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
 \hline \\[-1.8ex] 
- NSP1 & 0.660$^{**}$ & 1.100$^{***}$ & 1.600$^{***}$ & 0.770$^{*}$ \\ 
-  & & & & \\ 
- NSP2 & $-$1.300$^{**}$ & $-$1.800$^{***}$ & $-$1.300$^{*}$ & $-$0.850 \\ 
-  & & & & \\ 
- NSP3 & $-$5.700$^{***}$ & $-$5.200$^{***}$ & $-$3.800$^{***}$ & $-$0.930 \\ 
-  & & & & \\ 
- FORQ3 & $-$0.210$^{**}$ & 0.330$^{***}$ & $-$0.130 & $-$0.240$^{*}$ \\ 
-  & & & & \\ 
- DENSITY & $-$0.0003$^{***}$ & $-$0.0002$^{***}$ & $-$0.0004$^{***}$ & 0.00001 \\ 
-  & & & & \\ 
- PRICECHG & $-$0.045$^{***}$ & 0.012 & 0.035$^{***}$ & $-$0.034$^{**}$ \\ 
-  & & & & \\ 
- VAP\_B & $-$0.330$^{***}$ & $-$0.250$^{***}$ & $-$0.260$^{***}$ & $-$0.340$^{***}$ \\ 
-  & & & & \\ 
- EVANRATE & 0.190$^{***}$ & 0.710$^{***}$ & 0.560$^{***}$ & 0.540$^{***}$ \\ 
-  & & & & \\ 
- LDSRATE & 1.800$^{***}$ & 0.900$^{***}$ & 0.810$^{***}$ & 0.320$^{***}$ \\ 
-  & & & & \\ 
- VAP\_H & 0.230$^{***}$ & 0.210$^{***}$ & 0.220$^{***}$ & 0.200$^{**}$ \\ 
-  & & & & \\ 
- VAP\_H2 & $-$0.003$^{***}$ & $-$0.002$^{***}$ & $-$0.002$^{***}$ & $-$0.004$^{***}$ \\ 
-  & & & & \\ 
- MEDHHI & 0.150$^{***}$ & 0.084$^{***}$ & 0.082$^{***}$ & 0.120$^{***}$ \\ 
-  & & & & \\ 
- OWNEROCC & 0.061$^{***}$ & 0.110$^{***}$ & 0.110$^{***}$ & 0.093$^{***}$ \\ 
-  & & & & \\ 
- UNEM10 & 0.033 & $-$0.150$^{***}$ & $-$0.042 & 0.420$^{***}$ \\ 
-  & & & & \\ 
- OLD & 0.055$^{***}$ & 0.004 & $-$0.004 & 0.074$^{***}$ \\ 
-  & & & & \\ 
- WHITESOMECOL & 0.160$^{***}$ & 0.110$^{***}$ & 0.099$^{***}$ & 0.170$^{***}$ \\ 
-  & & & & \\ 
- VAP\_W & 0.110$^{***}$ & 0.190$^{***}$ & 0.099$^{***}$ & 0.140$^{*}$ \\ 
-  & & & & \\ 
- FORQ3:DENSITY & 0.00001 & $-$0.00002$^{*}$ & 0.00001 & $-$0.0001$^{***}$ \\ 
-  & & & & \\ 
- WHITESOMECOL:VAP\_W & 0.001$^{***}$ & 0.001$^{***}$ & 0.001$^{***}$ & $-$0.001 \\ 
-  & & & & \\ 
- Constant & $-$2.100 & $-$2.600 & 4.400$^{*}$ & 9.500 \\ 
-  & & & & \\ 
-\hline \\[-1.8ex] 
-Observations & 8,533 & 8,533 & 5,750 & 2,783 \\ 
-R$^{2}$ & 0.630 & 0.540 & 0.440 & 0.510 \\ 
-Adjusted R$^{2}$ & 0.620 & 0.540 & 0.440 & 0.510 \\ 
-Residual Std. Error & 10.000 & 11.000 & 11.000 & 9.800 \\ 
-F Statistic & 357.000$^{***}$ & 528.000$^{***}$ & 236.000$^{***}$ & 152.000$^{***}$ \\ 
+ NSP1 & 0.1211 & 0.3452 \\ 
+  Home price index change, 2007-2010 &  & 0.4305^{***} \\ 
+  Economic anxiety & 0.1203^{***} & 0.3251^{***} \\ 
+  2010 forelcosure rate & -0.0975 & -0.0020 \\ 
+  Labor risk & -0.2628^{***} & -1.2672^{***} \\ 
+  Unemployment change `05--`10 & 0.6517^{***} & 0.9725^{***} \\ 
+  2010 unemployment rate & -0.4272^{***} & -0.7021^{***} \\ 
+  Median household income (000s) & 0.1462^{***} & 0.1475^{***} \\ 
+  Population density (per sq.mi.) & -0.0001^{**} & -0.00004 \\ 
+  Tenure in home & -1.7250^{***} & -1.6490^{***} \\ 
+  Squared tenure & 0.0397^{***} & 0.0373^{***} \\ 
+  65-and-up \% & 0.1508^{***} & 0.1432^{***} \\ 
+  Black \% & -0.2127^{***} & -0.2222^{***} \\ 
+  Hispanic \% & 0.2061^{***} & 0.1881^{***} \\ 
+  Hispanic \% squared & -0.0020^{***} & -0.0019^{***} \\ 
+  White \% & 0.1825^{***} & 0.1702^{***} \\ 
+  White: some college or less \% & 0.1646^{***} & 0.1564^{***} \\ 
+  Evangelical \% & 0.5915^{***} & 0.6189^{***} \\ 
+  L.D.S. \% & 1.0108^{***} & 0.9949^{***} \\ 
+  Price change $\times$ anxiety &  & 0.0146^{***} \\ 
+  Price change $\times$ foreclosure rate &  & -0.0229 \\ 
+  Price change $\times$ labor risk &  & -0.0966^{***} \\ 
+  Foreclosure rate $\times$ density & -0.0001^{***} & -0.0001^{***} \\ 
+  White \% $\times$ some college or less & 0.0009^{***} & 0.0010^{***} \\ 
+  Constant & 9.4814^{***} & 13.1766^{***} \\ 
+ \hline \\[-1.8ex] 
+State fixed Effects? & Y & Y \\ 
+Observations & \multicolumn{1}{c}{8,700} & \multicolumn{1}{c}{8,700} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.5507} & \multicolumn{1}{c}{0.5612} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.5496} & \multicolumn{1}{c}{0.5599} \\ 
+Residual Std. Error & \multicolumn{1}{c}{11.2272} & \multicolumn{1}{c}{11.0983} \\ 
+F Statistic & \multicolumn{1}{c}{506.5095$^{***}$} & \multicolumn{1}{c}{443.6774$^{***}$} \\ 
 \hline 
 \hline \\[-1.8ex] 
-\textit{Note:}  & \multicolumn{4}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
 \end{tabular} 
 \end{table}
-The variables of interest were a mixed bag.
-NSP1 in each model showed strong statistical basis for rejecting the null hypothesis in favor of a positive effect on Republican voting, while the second and third rounds of the Neighborhood Stabilization Program consistently showed a negative association with Republican voting shares, though with inconsistent significance.
-Due to the ever-shrinking size of the dataset, I lean towards chalking this result up to an issue of size.
-The price change and foreclosure rates never delivered a statistically-significant pair consistent with expectations, with little evidence that either has a determinate effect on voting.
+These trials offer promising results but less statistical significance.
+First, the evidence that NSP1 had any effect on voting is far from conclusive, with statistically insignificant associations between round one funding and Republican vote shares.
+Second, home price interaction terms are significant and carry the same signs as in trials run on the full slate of observations, but insignificant when uninteracted.
+Third, the foreclosure rate switches signs when combined with the effects of home prices.
+This switch means that \emph{apart from their effects on prices} foreclosures are associated with increased Republican voting, but when those {[}negative{]} price effects are included, voters choose Democratic candidates more.
+This finding agrees with the narrative that Tea Party candidates cast foreclosed homeowners as irresponsible and blame-worthy neighbors.
+
+It seems that, since the NSP is associated with higher rates of Republican voting in the face of negative price effects, cultural (rather than economic) factors may have been at play.
+One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
+Table \ref{tab:compnsp} compares how each of the NSP rounds fared with respect to Republican votes.
+The first round saw increased levels of Republican voting, while rounds two and three saw decreases in Republican vote share.
+I excluded the second and third NSP rounds because, as of July 2011, respectively 20.6\% and 0.4\% of funds had been expended from NSP2 and NSP3.\footnote{18568, ``HUD NSP3 Report''; 18568, ``HUD NSP2 Report.''}
+Thus, any perceived effects could not been due to the price effects sought by the program.
+Though NSP1 had expended 43.4\% of funds and fully committed its allocations to grantees by September 2010,\footnote{18568, ``HUD NSP-1 Reporting Sept 2010.''} the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
+
+Explaining the cultural dynamics of this phenomenon (and teasing out its existence) opens opportunities for further research, but I present one theory now.
+Eagle-eyed readers will have noted that, while the foreclosure rate and population density were included in Section \ref{model}, the interaction between them was left unexplained.
+I have included this term to measure sociological effects of foreclosures, namely social contact theory, which posits that contact with an Other causes members of the in-group to sympathize with said Other.
+In this case, that Other is foreclosed homeowners.
+Where density is low, it may be possible to avoid seeing or knowing one of these ``deadbeats'', but as densities (and foreclosure rates) rise, it becomes less and less possible to assimilate ideas of irresponsibility and blame with people that one knows personally.
+While the coefficient attached to the foreclosure rate--population density interaction term is small, it was statistically significant in every trial I ran.
+Further, population density carries an enormous range of values; while most of these predictors are bounded between 0 and 100 percent, population density ranges from 0 to nearly 80,000.
+As such, the interaction term ranges from 0 to 270,896.7, meaning that effects could be quite large at the upper end.
 
 \hypertarget{limitations}{%
 \subsection{Limitations and proposed refinements}\label{limitations}}
 
-As stated above, these models were limited by several factors.
-The three areas I focus on as most important are data quality, model fitness, and spatial dependence.
+However, even with all these statistically-significant terms, there are questions of model adequacy that I am poorly-equipped to address.
+These models were limited by several factors, but the three areas I focus on as most important are data quality, model fitness, and spatial dependence.
 My data quality concerns are ever-present in natural-experiment methodologies.
 In short, individual voting characteristics, more granular price data, and a fuller spread of census tracts could have aided the conclusivity of this evidence.
-Additionally, individual-level observations would have avoided the ecological assumptions this analysis rests on.
+Additionally, using individual-level demographics and vote results would have avoided the ecological assumptions this analysis rests on.
 
 The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
-On that count, the attached .40-.62 R\^{}\{2\} values are not concerning.
-However, analysis of residuals leaves something to be desired.
+On that count, the attached .43-.56 \(R^{2}\) values are not concerning.
+However, further analysis of the residuals demonstrates weaknesses in model selection.
 Figure \ref{fig:linearesid} shows the residuals against fitted values for the full-sample, fixed-effects model.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
 Here, there is a clear inverse relationship framed by the bounds of the Republican voting share at 0 and 100 percent.
@@ -1469,160 +1530,310 @@ As Figure \ref{fig:linearquant} shows, the variance of actual versus fitted valu
 In contrast, the behavior of Figure \ref{fig:betaresid} conforms more closely to an ideal distribution, with less-pronounced upper and lower bounds.
 Results of the beta regressions can be seen in Table \ref{tab:beta}.
 Coefficients are altogether similar to what the linear models predict, making me more secure in my belief of their validity.
+\begin{table}[!htbp] \centering 
+  \caption{Beta regression of NSP1 on Voting} 
+  \label{tab:beta} 
+\begin{tabular}{@{\extracolsep{5pt}}lD{.}{.}{-4} D{.}{.}{-4} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-3} 
+\\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+\hline \\[-1.8ex] 
+ NSP1 & -0.0306^{***} & 0.0203 \\ 
+  Home price index change, 2007-2010 & 1.7823^{***} & 1.8845^{***} \\ 
+  Economic anxiety & 1.6295^{***} & 1.2396^{***} \\ 
+  2010 forelcosure rate & 4.9079^{***} & 1.5836 \\ 
+  Labor risk & -4.8220^{***} & -5.3246^{***} \\ 
+  Unemployment change `05--`10 & -10.2844^{***} & 4.5735^{***} \\ 
+  2010 unemployment rate & 5.1140^{***} & -3.3898^{***} \\ 
+  Median household income (000s) & 0.6216^{***} & 0.6179^{***} \\ 
+  Population density (per sq.mi.) & 0.0020^{***} & -0.0004^{*} \\ 
+  Tenure in home & -7.1027^{***} & -6.5834^{***} \\ 
+  Squared tenure & 0.1646^{***} & 0.1445^{***} \\ 
+  65-and-up \% & 0.4757^{***} & 0.5637^{***} \\ 
+  Black \% & -0.9473^{***} & -1.3248^{***} \\ 
+  Hispanic \% & 1.9847^{***} & 0.9694^{***} \\ 
+  Hispanic \% squared & -0.0216^{***} & -0.0112^{***} \\ 
+  White \% & 1.1155^{***} & 0.9798^{***} \\ 
+  White: some college or less \% & 0.7246^{***} & 1.0339^{***} \\ 
+  Evangelical \% & 3.2762^{***} & 2.7161^{***} \\ 
+  L.D.S. \% & 1.4511^{***} & 3.9845^{***} \\ 
+  Price change $\times$ anxiety & 9.0250^{***} & 5.7776^{***} \\ 
+  Price change $\times$ foreclosure rate & -2.9616 & -5.7626 \\ 
+  Price change $\times$ labor risk & -62.7542^{***} & -42.5241^{***} \\ 
+  Foreclosure rate $\times$ density & -0.0904^{***} & -0.0705^{***} \\ 
+  White \% $\times$ some college or less & 0.0262 & -0.0208 \\ 
+  Constant & -1.8907^{***} & -1.7943^{***} \\ 
+ \hline \\[-1.8ex] 
+State fixed Effects? & Y & Y \\ 
+Observations & \multicolumn{1}{c}{27,098} & \multicolumn{1}{c}{8,700} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.3117} & \multicolumn{1}{c}{0.5748} \\ 
+Log Likelihood & \multicolumn{1}{c}{10,222.2100} & \multicolumn{1}{c}{6,853.0630} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{2}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+Lastly, as mentioned, I believe these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
+Using state-level fixed effects and tract-level housing prices corrected some of this behavior, but the local nature of politics cannot be underestimated.
+I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as a lack of remote access to better hardware, quashed that opportunity.\footnote{This chapter was completed during 2020's novel coronavirus pandemic, which restricted access to University resources.}
+Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.
 
-Lastly, as mentioned, I believe these models were spatially-dependent, with biased the estimation of the home price effect on voting behavior.
-I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as my own facility with such approaches, quashed that opportunity.
-Nonetheless, I can virtually prove its existence in my models using standard tests of spatial correlation.
-
-I first constructed a neighbor's matrix from geographic census tract files; this matrix tells \textbf{R} which tracts share an edge.
+I first constructed a matrix of neighboring census tracts using geographic tract files; this matrix tells \textbf{R} which tracts are neighbors by triangulating their population-weighted geographic centers.
 I then ran the residuals of each model (from a positivist interpretation, these are the unobserved variables) through Moran's I and Geary's C tests.
 The similar tests look for spatial dependence respectively at the global and local levels.
 Since this dataset is fractured, containing large discontiguities, Geary's C test will be the more appropriate measure; both are retained because the calculations are quick and similar.
-Table \ref{tab:spdep} displays the results of these tests, all of which reject the null hypothesis of no spatial dependence at the highest precision level \textbf{R} offers.
+Table \ref{tab:spdep} displays the results of these tests, all of which reject the null hypothesis of no spatial dependence, affirming Tobler's first law of geography that ``everything is related to everything else, but near things are more related than distant things.''\footnote{Tobler, ``A Computer Movie Simulating Urban Growth in the Detroit Region,'' 236.}
 \begin{table}
 
-\caption{\label{tab:spdep}Results of various tests for spatial dependence. In all tests, the null hypothesis is spatially-independent.}
+\caption{\label{tab:spdep}Results of various tests for spatial dependence. In all tests, the null hypothesis is spatial independence.}
 \centering
 \begin{tabular}[t]{ccccc}
 \toprule
 Model & Moran's I & Moran p-value & Geary's C & Geary p-value\\
 \midrule
-full-sample fixed-effects & 0.82 & 0 & 0.16 & 0\\
-full-sample & 0.83 & 0 & 0.15 & 0\\
-Tea Party fixed-effects & 0.73 & 0 & 0.24 & 0\\
-Tea Party tracts & 0.77 & 0 & 0.20 & 0\\
-TP candidate lost & 0.77 & 0 & 0.19 & 0\\
+Full-sample no prices & 0.7738 & 0 & 0.2369 & 0\\
+Full-sample with prices & 0.7674 & 0 & 0.2436 & 0\\
+Tea Party no prices & 0.6984 & 0 & 0.3180 & 0\\
+Tea Party with prices & 0.6872 & 0 & 0.3298 & 0\\
+Beta full sample & 0.7641 & 0 & 0.2469 & 0\\
 \addlinespace
-TP candidate lost & 0.71 & 0 & 0.25 & 0\\
+Beta just Tea Party & 0.6420 & 0 & 0.3748 & 0\\
 \bottomrule
 \end{tabular}
 \end{table}
 \hypertarget{conclusion-1}{%
 \section{Conclusion}\label{conclusion-1}}
 
-In sum, there is strong evidence that recipients of the Neighborhood Stabilization Program's first round of grants voted more conservative in the 2010 elections, while subsequent rounds voted more liberal.
-This fact can be explained by the timescale that the NSP operated on.
-Other heretofore unexamined factors, such as home price level and foreclosure rate, show mixed results, though the strongest effects came as Tea Party politics stigmatized homeownership, foreclosure, and government relief programs.
+In sum, 2010 prices were negatively associated with the Neighborhood Stabilization Program's first round of funding.
+This fact may be due to unobserved variable bias, but, given the normalcy of regression diagnostics, it may instead be due to the NSP's timeline.
+Due to the mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
+My results indicate that the NSP reduced prices between 1.3\% and 2.0\%, a small reduction keeping with size of the mandated discount.
+Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.\footnote{18568, ``Sept 2010 Program-Wide Report''; HUD, ``HUD NSP1 Report.''}
 
-\appendix
+The labor risk--equity model was evaluated in spite of this fact, and evidence suggested the theorized effects were present in the 2010 midterms, though oddly not when only Tea Party tracts were considered.
+Economic anxiety, composed of low equity---represented by high foreclosure rates---and risky employment---represented by high variance of unemployment rate---magnified the conservatizing effects of increased home prices.
+These results were statistically significant and robust to several covariates.
+Still to be explained are the mechanisms by which labor risk propagates through mortgage markets, HELOCs, and political behavior.
+These variables provided ``liberalizing'' effects on voters (though not when combined with high foreclosure rates), confounding prior literature on the subject.
+
+Limitations of the measurement and statistical methods were explored, with strong evidence that further work is needed to extricate the impacts studied from spatial dependence and bounded response assumptions.
+Beta distribution regression was employed to correct for the latter issue, with slightly more ideal measures of model fitness and similarly strong evidence for the labor risk--equity model's capacity to explain voter behavior in the full sample as well as the Tea Party tracts.
+These results build towards consensus with empirical literature, girding Ansell (2014) with voting results to provide a crucial middle step in his argument.
+
+\hypertarget{conclusion}{%
+\chapter{Conclusion}\label{conclusion}}
+
+Between 2008 and 2012, more than 10 million Americans lost their homes.\footnote{Martin and Niedt, \emph{Foreclosed America}.}
+While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.\footnote{Ferreira and Gyourko, ``A New Look at the U.S. Foreclosure Crisis.''}
+In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,\footnote{Lasky and Gisselquist, ``Housing Wealth and Consumer Spending.''} or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.\footnote{``CSUSHPISA.''}
+
+The structures that facilitated this unprecedented growth were scaffolded with a ``social compact'' ushered in by the New Deal.
+This compact promised subsidized, predictable home mortgages and organized employment in return for the political support of the subset who profited most from these homes and jobs.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
+These policies responded to general economic turmoil and, I believe, learned from the lessons of farm foreclosures in the Midwest.
+Flunking crop prices and the ecological devastation of the Dust Bowl bore epidemiological resemblance to the foreclosure crisis: the diseases and dust storms in the 1920s and 1930s concentrated geographically much as the foreclosures in master planned developments (or close-knit neighborhoods) did in the 2000s and 2010s.
+But the responses of farmers bore little resemblance to the responses of homeowners.
+Farmers had been trained in debt politics, going back all the way to Shay's Rebellion.\footnote{Beard, \emph{An Economic Interpretation of the Constitution of the United States}.}
+Moreover, sociological forces made talking shop a respectable subject among farmers, rather than the shame that foreclosure connoted in the 2000s.
+The system to emerge subsidized long-term fixed-rate mortgages at what then were low interest rates and small downpayments.
+These policies increased demand for homeownership and fixed people in their suburban communities.\footnote{Jackson, \emph{Crabgrass Frontier}.}
+
+However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.
+This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.\footnote{Lewis, ``The Fat Men and Their Marvelous Money Machine.''}
+Meanwhile, taxation became a national political discussion.
+After the tax rates of top-bracket earners were cut in the 1960s from above 90\%, homeowners in California awoke to a rationalized and modern property tax system that edged assessed property values higher.
+These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.\footnote{Martin, ``Welcome to the Tax Cutting Party.''}
+
+The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
+In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.\footnote{Campbell, ``What Americans Think of Taxes.''}
+At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,\footnote{DuVernay, ``13th.''} while simultaneously with increasing military expenditure.
+In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
+Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.\footnote{Lewis, ``The Fat Men and Their Marvelous Money Machine.''}
+Better positioned in the market, and with fewer competitors, investment banks ramped up production of home mortgages.
+
+This acceleration was aided by successive federal policies from George H. W. Bush and Bill Clinton aimed at boosting affordability.
+For current homeowners, this sustained demand meant that home prices seemed to be stably increasing, and that eventual sale would bring certain profits.
+For prospective homeowners lured by the good fortune currently being enjoyed, global disinflation (partially due to outsourced manufacturing) meant that home mortgages, now packaged into mortgage-backed securities, offered enough return on investment to persuade international capital to provide the financial supply.\footnote{Schwartz, \emph{Subprime Nation}.}
+Once this demand and supply saw consistency in each other, they became apparently dependent on one another: increased demand let in more investors on these assets made riskless by yet more demand, allowing homeowners to borrow against their inflated home prices.
+This mechanism crystallized a successive, asset-backed social compact.
+Instead of organized employment, citizens received organized credit with relatively predictable gains while accepting uncertain wage employment.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
+
+Whether as social compact or opportunism, these political and financial swings made homeowners sensitive to real estate deflation as their parents, parties to the previous compact, were sensitive to inflation in the basket of everyday goods.
+When employment was unpredictable, or wages flat, homeowners relied on surging home prices to smooth their consumption.
+When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills\footnote{Buchholz and Larrimore, ``Federal Reserve Surveys.''} or necessary expenses.
+Home equity and increasing prices (that could be realized as income) acted as a form of private insurance, replacing unemployment benefits and welfare provisions.
+Dropping demand for those programs would also agree with lower taxation to further loosen households' financial constraints.
+The conservatizing effects of this logic on political behavior have been thoroughly theorized\footnote{Gingrich and Ansell, ``Preferences in Context''; Schwartz, \emph{Subprime Nation}; Seabrooke, \emph{The Politics of Housing Booms and Busts}.} but somewhat less-thoroughly observed.
+Empirical work has focused on the existence of preferences rather than their priority,\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014.} as data on individual home wealth and bespoke polling are expensive.
+
+This thesis has exploited the coincidence of unusually-precise data with political changes that sharpened (and possibly made explicit) the connections between homeownership, unstable employment, and taxation.
+In the former category, the decennial census and the first wave of nationwide efforts at precinct-level voting returns happened to occur in 2010.
+In the latter category, Americans processed nationally the depth of the Great Recession, with the Tea Party movement making great noise about lower taxation and welfare spending, especially as it regarded homeownership.
+The Great Recession was triggered by the Global Financial Crisis, which saw liquidity frozen in place and financiers around the North Atlantic thoroughly traumatized.
+The Crisis, in turn, began with plateauing home buying (and thus speculation and prices) in the mid-2000s.
+As prices evened out, equity to borrow against disintegrated, and foreclosures increased.
+With vacant properties and increased housing stock, prices fell nationally by 20\% from February 2007 to May 2009, ultimately settling 26\% down in February 2012.\footnote{``CSUSHPISA.''}
+
+Declining prices meant declining property tax revenues (or at least the future threat of such changes), which hamstrung cities, already shorn of much of their expected responsibility by state and federal governments.
+As for banks, the process of mortgage-backed securitization separated lines of communication from creditors who would rather take haircuts or extend loan maturities than foreclose.
+Home mortgages are usually backed by one party (a bank with a good name), and then serviced by another.
+This legal relationship rewarded prompt and reliable servicing of loans, even if such servicing meant foreclosure.
+Meanwhile, homeowners had long-forgotten the debt politics practiced by Midwestern farmers.
+They had been retrained as tax activists and expected positive direct benefits, not interference with private contracts.
+
+A federal response would be required.
+In addition to the trillions authorized by the Troubled Asset Relief Program (TARP), the Economic Stimulus Act of 2008 (ESA), and the other stimulating acronyms, George W. Bush enacted the Housing and Economic Recovery Act of 2008 (HERA), which authorized \$3.9 billion in funds for, among other channels, the Neighborhood Stabilization Program.
+HERA included titles that tried to ease mortgage payments and incentivize resolution aside from foreclosure.
+While its benefits were far below what foreclosure activists considered adequate,\footnote{Dayen, \emph{Chain of Title}.} actors on the right saw HERA as emblematic of the profligate welfare state that would burden the nation (as a collection of individual taxpayers) with perpetual debt.
+This narrative was essentialized in the profligate spending of highly-leveraged homeowners---the losers attached to ``losers' mortgages.''\footnote{``CNBC's Rick Santelli's Chicago Tea Party.''}
+Though short-lived, the Tea Party effectively wove subprime borrowing into the larger Republican animus of higher taxation and more subsidies.
+Its visibility may have made the financial health of neighborhoods legible to voters as voting issues.
+
+This political movement---tied to the same mechanisms that created cheap credit---allows for the examination of the labor risk--equity model proposed in political economy literature to be analyzed through vote returns.
+I matched 27,098 census tracts to the returns of voting precincts, foreclosure rates, home price changes, and several key demographic covariates in order to suss out these theorized effects, including attempting to measure the \emph{political} impact of the NSP.
+My results agreed with the theory's predictions on most, but not all levels.
+The negative price effects of NSP1 undermined a theoretical justification for its association with increased Republican voting among all sampled tracts.
+This association was rendered insignificant in trials on the subset of tracts in which a self-described member of the Tea Party sought election.
+Across the board, however, the combination of high foreclosure rates and high variance of unemployment magnified the positive association between home price change and Republican voting.
+This more general result conforms with the labor risk--equity model and opens the possibility that foreclosure relief, or indirect subsidies of housing prices of any sort, could have conservatizing effects on American political behavior.
+
+However, such subsidies may have to be large in magnitude or sustained over many years to make real differences.
+Despite lowering prices, the first round of the NSP seemed to raise Republican voting shares, and the interactions between price changes and labor risk on the one hand (possibly accounted for by the difficulty of securing HELOCs), and foreclosure rates and density on the other hand, suggest that cultural factors may weigh more heavily on voting behavior.
+While this conclusion would surprise almost no one who works on American political behavior, the sheer magnitude of homeownership as a personal financial and emotional concept would nonetheless render such a conclusion nontrivial.
+Additionally, there were questions of model selection and spatial dependence, which could be remedied by more sophisticated statistical techniques.
+
+An alternative possibility is that housing politics concentrates at the municipal level.
+Planning departments, which operate mostly at the city or county level in the United States, say a great deal about which properties profit.
+Urban planners today are much closer to wealth managers as they are to architects.\footnote{Stein, \emph{Capital City}.}
+The responsivity of localities, in conjunction with the lower profiles of city government affairs, make cities prime targets for activist voices and more extreme voting behaviors.
+As I write this thesis, rent strikes---unheard of even during the Great Recession---are igniting in cities and counties around the United States.
+America's first recession since the foreclosure crisis has been met with much greater ferocity.
+Mostly, this ferocity comes as a result of the suddenness, ubiquity, and consensus that Americans are blameless.
+These factors trigger a sympathy and unity not unlike that which swept through the Midwest in the Great Depression.
+But the rejuvenation of local, anti-capitalist organizing cannot be underestimated.
+The Tea Party's counterpart on the left was Occupy Wall Street, a failure by any measure, but one that spelled out the seriousness of economic issues in a country with an aging labor movement, and the occupants of which went on to become leaders in antifascist organizations and the Democratic Socialists of America, as of writing the largest socialist organization in America since at least the 1930s.
+
+The subsequent election of Donald Trump in 2016 is associated with the death of the Tea Party.
+What had been a rhetorically-negative movement (anti-tax, anti-welfare, anti-immigrant) spurred the politics that elected Trump, but left little new foundation on which a broader realignment could be built.
+A socially conservative but economically left-wing movement has begun to emerge from the Republican party.
+This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain Capital, speak out against private equity.\footnote{Romney, ``Sen. Romney Cap Gains Letter to Treasury.''}
+It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization,\footnote{Rubio, ``American Industrial Policy and the Rise of China.''} which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.
+And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.\footnote{Hawley, ``Getting America Back to Work.''}
+
+While the sharpest political moment may have passed, he financial and political forces at work during the foreclosure crisis and its reaction continue to influence American politics.
+I have elaborated on other scholars' theoretical and empirical work with an analysis of the 2010 midterms, concluding that economic anxiety can magnify the impacts of housing prices on political behavior.
+While there is yet more work to be done towards refining and measuring these behaviors, the general thesis that policies can alter and train preferences---a logic somewhat the obverse of what is normally said about policymaking---is reiterated in this thesis.
+
+\textbackslash{}\appendix
 
 \hypertarget{data-quality}{%
 \chapter{Data Quality}\label{data-quality}}
-\begin{longtable}[t]{ccccc}
-\caption{\label{tab:coverage}Tract coverage.}\\
-\toprule
-STATE & TEAPARTY & COVERED & TOTAL & COVERAGE\\
-\midrule
-\endfirsthead
-\caption[]{\label{tab:coverage}Tract coverage. \textit{(continued)}}\\
-\toprule
-STATE & TEAPARTY & COVERED & TOTAL & COVERAGE\\
-\midrule
-\endhead
-\
-\endfoot
-\bottomrule
-\endlastfoot
-Arizona & FALSE & 459 & 610 & 75.25\\
-Arizona & TRUE & 516 & 910 & 56.70\\
-Arkansas & FALSE & 0 & 160 & 0.00\\
-Arkansas & TRUE & 0 & 526 & 0.00\\
-California & FALSE & 4393 & 5325 & 82.50\\
-\addlinespace
-California & TRUE & 2239 & 2699 & 82.96\\
-Colorado & FALSE & 885 & 1050 & 84.29\\
-Colorado & TRUE & 135 & 192 & 70.31\\
-Connecticut & FALSE & 0 & 675 & 0.00\\
-Connecticut & TRUE & 0 & 153 & 0.00\\
-\addlinespace
-Delaware & FALSE & 80 & 214 & 37.38\\
-Florida & FALSE & 2005 & 3544 & 56.57\\
-Florida & TRUE & 389 & 638 & 60.97\\
-Georgia & FALSE & 0 & 1367 & 0.00\\
-Georgia & TRUE & 0 & 590 & 0.00\\
-\addlinespace
-Hawaii & TRUE & 101 & 315 & 32.06\\
-Idaho & FALSE & 0 & 153 & 0.00\\
-Idaho & TRUE & 0 & 145 & 0.00\\
-Illinois & FALSE & 0 & 1825 & 0.00\\
-Illinois & TRUE & 0 & 1290 & 0.00\\
-\addlinespace
-Indiana & FALSE & 0 & 655 & 0.00\\
-Indiana & TRUE & 0 & 852 & 0.00\\
-Kentucky & FALSE & 0 & 925 & 0.00\\
-Kentucky & TRUE & 0 & 185 & 0.00\\
-Louisiana & FALSE & 204 & 973 & 20.97\\
-\addlinespace
-Louisiana & TRUE & 23 & 156 & 14.74\\
-Maine & FALSE & 0 & 158 & 0.00\\
-Maine & TRUE & 0 & 193 & 0.00\\
-Maryland & FALSE & 127 & 1057 & 12.02\\
-Maryland & TRUE & 38 & 333 & 11.41\\
-\addlinespace
-Massachusetts & FALSE & 271 & 612 & 44.28\\
-Massachusetts & TRUE & 613 & 855 & 71.70\\
-Michigan & FALSE & 0 & 1445 & 0.00\\
-Michigan & TRUE & 0 & 1311 & 0.00\\
-Minnesota & FALSE & 429 & 1182 & 36.29\\
-\addlinespace
-Minnesota & TRUE & 92 & 152 & 60.53\\
-Mississippi & FALSE & 123 & 483 & 25.47\\
-Mississippi & TRUE & 35 & 176 & 19.89\\
-Missouri & FALSE & 64 & 914 & 7.00\\
-Missouri & TRUE & 2 & 477 & 0.42\\
-\addlinespace
-Nevada & FALSE & 99 & 414 & 23.91\\
-Nevada & TRUE & 41 & 266 & 15.41\\
-New Hampshire & FALSE & 0 & 147 & 0.00\\
-New Hampshire & TRUE & 0 & 145 & 0.00\\
-New Jersey & FALSE & 0 & 1548 & 0.00\\
-\addlinespace
-New Jersey & TRUE & 0 & 454 & 0.00\\
-New Mexico & FALSE & 0 & 159 & 0.00\\
-New Mexico & TRUE & 0 & 339 & 0.00\\
-New York & FALSE & 1154 & 2969 & 38.87\\
-New York & TRUE & 1152 & 1901 & 60.60\\
-\addlinespace
-North Carolina & FALSE & 777 & 1359 & 57.17\\
-North Carolina & TRUE & 477 & 816 & 58.46\\
-Ohio & FALSE & 1002 & 1626 & 61.62\\
-Ohio & TRUE & 914 & 1317 & 69.40\\
-Oregon & FALSE & 0 & 492 & 0.00\\
-\addlinespace
-Oregon & TRUE & 0 & 334 & 0.00\\
-Pennsylvania & FALSE & 1560 & 2621 & 59.52\\
-Pennsylvania & TRUE & 254 & 589 & 43.12\\
-South Carolina & TRUE & 513 & 1090 & 47.06\\
-Tennessee & FALSE & 288 & 999 & 28.83\\
-\addlinespace
-Tennessee & TRUE & 136 & 490 & 27.76\\
-Texas & FALSE & 1989 & 4249 & 46.81\\
-Texas & TRUE & 326 & 990 & 32.93\\
-Utah & FALSE & 0 & 395 & 0.00\\
-Utah & TRUE & 0 & 190 & 0.00\\
-\addlinespace
-Vermont & FALSE & 112 & 183 & 61.20\\
-Virginia & FALSE & 636 & 1357 & 46.87\\
-Virginia & TRUE & 274 & 529 & 51.80\\
-Washington & FALSE & 569 & 1136 & 50.09\\
-Washington & TRUE & 62 & 309 & 20.06\\
-\addlinespace
-West Virginia & FALSE & 0 & 307 & 0.00\\
-West Virginia & TRUE & 0 & 177 & 0.00\\
-Wisconsin & FALSE & 791 & 1045 & 75.69\\
-Wisconsin & TRUE & 201 & 347 & 57.93\\
-Tea Party states & FALSE & 18017 & 44333 & 40.64\\
-\addlinespace
-Tea Party states & TRUE & 8533 & 22431 & 38.04\\
-Tea Party states with any information & FALSE & 18017 & 33922 & 53.11\\
-Tea Party states with any information & TRUE & 8533 & 15547 & 54.89\\
-Total coverage of Tea Party states & NA & 26550 & 66764 & 39.77\\*
-\end{longtable}
+\begin{table}[!htbp] \centering 
+  \caption{Comparison of NSP Rounds} 
+  \label{tab:compnsp} 
+\begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-4} D{.}{.}{-4} D{.}{.}{-4} } 
+\\[-1.8ex]\hline 
+\hline \\[-1.8ex] 
+ & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
+\cline{2-4} 
+\\[-1.8ex] & \multicolumn{3}{c}{Republican vote percentage} \\ 
+\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+\hline \\[-1.8ex] 
+ NSP1 & -0.8423^{***} &  &  \\ 
+  Economic anxiety &  & -1.8817^{***} &  \\ 
+  2010 foreclosure rate &  &  & -6.7271^{***} \\ 
+  Labor risk & 0.0660^{***} & 0.0664^{***} & 0.0637^{***} \\ 
+  Unemployment change `05--`10 & 0.8911^{***} & 0.8495^{***} & 0.9794^{***} \\ 
+  2010 unemployment rate & 0.2970^{***} & 0.2813^{***} & 0.2863^{***} \\ 
+  Median household income (000s) & -0.3946^{***} & -0.4203^{***} & -0.3844^{***} \\ 
+  Population density (per sq.mi.) & -0.0023 & 0.0323 & -0.0136 \\ 
+  Tenure in home & 0.1699^{***} & 0.1700^{***} & 0.1662^{***} \\ 
+  Squared tenure & 0.0002^{***} & 0.0002^{***} & 0.0002^{***} \\ 
+  65-and-up \% & -2.1548^{***} & -2.1319^{***} & -2.1094^{***} \\ 
+  Black \% & 0.0531^{***} & 0.0525^{***} & 0.0521^{***} \\ 
+  Hispanic \% & 0.1962^{***} & 0.1969^{***} & 0.1973^{***} \\ 
+  Hispanic \% squared & -0.1056^{***} & -0.1071^{***} & -0.1036^{***} \\ 
+  White \% & 0.4606^{***} & 0.4583^{***} & 0.4617^{***} \\ 
+  White: some college or less \% & -0.0043^{***} & -0.0042^{***} & -0.0043^{***} \\ 
+  Evangelical \% & 0.2178^{***} & 0.2165^{***} & 0.2245^{***} \\ 
+  L.D.S. \% & 0.0962^{***} & 0.0929^{***} & 0.0986^{***} \\ 
+  Price change $\times$ anxiety & 0.7693^{***} & 0.7680^{***} & 0.7655^{***} \\ 
+  Price change $\times$ foreclosure rate & 0.6369^{***} & 0.6043^{***} & 0.6325^{***} \\ 
+  Price change $\times$ labor risk & -0.0001^{***} & -0.0001^{***} & -0.0001^{***} \\ 
+  Foreclosure rate $\times$ density & 0.0013^{***} & 0.0014^{***} & 0.0012^{***} \\ 
+  White \% $\times$ some college or less & 6.7980^{***} & 6.6797^{***} & 6.2076^{***} \\ 
+ \hline \\[-1.8ex] 
+State fixed effects? & Y & Y & Y \\ 
+Observations & \multicolumn{1}{c}{27,098} & \multicolumn{1}{c}{27,098} & \multicolumn{1}{c}{27,098} \\ 
+R$^{2}$ & \multicolumn{1}{c}{0.4338} & \multicolumn{1}{c}{0.4339} & \multicolumn{1}{c}{0.4359} \\ 
+Adjusted R$^{2}$ & \multicolumn{1}{c}{0.4334} & \multicolumn{1}{c}{0.4335} & \multicolumn{1}{c}{0.4354} \\ 
+Residual Std. Error & \multicolumn{1}{c}{15.1571} & \multicolumn{1}{c}{15.1560} & \multicolumn{1}{c}{15.1298} \\ 
+F Statistic & \multicolumn{1}{c}{987.9295$^{***}$} & \multicolumn{1}{c}{988.2385$^{***}$} & \multicolumn{1}{c}{996.1356$^{***}$} \\ 
+\hline 
+\hline \\[-1.8ex] 
+\textit{Note:}  & \multicolumn{3}{r}{$^{*}$p$<$0.1; $^{**}$p$<$0.05; $^{***}$p$<$0.01} \\ 
+\end{tabular} 
+\end{table}
+\begin{figure}
+
+{\centering \subfloat[Residuals on fitted.\label{fig:priceresid}\label{fig:prices1}]{\includegraphics[width=0.45\linewidth]{figure/priceresid} }\subfloat[Quantile-quantile distribution.\label{fig:priceqq}\label{fig:prices2}]{\includegraphics[width=0.45\linewidth]{figure/priceqq} }
+
+}
+
+\caption{Diagnostic plots of the regression of prices on NSP1.}\label{fig:prices}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figure/linearesid} 
+
+}
+
+\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids1}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figure/betaresid} 
+
+}
+
+\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids2}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figure/lineartpresid} 
+
+}
+
+\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids3}
+\end{figure}
+\begin{figure}
+
+{\centering \includegraphics[width=0.4\linewidth]{figure/betatpresid} 
+
+}
+
+\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids4}
+\end{figure}
 \backmatter
 
-References
+\hypertarget{references}{%
+\chapter{References}\label{references}}
 
 \hypertarget{refs}{}
+\leavevmode\hypertarget{ref-185682010huda}{}%
+18568. ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report.'' Department of Housing and Urban Development, n.d.
+
+\leavevmode\hypertarget{ref-185682010hud}{}%
+---------. ``HUD NSP-1 Reporting: Sept 2010 Program-Wide Report.'' Department of Housing and Urban Development, n.d.
+
+\leavevmode\hypertarget{ref-185682011huda}{}%
+---------. ``HUD NSP2 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, n.d.
+
+\leavevmode\hypertarget{ref-185682011hud}{}%
+---------. ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, n.d.
+
 \leavevmode\hypertarget{ref-20112010b}{}%
 ``2010 Census Summary File 1.'' US Census Bureau, 2011.
 
@@ -1646,6 +1857,9 @@ Angrisani, Marco, Michael Hurd, and Susann Rohwedder. ``The Effect of Housing We
 
 \leavevmode\hypertarget{ref-ansellPoliticalEconomyOwnership2014}{}%
 Ansell, Ben. ``The Political Economy of Ownership: Housing Markets and the Welfare State.'' \emph{American Political Science Review} 108, no. 2 (May 2014): 383--402. \url{https://doi.org/10.1017/S0003055414000045}.
+
+\leavevmode\hypertarget{ref-ansellPoliticalEconomyOwnership2014a}{}%
+---------. ``The Political Economy of Ownership: Housing Markets and the Welfare State.'' \emph{American Political Science Review} 108, no. 2 (May 2014): 383--402. \url{https://doi.org/10.1017/S0003055414000045}.
 
 \leavevmode\hypertarget{ref-ansolabehere2014precinctlevel}{}%
 Ansolabehere, Stephen, Maxwell Palmer, and Amanda Lee. ``Precinct-Level Election Data, 2002-2012.'' Harvard Dataverse, 2014.
@@ -1680,6 +1894,12 @@ Board of Governors of the Federal Reserve System (US). ``Mortgage Debt Outstandi
 \leavevmode\hypertarget{ref-bradley2010confronting}{}%
 Bradley, Katharine, and Robert Rector. ``Confronting the Unsustainable Growth of Welfare Entitlements: Principles of Reform and the Next Steps.'' Washington, DC: The Heritage Foundation, June 2010.
 
+\leavevmode\hypertarget{ref-buchholz2016federal}{}%
+Buchholz, Dave, and Jeff Larrimore. ``Federal Reserve Surveys of the Economic Wellbeing of US Households: SCF and SHED.'' Lunchtime Data Talk. Housing Finance Policy Center, January 2016.
+
+\leavevmode\hypertarget{ref-bucholtz2008neighborhood}{}%
+Bucholtz, Shawn J. ``Neighborhood Level Foreclosure Data.'' Department of Housing \& Urban Development Office of Policy Development and Research, September 2008.
+
 \leavevmode\hypertarget{ref-bucks2009changes}{}%
 Bucks, Brian K, Arthur B Kennickell, Traci L Mach, and Kevin B Moore. ``Changes in U.S. Family Finances from 2004 to 2007: Evidence Form the Survey of Consumer Finances.'' \emph{Federal Reserve Bulletin}, February 2009, 1--56.
 
@@ -1704,11 +1924,14 @@ Chernick, Howard, Andrew Reschovsky, and Sandra Newman. ``The Effect of the Hous
 \leavevmode\hypertarget{ref-cheung2014homeowners}{}%
 Cheung, Ron, Chris Cunningham, and Rachel Meltzer. ``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?'' \emph{Journal of Housing Economics}, Housing Policy in the United States, 24 (June 2014): 75--88. \url{https://doi.org/10.1016/j.jhe.2013.11.007}.
 
+\leavevmode\hypertarget{ref-albright2017clinton}{}%
+``Clinton: The Comeback Kid.'' Documentary, July 2017.
+
 \leavevmode\hypertarget{ref-santelli2009cnbc}{}%
 ``CNBC's Rick Santelli's Chicago Tea Party.'' CNBC, February 2009.
 
 \leavevmode\hypertarget{ref-cody2010neighborhood}{}%
-Cody, Mirian. ``Neighborhood Stabilization Program Data.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/datasets/NSP.html, October 2010.
+Cody, Mirian. ``Neighborhood Stabilization Program Data.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/datasets/NSP.html, n.d.
 
 \leavevmode\hypertarget{ref-collins2011state}{}%
 Collins, J. Michael, Ken Lam, and Christopher E. Herbert. ``State Mortgage Foreclosure Policies and Lender Interventions: Impacts on Borrower Behavior in Default.'' \emph{Journal of Policy Analysis and Management} 30, no. 2 (2011): 216--32. \url{https://doi.org/10.1002/pam.20559}.
@@ -1722,8 +1945,17 @@ DeFusco, Anthony, Wenjie Ding, Fernando Ferreira, and Joseph Gyourko. ``The Role
 \leavevmode\hypertarget{ref-dennis2011falling}{}%
 Dennis, Brady. ``Falling Home Values Mean Budget Crunches for Cities.'' \emph{Washington Post}, n.d.
 
+\leavevmode\hypertarget{ref-duvernay201613th}{}%
+DuVernay, Ava. ``13th.'' Documentary, Crime, News. Forward Movement, Kandoo Films, Netflix, October 2016.
+
+\leavevmode\hypertarget{ref-dymski2013race}{}%
+Dymski, Gary, Jesus Hernandez, and Lisa Mohanty. ``Race, Gender, Power, and the US Subprime Mortgage and Foreclosure Crisis: A Meso Analysis.'' \emph{Feminist Economics} 19, no. 3 (July 2013): 124--51. \url{https://doi.org/10.1080/13545701.2013.791401}.
+
 \leavevmode\hypertarget{ref-epstein1984revitalization}{}%
 Epstein, Richard. ``Toward a Revitalization of the Contract Clause.'' \emph{University of Chicago Law Review} 51, no. 3 (June 1984).
+
+\leavevmode\hypertarget{ref-faber2013racial}{}%
+Faber, Jacob W. ``Racial Dynamics of Subprime Mortgage Lending at the Peak.'' \emph{Housing Policy Debate} 23, no. 2 (April 2013): 328--49. \url{https://doi.org/10.1080/10511482.2013.771788}.
 
 \leavevmode\hypertarget{ref-2004fact}{}%
 ``Fact Sheet: America's Ownership Society: Expanding Opportunities.'' Archive. \emph{The White House: President George W. Bush}. https://georgewbush-whitehouse.archives.gov/news/releases/2004/08/20040809-9.html, August 2004.
@@ -1736,6 +1968,9 @@ Ferreira, Fernando, and Joseph Gyourko. ``A New Look at the U.S. Foreclosure Cri
 
 \leavevmode\hypertarget{ref-fliter2012fighting}{}%
 Fliter, John A., and Derek S. Hoff. \emph{Fighting Foreclosure: The Blaisdell Case, the Contract Clause, and the Great Depression}. Landmark Law Cases \& American Society. Lawrence, Kansas: University Press of Kansas, 2012.
+
+\leavevmode\hypertarget{ref-gass2010guide}{}%
+Gass, Anne. ``Guide to Marketing and Selling NSP Homes.'' Department of Housing and Urban Development, July 2010.
 
 \leavevmode\hypertarget{ref-ghent2012historical}{}%
 Ghent, Andra. ``The Historical Origins of America's Mortgage Laws.'' Special Report. Research Institute for Housing America, October 2012.
@@ -1755,11 +1990,11 @@ Greenspan, Alan, and James Kennedy. ``Sources and Uses of Equity Extracted from 
 \leavevmode\hypertarget{ref-gross2012local}{}%
 Gross, Liz, Kil Huh, Abigail Sylvester, and Robert Zahradnik. ``The Local Squeeze: Falling Revenues and Growing Demand for Services Challenge Cities, Counties, and School Districts.'' Edited by Susan Urahn. Philadelphia: Pew Research Center, 2012.
 
-\leavevmode\hypertarget{ref-2010guide}{}%
-``Guide to Marketing and Selling NSP Homes.'' Department of Housing and Urban Development, September 2010.
-
 \leavevmode\hypertarget{ref-harris2018america}{}%
 Harris, Adam. ``America Is Divided by Education.'' \emph{The Atlantic}. https://www.theatlantic.com/education/archive/2018/11/education-gap-explains-american-politics/575113/, November 2018.
+
+\leavevmode\hypertarget{ref-hawley2020getting}{}%
+Hawley, Josh. ``Getting America Back to Work,'' April 2020.
 
 \leavevmode\hypertarget{ref-2019historical}{}%
 ``Historical Sources of Income and Tax Items.'' \emph{Tax Policy Center}. https://www.taxpolicycenter.org/statistics/historical-sources-income-and-tax-items, October 2019.
@@ -1769,6 +2004,9 @@ Harris, Adam. ``America Is Divided by Education.'' \emph{The Atlantic}. https://
 
 \leavevmode\hypertarget{ref-2002homeownership}{}%
 ``Homeownership Policy Book - Chapter 1.'' Archive. \emph{The White House: President George W. Bush}. https://georgewbush-whitehouse.archives.gov/infocus/homeownership/homeownership-policy-book-ch1.html, 2002.
+
+\leavevmode\hypertarget{ref-hud2013hud}{}%
+HUD. ``HUD NSP1 Report: National Drawdowns by Activity (Q3 2013).'' Department of Housing and Urban Development, n.d.
 
 \leavevmode\hypertarget{ref-immergluck2011foreclosed}{}%
 Immergluck, Daniel. \emph{Foreclosed: High-Risk Lending, Deregulation, and the Undermining of America's Mortgage Market}. Ithaca: Cornell University Press, 2011.
@@ -1781,6 +2019,9 @@ Indiviglio, Daniel. ``The Housing Stabilization Program You Haven't Heard About.
 
 \leavevmode\hypertarget{ref-jackson2008blacks}{}%
 Jackson, Brooks. ``Blacks and the Democratic Party.'' \emph{FactCheck.org}, April 2008.
+
+\leavevmode\hypertarget{ref-jacksonCrabgrassFrontierSuburbanization1985}{}%
+Jackson, Kenneth T. \emph{Crabgrass Frontier: The Suburbanization of the United States}. New York: Oxford University Press, 1985.
 
 \leavevmode\hypertarget{ref-jarvis1979mad}{}%
 Jarvis, Howard, and Robert Pack. \emph{I'm Mad as Hell: The Exclusive Story of the Tax Revolt and Its Leader}. Times Books, 1979.
@@ -1821,6 +2062,12 @@ Lewis, Michael. ``The Fat Men and Their Marvelous Money Machine.'' In \emph{Liar
 \leavevmode\hypertarget{ref-linton2014house}{}%
 Linton, Eric. ``House Majority Leader Eric Cantor Defeated by Tea Party Challenger David Brat in Virginia GOP Primary.'' \emph{International Business Times}. https://www.ibtimes.com/house-majority-leader-eric-cantor-defeated-tea-party-challenger-david-brat-virginia-gop-1597736, June 2014.
 
+\leavevmode\hypertarget{ref-2020local}{}%
+``Local Area Unemployment Statistics.'' Bureau of Labor Statistics, March 2020.
+
+\leavevmode\hypertarget{ref-lown2005educating}{}%
+Lown, Jean M. ``Educating and Empowering Consumers to Avoid Bankruptcy.'' \emph{International Journal of Consumer Studies} 29, no. 5 (2005): 401--8. \url{https://doi.org/10.1111/j.1470-6431.2005.00468.x}.
+
 \leavevmode\hypertarget{ref-lutz2011housing}{}%
 Lutz, Byron, Raven Molloy, and Hui Shan. ``The Housing Crisis and State and Local Government Tax Revenue: Five Channels.'' \emph{Regional Science and Urban Economics}, Special Issue: The Effect of the Housing Crisis on State and Local Governments, 41, no. 4 (July 2011): 306--19. \url{https://doi.org/10.1016/j.regsciurbeco.2011.03.009}.
 
@@ -1842,17 +2089,14 @@ Mian, Atif, Amir Sufi, and Francesco Trebbi. ``The Political Economy of the US M
 \leavevmode\hypertarget{ref-2019military}{}%
 ``Military Expenditure by Country, in Constant (2017) US\$ M., 1988-2018.'' Stockholm International Peace Research Institute, 2019.
 
+\leavevmode\hypertarget{ref-mota2015spatial}{}%
+Mota, Nuno. ``Spatial Features of Labor Markets and Links to the Housing Market.'' https://www.semanticscholar.org/paper/Spatial-features-of-labor-markets-and-links-to-the-Mota/4092fc8ebb493a0b116f20a304bc7c9e4912f9d6, 2015.
+
 \leavevmode\hypertarget{ref-muro2009fiscal}{}%
 Muro, Mark, and Christopher Hoene. ``Fiscal Challenges Facing Cities: Implications for Recovery.'' Brookings, November 2009.
 
-\leavevmode\hypertarget{ref-2008neighborhood}{}%
-``Neighborhood Level Foreclosure Data.'' Department of Housing \& Urban Development Office of Policy Development and Research, September 2008.
-
 \leavevmode\hypertarget{ref-comfort2010new}{}%
 ``New Jersey Courts Take Steps to Ensure Integrity of Residential Mortgage Foreclosure Process.'' New Jersey Courts, December 2010.
-
-\leavevmode\hypertarget{ref-defilippo2009nsp2}{}%
-``NSP2 Data and Methodology.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/NSP2datadesc.html, December 2009.
 
 \leavevmode\hypertarget{ref-orolbreaks}{}%
 Orol, Ronald D. ``U.S. Breaks down \$9.3 Bln Robo-Signing Settlement.'' \emph{MarketWatch}. https://www.marketwatch.com/story/us-breaks-down-93-bln-robo-signing-settlement-2013-02-28, n.d.
@@ -1881,6 +2125,18 @@ Putnam, Robert D. \emph{Bowling Alone: The Collapse and Revival of American Comm
 \leavevmode\hypertarget{ref-raines1984party}{}%
 Raines, Howell. ``Party Nominates Rep. Ferraro; Mondale, in Acceptance, Vows Fair Policies and Deficit Cut.'' \emph{The New York Times}, July 1984, 1.
 
+\leavevmode\hypertarget{ref-richardson2009nsp2}{}%
+Richardson, Todd. ``NSP2 Data and Methodology.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/NSP2datadesc.html, December 2009.
+
+\leavevmode\hypertarget{ref-robert2016reaganomics}{}%
+Robert, Brett. ```Reaganomics': The Economic Recovery Tax Act of 1981.'' \emph{The Reagan Library Education Blog}. https://reagan.blogs.archives.gov/2016/08/15/reaganomics-the-economic-recovery-tax-act-of-1981/, August 2016.
+
+\leavevmode\hypertarget{ref-romney2019sen}{}%
+Romney, Mitt. ``Sen. Romney Cap Gains Letter to Treasury.'' Open Letter, September 2019.
+
+\leavevmode\hypertarget{ref-rubio2019american}{}%
+Rubio, Marco. ``American Industrial Policy and the Rise of China.'' \emph{The American Mind}, December 2019.
+
 \leavevmode\hypertarget{ref-saulny2008financial}{}%
 Saulny, Susan. ``Financial Crisis Takes a Toll on Already-Squeezed Cities.'' \emph{New York Times}, June 2008, 16.
 
@@ -1893,14 +2149,17 @@ Seabrooke, Leonard. \emph{The Politics of Housing Booms and Busts}. Edited by He
 \leavevmode\hypertarget{ref-skocpol2018how}{}%
 Skocpol, Theda, Alexandra Hertel-Fernandez, and Caroline Tervo. ``How the Koch Brothers Built the Most Powerful Rightwing Group You've Never Heard of.'' \emph{The Guardian}, September 2018.
 
+\leavevmode\hypertarget{ref-spader2015evaluation}{}%
+Spader, Jonathan, Alvaro Cortes, Kimberly Burnett, Larry Buron, Michael DiDomenico, Anna Jefferson, Stephen Whitlow, Jennifer Lewis Buell, Christian Redfearn, and Jenny Schuetz. ``The Evaluation of the Neighborhood Stabilization Program.'' U.S. Department of Housing and Urban Development, March 2015.
+
+\leavevmode\hypertarget{ref-2019caseshiller}{}%
+``S\&P/Case-Shiller U.S. National Home Price Index.'' https://fred.stlouisfed.org/series/CSUSHPISA, October 2019.
+
 \leavevmode\hypertarget{ref-stein2019capital}{}%
 Stein, Samuel. \emph{Capital City: Gentrification and the Real Estate State}. Jacobin Series. London ; Brooklyn, NY: Verso, 2019.
 
-\leavevmode\hypertarget{ref-stern2013dark}{}%
-Stern, Stephanie M. ``The Dark Side of Town: The Social Capital Revolution in Residential Property.'' \emph{Virginia Law Review} 99, no. 811 (April 2013): 68.
-
 \leavevmode\hypertarget{ref-stern2010inviolate}{}%
----------. ``The Inviolate Home: Housing Exceptionalism in the Fourth Amendment.'' \emph{Cornell Law Review} 95 (May 2010): 48.
+Stern, Stephanie M. ``The Inviolate Home: Housing Exceptionalism in the Fourth Amendment.'' \emph{Cornell Law Review} 95 (May 2010): 48.
 
 \leavevmode\hypertarget{ref-stollerHousingCrashEnd2016}{}%
 Stoller, Matt. ``The Housing Crash and the End of American Citizenship.'' \emph{Fordham Urban Law Journal} 39, no. 4 (February 2016): 1183.
@@ -1910,6 +2169,9 @@ Stoller, Matt. ``The Housing Crash and the End of American Citizenship.'' \emph{
 
 \leavevmode\hypertarget{ref-tobler1970computer}{}%
 Tobler, W. R. ``A Computer Movie Simulating Urban Growth in the Detroit Region.'' \emph{Economic Geography} 46 (1970): 234--40. \url{https://doi.org/10.2307/143141}.
+
+\leavevmode\hypertarget{ref-toozeCrashedHowDecade2018}{}%
+Tooze, J. Adam. \emph{Crashed: How a Decade of Financial Crises Changed the World}. New York: Viking, 2018.
 
 \leavevmode\hypertarget{ref-usbureauofeconomicanalysis1929gross}{}%
 U.S. Bureau of Economic Analysis. ``Gross Domestic Product.'' \emph{FRED, Federal Reserve Bank of St. Louis}. https://fred.stlouisfed.org/series/GDPA, January 1929.

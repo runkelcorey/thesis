@@ -1,8 +1,8 @@
-The mortgage crisis of 2007--2012 the foreclosure of some 10 million American homes.
+The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
 In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
 The program operated by purchasing, repairing, and re-selling vacant homes in neighborhoods at high risk of even more foreclosures.
 Though this program resembled Democrat-supported welfare programs, there are theoretical questions about the impacts it may have had on voting.
 Broadly, political economists have predicted that increased home equity leads to preferences for less social insurance, while early 21st-century American politics consistently connected less social insurance with lower taxation.
 These features would suggest that the Neighborhood Stabilization Program pushed voters towards Republican candidates, especially towards self-avowed members of the Tea Party Caucus, which sharpened the taxation--social insurance connection and derided the subsidy of home mortgages.
 I create a novel dataset connecting NSP target areas, 2010 midterm vote returns, home prices, and a range of demographic information in order to analyze this question.
-I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a more broad feature of Republican support.
+I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a broader feature of Republican support.

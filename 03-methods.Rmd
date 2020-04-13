@@ -111,7 +111,7 @@ If each foreclosure costs, on average, $159,000 in decreased property values,[@i
 Conversely, if a vacant property is fixed and resold, surrounding home values would only increase by a fraction.
 Additionally, the hefty oversight on the NSP targeted profiteering by local actors, preventing any get-rich-quick schemes.
 The Neighborhood Stabilization Program receives high marks methodologically from its under-the-radar nature: if voters knew, and could filter, their wealth gains through an ideological sieve, it could skew results.
-Rather, its small effects and lack of advertising[@2010guide, 5] (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
+Rather, its small effects and lack of advertising[@gass2010guide, 5] (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
 
 While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value equal amounts of money lost and gained.
 In behavioral economics and cognitive psychology, the endowment effect describes the premium that individuals place on ownership.
@@ -267,9 +267,9 @@ I weight the importance of this variable by its frequency: a tract with a single
 
 The discussion above leaves me with a model of Republican voting:
 
-\begin{multiline}
-rep_i = \beta_0 + \beta_1NSP_i + \beta_2{PriceChg_i \times LaborRisk_i \times ForeclosureRate_i}  + \beta_3UnemploymentChg_i + \\ \beta_4UnemploymentRate_i + \beta_5medHHI_i + \beta_6Density_i + \beta_7Tenure_i + \\
-\beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\
+\begin{multline}
+rep_i = \beta_0 + \beta_1NSP_i + \beta_2{PriceChg_i \times LaborRisk_i \times ForeclosureRate_i}  + \\ \beta_3UnemploymentChg_i + \beta_4UnemploymentRate_i + \beta_5medHHI_i + \beta_6Density_i + \\
+\beta_7Tenure_i + \beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\
 \beta_{12}Hispanic^2_i + \beta_{13}(White_i + SomeCol_i) + \beta_{13}Evangelical_i + \beta_{14}LDS_i + \epsilon_i
 (\#eq:model)
-\end{multiline}
+\end{multline}
