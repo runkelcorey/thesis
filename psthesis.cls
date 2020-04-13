@@ -262,6 +262,7 @@
 
 \renewcommand{\maketitle}{%
   {\pagestyle{empty}
+  \setlength{\textwidth}{7in}
   \fontsize{14}{16}\selectfont
   \begin{titlepage}
   \newpage

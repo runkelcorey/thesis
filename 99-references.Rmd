@@ -2,3 +2,7 @@
 \backmatter
 
 # References
+
+\setlength{\parindent}{-0.25in}
+\setlength{\leftskip}{0.25in}
+\noindent

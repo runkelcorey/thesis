@@ -36,9 +36,8 @@
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
 \usepackage[none]{hyphenat}
-\usepackage[hyphens]{url}
+\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks,breaklinks]{hyperref}
 % Added by CII
-\usepackage[hidelinks]{hyperref}
 \usepackage{lmodern}
 \usepackage{float}
 \usepackage{titlesec}
@@ -152,25 +151,27 @@ $if(title)$
   \maketitle
 $endif$
 
-\pagenumbering{roman} % this removes page numbers from the frontmatter
 \frontmatter % this stuff will be roman-numbered
 
 $if(toc)$
-  \hypersetup{linkcolor=black}
   \setcounter{tocdepth}{$toc-depth$}
   \tableofcontents
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
 $endif$
 
 $if(lot)$
   \listoftables
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
 $endif$
 
 $if(lof)$
   \listoffigures
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
 $endif$
 
 $if(abstract)$
   \begin{abstract}
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
   \doublespacing
     $abstract$
   \end{abstract}

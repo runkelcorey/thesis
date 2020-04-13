@@ -23,7 +23,7 @@ abstract: |
 # Specify the location of the bibliography below
 bibliography: bib/thesis.bib
 # Download your specific csl file and refer to it in the line below.
-csl: csl/chicago-note-bibliography.csl
+csl: csl/chicago-fullnote-bibliography.csl
 lot: true
 lof: true
 ---

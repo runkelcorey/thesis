@@ -1,15 +1,6 @@
----
-bibliography: bib/thesis.bib
-csl: csl/chicago-note-bibliography.csl
-output:
-  word_document: default
-  html_document: default
-  pdf_document:
-    keep_tex: true
----
 # Connecting Home Prices to Voting {#motive-opportunity}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{\textit{George W. Bush, October 2004}}
 
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim ran parallel with the Bush administration's "ownership society", which added moral heft to the legal responsibilities associated with private property.
@@ -105,7 +96,7 @@ The definition is almost self-evident: an America where as much is owned and con
 Bush explained the logic guiding this idea by claiming that "The more ownership there is in America, the more vitality there is in America, and the more people have a vital stake in the future of this country."[@2004fact]
 With this claim came a raft of policies demonstrating the promise of an ownership society.
 
-Under this capacious roof, the administration housed health savings accounts, more individuated retirement options, and policies aimed at boosting homeownership.
+Under this capacious roof, the administration housed health savings accounts, more individuated retirement options, and policies aimed at boosting homeownership.[@klein2008disowned]
 These policies included the American Dream Downpayment Initiative (fairly self-explanatory) and the Single-Family Affordable Housing Tax Credit.[@2002homeownership]
 By encouraging single-family homes in the "Nation’s inner cities", thinning the density of apartment complexes and tenements, this last provision hearkened back to New Deal marketing, which idealized the home as a Romantic "refuge from urban corruption"[@stern2010inviolate, 910] associated with a high-density cityscape and the web of problems spun around public housing complexes.
 Bush's ownership society provisions also included a "tripling of funding"[@2002homeownership] for a program that swapped personal or volunteer labor for housing assistance, known in low-income housing development as "sweat equity".
@@ -284,7 +275,7 @@ An ill-informed question about the effects of the national debt on the candidate
 This example serves only to highlight the importance of the question in 1992, and more broadly in the late 1990s and early 2000s, when concerns about America's economic power were heightened by the growth of Japanese and Chinese foreign direct investment.
 The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan spending cuts were able to pass both houses of Congress.
 
-```{r publicdebt, fig.align='center', out.width='30%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
+```{r publicdebt, fig.align='center', out.width='90%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
 include_graphics("figure/publicdebt.png")
 ```
 
@@ -299,7 +290,7 @@ Figure \@ref(fig:deficit) shows this trend by political party affiliation.
 Republican-affiliated respondents in 2002, who by the turn of the millennium differ little in number from Democrats and Independents, distance themselves from both affiliations, registering the smallest number of respondents who prioritize the budget deficit between 1994 and 2016.
 Priorities of the two parties reconvene in 2009, when the economic woes of Bush are inherited by Obama (Pew conducted the poll in mid-January), but diverge once again in 2011, as the new Congress is sworn in following 2010's midterm elections.
 
-```{r deficit, fig.align='center', out.width='90%', fig.cap="Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.", echo=FALSE, dev='pdf'}
+```{r deficit, fig.align='center', out.width='30%', fig.cap="Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.", echo=FALSE, dev='pdf'}
 include_graphics("figure/deficit.png")
 ```
 

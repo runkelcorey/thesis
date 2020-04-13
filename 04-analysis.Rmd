@@ -1,15 +1,6 @@
----
-bibliography: bib/thesis.bib
-csl: csl/chicago-note-bibliography.csl
-output:
-  pdf_document:
-    keep_tex: true
-  html_document: default
-  word_document: default
----
 # The Neighborhood Stabilization Program and Voting {#outcome}
 
-\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt}
+\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{\textit{William Levitt}}
 
 ```{r libs, include=FALSE}
 library(tidyverse)
@@ -22,6 +13,7 @@ options(scipen = 9999, knitr.graphics.auto_pdf = TRUE)
 knit_hooks$set(inline = function(x) {
   prettyNum(x, big.mark = ",")
 })
+opts_chunk$set(cache = TRUE)
 wide <- read_csv("wide.csv")
 ```
 
@@ -138,7 +130,7 @@ I first decomposed 2000 tracts by the percentage of housing units intersecting w
 Lastly, data from the 2010 US Religion Census[@grammich2018religion] and the Bureau of Labor Statistics[@2020local] is collected at the county-level.
 Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average was used.
 All other data used were native to the 2010 tract level, without translation.
-These data were primarily from the 2010 decennial census, with some additional information from the 2005-2009 American Community Survey.
+These data were primarily from the 2010 decennial census,[@20112010b; @walker2020tigris] with some additional information from the 2005-2009 American Community Survey.[@201120062010; @walker2020tidycensus]
 American Community Survey data comes attached with margins of error, but, no other variables had these margins of error.
 In the interest of time and observations, I took the Census Bureau at their word that errors were distributed evenly.
 
@@ -168,7 +160,7 @@ To evaluate localized effects, I run additional models using only the Tea Party 
 mod1 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ + STATE, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
 mod2 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
 mod3 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ + STATE, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5, RESULT != "EXTRA-TP"))
-stargazer(mod1, mod2, mod3, type = "latex", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density (per sq.mi.)", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change `05--`10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010", column.sep.width = "3pt")
+stargazer(mod1, mod2, mod3, type = "latex", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density (per sq.mi.)", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change `05--`10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010", column.sep.width = "2pt")
 ```
 
 Table \@ref(tab:prices) lists the effects of NSP1 on prices.

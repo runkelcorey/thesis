@@ -1,4 +1,4 @@
-\\\appendix
+\appendix
 
 # Data Quality
 
@@ -12,7 +12,7 @@ mod11 <- lm(RPCT ~ NSP3 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + M
 ```
 
 ```{r compnsp, echo=FALSE, message=FALSE, results='asis'}
-stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Rounds", omit = c("^STATE"), label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Economic anxiety", "2010 foreclosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "3pt")
+stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Rounds", omit = c("^STATE"), label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "Economic anxiety", "2010 foreclosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "2pt")
 ```
 
 ```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the regression of prices on NSP1.", fig.subcap=c("Residuals on fitted.\\label{fig:priceresid}", "Quantile-quantile distribution.\\label{fig:priceqq}"), dev='pdf'}

@@ -36,9 +36,8 @@
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
 \usepackage[none]{hyphenat}
-\usepackage[hyphens]{url}
+\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks,breaklinks]{hyperref}
 % Added by CII
-\usepackage[hidelinks]{hyperref}
 \usepackage{lmodern}
 \usepackage{float}
 \usepackage{titlesec}
@@ -157,17 +156,19 @@ I find some evidence that the behavior theorized did occur among races featuring
 % Everything below added by CII
   \maketitle
 
-\pagenumbering{roman} % this removes page numbers from the frontmatter
 \frontmatter % this stuff will be roman-numbered
 
-  \hypersetup{linkcolor=black}
   \setcounter{tocdepth}{2}
   \tableofcontents
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
 
   \listoftables
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
 
   \listoffigures
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
   \begin{abstract}
+  \thispagestyle{plain} % this removes page numbers from the frontmatter
   \doublespacing
     The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
     In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
@@ -190,19 +191,19 @@ I find some evidence that the behavior theorized did occur among races featuring
 \hypertarget{actors-motive}{%
 \chapter{An Unfurling Crisis}\label{actors-motive}}
 
-Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.\footnote{Martin and Niedt, \emph{Foreclosed America}.}
+Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.\footnote{Isaac William Martin and Christopher Niedt, \emph{Foreclosed America} (Stanford, California: Stanford University Press, 2015).}
 It was clear then that homeowners needed an intervention.
-When Countrywide, which two years earlier had serviced 20\% of the mortgages in the United States,\footnote{Seabrooke, \emph{The Politics of Housing Booms and Busts}.} collapsed in July 2008, it was clear that the real estate industry needed to change.
+When Countrywide, which two years earlier had serviced 20\% of the mortgages in the United States,\footnote{Leonard Seabrooke, \emph{The Politics of Housing Booms and Busts}, ed. Herman M. Schwartz, International Political Economy Series (Palgrave Macmillan UK, 2009), \url{https://doi.org/10.1057/9780230280441}.} collapsed in July 2008, it was clear that the real estate industry needed to change.
 When cities and counties around California, Florida, Nevada, and Arizona trembled at a declining tax base, it was clear that municipalities needed a break.
 Yet, none of these actors wielded much power in the response to the subprime mortgage crisis.
 Unlike the Great Depression, homeowners barely organized their political power and financial institutions imposed very modest debtor-relief programs.
 Additionally, the long-term trend of municipal disinvestment emphasized the need to remove neighborhood blight instead of create or subsidize housing.
 
-In reponse, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute \$3.9 billion to state and local governments for the purchase and repair of foreclosed properties.\footnote{Pelosi, ``HERA.''}
+In reponse, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute \$3.9 billion to state and local governments for the purchase and repair of foreclosed properties.\footnote{Nancy Pelosi, ``Housing and Economic Recovery Act of 2008,'' July 2008.}
 This program, later termed the Neighborhood Stabilization Program (NSP), is my focus.
 In purchasing, repairing, and in most cases reselling foreclosed properties, the NSP sought to mitigate the effects of foreclosures on their surroundings.
 Primarily, foreclosures tear people from their homes.
-On top of this comes the stigma of being a ``deadbeat''\footnote{Dayen, \emph{Chain of Title}.} and mounds of fees---legal, cancellation, transportation-related.
+On top of this comes the stigma of being a ``deadbeat''\footnote{David Dayen, \emph{Chain of Title: How Three Ordinary Americans Uncovered Wall Street's Great Foreclosure Fraud} (New York: The New Press, 2016).} and mounds of fees---legal, cancellation, transportation-related.
 But once homeowners have been forced out, the neighborhood and municipality bear the financial weight of that foreclosure.
 
 This thesis considers two lines of analysis, the first a question of method and mechanism, the second a question of politics and historical contingency.
@@ -216,8 +217,8 @@ The historical claims are not new; they have been fashioned directly from the wo
 I zoom in on a particular corner of political economy and housing, however, to beef up my methodological assumptions.
 The relationship between these two lines of analysis is complex but understanding it is imperative to comprehending the validity of my argument about the impact of the Neighborhood Stabilization Program.
 
-To nearby homeowners, foreclosures cost \$159,000 on average in decreased property values.\footnote{Immergluck, \emph{Foreclosed}, 151.}
-To the city or county that envelops the property, it costs around \$50,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.\footnote{Indiviglio, ``The Housing Stabilization Program You Haven't Heard About.''}
+To nearby homeowners, foreclosures cost \$159,000 on average in decreased property values.\footnote{Daniel Immergluck, \emph{Foreclosed: High-Risk Lending, Deregulation, and the Undermining of America's Mortgage Market} (Ithaca: Cornell University Press, 2011), 151.}
+To the city or county that envelops the property, it costs around \$50,000 for the legal and construction work to demolish and resell a vacant lot, parcels which tend to drop property values even further.\footnote{Daniel Indiviglio, ``The Housing Stabilization Program You Haven't Heard About,'' \emph{The Atlantic} (https://www.theatlantic.com/business/archive/2010/04/the-housing-stabilization-program-you-havent-heard-about/38739/, April 2010).}
 When property values drop, a home's {[}apparent{]} equity drops too.
 This figure, estimated constantly by market research firms such as Zillow and appraised periodically by taxing authorities, determines to a large extent the wealth and borrowing power of homeowners.
 If the value of an already-mortgaged home rises, homeowners can refinance.
@@ -253,7 +254,7 @@ Circling back to the original home-price dynamic, higher home values fund greate
 
 When prices rose, creditor and debtor interests laid at some angle, intersecting in the particular case of safe, two-year refinancing, but divergent in the general case of refinancing that took advantage of lower interest rates.
 On the other hand, falling housing prices conformed the immediate interests of creditors and debtors to one another, since delinquency and default eliminated any chance of extracting further rents.
-Fears of a debt spiral triggered by falling home prices also beset cities,\footnote{Muro and Hoene, ``Fiscal Challenges Facing Cities.''} though there is some doubt that those fears were justified.\footnote{Gross et al., ``The Local Squeeze''; Lutz, Molloy, and Shan, ``The Housing Crisis and State and Local Government Tax Revenue.''}
+Fears of a debt spiral triggered by falling home prices also beset cities,\footnote{Mark Muro and Christopher Hoene, ``Fiscal Challenges Facing Cities: Implications for Recovery'' (Brookings, November 2009).} though there is some doubt that those fears were justified.\footnote{Liz Gross et al., ``The Local Squeeze: Falling Revenues and Growing Demand for Services Challenge Cities, Counties, and School Districts,'' ed. Susan Urahn (Philadelphia: Pew Research Center, 2012); Byron Lutz, Raven Molloy, and Hui Shan, ``The Housing Crisis and State and Local Government Tax Revenue: Five Channels,'' \emph{Regional Science and Urban Economics}, Special Issue: The Effect of the Housing Crisis on State and Local Governments, 41, no. 4 (July 2011): 306--19, \url{https://doi.org/10.1016/j.regsciurbeco.2011.03.009}.}
 With these interests in syzygy, why didn't homeowners, investors, or cities assert solutions, even ones that were done chiefly in their own interest?
 I argue in this chapter first that homeowners remained quiet due to changes in the foreclosure process from the Great Depression, the differential character of housing versus farming, and narratives about mortgage debtors.
 Second, the incongruity---spurred by the demise of savings and loans---between incentives for principals in mortgage-backed securities and agents tasked with servicing the underlying mortgages, along with fraudulent mortgage transfers, resulted in foreclosures that may have otherwise been unwanted by creditors.
@@ -275,17 +276,17 @@ In addition, the organizers' audience was blocked partially by other demands, in
 The Great Depression, however, saw these factors come together in the Midwest, where farms were physically parched and thus, financially underwater.
 Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they relied on their land for its income.
 However, farmers in the Great Depression differed from early 2000s subprime borrowers in that farming did not \emph{supplement} wage income, it \emph{replaced} wage incomes.
-In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting \emph{per se} or \emph{de facto} moratoria on foreclosures.\footnote{Wheelock, ``Changing the Rules,'' 537.}
+In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting \emph{per se} or \emph{de facto} moratoria on foreclosures.\footnote{David C Wheelock, ``Changing the Rules: State Mortgage Foreclosure Moratoria During the Great Depression,'' \emph{Federal Reserve Bank of St. Louis Review} 90, no. 6 (n.d.): 537.}
 The lack of such conditions pitched the struggle for foreclosure legislation in the subprime mortgage crisis to a severe angle.
 
 The most important differentiator between the foreclosure crisis in the Great Depression and that which preceded the Great Recession was the outsize effect of farm foreclosures.
 Farms were both the workplace and home of farmers.
 Unlike the foreclosure crisis in the 2000s, losing a home implied losing a job, though that job could be lost in other ways (drought, crop disease, low prices).
 This fact raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
-Of the 100,000 farmers who lost their farms each year between 1926 and 1940,\footnote{Alston, ``Farm Foreclosures in the United States During the Interwar Period.''} the Midwest saw the highest concentrations.
+Of the 100,000 farmers who lost their farms each year between 1926 and 1940,\footnote{Lee J. Alston, ``Farm Foreclosures in the United States During the Interwar Period,'' \emph{The Journal of Economic History} 43, no. 4 (1983): 885--903.} the Midwest saw the highest concentrations.
 Figure \ref{fig:wheelock-farms} shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
 In 1933, by far the worst year for farm mortgages, failure rates topped 3.7\%; during the rest of 1926-1940, rates were often above 1.5\%.\footnote{Wheelock, ``Changing the Rules,'' 571.}
-By contrast, U.S. residential foreclosures reached 2.23\% in 2010, the worst year of the foreclosure crisis.\footnote{``U.S. Foreclosure Activity Drops to 13-Year Low in 2018.''}
+By contrast, U.S. residential foreclosures reached 2.23\% in 2010, the worst year of the foreclosure crisis.\footnote{``U.S. Foreclosure Activity Drops to 13-Year Low in 2018,'' \emph{ATTOM Data Solutions} (https://www.attomdata.com/news/most-recent/2018-year-end-foreclosure-market-report/, January 2019).}
 In part, this is a denominator effect: the 50\% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
 \begin{figure}
@@ -299,16 +300,16 @@ In large part, however, the differences between farms and homes accounted for th
 The geography of farmland created several features that made easier mass organizing.
 Lower population densities meant that fewer people exercised political power over a fixed-size jurisdiction, when compared to a densely-populated district.
 While this feature could not have played into U.S. Congressional politics, which are apportioned by population, it could make collusion easier in counties.
-Organization at the county level was important in the Great Depression, because foreclosed properties were sold by sheriffs, elected county officials.\footnote{Fliter and Hoff, \emph{Fighting Foreclosure}.}
+Organization at the county level was important in the Great Depression, because foreclosed properties were sold by sheriffs, elected county officials.\footnote{John A. Fliter and Derek S. Hoff, \emph{Fighting Foreclosure: The Blaisdell Case, the Contract Clause, and the Great Depression}, Landmark Law Cases \& American Society (Lawrence, Kansas: University Press of Kansas, 2012).}
 Compounding the numerical ease of collusion was the congruency of interests.
 While farms produce a variety of crops, soil and climate particularities combine with federal agriculture policy to homogenize production locally.
-In other words, Tobler's first law of geography holds: ``everything is related to everything else, but near things are more related than distant things.''\footnote{Tobler, ``A Computer Movie Simulating Urban Growth in the Detroit Region,'' 236.}
+In other words, Tobler's first law of geography holds: ``everything is related to everything else, but near things are more related than distant things.''\footnote{W. R. Tobler, ``A Computer Movie Simulating Urban Growth in the Detroit Region,'' \emph{Economic Geography} 46 (1970): 236, \url{https://doi.org/10.2307/143141}.}
 In conversation with the realities of the foreclosure crisis in the 2000s, two conclusions---one ecological, the other sociological---emerge.
 
 On the side of ecology, crop failures occurred in conjunction with nearby farms.
 The same climate or disease that killed a neighbor's crops could not be stopped at the property line.
 Farmers in the Great Depression shared this feature with homeowners in the mortgage crisis: lowered property values on one side would spillover to the other side.
-For both populations, spatial correlations were imperfect, as some farmers planted different crops and some foreclosures occurred among conservative borrowers or wholly-owned homes, but the spillover effect matters.\footnote{DeFusco et al., ``The Role of Price Spillovers in the American Housing Boom.''}
+For both populations, spatial correlations were imperfect, as some farmers planted different crops and some foreclosures occurred among conservative borrowers or wholly-owned homes, but the spillover effect matters.\footnote{Anthony DeFusco et al., ``The Role of Price Spillovers in the American Housing Boom,'' \emph{Journal of Urban Economics} 108 (November 2018): 72--84, \url{https://doi.org/10.1016/j.jue.2018.10.001}.}
 Falling property values decreased the value of neighboring properties, deepening the mortgage crisis for farmers in the Depression and homeowners before the Recession.
 The conditions of localized, severe economic distress existed in both eras.
 
@@ -317,9 +318,9 @@ Farming the same crops entails some degree of visiting the same market, buying t
 Farmers met their neighbors whether they liked them or not, creating a forum to talk shop with nearby people who shared interests.
 The simple fact of homeownership, however, tends to signify income, but little else, and the larger populations of suburbs facing home foreclosures meant more social and cultural institutions among which residents could choose.
 The higher density and absolute size of the suburbs separated struggling homeowners from each other, while the lack of farming meant that---even if they had bumped shoulders---their mortgage finances were less likely to be topics of discussion.
-While the suburban quality of foreclosures in the recent mortgage crisis could have drawn homeowners closer together through their homeowner association (HOA), HOAs were insignificant bulwarks against nearby foreclosures.\footnote{Cheung, Cunningham, and Meltzer, ``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?'' 87.}
-And more to the point of homeowner behavior, HOA fees were some of the first payments to stop once mortgage debt piled up,\footnote{Perkins, ``Privatopia in Distress,'' 561.} suggesting that homeowners disengaged from their homeowner associations entirely.
-These divergent implications for farming and suburban housing could be added to Robert Putnam's argument of a secular (in both the economic and religious senses) decline in social capital\footnote{Putnam, \emph{Bowling Alone}.} to argue that the sociological character of suburbs blocked organization around increasing mortgage delinquency and household foreclosures.
+While the suburban quality of foreclosures in the recent mortgage crisis could have drawn homeowners closer together through their homeowner association (HOA), HOAs were insignificant bulwarks against nearby foreclosures.\footnote{Ron Cheung, Chris Cunningham, and Rachel Meltzer, ``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?'' \emph{Journal of Housing Economics}, Housing Policy in the United States, 24 (June 2014): 87, \url{https://doi.org/10.1016/j.jhe.2013.11.007}.}
+And more to the point of homeowner behavior, HOA fees were some of the first payments to stop once mortgage debt piled up,\footnote{Casey Perkins, ``Privatopia in Distress: The Impact of the Foreclosure Crisis on Homeowners' Associations,'' \emph{Nevada Law Journal} 10, no. 2 (January 2010): 561.} suggesting that homeowners disengaged from their homeowner associations entirely.
+These divergent implications for farming and suburban housing could be added to Robert Putnam's argument of a secular (in both the economic and religious senses) decline in social capital\footnote{Robert D. Putnam, \emph{Bowling Alone: The Collapse and Revival of American Community} (New York, NY: Simon \& Schuster, 2001).} to argue that the sociological character of suburbs blocked organization around increasing mortgage delinquency and household foreclosures.
 
 As I mentioned above, the lack of local fora was important.
 In the Great Depression, not only were county sheriff offices the location of foreclosure sales, they were also the location of foreclosure sale stoppages.
@@ -340,14 +341,14 @@ But organizing need not adopt the character of halting foreclosure sales; rather
 Changes to bankruptcy laws made foreclosures less defensible by making judicial hearings an opt-in rather than mandatory system.
 The hearings provide both the legal forum to contest evidence, claims, and standing, as well as the social forum to support other defendants.\footnote{Dayen, \emph{Chain of Title}.}
 Courts' docket sizes also elongated the period a delinquent borrower could stay in their home, during which alternative remedies may be sought.\footnote{Cheung, Cunningham, and Meltzer, ``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?''}
-Collins, Lam, and Herbert\footnote{``State Mortgage Foreclosure Policies and Lender Interventions.''} found that even such vanilla advocacy as mailings to suggest loan modification were more effective in states with judicial foreclosures.
+J. Michael Collins, Ken Lam, and Christopher E. Herbert\footnote{``State Mortgage Foreclosure Policies and Lender Interventions: Impacts on Borrower Behavior in Default,'' \emph{Journal of Policy Analysis and Management} 30, no. 2 (2011): 216--32, \url{https://doi.org/10.1002/pam.20559}.} found that even such vanilla advocacy as mailings to suggest loan modification were more effective in states with judicial foreclosures.
 However, evidence regarding the change of this process over time is a mixed bag.
-Cheung, Cunningham, and Meltzer\footnote{``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?''} argues that the rights of residents have been eroded due to the increase in states where non-judicial foreclosure is the \emph{norm}, though the actual number of states where non-judicial foreclosure is legally available has decreased.\footnote{Ghent, ``The Historical Origins of America's Mortgage Laws,'' 22--23.}
+Cheung, Cunningham, and Meltzer\footnote{``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?''} argues that the rights of residents have been eroded due to the increase in states where non-judicial foreclosure is the \emph{norm}, though the actual number of states where non-judicial foreclosure is legally available has decreased.\footnote{Andra Ghent, ``The Historical Origins of America's Mortgage Laws,'' Special Report (Research Institute for Housing America, October 2012), 22--23.}
 
 Judicial foreclosure briefly entered the national news cycle in 2010, when former homeowners alleged fraud against several large mortgage servicers, termed foreclosure mills for their prolific business.
-Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,\footnote{Orol, ``U.S. Breaks down \$9.3 Bln Robo-Signing Settlement.''}
+Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,\footnote{Ronald D. Orol, ``U.S. Breaks down \$9.3 Bln Robo-Signing Settlement,'' \emph{MarketWatch} (https://www.marketwatch.com/story/us-breaks-down-93-bln-robo-signing-settlement-2013-02-28, n.d.).}
 The fraudulent documents meant that contestation in foreclosure courts was possible, against the assumptions for foreclosures.
-In fact, the New Jersey Supreme Court in 2010 ordered lower courts to stop hearing foreclosure cases due to the prevalence of fraudulent documents.\footnote{``New Jersey Courts Take Steps to Ensure Integrity of Residential Mortgage Foreclosure Process.''}
+In fact, the New Jersey Supreme Court in 2010 ordered lower courts to stop hearing foreclosure cases due to the prevalence of fraudulent documents.\footnote{``New Jersey Courts Take Steps to Ensure Integrity of Residential Mortgage Foreclosure Process'' (New Jersey Courts, December 2010).}
 Organizers cited the political influence of foreclosure mills---particularly in hard-hit Florida, the only Sand State with mandatory judicial foreclosure---as cause for the inefficacy of activism around foreclosure fraud.
 In several cases, the Florida Attorney General and elected representatives backed out of supporting investigations after meeting with employees of mortgage servicers (who were, in two cases, also employees of the Attorney General).\footnote{Dayen, \emph{Chain of Title}.}
 Whatever the cause, the fraudulent mortgage documents offered a concrete opportunity for organizing that resulted in the dislocation of millions, and undermined a tradition of impeccably-kept land records that extended well before 1776.
@@ -356,7 +357,7 @@ Geographic and economic features of farming compounded its larger-scale mortgage
 The Internet forums where foreclosures were discussed and debated turned out to be silos, with arguments accumulating while few asked outside sought answers.
 In contrast, farming's power to determine social interactions pushed together those in distress, joining a long line of Progressive debtor's rights movements in the Midwest.
 These movements organized, articulating political demands most remarkably on March 22, 1933, when ``a caravan of two to three thousand farmers descended upon St.~Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol.''\footnote{Fliter and Hoff, \emph{Fighting Foreclosure}.}
-This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in \emph{Home Building \& Loan Association v. Blaisdell},\footnote{``Blaisdell.''} paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
+This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in \emph{Home Building \& Loan Association v. Blaisdell},\footnote{``Home Building \& Loan Assn. V. Blaisdell,'' January 1934.} paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
 In contrast, each call for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on \emph{Blaisdell}.
 To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
 
@@ -372,13 +373,13 @@ This influence combined with the altered expectation of federal policy regulatin
 This turn away from local economic regulation starved states and cities of the resources needed to handle foreclosures.
 
 Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in Figure \ref{fig:spending-shift}.
-While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, Beard\footnote{\emph{An Economic Interpretation of the Constitution of the United States}.} retains its value by its analysis of primary sources.
+While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, Charles A. Beard\footnote{\emph{An Economic Interpretation of the Constitution of the United States} (New York: The Macmillan Company, 1913).} retains its value by its analysis of primary sources.
 In it, Beard argues that the United States has a long history of enforcing the rights of creditors over the sovereignty of states.
 Linking uprisings such as Shays Rebellion to foreign credit demands and the interests of individual urban bondholders, he suggests that the Constiution can be seen broadly as a struggle between farmers and bondholders, not unlike Depression-era rhetoric between Midwest farmers leaden with debts and their Eastern creditors.
 
 The primary result of this struggle was the Contract Clause:
 \begin{quote}
-No State shall {[}\ldots{]} coin Money; emit Bills of Credit; make any Thing but gold and silver Coin a Tender in Payment of Debts; pass any Bill of Attainder, ex post facto Law, or Law impairing the Obligation of Contracts\footnote{Madison, ``The Constitution of the United States.''}
+No State shall {[}\ldots{]} coin Money; emit Bills of Credit; make any Thing but gold and silver Coin a Tender in Payment of Debts; pass any Bill of Attainder, ex post facto Law, or Law impairing the Obligation of Contracts\footnote{James Madison, ``The Constitution of the United States,'' June 1788.}
 \end{quote}
 The Contract Clause limited state powers for economic regulation in three main ways.
 First, it removed from states the ability to print money, and, thus, to overprint money.
@@ -389,8 +390,8 @@ Debt cancellation or reduction was a primary aim of uprisings like Shays Rebelli
 
 In the Great Depression, the meaning of the Contract Clause was challenged, as mentioned, in \emph{Blaisdell}.
 But scholarly opinion had soured on Chief Justice Charles Hughes' words that, ``While emergency does not create power, emergency may furnish the occasion for the exercise of power.''
-Richard Epstein, one of the Chicago School's leading legal scholars, writes that, ``the police power exception has come to eviscerate the contracts clause,''\footnote{Epstein, ``Toward a Revitalization of the Contract Clause,'' 738.} and he is not alone.
-Indeed, Tim Geithner's approach to the foreclosure policies emphasized legality as one of its tenets, and pointed to state usage of the Contract Clause as a grey area.\footnote{McNamara, ``Yale Program on Financial Stability Interview.''}
+Richard Epstein, one of the Chicago School's leading legal scholars, writes that, ``the police power exception has come to eviscerate the contracts clause,''\footnote{Richard Epstein, ``Toward a Revitalization of the Contract Clause,'' \emph{University of Chicago Law Review} 51, no. 3 (June 1984): 738.} and he is not alone.
+Indeed, Tim Geithner's approach to the foreclosure policies emphasized legality as one of its tenets, and pointed to state usage of the Contract Clause as a grey area.\footnote{Christian McNamara, ``Yale Program on Financial Stability Interview,'' October 2019.}
 Constitutional limits on state (and thereby local) economic regulation were bolstered by scholarly backlash and the significant influence of originalism and textualism on the Court.
 If Beard's interpretation of the Contract Clause is correct, then conservative justices would likely have blocked any such attempts to establish the foreclosure moratoria imposed during the Depression.
 
@@ -402,7 +403,7 @@ Defenders of the Contract Clause's intended usage prioritize the right to contra
 Defenders of the Commerce Clause prioritize the federal government's capacity and judgment to regulate business that stretches across state lines over the right of local government.
 Unlike the Contract Clause, whose recent judgments and scholarship point to unconstitutionality of state-passed foreclosure moratoria,\footnote{Note that the New Jersey ``moratorium'' was neither a legislative act nor a blanket moratorium. It affected the litigation of foreclosures and referenced the validity of evidence itself, which would hypothetically be inadmissable regardless of the order.} the Commerce Clause has been granted broad powers, with conservatives on the Court only tinkering at the edges of its range of freedom.
 
-For instance, where \emph{Blaisdell} squeaked by with a 5-4 decision, \emph{Wickard v. Filburn}\footnote{``Wickard V. Filburn.''} unanimously upheld the authority of the Agricultural Adjustment Act to regulate private acts---ones that had never seen a marketplace---which substantially effected the business of another state.\footnote{``Wickard V. Filburn.''} capped five to seven years of the Commerce Clause's usage to authorize New Deal policies.
+For instance, where \emph{Blaisdell} squeaked by with a 5-4 decision, \emph{Wickard v. Filburn}\footnote{``Wickard V. Filburn,'' October 1942.} unanimously upheld the authority of the Agricultural Adjustment Act to regulate private acts---ones that had never seen a marketplace---which substantially effected the business of another state.\footnote{``Wickard V. Filburn.''} capped five to seven years of the Commerce Clause's usage to authorize New Deal policies.
 If the powers extended down to peoples' private properties, what jurisdiction did the federal government \emph{not} possess?
 For the subprime mortgage crisis, this history of Commerce Clause--facilitated pre-emption meant that the federal government was expected to the intervene during economic crises.
 All that was needed to authorize pre-emption was the substantial effects test employed in \emph{Wickard}.
@@ -429,19 +430,19 @@ So, while specific taxes have been reined in by voters, the level of taxation is
 
 The one area secured by taxpayer reform efforts have been measures that require legislative supermajorities or popular referenda to raise rates.
 For instance, the original California movement succeeded in restraining property tax rates from climbing above 1\% and required a legislative supermajority equal to that needed to amend the state constitution in order to raise special taxes.
-Provisions such as this have been successful at limiting property tax receipts,\footnote{Kioko and Martell, ``State-Level Tax and Expenditure Limits.''} effects which bear directly on state and local abilities to raise revenue from housing.
+Provisions such as this have been successful at limiting property tax receipts,\footnote{Sharon N. Kioko and Christine R. Martell, ``Impact of State-Level Tax and Expenditure Limits (TELs) on Government Revenues and Aid to Local Governments,'' \emph{Public Finance Review}, May 2012, \url{https://doi.org/10.1177/1091142112438460}.} effects which bear directly on state and local abilities to raise revenue from housing.
 In housing-rich states---such as California, Florida, Nevada, and Arizona---that saw so much of their housing stock go vacant, this feature puts a double-bind on states and localities.
-It implements a strongly pro-cyclic revenue structure that conflicts with the anti-cyclic need for government investment,\footnote{Keynes and Krugman, \emph{The General Theory of Employment, Interest, and Money}.} though such a gap would not grow until assessments had revalued property in the face of the housing bust.
+It implements a strongly pro-cyclic revenue structure that conflicts with the anti-cyclic need for government investment,\footnote{John Maynard Keynes and Paul R. Krugman, \emph{The General Theory of Employment, Interest, and Money} (New York: Palgrave Macmillan, 2007).} though such a gap would not grow until assessments had revalued property in the face of the housing bust.
 In 2007, 2008, and 2009, this feature likely acted as the lower arm of a pair of price scissors to homeowners---though they were \emph{very} rusty, unable to close completely since property taxes rarely top 2\%---holding stable as housing prices plummeted.
-There is little research of this effect on municipal finances, but more recent scholarship points to large decreases beginning in 2009 or 2010 and extending as late as 2013.\footnote{Chernick, Reschovsky, and Newman, ``The Effect of the Housing Crisis on the Finances of Central Cities''; Gross et al., ``The Local Squeeze.''}
+There is little research of this effect on municipal finances, but more recent scholarship points to large decreases beginning in 2009 or 2010 and extending as late as 2013.\footnote{Howard Chernick, Andrew Reschovsky, and Sandra Newman, ``The Effect of the Housing Crisis on the Finances of Central Cities,'' in \emph{Housing Markets and the Fiscal Health of US Central Cities}, 2017, 18; Gross et al., ``The Local Squeeze.''}
 The size of this lag may account for the lack of consensus on the topic, with 2011 research by the Federal Reseve Board of Governors denying significant fiscal effects of foreclosures.\footnote{Lutz, Molloy, and Shan, ``The Housing Crisis and State and Local Government Tax Revenue.''}
-At any rate, while property taxes did strain municipal budgets, and while cities did not feel the effects until after the foreclosure crisis elicited policy responses, anxiety over the coming problems mounted.\footnote{Dennis, ``Falling Home Values Mean Budget Crunches for Cities''; Saulny, ``Financial Crisis Takes a Toll on Already-Squeezed Cities.''}
+At any rate, while property taxes did strain municipal budgets, and while cities did not feel the effects until after the foreclosure crisis elicited policy responses, anxiety over the coming problems mounted.\footnote{Brady Dennis, ``Falling Home Values Mean Budget Crunches for Cities,'' \emph{Washington Post}, n.d.; Susan Saulny, ``Financial Crisis Takes a Toll on Already-Squeezed Cities,'' \emph{New York Times}, June 2008, 16.}
 
 I have outlined structural forces that limited the legal and fiscal capacities of states to intervene in private activities, even when such activites have heavily public effects.
 While the structural forces clearly affect much more than housing, the funding of American states and towns is heavily indebted towards property taxes, bringing one of every three municipal dollars.\footnote{Gross et al., ``The Local Squeeze,'' 1.}
 While property taxes had not yet declined when the foreclosure crisis hit its lows, anxieties were rising, and taxpayer reform movements had already bit large chunks out of the ability to raise money.
 These forces starved states and cities of the resources necessary to handle foreclosure.
-Endowed only with powers to issue zoning regulations, tax \emph{incentives}, and other growth-oriented policies,\footnote{Stein, \emph{Capital City}.} cities and states were less able to handle the wave of foreclosures that pushed one of every twenty American adults out of their home.\footnote{Martin and Niedt, \emph{Foreclosed America}, 5.}
+Endowed only with powers to issue zoning regulations, tax \emph{incentives}, and other growth-oriented policies,\footnote{Samuel Stein, \emph{Capital City: Gentrification and the Real Estate State}, Jacobin Series (London ; Brooklyn, NY: Verso, 2019).} cities and states were less able to handle the wave of foreclosures that pushed one of every twenty American adults out of their home.\footnote{Martin and Niedt, \emph{Foreclosed America}, 5.}
 
 \hypertarget{banks}{%
 \section{Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures}\label{banks}}
@@ -459,7 +460,7 @@ At that time, the Federal National Mortgage Association (Fannie Mae) and Federal
 Fannie and Freddie brokered mortgages to prime borrowers, those considered least likely to default.
 Yet the low risk could only the price of credit (aka interest rates) by so much.
 Securitization offered a second layer of insulation from the unpredictability of individuals, leading to lower risk, and lower interest rates, making mortgages attractive to propsective homeowners.
-In this case it was the knowledge that investors would accept low interest rates---made acceptable by global disinflation and a massive supply of savings\footnote{Schwartz, \emph{Subprime Nation}.}---which facilitated such attractive interest rates.
+In this case it was the knowledge that investors would accept low interest rates---made acceptable by global disinflation and a massive supply of savings\footnote{Herman M. Schwartz, \emph{Subprime Nation: American Power, Global Capital, and the Housing Bubble}, Cornell Studies in Money (Ithaca: Cornell University Press, 2009).}---which facilitated such attractive interest rates.
 After brokering a mortgage, Fannie Mae or Freddie Mac would then take a few thousand other mortgages and combine them into a mortgage pool.
 Later these pools would contain mortgages brokered by dozens, perhaps hundreds of firms, who would immediately sell them to originators.
 These two roles, broker and originator, seprated over time, and created the initial problems whereby bad loans were good business.\footnote{Immergluck, \emph{Foreclosed}, 103.}
@@ -489,7 +490,7 @@ But in a housing crisis, when flattening home values give way to falling, and th
 Securitization provided agents, the mortgage servicers, to escape the interests of the principals, investors.
 By removing the principal from the process, MBS securitization granted the agent free{[}r{]} reign.
 
-While foreclosures were in the interests of the mortgage-servicing agents,\footnote{Goodman, ``For Mortgage Servicers, an Incentive Not to Help Homeowners.''} they were less likely to be in the interests of investors.
+While foreclosures were in the interests of the mortgage-servicing agents,\footnote{Peter S. Goodman, ``For Mortgage Servicers, an Incentive Not to Help Homeowners,'' \emph{The New York Times}, July 2009.} they were less likely to be in the interests of investors.
 Depending on their tranche in an MBS, some investors would have actually \emph{preferred} to keep loan terms stringent in order to increase risk, and thus reward.
 These inter-investor squabbles meant that servicers that acted along informal lines of request ``may be seen as instigating interparty litigation.''\footnote{Immergluck, \emph{Foreclosed}, 103.}
 I do not argue that investors necessarily would have ceased foreclosure in times of crisis, but that, like banks in the Depression that were long in their own investments, they may have added extra time for payment had they the organizational mechanisms to do so.
@@ -508,7 +509,7 @@ I will bookend these discussions with theoretical and historical understandings 
 \hypertarget{motive-opportunity}{%
 \chapter{Connecting Home Prices to Voting}\label{motive-opportunity}}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{\textit{George W. Bush, October 2004}}
 
 The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim ran parallel with the Bush administration's ``ownership society'', which added moral heft to the legal responsibilities associated with private property.
@@ -520,8 +521,8 @@ So, while the policies fit with the Bush administration, their ideological dimen
 
 But, as mentioned early in Chapter \ref{actors-motive}, opposing the leftward pull of ideology was the rightward push of rising wealth.
 While higher levels of wealth and income are colloquially associated with conservatism, but there is less research on how asset ownership pushes people towards their political decisions.
-And, historically, the political effects of taxation were not a given: after World War II, taxation was not a weighty political issue,\footnote{Campbell, ``How Americans Think About Taxes,'' 160.} let alone a wedge issue.
-Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans ``to define themselves and their party in opposition to taxes.''\footnote{Martin, ``Welcome to the Tax Cutting Party,'' 128.}
+And, historically, the political effects of taxation were not a given: after World War II, taxation was not a weighty political issue,\footnote{Andrea Louise Campbell, ``How Americans Think About Taxes: Lessons from the History of Tax Attitudes,'' \emph{Proceedings. Annual Conference on Taxation and Minutes of the Annual Meeting of the National Tax Association} 102 (2009): 160.} let alone a wedge issue.
+Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans ``to define themselves and their party in opposition to taxes.''\footnote{Isaac William Martin, ``Welcome to the Tax Cutting Party: How the Tax Revolt Transformed Republican Politics,'' in \emph{The Permanent Tax Revolt: How the Property Tax Transformed American Politics} (Stanford, California: Stanford University Press, 2008), 128.}
 Politicians of all stripes followed, with Third Way Democrats, led by President Bill Clinton, accepted tax cuts in their successful political bids; it was only in the 2000s that Democrats united (more or less) in warning against lower taxation.
 
 The mortgage crisis hit after this crystallization of interests: a moment in American politics when the two parties agreed on the content of their debates.
@@ -551,7 +552,7 @@ Section 2301(a) of the Housing and Economic Recovery Act of 2008 appropriates \$
 for assistance to States and units of general local government (as such terms are defined in section 102 of the Housing and Community Development Act of 1974 (42 U.S.C. 5302)) for the redevelopment of abandoned and foreclosed upon homes and residential properties.
 \end{quote}
 Due to the size of the bill passed and the extent of modifications by a range of members, it is unclear who inserted the provision.
-However, a select few news sources picked up on the insertion, including a Reuters piece which claimed ``The White House had originally opposed a provision that offers \$4 billion in grants to states to buy and repair foreclosed homes.''\footnote{Pelofsky, ``Bush Signs Housing Bill as Fannie Mae Grows.''}
+However, a select few news sources picked up on the insertion, including a Reuters piece which claimed ``The White House had originally opposed a provision that offers \$4 billion in grants to states to buy and repair foreclosed homes.''\footnote{Jeremy Pelofsky, ``Bush Signs Housing Bill as Fannie Mae Grows,'' \emph{Reuters}, July 2008.}
 The opposition by the Bush administration of the \$4 billion outlay, a mere 1.3\% of the \$300 billion ensured to Fannie Mae, indicates that the amender likely belonged to the Democratic Party.
 Albeit brief, this opposition---the only opposition mentioned in an article awash in hundred-billion-dollar outlays---is surprising given the NSP's tiny size and the measures taken to distance the federal government from political (and legal) liability.
 
@@ -561,7 +562,7 @@ This provision also avoided long-term commitments by HUD to far-flung localities
 But, while the bill collected information and decision-making at the local level, its compliance regulations were still onerous.
 Dan Immergluck (2015) argues that ensuing language in HERA, which limited localities to purchase properties at a discount from market price, lessened the program's efficacy.
 Much like with the market for used cars, houses at a discount are always already more likely to be lemons, since the seller wouldn't take less than market price for an above-average quality home.
-Beyond that, federal oversight of localities was intense, as the administration took an extremely risk-averse approach to mismanagement of funds, fitting the image pushed by conservatives in Bush's party of housing programs as loci of graft and inefficiency.\footnote{Immergluck, \emph{Preventing the Next Mortgage Crisis}.}
+Beyond that, federal oversight of localities was intense, as the administration took an extremely risk-averse approach to mismanagement of funds, fitting the image pushed by conservatives in Bush's party of housing programs as loci of graft and inefficiency.\footnote{Daniel Immergluck, \emph{Preventing the Next Mortgage Crisis: The Meltdown, the Federal Response, and the Future of Housing in America} (Lanham: Rowman \& Littlefield Education, 2015).}
 
 Funds were originally calculated by a need-based formula factoring in rates of foreclosure, subprime borrowing, and payment delinquency in order to address areas ``identified by the State or unit of general local government as likely to face a significant rise in the rate of home foreclosures.''\footnote{Pelosi, ``HERA.''}
 In doing so, the legislation aimed to use the buying power of the federal government to bid up prices in neighborhoods by taking housing stock off the market (reducing supply), recording purchase prices close to market levels (benchmarking nearby appraisals and sales), and reselling said housing stock after maintenance and repairs (increasing quality).
@@ -571,9 +572,9 @@ At the time, dispossessed homeowners and their coalitions called for principal r
 Rather than direct cash transfers, which would have enhanced individual freedom by loosening household budget constraints, or pass-through payments to debt holders, which would have promoted rent-seeking by those debt holders, the Neighborhood Stabilization Program advocated for indirect bumps on home equity.
 
 The NSP attempted to cosset homeowners from endogenous shocks, recognizing the social dislocation caused by such a stupid destruction of private wealth.
-While some homeowners could be painted as the kind of irresponsible, purely-speculating ``deadbeats'' characterized in Dayen (2016) and Michael Lewis' \emph{The Big Short}, it is important to remember that the majority of those foreclosed upon were prime borrowers.\footnote{Ferreira and Gyourko, ``A New Look at the U.S. Foreclosure Crisis.''}
+While some homeowners could be painted as the kind of irresponsible, purely-speculating ``deadbeats'' characterized in Dayen (2016) and Michael Lewis' \emph{The Big Short}, it is important to remember that the majority of those foreclosed upon were prime borrowers.\footnote{Fernando Ferreira and Joseph Gyourko, ``A New Look at the U.S. Foreclosure Crisis: Panel Data Evidence of Prime and Subprime Borrowers from 1997 to 2012,'' Working Paper (National Bureau of Economic Research, June 2015), \url{https://doi.org/10.3386/w21261}.}
 Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \ref{fig:distress}.\footnote{Though that lag was partially because there was more ``fuel left to burn'' in the sense that the number of subprime borrowers, already only 20\% of the market, had already been slashed.}
-These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.\footnote{Tooze, \emph{Crashed}; Mian, Sufi, and Trebbi, ``The Political Economy of the US Mortgage Default Crisis.''}
+These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.\footnote{J. Adam Tooze, \emph{Crashed: How a Decade of Financial Crises Changed the World} (New York: Viking, 2018); Atif Mian, Amir Sufi, and Francesco Trebbi, ``The Political Economy of the US Mortgage Default Crisis,'' \emph{American Economic Review} 100, no. 5 (December 2010): 1967--98, \url{https://doi.org/10.1257/aer.100.5.1967}.}
 The political stigmata came when Santelli (among others) fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclsoure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
 \begin{figure}
 
@@ -591,18 +592,18 @@ Rather, the NSP aimed at the more foundational goal of saving the plunging home 
 
 This individuation, this buffer from the market, is a privilege long constructed for the American home by law and policy.
 Specifically, the private-public distinction is made much sharper for homeowners than for renters.
-Consider for instance 4th Amendment cases, where {[}English{]} property law still dominates legal interpretation (despite the impact of \emph{Katz v. United States}, which expanded what the 4th Amendment shielded to include more person-centric concepts).\footnote{Stern, ``The Inviolate Home.''}
+Consider for instance 4th Amendment cases, where {[}English{]} property law still dominates legal interpretation (despite the impact of \emph{Katz v. United States}, which expanded what the 4th Amendment shielded to include more person-centric concepts).\footnote{Stephanie M. Stern, ``The Inviolate Home: Housing Exceptionalism in the Fourth Amendment,'' \emph{Cornell Law Review} 95 (May 2010): 48.}
 Or consider the mortgage interest deduction, a large subsidy applied to owner-occupied properties.
 The history of American housing policy---both as centralized legislation and decentralized legal interpretation---has conferred on homeowners (who, in the case of single-family housing, are also land owners) additional rights when compared to renters, expanding the legal extent of their individual selves.
 
 These privileges made up much of the popular appeal of George W. Bush's ``ownership society''.
 While it lived a larger life in the media than in Bush's own remarks, the philosophy can explain much of Bush's domestic policy, and should therefore be taken seriously.
 The definition is almost self-evident: an America where as much is owned and controlled by individuals as is feasible.
-Bush explained the logic guiding this idea by claiming that ``The more ownership there is in America, the more vitality there is in America, and the more people have a vital stake in the future of this country.''\footnote{``America's Ownership Society.''}
+Bush explained the logic guiding this idea by claiming that ``The more ownership there is in America, the more vitality there is in America, and the more people have a vital stake in the future of this country.''\footnote{``Fact Sheet: America's Ownership Society: Expanding Opportunities,'' Archive, \emph{The White House: President George W. Bush} (https://georgewbush-whitehouse.archives.gov/news/releases/2004/08/20040809-9.html, August 2004).}
 With this claim came a raft of policies demonstrating the promise of an ownership society.
 
-Under this capacious roof, the administration housed health savings accounts, more individuated retirement options, and policies aimed at boosting homeownership.
-These policies included the American Dream Downpayment Initiative (fairly self-explanatory) and the Single-Family Affordable Housing Tax Credit.\footnote{``Homeownership Policy Book.''}
+Under this capacious roof, the administration housed health savings accounts, more individuated retirement options, and policies aimed at boosting homeownership.\footnote{Naomi Klein, ``Disowned by the Ownership Society,'' \emph{The Nation}, February 2008.}
+These policies included the American Dream Downpayment Initiative (fairly self-explanatory) and the Single-Family Affordable Housing Tax Credit.\footnote{``Homeownership Policy Book - Chapter 1,'' Archive, \emph{The White House: President George W. Bush} (https://georgewbush-whitehouse.archives.gov/infocus/homeownership/homeownership-policy-book-ch1.html, 2002).}
 By encouraging single-family homes in the ``Nation's inner cities'', thinning the density of apartment complexes and tenements, this last provision hearkened back to New Deal marketing, which idealized the home as a Romantic ``refuge from urban corruption''\footnote{Stern, ``The Inviolate Home,'' 910.} associated with a high-density cityscape and the web of problems spun around public housing complexes.
 Bush's ownership society provisions also included a ``tripling of funding''\footnote{``Homeownership Policy Book.''} for a program that swapped personal or volunteer labor for housing assistance, known in low-income housing development as ``sweat equity''.
 These programs in aggregate, pushed a narrative of meritocratic access to consumer credit spurring individual ownership.
@@ -611,7 +612,7 @@ The NSP, in turn, slotted into this story by insulating responsible (i.e.~those 
 Such a conformity with Bush's animating philosophy, despite the program's brief opposition by the president, places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.
 If voters were unable to locate programs like the NSP within Democratic or Republican platforms, then there would be no clear reason why pro--home price policies translate into Republican votes.
 But while the values cherished by Bush's ownership society aligned ideologically with American conservatism, its distinctive policies were afield of the Republican platform.
-Part of this separation was because Bush's ownership society was not too different than the messages had pushed by presidents on both sides of the aisle since at least the Great Depression.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
+Part of this separation was because Bush's ownership society was not too different than the messages had pushed by presidents on both sides of the aisle since at least the Great Depression.\footnote{Matt Stoller, ``The Housing Crash and the End of American Citizenship,'' \emph{Fordham Urban Law Journal} 39, no. 4 (February 2016): 1183.}
 Rather, the policies looked like a {[}more{]} moralistic version of Democratic plans for affordable housing and access to credit.
 
 \hypertarget{shifting-priorities-in-the-grand-old-party}{%
@@ -621,12 +622,12 @@ Republican antipathy to taxation and opposition to visible, continuing welfare a
 Instead, what talk there was regarding debt resulted from a more general concern over asset prices.
 This talk proceeded from the expansion of finance's place in the economy and culture of the United States.
 While bankers had always been handsomely paid, it was not until the liberalizations of the Reagan era that its ranks swelled in quantity and individual wealth.
-These included passage of the Garn--St.~Germain Depository Institutions Act of 1982---which Paul Krugman held responsible for the savings and loan crisis by granting permission to private lenders for the sale of adjustable-rate mortgages\footnote{Krugman, ``Reagan Did It.''}---but I pay particular attention to the exaltation of multinational creditors in mortgage markets.
-A year before the Garn--St.~Germain Act, Reagan enacted his signature reform, the Economic Recovery Tax Act of 1981, which allowed troubled savings and loan institutions to sell home mortgages and consequently write down their tax burdens.\footnote{Lewis, ``The Fat Men and Their Marvelous Money Machine.''}
+These included passage of the Garn--St.~Germain Depository Institutions Act of 1982---which Paul Krugman held responsible for the savings and loan crisis by granting permission to private lenders for the sale of adjustable-rate mortgages\footnote{Paul Krugman, ``Reagan Did It,'' \emph{The New York Times}, May 2009.}---but I pay particular attention to the exaltation of multinational creditors in mortgage markets.
+A year before the Garn--St.~Germain Act, Reagan enacted his signature reform, the Economic Recovery Tax Act of 1981, which allowed troubled savings and loan institutions to sell home mortgages and consequently write down their tax burdens.\footnote{Michael Lewis, ``The Fat Men and Their Marvelous Money Machine,'' in \emph{Liar's Poker} (W.W. Norton \& Company, 2010).}
 This provision opened the floodgates for private-label mortgage securitization; where savings and loans had dominated the private market, investment banks could now cash in.
 By definition, it was these creditors that enabled the expansion of mortgage-backed securities to subprime lenders, and with them, significant economic growth.
 
-Between 1981 and 2007, outstanding residential mortgage debt---shown in Figure \ref{fig:hhdebt}---swelled from 37\% of US gross domestic product to 82\%, more than doubling in relative size.\footnote{Board of Governors of the Federal Reserve System (US), ``MDOTPFP''; Board of Governors of the Federal Reserve System (US), ``MDOTPNNRP''; Board of Governors of the Federal Reserve System (US), ``MDOAH''; U.S. Bureau of Economic Analysis, ``GDPA.''}
+Between 1981 and 2007, outstanding residential mortgage debt---shown in Figure \ref{fig:hhdebt}---swelled from 37\% of US gross domestic product to 82\%, more than doubling in relative size.\footnote{Board of Governors of the Federal Reserve System (US), ``Mortgage Debt Outstanding by Type of Property: Farm,'' \emph{FRED, Federal Reserve Bank of St. Louis} (https://fred.stlouisfed.org/series/MDOTPFP, October 1949); Board of Governors of the Federal Reserve System (US), ``Mortgage Debt Outstanding by Type of Property: Nonfarm and Nonresidential,'' \emph{FRED, Federal Reserve Bank of St. Louis} (https://fred.stlouisfed.org/series/MDOTPNNRP, October 1949); Board of Governors of the Federal Reserve System (US), ``Mortgage Debt Outstanding, All Holders,'' \emph{FRED, Federal Reserve Bank of St. Louis} (https://fred.stlouisfed.org/series/MDOAH, October 1949); U.S. Bureau of Economic Analysis, ``Gross Domestic Product,'' \emph{FRED, Federal Reserve Bank of St. Louis} (https://fred.stlouisfed.org/series/GDPA, January 1929).}
 On the other side of the largest pool of consumer debt in the world stood an even larger pool of capital.
 While the rampant foreign direct investment (FDI) of Japan and Germany are often noted in economic histories of the 1980s, potentially more significant were the destination of such capital flows.
 Herman Schwartz disaggregates the flows of FDI entering and exiting the United States to explain why, despite the large net debt position of America, the country was not hamstrung by austerity provisions but actually received net positive income.
@@ -647,7 +648,7 @@ In conjunction with liberalized finance, norms and regulations were repealed tha
 While these repeals have wrought huge blows to bargaining power, their perceived impact was aided---and perhaps eclipsed---by the spatial and international movements of manufacturing jobs away from the organized mid-Atlantic and Midwest, to the unorganized American South, and ultimately to the Global South.
 In any case, labor markets became increasingly volatile in the United States, necessitating some form of insurance.
 Matt Stoller argues that the exaltation of finance, subordination of labor, and mitigation of social insurance policies can be viewed macrosocially as a renegotiation of the American social contract inaugurated by the New Deal.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
-Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy\footnote{Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than \$2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars), Poterba et al., ``Stock Ownership Patterns, Stock Market Fluctuations, and Consumption,'' 321} discarded with the need for stable, steadily increasing salaries.
+Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy\footnote{Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than \$2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars), James M. Poterba et al., ``Stock Ownership Patterns, Stock Market Fluctuations, and Consumption,'' \emph{Brookings Papers on Economic Activity} 1995, no. 2 (1995): 321, \url{https://doi.org/10.2307/2534614}} discarded with the need for stable, steadily increasing salaries.
 These jobs, salaries, and benefits then acted as dragnets on profits, ultimately to be jettisoned at the behest of shareholders.
 In return, the asset-backed social contract offered cheap credit and the Minskyan promise of speculative returns to supplement, or supplant, income.
 
@@ -667,7 +668,7 @@ Despite the rich history of debt politics among American farmers, parties focuse
 \caption{Minsky cycle, theorized by Hyman Minsky.}\label{fig:minsky}
 \end{figure}
 To be sure, this vocabulary was a rational response to the rising home prices---so long as markets showed signs of growth, debt relief would be a minor issue, while tax reductions and access to credit extended individual budgets.
-But it was not uniquely rational: dependable debt relief could, if annualized, be indistinguishable from a similarly-sized mortgage tax credit; after all, with all the easy credit, there was certainly enough debt to go around---in addition to mortgage debt equaling 82\% of gross domestic product, mortgage debt service payments in 2007 increased 75\% over 1981 levels.\footnote{Board of Governors of the Federal Reserve System (US), ``MDSP.''}
+But it was not uniquely rational: dependable debt relief could, if annualized, be indistinguishable from a similarly-sized mortgage tax credit; after all, with all the easy credit, there was certainly enough debt to go around---in addition to mortgage debt equaling 82\% of gross domestic product, mortgage debt service payments in 2007 increased 75\% over 1981 levels.\footnote{Board of Governors of the Federal Reserve System (US), ``Mortgage Debt Service Payments as a Percent of Disposable Personal Income,'' \emph{FRED, Federal Reserve Bank of St. Louis} (https://fred.stlouisfed.org/series/MDSP, January 1980).}
 
 To summarize, the Neighborhood Stabilization Program sought to insulate homeowners from the market by using the buying power of the federal government to fix local home prices.
 This program, despite the initial opposition of the Bush administration, fit with George W. Bush's ``ownership society'', which emphasized private, family-owned property as both a social and economic doctrine.
@@ -689,7 +690,7 @@ By centering taxation---and succeeding politically in implementing favored tax c
 With taxation in the center, and Democrats playing a softer version of Republicans' tune, debt politics became illegible as politics, rendering any small resurgence into a social movement.
 
 Despite some notable tax activism (see: Boston Tea Party), Americans were generally quiet about taxes well into the 20th century.
-This phenomenon was no doubt largely because the federal income tax fell on no one until 1913, and less than six percent of the United States population until 1940.\footnote{``Historical Sources of Income and Tax Items.''}
+This phenomenon was no doubt largely because the federal income tax fell on no one until 1913, and less than six percent of the United States population until 1940.\footnote{``Historical Sources of Income and Tax Items,'' \emph{Tax Policy Center} (https://www.taxpolicycenter.org/statistics/historical-sources-income-and-tax-items, October 2019).}
 But after that point, the direction of tax expenditures---towards national defense in the beginning of the Cold War and for New Deal welfare programs such as the Social Security Act---were popular enough to discourage politicians from taking aim at tax cuts.\footnote{Campbell, ``How Americans Think About Taxes,'' 160.}
 This equilibrium continued until the 1960s.
 The fiscally-conservative Southern Democrats who controlled Congress' tax-writing committees\footnote{Campbell, 162.} were then voted out of office or changed party allegiances following federal enforcement of Civil Rights Movement legal judgments (such as \emph{Brown v. Board of Education}), the passage of the Civil Rights and Voting acts, and finally Nixon's Southern Strategy in the 1970s.
@@ -698,7 +699,7 @@ Then, in 1978, Californians voted in favor of Proposition 13, which limited the 
 Proposition 13 emerged out of a long-fought battle by tax activists against the rationalization and modernization of property tax assessment.\footnote{Martin, ``Welcome to the Tax Cutting Party.''}
 Tax assessors declined to re-appraise property values at common intervals, leading to ``fractional assessment'' that, in 1971, ``was ten times greater than the home mortgage interest deduction,''\footnote{Martin, 9.} mentioned above as a quintessentially bouregois example of the relatively-regressive American tax policies.
 The success of Proposition 13 realized the potential of anti-tax movements in post-war, post--New Deal American politics.
-Interviews of Congressional staffers at the time referred to a `Proposition 13 mentality'\footnote{Kingdon, \emph{Agendas, Alternatives, and Public Policies}, 97.} and President Jimmy Carter said the result ``sent a shock wave through the consciousness of every public servant.''\footnote{Jarvis and Pack, \emph{I'm Mad as Hell}, 3.}
+Interviews of Congressional staffers at the time referred to a `Proposition 13 mentality'\footnote{John W Kingdon, \emph{Agendas, Alternatives, and Public Policies} (New York: Longman, 1995), 97.} and President Jimmy Carter said the result ``sent a shock wave through the consciousness of every public servant.''\footnote{Howard Jarvis and Robert Pack, \emph{I'm Mad as Hell: The Exclusive Story of the Tax Revolt and Its Leader} (Times Books, 1979), 3.}
 Interestingly, Proposition 13 was not destined for the Republican platform from the outset.
 Isaac William Martin refutes this perception by noting the colorful array of leftists, hippies, anti-government organizers, and 9-to-5-ers that marched in the streets in support of the referendum, while President Carter's comment above highlights the immediacy with which Democrats understood Proposition 13's political effects.
 Rather, it was Reagan's signature income tax cuts that assimilated the anti-tax fervor to the Republican platform.
@@ -723,15 +724,15 @@ Yet, the focus of balancing the deficit rarely falls (and rarely fell) on this m
 The purported want to balance budgets---echoed by every recent president---does not imply a need to contain visible (or invisible) welfare programs and transfers to local governments.
 Rather, it is by political construction that programs like the Neighborhood Stabilization Program end up in budget debates.
 
-Reagan's 1980 presidential campaign picked up on the Proposition 13 rhetoric, mentioning taxes in more times than any previous candidate had in his nomination acceptance speech.\footnote{Campbell, ``What Americans Think of Taxes.''}
+Reagan's 1980 presidential campaign picked up on the Proposition 13 rhetoric, mentioning taxes in more times than any previous candidate had in his nomination acceptance speech.\footnote{Andrea Louise Campbell, ``What Americans Think of Taxes,'' in \emph{The New Fiscal Sociology}, ed. Isaac William Martin, Ajay K. Mehrotra, and Monica Prasad (Cambridge: Cambridge University Press, 2009), 48--67, \url{https://doi.org/10.1017/CBO9780511627071.004}.}
 He offered tax cuts within a larger theory, connecting the private economic conditions with larger social problems.
 These would respond, not to the popular New Deal provisions, but to the increases in expenditure caused by Lyndon Johnson's Great Society, not yet 20 years old.
 Taxes were certainly not the only issue on his platform, but they are that for which he is remembered: the Iranian hostage situation and antidote to Jimmy Carter's ``Crisis of Confidence'' sermon were contingencies where taxes were a certainty.
-His signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---was not as fortunate when enacted, but became a key feature of his popularity as the economy rebounded before the 1984 presidential election and has lingered in his public image.\footnote{Robert, ```Reaganomics'.''}
+His signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---was not as fortunate when enacted, but became a key feature of his popularity as the economy rebounded before the 1984 presidential election and has lingered in his public image.\footnote{Brett Robert, ```Reaganomics': The Economic Recovery Tax Act of 1981,'' \emph{The Reagan Library Education Blog} (https://reagan.blogs.archives.gov/2016/08/15/reaganomics-the-economic-recovery-tax-act-of-1981/, August 2016).}
 
 After the reforms of the first term, the campaign ramped up its tax rhetoric.
 Figure \ref{fig:taxation} shows the massive spike in tax mentions in nomination acceptance speeches (\ref{fig:acceptance}) and general election television ads (\ref{fig:ads}) aligning with the 1984 election.
-Bolstered by the knowledge that one could uncouple taxes from spending, Reagan was able to fend off Democratic challenger Walter Mondale's criticism that, ``Reagan will raise taxes and so will I. He won't tell you.''\footnote{Raines, ``Party Nominates Rep. Ferraro; Mondale, in Acceptance, Vows Fair Policies and Deficit Cut.''}
+Bolstered by the knowledge that one could uncouple taxes from spending, Reagan was able to fend off Democratic challenger Walter Mondale's criticism that, ``Reagan will raise taxes and so will I. He won't tell you.''\footnote{Howell Raines, ``Party Nominates Rep. Ferraro; Mondale, in Acceptance, Vows Fair Policies and Deficit Cut,'' \emph{The New York Times}, July 1984, 1.}
 Ronald Reagan would go on to win every state except Minnesota, Mondale's home.
 \begin{figure}
 
@@ -773,7 +774,7 @@ The Tea Party rejuvenated the connection between spending and taxes in response 
 The American Reinvestment and Recovery Act of 2009 (ARRA) injected \$787 billion into the United States economy via direct federal spending and indirect transfers to states and localities, {[}re-{]}authorizing a range of programs including the Neighborhood Stabilization Program.
 Until then, debate about the national debt had fallen slack as the War on Terror justified huge amounts of spending to Republicans (and Democrats, at first), while Democrats since the New Deal have accommodated larger deficits in return for social insurance programs.
 With a Democrat in the White House, anti-tax organizers pointed to the increase in welfare spending as an unconsented-to burden on the American taxpayer and steps down the road to federal bankruptcy.
-This movement came to knock on the doors of troubled American homeowners when Rick Santelli, a reporter for CNBC, launched into an tirade from the trading floor of the Chicago Mercantile Exchange at the thought of the American taxpayer ``subsidizing the losers' mortgages,'' calling for a ``Chicago Tea Party in July.''\footnote{``CNBC's Rick Santelli's Chicago Tea Party.''}
+This movement came to knock on the doors of troubled American homeowners when Rick Santelli, a reporter for CNBC, launched into an tirade from the trading floor of the Chicago Mercantile Exchange at the thought of the American taxpayer ``subsidizing the losers' mortgages,'' calling for a ``Chicago Tea Party in July.''\footnote{``CNBC's Rick Santelli's Chicago Tea Party'' (CNBC, February 2009).}
 
 The rant transfigured debt relief into a taxation issue, bundling it with ARRA's other increases, and making debt relief suddenly legible to the Republican party.
 In the following days, prominent conservative and anti-tax organizations, such as the Heritage Foundation and Americans for Tax Relief, convened conference calls to capitalize on the opportunity.
@@ -786,7 +787,7 @@ Figure \ref{fig:publicdebt} shows the total federal public debt as a percentage 
 With the exception of Bill Clinton's second term from 1997 to 2001, it grew at various rates since the Economic Recovery Tax Act of 1981.
 And until Obama's stimulus bill, debt politics entered the national conversation exclusively as \emph{the} national debt.
 The debate about the debt shaped the presidential race most dramatically: a nationally-televised town hall debate between Clinton, George H. W. Bush, and Ross Perot in 1992.
-An ill-informed question about the effects of the national debt on the candidates' lives is cited by campaign advisers and political analysts as an inflection point in the race when Clinton could connect and Bush could not.\footnote{``Clinton.''}
+An ill-informed question about the effects of the national debt on the candidates' lives is cited by campaign advisers and political analysts as an inflection point in the race when Clinton could connect and Bush could not.\footnote{``Clinton: The Comeback Kid,'' Documentary, July 2017.}
 This example serves only to highlight the importance of the question in 1992, and more broadly in the late 1990s and early 2000s, when concerns about America's economic power were heightened by the growth of Japanese and Chinese foreign direct investment.
 The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan spending cuts were able to pass both houses of Congress.
 \begin{figure}
@@ -799,11 +800,11 @@ The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan
 \end{figure}
 Outside the Clinton presidency, however, debt became the norm.
 Despite H. W. Bush's promise of ``No new taxes,'' Democrats passed the Omnibus Budget Reconciliation Act of 1990, which raised taxes and introduced restrictions on expenditures in an effort to combat deficit spending, but was unsuccessful in slowing the growth of debt relative to gross domestic product.
-A generation later, George W. Bush would trigger a very moderate rise in debt-to-GDP, but a very large rise in real (2017) dollars, by increasing military spending from \$433 billion in 2001 to \$707 billion in 2008\footnote{``Military Expenditure by Country, in Constant (2017) US\$ M., 1988-2018.''} and slashing taxes.
+A generation later, George W. Bush would trigger a very moderate rise in debt-to-GDP, but a very large rise in real (2017) dollars, by increasing military spending from \$433 billion in 2001 to \$707 billion in 2008\footnote{``Military Expenditure by Country, in Constant (2017) US\$ M., 1988-2018'' (Stockholm International Peace Research Institute, 2019).} and slashing taxes.
 Finally, the combination of Bush-era bailouts and Obama-era measures to combat the Global Financial Crisis and Great Recession account for the shark fin--looking feature towards the end of the 2000s.
 
 While public opinion polling tracks the spikes and dips of this graph reasonably well, it is confounded by the War on Terror, an expenditure (initially) justifiable by members on both sides of the aisle.
-In 2002, their first poll since the attacks of September 11, 2001, Pew Research Center tracked a plunge in the percentage of respondents who say that ``reducing the budget deficit is a top priority.''\footnote{``Budget Deficit Slips as Public Priority.''}
+In 2002, their first poll since the attacks of September 11, 2001, Pew Research Center tracked a plunge in the percentage of respondents who say that ``reducing the budget deficit is a top priority.''\footnote{``Budget Deficit Slips as Public Priority'' (Washington, DC: Pew Research Center, January 2016).}
 Figure \ref{fig:deficit} shows this trend by political party affiliation.
 Republican-affiliated respondents in 2002, who by the turn of the millennium differ little in number from Democrats and Independents, distance themselves from both affiliations, registering the smallest number of respondents who prioritize the budget deficit between 1994 and 2016.
 Priorities of the two parties reconvene in 2009, when the economic woes of Bush are inherited by Obama (Pew conducted the poll in mid-January), but diverge once again in 2011, as the new Congress is sworn in following 2010's midterm elections.
@@ -820,7 +821,7 @@ For Republican critics, the target of choice against Democratic presidents is si
 Where Clinton neutralized this criticism by signing into law welfare reform, Obama touted programs during the Recession.
 Organizations like the Heritage Foundation latched on to this narrative in a 2010 report entitled ``Confronting the Unsustainable Growth of Welfare Entitlements'':
 \begin{quote}
-According to Obama's published budget plans, means-tested welfare spending over the next decade will total \$10.3 trillion, not including spending for Obamacare. Most of this welfare spendathon will be financed by borrowing from future generations. Not surprisingly, the federal debt will grow to equal nearly the entire national economy by the end of the decade. ¶ This endless spending growth is unsustainable and will drive the nation into bankruptcy.\footnote{Bradley and Rector, ``Confronting the Unsustainable Growth of Welfare Entitlements.''}
+According to Obama's published budget plans, means-tested welfare spending over the next decade will total \$10.3 trillion, not including spending for Obamacare. Most of this welfare spendathon will be financed by borrowing from future generations. Not surprisingly, the federal debt will grow to equal nearly the entire national economy by the end of the decade. ¶ This endless spending growth is unsustainable and will drive the nation into bankruptcy.\footnote{Katharine Bradley and Robert Rector, ``Confronting the Unsustainable Growth of Welfare Entitlements: Principles of Reform and the Next Steps'' (Washington, DC: The Heritage Foundation, June 2010).}
 \end{quote}
 This passage, like the report as a whole, argues that ``means-tested welfare''\footnote{`Means-tested' describes a provision of a public good and/or subsidy that requires of its recipients certain behavior (such as a work requirement) or a certain status, namely that wealth or income be \emph{below} a particular level. It does not, despite first impressions, provide benefits only to people of means, as do invisible welfare programs such as the mortgage interest deduction.} would be responsible for the impoverishment of the US.
 It draws a connection between the `welfare spendathon' and national debt, though it does not explicitly say---nor give evidence for the argument---that means-tested welfare will cause the American economy to equal the US gross domestic product.
@@ -835,10 +836,10 @@ Santelli latches on to personal responsibility and strong property rights agains
 His speech leverages Republican enemies (Communist-controlled Cuba, irresponsible debtors, economic inefficiencies) and friends (the individual, the entrepreneur, personal wealth) to slot this unfamiliar mortgage default problem into a more familiar narrative about personal responsibility and taxpayer burdens.
 
 This moment coincided with burgeoning anti-tax organizations around the country.
-Americans for Prosperity, founded and backed by brothers David and Charles Koch, had advocated around the idea of a formal, political Tea Party since 2002.\footnote{Zuesse, ``Final Proof the Tea Party Was Founded as A Bogus AstroTurf Movement.''}
-The organization built out chapters around the country, with state chapters growing in power and turning membership rolls into legislative victories.\footnote{Skocpol, Hertel-Fernandez, and Tervo, ``How the Koch Brothers Built the Most Powerful Rightwing Group You've Never Heard of.''}
+Americans for Prosperity, founded and backed by brothers David and Charles Koch, had advocated around the idea of a formal, political Tea Party since 2002.\footnote{Eric Zuesse, ``Final Proof the Tea Party Was Founded as A Bogus AstroTurf Movement,'' \emph{HuffPost} (https://www.huffpost.com/entry/final-proof-the-tea-party\_b\_4136722, October 2013).}
+The organization built out chapters around the country, with state chapters growing in power and turning membership rolls into legislative victories.\footnote{Theda Skocpol, Alexandra Hertel-Fernandez, and Caroline Tervo, ``How the Koch Brothers Built the Most Powerful Rightwing Group You've Never Heard of,'' \emph{The Guardian}, September 2018.}
 After the Santelli affair, rallies of up to a few thousand protesters gathered in cities around the United States, and in September 2009, tens of thousands marched on Washington.
-The movement had outsize influence due to its insurgency, receiving a jolt of energy when Dave Brat unseated House Majority Leader Eric Cantor, a first in American primary politics.\footnote{Linton, ``House Majority Leader Eric Cantor Defeated by Tea Party Challenger David Brat in Virginia GOP Primary.''}
+The movement had outsize influence due to its insurgency, receiving a jolt of energy when Dave Brat unseated House Majority Leader Eric Cantor, a first in American primary politics.\footnote{Eric Linton, ``House Majority Leader Eric Cantor Defeated by Tea Party Challenger David Brat in Virginia GOP Primary,'' \emph{International Business Times} (https://www.ibtimes.com/house-majority-leader-eric-cantor-defeated-tea-party-challenger-david-brat-virginia-gop-1597736, June 2014).}
 
 \hypertarget{conclusion}{%
 \section{Conclusion}\label{conclusion}}
@@ -856,9 +857,9 @@ Where it deals directly with this connection between housing prices and right-wi
 I counter its ahistoricism with this chapter, which also serves as sort of a macrotheory of the response to this crisis: where the next chapter will look at individuals, I look here at the groups which shape the individuals.
 
 \hypertarget{methods}{%
-\chapter{Asset Prices, Individual Preferences, and Foreclosure Relief}\label{methods}}
+\chapter{Asset Prices, Individual Preferences, and Foreclosures}\label{methods}}
 
-\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{A Theory of the Consumption Function \\ Milton Friedman}
+\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{\textit{A Theory of the Consumption Function \\ Milton Friedman}}
 
 How do asset prices affect voter decisions \emph{in extremis}?
 Political economists have investigated the impacts of wealth on welfare preferences and labor market risk on welfare preferences, but it has not investigated how such policy preferences are represented in political decision-making, nor how such preferences change along the wealth distribution.
@@ -880,14 +881,14 @@ In an extreme example, a toddler able to form ``rational'' (some fuzziness on th
 This framework sees wealth, and therefore housing, as potentially permanent income.
 
 But housing can also be used as a financial ``buffer stock'' against emergencies.
-This refinement is motivated by historical facts about American saving habits.\footnote{Carroll, ``Buffer-Stock Saving and the Life Cycle/Permanent Income Hypothesis,'' 1.}
+This refinement is motivated by historical facts about American saving habits.\footnote{Christopher D. Carroll, ``Buffer-Stock Saving and the Life Cycle/Permanent Income Hypothesis,'' \emph{The Quarterly Journal of Economics} 112, no. 1 (1997): 1.}
 In 2007, about as many households saved for retirement (33.9\%) as for unexpected expenses (32.0\%).
-In addition, only 56\% of households saved in 2007, with dramatically lower rates at lower levels of the income distribution.\footnote{Bucks et al., ``Changes in U.S. Family Finances from 2004 to 2007,'' 9--10.}
+In addition, only 56\% of households saved in 2007, with dramatically lower rates at lower levels of the income distribution.\footnote{Brian K Bucks et al., ``Changes in U.S. Family Finances from 2004 to 2007: Evidence Form the Survey of Consumer Finances,'' \emph{Federal Reserve Bulletin}, February 2009, 9--10.}
 Regardless of whatever official statistics can show the trends in labor market risk to be, it is the perception of homeowners that such risks necessitate savings.
 
 I argue that understanding the home doubly as an asset shapes homeowners' political decisions.
 In light of their perceptions regarding risk, how one plans to pay for emergencies feeds into that person's politics.
-This claim is supported in no small part by the fact that homeowners are represented worldwide by conservative political parties.\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014, 387.}
+This claim is supported in no small part by the fact that homeowners are represented worldwide by conservative political parties.\footnote{Ben Ansell, ``The Political Economy of Ownership: Housing Markets and the Welfare State,'' \emph{American Political Science Review} 108, no. 02 (May 2014): 387, \url{https://doi.org/10.1017/S0003055414000045}.}
 Of course, it could simply be the case that high-income people, those who are more likely to own a home, tend to be more conservative.
 Or, perhaps those who own homes value it as ``a refuge from urban corruption,''\footnote{Stern, ``The Inviolate Home.''} and the idea of leveraging one's home instrumentally for financial gain is vulgar to such a person's traditional social values.
 But these alternative narratives cannot embrace the facts of American household finances.
@@ -908,19 +909,19 @@ For at least the XX\% of Americans who use home equity to finance personal consu
 While these effects are not unique to housing, they are most significant in housing.
 Mortgage equity exhibits greater wealth effects than investments in stocks: research by Case, Shiller, and Quigley (2005) found statistically significant increases in the consumption patterns of housing welath over stock market wealth.
 Specifically, every new dollar of housing income generated 6 cents of new consumption over the same dollar in stock market income.
-Economists disagree as to the cause and level of this wealth effect, but its primacy over other financial holdings is broadly agreed upon,\footnote{Lasky and Gisselquist, ``Housing Wealth and Consumer Spending.''} and fits into the view that America has transitioned into a consumption- and import-oriented economy.
-Compounding the significance of housing wealth was the sheer size and volatility of housing: Ansell notes that, ``between 1985 and 2006, real house price inflation was three times greater than between 1970 and 1985, with a standard deviation almost twice as large.''\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014, 383.}
+Economists disagree as to the cause and level of this wealth effect, but its primacy over other financial holdings is broadly agreed upon,\footnote{Mark Lasky and Andrew Gisselquist, ``Housing Wealth and Consumer Spending'' (Congressional Budget Office, January 2007).} and fits into the view that America has transitioned into a consumption- and import-oriented economy.
+Compounding the significance of housing wealth was the sheer size and volatility of housing: Ansell notes that, ``between 1985 and 2006, real house price inflation was three times greater than between 1970 and 1985, with a standard deviation almost twice as large.''\footnote{Ansell, ``The Political Economy of Ownership,'' 383.}
 
 Subsidizing housing and home mortgages privatizes government spending otherwise recognizable as welfare.
 In doing so, the policies and implementations change how citizens view the state's role in their personal finances.
-More specifically, individuals' preferences for welfare depend ``on how existing policies shape their experience of individual risk.''\footnote{Gingrich and Ansell, ``Preferences in Context.''}
+More specifically, individuals' preferences for welfare depend ``on how existing policies shape their experience of individual risk.''\footnote{Jane Gingrich and Ben Ansell, ``Preferences in Context: Micro Preferences, Macro Contexts, and the Demand for Social Policy,'' \emph{Comparative Political Studies} 45, no. 12 (December 2012): 1624--54, \url{https://doi.org/10.1177/0010414012463904}.}
 A stronger claim would be that policies \emph{train} beneficiaries, a view held by Isaac William Martin.
 He uses this mechanism to explain the great political diversity of organizers for Proposition 13 in California: homeowners protect the welfare afforded to them.\footnote{Martin, ``Welcome to the Tax Cutting Party.''}
 At the local level, homeowners have long lobbied as a class, enclosing their neighborhoods from Black applicants, breaking fervent upzoning factions, and rejecting otherwise welcome industry.
 Thus, it should come as no surprise that homeowners react to direct and indirect subsidies in similar ways as they react to market-caused fluctuations in their home values.
 
 By privatizing government spending, the subsidies offered by the Neighborhood Stabilization Program individualize housing gains, differentiating this form of ``invisible welfare'' from the bureaucratic programs debated by the Republican and Democratic parties.
-Visible welfare programs transfer individual risk to social risk,\footnote{Gingrich and Ansell, ``Preferences in Context.''} and make more equitable\footnote{Prasad, \emph{The Land of Too Much}, 229.} the public goods of a society (in the Rawlsian sense).
+Visible welfare programs transfer individual risk to social risk,\footnote{Gingrich and Ansell, ``Preferences in Context.''} and make more equitable\footnote{Monica Prasad, \emph{The Land of Too Much: American Abundance and the Paradox of Poverty} (Cambridge, Mass.: Harvard University Press, 2012), 229.} the public goods of a society (in the Rawlsian sense).
 These two features distinguish the welfare that is argued about on television from the welfare that is argued about in journals.
 The political scientist's point is that they are substitutable: preference for this private form of insurance reduces the demand for social insurance programs.
 
@@ -932,14 +933,14 @@ Tea Party candidates espoused this logic, clearing a spot into which voter prefe
 However, it is important to understand that, just like the contingencies of party platforms, there are contingencies in how individuals process economic data and political propositions.
 Larry Bartels (2002) accepts this basic assumption while rejecting the idea that ideology or partisanship are static filters through which people see selectively.
 Rather, he argues, partisanship is a dynamic negotiation between partisanship as exogenous or endogenous variable.
-His Bayesian learning model presents a different model: people update beliefs as new information becomes available, but people also selectively intake information according to beliefs.\footnote{Bartels, ``Beyond the Running Tally.''}
+His Bayesian learning model presents a different model: people update beliefs as new information becomes available, but people also selectively intake information according to beliefs.\footnote{Larry M. Bartels, ``Beyond the Running Tally: Partisan Bias in Political Perceptions,'' \emph{Political Behavior} 24, no. 2 (2002): 117--50.}
 Disentangling the two sub-routines is difficult, if not impossible, but the rule of thumb is that long-held beliefs require {[}relatively{]} huge inconsistencies to catalyze change.
 
 While the mortgage crisis, financial meltdown, and ensuing Great Recession delivered onto unsuspecting citizens heaps of information---much of it likely inconsistent with individual beliefs about meritocracy, personal financial stability, and government oversight---survey data suggests that the government response delivered similarly-sized heaps of information.
-Pew Research's American Values polling series has tracked opposition and support of various political positions since the late 1980s.\footnote{Kohut et al., ``Partisan Polarization Surges in Bush, Obama Years.''}
+Pew Research's American Values polling series has tracked opposition and support of various political positions since the late 1980s.\footnote{Andrew Kohut et al., ``Partisan Polarization Surges in Bush, Obama Years'' (Washington, DC: Pew Research Center, June 2012).}
 This longitudinal sureying shows sharp divergence between the economic beliefs of Democrats and Republicans \emph{as well as} between independents who lean either way.
 For partisan divides, Figure \ref{fig:partisan} shows how Republican beliefs regarding social insurance regress to a conservative ideal more aggressively than both Democrats and independents.
-I split hairs over this behavior with Ansell (2014), who maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014, 387.}
+I split hairs over this behavior with Ansell (2014), who maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.\footnote{Ansell, ``The Political Economy of Ownership,'' 387.}
 This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle section) falls relative to Democratic support after 2007, independent support for maintaining (left section) or expanding (right section) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
 When these are combined with the polling on ideological slant, the Pew research offers a coherent picture of independent voting behavior between 2007 and 2012.
 
@@ -962,12 +963,12 @@ If each foreclosure costs, on average, \$159,000 in decreased property values,\f
 Conversely, if a vacant property is fixed and resold, surrounding home values would only increase by a fraction.
 Additionally, the hefty oversight on the NSP targeted profiteering by local actors, preventing any get-rich-quick schemes.
 The Neighborhood Stabilization Program receives high marks methodologically from its under-the-radar nature: if voters knew, and could filter, their wealth gains through an ideological sieve, it could skew results.
-Rather, its small effects and lack of advertising\footnote{Gass, ``Guide to Marketing and Selling NSP Homes,'' 5.} (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
+Rather, its small effects and lack of advertising\footnote{Anne Gass, ``Guide to Marketing and Selling NSP Homes'' (Department of Housing and Urban Development, July 2010), 5.} (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
 
 While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value equal amounts of money lost and gained.
 In behavioral economics and cognitive psychology, the endowment effect describes the premium that individuals place on ownership.
 Asked to trade one object given to them for another of equivalent exchange value, people demonstrate a marked preference for the object assigned to them.
-The endowment effect is tied to loss aversion, which is that people experience a dollar lost much more acutely than a dollar gained.\footnote{Kahneman, Knetsch, and Thaler, ``Anomalies.''}
+The endowment effect is tied to loss aversion, which is that people experience a dollar lost much more acutely than a dollar gained.\footnote{Daniel Kahneman, Jack L. Knetsch, and Richard H. Thaler, ``Anomalies: The Endowment Effect, Loss Aversion, and Status Quo Bias,'' \emph{Journal of Economic Perspectives} 5, no. 1 (March 1991): 193--206, \url{https://doi.org/10.1257/jep.5.1.193}.}
 In the permanent income hypothesis, this behavior is not well integrated.
 Even with ``buffer shocks'' added in, the hypothesis asserts that wealth shocks will affect spending linearly.
 
@@ -981,10 +982,10 @@ In this second case, consumption is a function not only of price changes, but al
 
 Angrisani et al.~(2019) demonstrated that the marginal propensity to consume changed during the recession (2008--2010) from its run-up (2005--2008).
 That these dates do not align perfectly with those of the foreclosure crisis (2007--2012) is not significant; these dates contain the three phases of the Neighborhood Stabilization Program as well as the 2010 midterms, and overlap significantly with the foreclosure crisis.
-Angrisani et al.~used an instrumental variables approach to estimate the MPC of non-recessionary periods to be statistically insignificant, while that of the recession to be 0.062.\footnote{Angrisani, Hurd, and Rohwedder, ``The Effect of Housing Wealth Losses on Spending in the Great Recession,'' 986.}
+Angrisani et al.~used an instrumental variables approach to estimate the MPC of non-recessionary periods to be statistically insignificant, while that of the recession to be 0.062.\footnote{Marco Angrisani, Michael Hurd, and Susann Rohwedder, ``The Effect of Housing Wealth Losses on Spending in the Great Recession,'' \emph{Economic Inquiry} 57, no. 2 (April 2019): 986, \url{https://doi.org/10.1111/ecin.12753}.}
 His finding that non-recessionary periods exhibit no change in marginal propensity to consume conforms to the rational expectations model of microeconomic behavior---given an \emph{expected} change in income, individuals will not alter consumption.
 Rather, it is only during an unexepcted change in expectations (such as a recession) that consumption changes.
-This understanding integrates Angrisani's research with most of the work on housing wealth effects pre- and post-crisis.\footnote{Greenspan and Kennedy, ``Sources and Uses of Equity Extracted from Homes''; Lasky and Gisselquist, ``Housing Wealth and Consumer Spending''; Mian, Sufi, and Trebbi, ``The Political Economy of the US Mortgage Default Crisis''; Schwartz, \emph{Subprime Nation}.}
+This understanding integrates Angrisani's research with most of the work on housing wealth effects pre- and post-crisis.\footnote{Alan Greenspan and James Kennedy, ``Sources and Uses of Equity Extracted from Homes,'' Working Paper (Washington, DC: Federal Reserve Board, March 2007); Lasky and Gisselquist, ``Housing Wealth and Consumer Spending''; Mian, Sufi, and Trebbi, ``The Political Economy of the US Mortgage Default Crisis''; Schwartz, \emph{Subprime Nation}.}
 Further, Angrisani et al.~is the only approach I have found that disaggregates housing wealth MPC before and after the crisis in the familiar permanent income hypothesis framework.
 
 And, its findings are buttressed by two other pieces of literature.
@@ -993,12 +994,12 @@ Angrisani et al.~acknowledges this by saying ``If, as documented in previous wor
 The second piece is the work done by Berger et al.
 This paper understands data that points to large consumption effects as running contrary to the permanent income hypothesis, which predicts that wealth shocks will be amortized over an individuals' lifetime.
 They then build a new model that attempts to model homeowener expectations based on realistic features of the housng market such as debt levels, collateralization, and variable home price expectations.
-These features result in larger marginal propensities to consume, and larger effects of lost wealth than gained wealth.\footnote{Berger et al., ``House Prices and Consumer Spending.''}
+These features result in larger marginal propensities to consume, and larger effects of lost wealth than gained wealth.\footnote{David Berger et al., ``House Prices and Consumer Spending,'' Working Paper, November 2016.}
 
 The upshot this literature yields for my analysis is that neighborhoods not targeted by the Neighborhood Stabilization Program should see consumption decrease greater from the bust than consumption increased from the boom.
 This behavior should heighten labor market risk, meaning that, in untargeted areas, lower Republican support should be present.
 An additional---but less controversial---tension to consider is the relationship between change of wealth and total position of wealth.
-In general, the marginal propensity of wealth decreases as individuals get wealthier.\footnote{Arrondel, Lamarche, and Savignac, ``Wealth Effects on Consumption Across the Wealth Distribution.''}
+In general, the marginal propensity of wealth decreases as individuals get wealthier.\footnote{Luc Arrondel, Pierre Lamarche, and Frédérique Savignac, ``Wealth Effects on Consumption Across the Wealth Distribution: Empirical Evidence,'' Working Paper (Frankfurt am Main: European Central Bank, June 2015).}
 While there is some squirreliness regarding housing MPC at the very high end of the wealth distribution (second and third homes may truly be just assets, so the purpose would be extra consumption), given the size and location of such high wealth individuals, it is unlikely the Neighborhood Stabilization Program affected those individuals' houses.
 This result implies that those tracts targeted by the NSP should be especially sensitive to its marginal price increases and therefore exhibit higher Republican voting returns.
 
@@ -1025,35 +1026,35 @@ Absent individual polling, the demographic features provided by the decennial ce
 \subsection{Visible Identity}\label{visible-identity}}
 
 Visible identities are those which are involuntarily imposed.
-They press, as Kwame Anthony Appiah, notes, as ``walls that hedge us in.''\footnote{Appiah, \emph{The Lies That Bind}, 189.}
+They press, as Kwame Anthony Appiah, notes, as ``walls that hedge us in.''\footnote{Kwame Anthony Appiah, \emph{The Lies That Bind: Rethinking Identity}, eBook (New York: Liveright Publishing Corporation, 2018), 189.}
 Since many of these identities have become legally protected categories in the United States, their records are kept precisely and publicly.
 The upshot of this feature is that records are easily available, but this availability may lead to an overestimation of their effects on voting, as researchers look where the light shines instead of where their object of interest may be found.
 On the other hand, while partisan voting support may have counter-intuitive logic that necessitates complex research methodologies, rational explanations for identity-based support are often at hand in visible identities.
 
 For instance, Black voters long supported the Republican Party as the party of Abraham Lincoln, Congress' first Black legislators, and as proponents of programs benefitting African Americans.
 This support changed first with the New Deal, with Franklin Delano Roosevelt won 71\% of the votes cast by African Americans in 1936, though party identification by African Americans reamined even between the two parties over the next ten years.
-During the Civil Rights Movement this support changed again, when votes for Lyndon B. Johnson's first elected term commanded 94\% of the Black vote.\footnote{Jackson, ``Blacks and the Democratic Party.''}
+During the Civil Rights Movement this support changed again, when votes for Lyndon B. Johnson's first elected term commanded 94\% of the Black vote.\footnote{Brooks Jackson, ``Blacks and the Democratic Party,'' \emph{FactCheck.org}, April 2008.}
 Some of the United States' pre-eminent segregationists were staunch Democrats, but federal action by Lyndon B. Johnson and subsequent campaigning by Richard Nixon effectively fractured Democratic support in the South.
 In the contemporary Democratic Party, redistributionist welfare programs aligned with integration to remedy both the economic and social disparities between white and Black Americans, turning the Democratic Party towards the majority of African Americans.
 
 Similar stories cannot be told for American Indians, Asian Americans, or ethnically Hispanic Americans, but each has their \emph{own} story with the Republican or Democratic parties.
 While American Indians have comprised a small percentage of the United States voting population, a fact owing to their legal disenfranchisement and decimation by civilian and military forces, their vote swings heavily Democratic.
 This behavior is not due to historical reasons---no party has sustained Indian issues at the national scale---but to reactions for the supply of social welfare programs.
-On average, 48\% more reservation residents receive cash or food stamps from the federal government than do households in the general population.\footnote{``Public Assistance Income or Food Stamps/SNAP in the Past 12 Months for Households.''}
+On average, 48\% more reservation residents receive cash or food stamps from the federal government than do households in the general population.\footnote{``Public Assistance Income or Food Stamps/SNAP in the Past 12 Months for Households'' (US Census Bureau, 2010).}
 While their turnout rates and absolute population size is low, including a variable for their population could explain the voting behavior of Census Tracts where reservations are located.
 I will employ a binary cut-off metric: should a Census Tract contain a large population of Native Americans (25\%, for instance, compared to the national average of 0.9\%), then that tract would be labeled as such.
 
 The stories of Asian Americans and ethnically Hispanic Americans are perhaps the most fractured among racial political narratives.
 The ``Hispanic vote'' is often pointed to as a core aspirational piece of the Democratic coalition, though Democratic candidates maintain a checkered record in attracting and serving ethnically Hispanic voters.
 Nonetheless, there are compelling reasons to include a measure of Hispanic voters.
-Until a certain point, an increased Hispanic population raises fears of white job loss, increasing conservative---and especially Tea Party---voting, though no consensus regarding this ``racial threat'' hypothesis has emerged.\footnote{Campbell, Wong, and Citrin, ```Racial Threat', Partisan Climate, and Direct Democracy.''}
+Until a certain point, an increased Hispanic population raises fears of white job loss, increasing conservative---and especially Tea Party---voting, though no consensus regarding this ``racial threat'' hypothesis has emerged.\footnote{Andrea Louise Campbell, Cara Wong, and Jack Citrin, ```Racial Threat', Partisan Climate, and Direct Democracy: Contextual Effects in Three California Initiatives,'' \emph{Political Behavior} 28, no. 2 (June 2006): 129, \url{https://doi.org/10.1007/s11109-006-9005-6}.}
 As white voters compose between 60\% and 70\% of the national electorate, fears inflected through them lead to significant effects.
 Interestingly, Republicans used housing policy as a way to attract Hispanic voters.
-With more than 50\% of Hispanic people living in America identifying themselves as Catholic,\footnote{``The Shifting Religious Identity of Latinos in the United States.''} adding the promise of a home to conservative social values would further cement the 40\% of the ``Hispanic vote'' achieved by Republicans in the 2004 presidential election.\footnote{Abrajano, Michael Alvarez, and Nagler, ``The Hispanic Vote in the 2004 Presidential Election.''}
+With more than 50\% of Hispanic people living in America identifying themselves as Catholic,\footnote{``The Shifting Religious Identity of Latinos in the United States,'' \emph{Pew Research Center's Religion \& Public Life Project}, May 2014.} adding the promise of a home to conservative social values would further cement the 40\% of the ``Hispanic vote'' achieved by Republicans in the 2004 presidential election.\footnote{Marisa A. Abrajano, R. Michael Alvarez, and Jonathan Nagler, ``The Hispanic Vote in the 2004 Presidential Election: Insecurity and Moral Concerns,'' \emph{The Journal of Politics} 70, no. 2 (April 2008): 368--82, \url{https://doi.org/10.1017/S0022381608080365}.}
 While the motives for voting Republican by Hispanics are complex, the reasons do not cancel out one another, so I will include their population percentages as a predictor.
 
 On the other hand, Asian Americans have pushed back against the ``Model Minority'' myth to contextualize the fact that the median Asian American income earner---come their families (or they) from India, China, Vietnam, Japan, Korea, Iran, Uzbekistan, or the Philippines---made in 2016 \$3,330 more than the average white household.
-But inequality among Asian Americans is worse than for any other group; Pew notes that income earners in the 90th percentile made nearly 11 times as much as those in the 10th percentile.\footnote{Kochhar and Cilluffo, ``Income Inequality in the U.S. Is Rising Most Rapidly Among Asians.''}
+But inequality among Asian Americans is worse than for any other group; Pew notes that income earners in the 90th percentile made nearly 11 times as much as those in the 10th percentile.\footnote{Rakesh Kochhar and Anthony Cilluffo, ``Income Inequality in the U.S. Is Rising Most Rapidly Among Asians,'' \emph{Pew Research Center's Social \& Demographic Trends Project}, July 2018.}
 Across historical, religious, and cultural factors, it is arguable that Asian Americans are the most heterogeneous group of immigrants, which makes their inclusion in Ben Ansell's 2014 paper puzzling.
 Given the contemporaneous heterogeneity of voting patterns by Asian Americans, and the shifting patterns of ethnicities throughout time, I find little reason for their inclusion in this model.
 
@@ -1099,7 +1100,7 @@ Additionally, I included median household income to control for variations in cl
 Three primary factors flavor voting at the cultural level: religion, urbanicity, and highest level of education attained.
 Within these factors, which are so grouped because they are in some sense voluntarily elected by the person to which the characteristics are attached, specific levels are significantly associated with Republican voting, while other levels are a mixed bag.
 Religion exemplifies this relationship.
-Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion,\footnote{``A Deep Dive into Party Affiliation.''} while prior literature has identified household factors---namely size, and age of parents---that push Mormon applicants to become early, unqualified entrants to the mortgage market, and therefore more susceptible to application rejections and subprime lending.\footnote{Lown, ``Educating and Empowering Consumers to Avoid Bankruptcy.''}
+Republican voting by evangelical Protestants and members of the Church of Latter-Day Saints (LDS, or the Mormon Church) is much more predictable than voting by members adherent to any religion,\footnote{``A Deep Dive into Party Affiliation,'' \emph{Pew Research Center's U.S. Politics \& Policy Project}, April 2015.} while prior literature has identified household factors---namely size, and age of parents---that push Mormon applicants to become early, unqualified entrants to the mortgage market, and therefore more susceptible to application rejections and subprime lending.\footnote{Jean M. Lown, ``Educating and Empowering Consumers to Avoid Bankruptcy,'' \emph{International Journal of Consumer Studies} 29, no. 5 (2005): 401--8, \url{https://doi.org/10.1111/j.1470-6431.2005.00468.x}.}
 While that analysis was conducted exclusively on LDS adherents, the logic extends as well to evangelical adherents, prompting the inclusion of both.
 The U.S. Religion Census reports county-level data on adherents to a huge number of denominations, and is the only sub-national source for all fifty states.
 Conducted contemporaneously with the decennial census (though not connected, organizationally), I will join county-level statistics regarding the level of evangelical Protestants and members of LDS to the Census Tract level.
@@ -1112,7 +1113,7 @@ These factors do not imply that those areas are in stasis, but rather that the r
 These beliefs, in long historical sweep, are generally better represented by conservative legislators currently residing in the Republican party.
 
 Lastly, the highest level of education attained is a huge predictor of one's party affiliation, but only for white voters.
-A 15-point gap persists between white voters with and without a college degree: 45\% percent of college-educated white voters cast their ballots for Republicans, while more than 60\% of those with a college degree did the same.\footnote{Harris, ``America Is Divided by Education.''}
+A 15-point gap persists between white voters with and without a college degree: 45\% percent of college-educated white voters cast their ballots for Republicans, while more than 60\% of those with a college degree did the same.\footnote{Adam Harris, ``America Is Divided by Education,'' \emph{The Atlantic} (https://www.theatlantic.com/education/archive/2018/11/education-gap-explains-american-politics/575113/, November 2018).}
 This trait has worsened since George H. W. Bush's presidency, before which educated and uneducated voters were more or less aligned.
 I weight the importance of this variable by its frequency: a tract with a single white voter who is not college educated is far less significant than one with 2,000 white voters, 45\% of whom are not college educated.
 
@@ -1129,7 +1130,7 @@ rep_i = \beta_0 + \beta_1NSP_i + \beta_2{PriceChg_i \times LaborRisk_i \times Fo
 \hypertarget{outcome}{%
 \chapter{The Neighborhood Stabilization Program and Voting}\label{outcome}}
 
-\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt}
+\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{\textit{William Levitt}}
 
 Complete data were available for 27,098 census tracts, covering more than half of the inhabited census tracts of 24 states, and more than half of the tracts where a self-described member of the Tea Party sought election.
 Most of the census tracts missing belonged to states where connecting voting returns with census geography was infeasible.
@@ -1149,7 +1150,7 @@ However, since the Bureau undertook to cover the \emph{entire} United States wit
 Blocks are then aggregated into census tracts containing between 1,200 and 8,000 people.
 Tracts are the smallest unit for which American Community Survey data---a continuously-run telephone survey that collects additional demographic data such as median household income and educational attainment---are published.
 Census tracts sit inside counties and then inside states; unlike tracts and blocks, county boundaries are also legal jurisdictions and therefore rarely change.
-See Figure \ref{fig:geography} for the Census Bureau's graphical representation.\footnote{Lemery, ``LibGuides.''}
+See Figure \ref{fig:geography} for the Census Bureau's graphical representation.\footnote{Christopher Lemery, ``United States Census Information @ Pitt: Understanding Census Geography,'' \emph{LibGuides at University of Pittsburgh} (https://pitt.libguides.com/uscensus/understandinggeography, March 2020).}
 \begin{figure}
 
 {\centering \subfloat[To-scale breakdown of nested census geography, with street names.\label{fig:geography1}]{\includegraphics[width=0.5\linewidth]{figure/census_small_area_geography2} }\subfloat[Organizational hierarchy of different geographies.\label{fig:geography2}]{\includegraphics[width=0.45\linewidth]{figure/geo_hierarchy} }
@@ -1188,14 +1189,14 @@ Since my analysis deals with already-made and locally-created voting precincts, 
 I built my data almost exclusively from official statistics and estimates.
 Given that most of my sources would eventually lead back to the Census Bureau, which covers the entire United States, I knew that the factors limiting my coverage would lie outside the Census Bureau.
 Collecting and translating precinct-level voting data to census tracts proved to be the most limited and time-consuming aspect of this process.
-I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA).\footnote{Ansolabehere, Palmer, and Lee, ``Precinct-Level Election Data, 2002-2012.''}
+I began by downloading precinct-level voting returns from the Harvard Election Data Archive (HEDA).\footnote{Stephen Ansolabehere, Maxwell Palmer, and Amanda Lee, ``Precinct-Level Election Data, 2002-2012'' (Harvard Dataverse, 2014).}
 Started in 2008 by political scientists, this database compiled voting returns from most states and reported results for state and national races in a standardized format.
 
 These figures were then wedded to files specifying the geographic boundaries of each voting precinct within a state.
 At this stage saw the complete loss of several states' data as some systems used to identify precincts at the state-level were inconsistent with Census Bureau naming conventions.
 For each state, I looked for an isomorphic mapping from state-level naming to the standardized naming of the Census Bureau or Harvard Election Data Archive, and only for links where the match was clear were the data used.
 Case in point was Maryland: the voting returns data clearly contained every single specified tract in Maryland, but matching algorithms could only identify a few hundred of the several thousand voting districts.
-Geographic files came primarily from the Census Bureau's TIGER/Line redistricting project, the official database for all Census geography,\footnote{``TIGER/Line.''} via the Election-Geodata mapping project, an open-source repository for redistricting data,\footnote{Kelso, ``Nvkelso/Election-Geodata.''} though, as alluded to above, some states' geographic files were also compiled by HEDA.
+Geographic files came primarily from the Census Bureau's TIGER/Line redistricting project, the official database for all Census geography,\footnote{``2010 TIGER/Line Shapefiles'' (US Census Bureau, 2012).} via the Election-Geodata mapping project, an open-source repository for redistricting data,\footnote{Nathaniel V. Kelso, ``Nvkelso/Election-Geodata,'' March 2020.} though, as alluded to above, some states' geographic files were also compiled by HEDA.
 
 Translating the voting precincts to Census geography was a complicated process of decomposition and recomposition.
 Since Census tracts often straddle two voting precincts, distributing votes to particular tracts relies on ecological methods, essentially peeling off the part of a precinct lying in one tract and stitching it together with parts of the other precincts that also coincide with a tract.
@@ -1225,7 +1226,7 @@ Public Law 94-171 (PL 94-171) ensures that the Congressional districting mandate
 In addition, requirements of the Voting Rights Act pressed states to consider the racial makeup of their Congressional districts.
 Since these are governmental tabulations, the population counts were required to be public.
 I drew from these data tables, comprising every block in the United States, in order to divide up census tracts.
-The advantage from data granularity is large: half of the 11,166,336 census blocks in 2010 were smaller than a tenth of a square mile\footnote{``FCC Form 477,'' 1.}---Charlottesville itself contains 803 census blocks, averaging 54.14 persons.\footnote{``SF1.''}
+The advantage from data granularity is large: half of the 11,166,336 census blocks in 2010 were smaller than a tenth of a square mile\footnote{``FCC Form 477: More About Census Blocks'' (Federal Communications Commission, March 2015), 1.}---Charlottesville itself contains 803 census blocks, averaging 54.14 persons.\footnote{``2010 Census Summary File 1'' (US Census Bureau, 2011).}
 
 Then, to distribute portions of voting precincts to tracts, I counted how many census blocks from each particular tract lay within each precinct.
 For computational reasons, the relevant statistic here was the block's spatial center rather than its nuanced boundaries.
@@ -1239,18 +1240,18 @@ votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_
 To recap, this process first decomposes precincts P into blocks B, and then recomposes precincts from tracts T each with particular allocations of votes according to their relative share of the total precinct population.
 
 In this dataset, each tract's votes were calculated by this method, with the exception of Californian tracts.
-The Redistricting Database for the State of California, hosted at the University of California Berkeley School of Law, had already performed a more precise version of this process using voting registration records.\footnote{``The Statewide Database.''}
+The Redistricting Database for the State of California, hosted at the University of California Berkeley School of Law, had already performed a more precise version of this process using voting registration records.\footnote{``2010 General Election Precinct Data'' (University of California, 2011).}
 Voter registration records allow researchers to locate each address---and thus each resident voter---precisely within tracts and precincts.
 A more careful version of my analysis would implement such methods, as the time required to aggregate each state's registration records exceeded my timeframe.
 
-A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure data,\footnote{Bucholtz, ``Neighborhood Level Foreclosure Data''; Cody, ``Neighborhood Stabilization Program Data''; Richardson, ``NSP2 Data and Methodology.''} which was tabulated at the 2000 tract- and block group--level.
+A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure data,\footnote{Shawn J Bucholtz, ``Neighborhood Level Foreclosure Data'' (Department of Housing \& Urban Development Office of Policy Development and Research, September 2008); Mirian Cody, ``Neighborhood Stabilization Program Data,'' Research Portal, \emph{HUD User} (https://www.huduser.gov/portal/datasets/NSP.html, n.d.); Todd Richardson, ``NSP2 Data and Methodology,'' Research Portal, \emph{HUD User} (https://www.huduser.gov/portal/NSP2datadesc.html, December 2009).} which was tabulated at the 2000 tract- and block group--level.
 The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
 I first decomposed 2000 tracts by the percentage of housing units intersecting with a particular 2010 tract, and then recomposed those 2010 tract figures by allocating foreclosure starts and total housing units according to the percentage each 2010 tract contained.
 
-Lastly, data from the 2010 US Religion Census\footnote{Grammich et al., ``U.S. Religion Census Religious Congregations and Membership Study, 2010 (County File).''} and the Bureau of Labor Statistics\footnote{``LAUCN.''} is collected at the county-level.
+Lastly, data from the 2010 US Religion Census\footnote{Clifford Grammich et al., ``U.S. Religion Census Religious Congregations and Membership Study, 2010 (County File)'' (Open Science Framework, 2018).} and the Bureau of Labor Statistics\footnote{``Local Area Unemployment Statistics'' (Bureau of Labor Statistics, March 2020).} is collected at the county-level.
 Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average was used.
 All other data used were native to the 2010 tract level, without translation.
-These data were primarily from the 2010 decennial census, with some additional information from the 2005-2009 American Community Survey.
+These data were primarily from the 2010 decennial census,\footnote{``SF1''; Kyle Walker and Bob Rudis, ``Tigris: Load Census TIGER/Line Shapefiles,'' February 2020.} with some additional information from the 2005-2009 American Community Survey.\footnote{``2006-2010 American Community Survey 5-Year Summary File'' (US Census Bureau, 2011); Kyle Walker, Kris Eberwein, and Matt Herman, ``Tidycensus: Load US Census Boundary and Attribute Data as 'Tidyverse' and 'Sf'-Ready Data Frames,'' January 2020.}
 American Community Survey data comes attached with margins of error, but, no other variables had these margins of error.
 In the interest of time and observations, I took the Census Bureau at their word that errors were distributed evenly.
 
@@ -1280,7 +1281,7 @@ To evaluate localized effects, I run additional models using only the Tea Party 
 \begin{table}[!htbp] \centering 
   \caption{Effect of NSP1 on Prices} 
   \label{tab:prices} 
-\begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-4} D{.}{.}{-4} D{.}{.}{-4} } 
+\begin{tabular}{@{\extracolsep{2pt}}lD{.}{.}{-4} D{.}{.}{-4} D{.}{.}{-4} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
@@ -1325,7 +1326,7 @@ To avoid price spillovers from interfering with measurement, I only included tra
 The results are plain and robust to several possible covariates: tracts receiving NSP1 funding were associated with statistically significant home prices declines, estimated between one and two points lower, compared to tracts not receiving aid.
 
 Results (not shown) of these models for NSP2 funding, allocated competitively within at-risk tracts, are similarly sobering.
-The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.\footnote{Spader et al., ``The Evaluation of the Neighborhood Stabilization Program.''}
+The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.\footnote{Jonathan Spader et al., ``The Evaluation of the Neighborhood Stabilization Program'' (U.S. Department of Housing and Urban Development, March 2015).}
 Further, these models appear to be good predictors of home prices, acounting for 79\% to 85\% of total price variations among the 12,234 tracts included.
 Diagnostic plots of the best model are available in Figures \ref{fig:priceresid} and \ref{fig:priceqq}.
 
@@ -1403,7 +1404,7 @@ Both the triple interaction between prices, foreclosures, and labor risk, as wel
 But curiously, the interaction between price change and labor risk carries an inverse relationship with Republican voting.
 In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
 This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
-I account for this with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).\footnote{Mota, ``Spatial Features of Labor Markets and Links to the Housing Market,'' Table 1.}
+I account for this with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).\footnote{Nuno Mota, ``Spatial Features of Labor Markets and Links to the Housing Market'' (https://www.semanticscholar.org/paper/Spatial-features-of-labor-markets-and-links-to-the-Mota/4092fc8ebb493a0b116f20a304bc7c9e4912f9d6, 2015), Table 1.}
 Thus, rather than this negative association representing an inconsistency between predicted and actual effects of increased equity, it could be the case that incomplete credit markets prevented individuals with highly-risky employment from behaving as they would prefer.
 In sum, the labor risk--equity model and prior literature on Republican voting behavior broadly agree with my regression results on the full sample of observations.
 
@@ -1411,7 +1412,7 @@ Because of these reasons, I urge acceptance of the model's capacity to understan
 Here it is important to understand this specific sense of model validity.
 The point here is not to predict vote outcomes, but to infer the effects of certain variables.
 While prediction would be nice (and would be sufficient to validate a model's inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
-For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;\footnote{Dymski, Hernandez, and Mohanty, ``Race, Gender, Power, and the US Subprime Mortgage and Foreclosure Crisis''; Faber, ``Racial Dynamics of Subprime Mortgage Lending at the Peak.''} since race is also associated with Republican voting, I have included descriptive variables in my models.
+For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;\footnote{Gary Dymski, Jesus Hernandez, and Lisa Mohanty, ``Race, Gender, Power, and the US Subprime Mortgage and Foreclosure Crisis: A Meso Analysis,'' \emph{Feminist Economics} 19, no. 3 (July 2013): 124--51, \url{https://doi.org/10.1080/13545701.2013.791401}; Jacob W. Faber, ``Racial Dynamics of Subprime Mortgage Lending at the Peak,'' \emph{Housing Policy Debate} 23, no. 2 (April 2013): 328--49, \url{https://doi.org/10.1080/10511482.2013.771788}.} since race is also associated with Republican voting, I have included descriptive variables in my models.
 Though I am somewhat worried about data quality with regards to ecological methods, the care taken to remove unobserved variable bias and the congruence of my results with expectations leads me to confidence in my \emph{model}, and explains why I do not worry about fact that only half of the variation in Republican voting share is explained by my model.
 
 How then did this model fare in Tea Party tracts?
@@ -1476,9 +1477,9 @@ It seems that, since the NSP is associated with higher rates of Republican votin
 One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
 Table \ref{tab:compnsp} compares how each of the NSP rounds fared with respect to Republican votes.
 The first round saw increased levels of Republican voting, while rounds two and three saw decreases in Republican vote share.
-I excluded the second and third NSP rounds because, as of July 2011, respectively 20.6\% and 0.4\% of funds had been expended from NSP2 and NSP3.\footnote{18568, ``HUD NSP3 Report''; 18568, ``HUD NSP2 Report.''}
+I excluded the second and third NSP rounds because, as of July 2011, respectively 20.6\% and 0.4\% of funds had been expended from NSP2 and NSP3.\footnote{18568, ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011)'' (Department of Housing and Urban Development, n.d.); 18568, ``HUD NSP2 Report: National Expenditures by Grantee (Q2 2011)'' (Department of Housing and Urban Development, n.d.).}
 Thus, any perceived effects could not been due to the price effects sought by the program.
-Though NSP1 had expended 43.4\% of funds and fully committed its allocations to grantees by September 2010,\footnote{18568, ``HUD NSP-1 Reporting Sept 2010.''} the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
+Though NSP1 had expended 43.4\% of funds and fully committed its allocations to grantees by September 2010,\footnote{18568, ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report'' (Department of Housing and Urban Development, n.d.).} the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
 
 Explaining the cultural dynamics of this phenomenon (and teasing out its existence) opens opportunities for further research, but I present one theory now.
 Eagle-eyed readers will have noted that, while the foreclosure rate and population density were included in Section \ref{model}, the interaction between them was left unexplained.
@@ -1611,7 +1612,7 @@ In sum, 2010 prices were negatively associated with the Neighborhood Stabilizati
 This fact may be due to unobserved variable bias, but, given the normalcy of regression diagnostics, it may instead be due to the NSP's timeline.
 Due to the mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
 My results indicate that the NSP reduced prices between 1.3\% and 2.0\%, a small reduction keeping with size of the mandated discount.
-Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.\footnote{18568, ``Sept 2010 Program-Wide Report''; HUD, ``HUD NSP1 Report.''}
+Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.\footnote{18568, ``HUD NSP-1 Reporting: Sept 2010 Program-Wide Report'' (Department of Housing and Urban Development, n.d.); HUD, ``HUD NSP1 Report: National Drawdowns by Activity (Q3 2013)'' (Department of Housing and Urban Development, n.d.).}
 
 The labor risk--equity model was evaluated in spite of this fact, and evidence suggested the theorized effects were present in the 2010 midterms, though oddly not when only Tea Party tracts were considered.
 Economic anxiety, composed of low equity---represented by high foreclosure rates---and risky employment---represented by high variance of unemployment rate---magnified the conservatizing effects of increased home prices.
@@ -1628,7 +1629,7 @@ These results build towards consensus with empirical literature, girding Ansell 
 
 Between 2008 and 2012, more than 10 million Americans lost their homes.\footnote{Martin and Niedt, \emph{Foreclosed America}.}
 While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.\footnote{Ferreira and Gyourko, ``A New Look at the U.S. Foreclosure Crisis.''}
-In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,\footnote{Lasky and Gisselquist, ``Housing Wealth and Consumer Spending.''} or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.\footnote{``CSUSHPISA.''}
+In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,\footnote{Lasky and Gisselquist, ``Housing Wealth and Consumer Spending.''} or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.\footnote{``S\&P/Case-Shiller U.S. National Home Price Index'' (https://fred.stlouisfed.org/series/CSUSHPISA, October 2019).}
 
 The structures that facilitated this unprecedented growth were scaffolded with a ``social compact'' ushered in by the New Deal.
 This compact promised subsidized, predictable home mortgages and organized employment in return for the political support of the subset who profited most from these homes and jobs.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
@@ -1638,7 +1639,7 @@ But the responses of farmers bore little resemblance to the responses of homeown
 Farmers had been trained in debt politics, going back all the way to Shay's Rebellion.\footnote{Beard, \emph{An Economic Interpretation of the Constitution of the United States}.}
 Moreover, sociological forces made talking shop a respectable subject among farmers, rather than the shame that foreclosure connoted in the 2000s.
 The system to emerge subsidized long-term fixed-rate mortgages at what then were low interest rates and small downpayments.
-These policies increased demand for homeownership and fixed people in their suburban communities.\footnote{Jackson, \emph{Crabgrass Frontier}.}
+These policies increased demand for homeownership and fixed people in their suburban communities.\footnote{Kenneth T. Jackson, \emph{Crabgrass Frontier: The Suburbanization of the United States} (New York: Oxford University Press, 1985).}
 
 However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.
 This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.\footnote{Lewis, ``The Fat Men and Their Marvelous Money Machine.''}
@@ -1648,7 +1649,7 @@ These homeowners revolted, reorienting politicians on both sides of the aisle to
 
 The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
 In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.\footnote{Campbell, ``What Americans Think of Taxes.''}
-At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,\footnote{DuVernay, ``13th.''} while simultaneously with increasing military expenditure.
+At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,\footnote{Ava DuVernay, ``13th,'' Documentary, Crime, News (Forward Movement, Kandoo Films, Netflix, October 2016).} while simultaneously with increasing military expenditure.
 In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
 Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.\footnote{Lewis, ``The Fat Men and Their Marvelous Money Machine.''}
 Better positioned in the market, and with fewer competitors, investment banks ramped up production of home mortgages.
@@ -1662,11 +1663,11 @@ Instead of organized employment, citizens received organized credit with relativ
 
 Whether as social compact or opportunism, these political and financial swings made homeowners sensitive to real estate deflation as their parents, parties to the previous compact, were sensitive to inflation in the basket of everyday goods.
 When employment was unpredictable, or wages flat, homeowners relied on surging home prices to smooth their consumption.
-When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills\footnote{Buchholz and Larrimore, ``Federal Reserve Surveys.''} or necessary expenses.
+When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills\footnote{Dave Buchholz and Jeff Larrimore, ``Federal Reserve Surveys of the Economic Wellbeing of US Households: SCF and SHED,'' Lunchtime Data Talk (Housing Finance Policy Center, January 2016).} or necessary expenses.
 Home equity and increasing prices (that could be realized as income) acted as a form of private insurance, replacing unemployment benefits and welfare provisions.
 Dropping demand for those programs would also agree with lower taxation to further loosen households' financial constraints.
 The conservatizing effects of this logic on political behavior have been thoroughly theorized\footnote{Gingrich and Ansell, ``Preferences in Context''; Schwartz, \emph{Subprime Nation}; Seabrooke, \emph{The Politics of Housing Booms and Busts}.} but somewhat less-thoroughly observed.
-Empirical work has focused on the existence of preferences rather than their priority,\footnote{Ansell, ``The Political Economy of Ownership,'' May 2014.} as data on individual home wealth and bespoke polling are expensive.
+Empirical work has focused on the existence of preferences rather than their priority,\footnote{Ben Ansell, ``The Political Economy of Ownership: Housing Markets and the Welfare State,'' \emph{American Political Science Review} 108, no. 2 (May 2014): 383--402, \url{https://doi.org/10.1017/S0003055414000045}.} as data on individual home wealth and bespoke polling are expensive.
 
 This thesis has exploited the coincidence of unusually-precise data with political changes that sharpened (and possibly made explicit) the connections between homeownership, unstable employment, and taxation.
 In the former category, the decennial census and the first wave of nationwide efforts at precinct-level voting returns happened to occur in 2010.
@@ -1718,22 +1719,22 @@ The Tea Party's counterpart on the left was Occupy Wall Street, a failure by any
 The subsequent election of Donald Trump in 2016 is associated with the death of the Tea Party.
 What had been a rhetorically-negative movement (anti-tax, anti-welfare, anti-immigrant) spurred the politics that elected Trump, but left little new foundation on which a broader realignment could be built.
 A socially conservative but economically left-wing movement has begun to emerge from the Republican party.
-This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain Capital, speak out against private equity.\footnote{Romney, ``Sen. Romney Cap Gains Letter to Treasury.''}
-It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization,\footnote{Rubio, ``American Industrial Policy and the Rise of China.''} which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.
-And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.\footnote{Hawley, ``Getting America Back to Work.''}
+This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain Capital, speak out against private equity.\footnote{Mitt Romney, ``Sen. Romney Cap Gains Letter to Treasury,'' Open Letter, September 2019.}
+It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization,\footnote{Marco Rubio, ``American Industrial Policy and the Rise of China,'' \emph{The American Mind}, December 2019.} which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.
+And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.\footnote{Josh Hawley, ``Getting America Back to Work,'' April 2020.}
 
 While the sharpest political moment may have passed, he financial and political forces at work during the foreclosure crisis and its reaction continue to influence American politics.
 I have elaborated on other scholars' theoretical and empirical work with an analysis of the 2010 midterms, concluding that economic anxiety can magnify the impacts of housing prices on political behavior.
 While there is yet more work to be done towards refining and measuring these behaviors, the general thesis that policies can alter and train preferences---a logic somewhat the obverse of what is normally said about policymaking---is reiterated in this thesis.
 
-\textbackslash{}\appendix
+\appendix
 
 \hypertarget{data-quality}{%
 \chapter{Data Quality}\label{data-quality}}
 \begin{table}[!htbp] \centering 
   \caption{Comparison of NSP Rounds} 
   \label{tab:compnsp} 
-\begin{tabular}{@{\extracolsep{3pt}}lD{.}{.}{-4} D{.}{.}{-4} D{.}{.}{-4} } 
+\begin{tabular}{@{\extracolsep{2pt}}lD{.}{.}{-4} D{.}{.}{-4} D{.}{.}{-4} } 
 \\[-1.8ex]\hline 
 \hline \\[-1.8ex] 
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
@@ -1821,6 +1822,11 @@ F Statistic & \multicolumn{1}{c}{987.9295$^{***}$} & \multicolumn{1}{c}{988.2385
 \hypertarget{references}{%
 \chapter{References}\label{references}}
 
+\setlength{\parindent}{-0.25in}
+\setlength{\leftskip}{0.25in}
+
+\noindent
+
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-185682010huda}{}%
 18568. ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report.'' Department of Housing and Urban Development, n.d.
@@ -1833,6 +1839,9 @@ F Statistic & \multicolumn{1}{c}{987.9295$^{***}$} & \multicolumn{1}{c}{988.2385
 
 \leavevmode\hypertarget{ref-185682011hud}{}%
 ---------. ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, n.d.
+
+\leavevmode\hypertarget{ref-201120062010}{}%
+``2006-2010 American Community Survey 5-Year Summary File.'' US Census Bureau, 2011.
 
 \leavevmode\hypertarget{ref-20112010b}{}%
 ``2010 Census Summary File 1.'' US Census Bureau, 2011.
@@ -1856,7 +1865,7 @@ Alston, Lee J. ``Farm Foreclosures in the United States During the Interwar Peri
 Angrisani, Marco, Michael Hurd, and Susann Rohwedder. ``The Effect of Housing Wealth Losses on Spending in the Great Recession.'' \emph{Economic Inquiry} 57, no. 2 (April 2019): 972--96. \url{https://doi.org/10.1111/ecin.12753}.
 
 \leavevmode\hypertarget{ref-ansellPoliticalEconomyOwnership2014}{}%
-Ansell, Ben. ``The Political Economy of Ownership: Housing Markets and the Welfare State.'' \emph{American Political Science Review} 108, no. 2 (May 2014): 383--402. \url{https://doi.org/10.1017/S0003055414000045}.
+Ansell, Ben. ``The Political Economy of Ownership: Housing Markets and the Welfare State.'' \emph{American Political Science Review} 108, no. 02 (May 2014): 383--402. \url{https://doi.org/10.1017/S0003055414000045}.
 
 \leavevmode\hypertarget{ref-ansellPoliticalEconomyOwnership2014a}{}%
 ---------. ``The Political Economy of Ownership: Housing Markets and the Welfare State.'' \emph{American Political Science Review} 108, no. 2 (May 2014): 383--402. \url{https://doi.org/10.1017/S0003055414000045}.
@@ -2041,6 +2050,9 @@ Kingdon, John W. \emph{Agendas, Alternatives, and Public Policies}. New York: Lo
 \leavevmode\hypertarget{ref-kioko2012impact}{}%
 Kioko, Sharon N., and Christine R. Martell. ``Impact of State-Level Tax and Expenditure Limits (TELs) on Government Revenues and Aid to Local Governments.'' \emph{Public Finance Review}, May 2012. \url{https://doi.org/10.1177/1091142112438460}.
 
+\leavevmode\hypertarget{ref-klein2008disowned}{}%
+Klein, Naomi. ``Disowned by the Ownership Society.'' \emph{The Nation}, February 2008.
+
 \leavevmode\hypertarget{ref-kochhar2018income}{}%
 Kochhar, Rakesh, and Anthony Cilluffo. ``Income Inequality in the U.S. Is Rising Most Rapidly Among Asians.'' \emph{Pew Research Center's Social \& Demographic Trends Project}, July 2018.
 
@@ -2178,6 +2190,12 @@ U.S. Bureau of Economic Analysis. ``Gross Domestic Product.'' \emph{FRED, Federa
 
 \leavevmode\hypertarget{ref-2019foreclosure}{}%
 ``U.S. Foreclosure Activity Drops to 13-Year Low in 2018.'' \emph{ATTOM Data Solutions}. https://www.attomdata.com/news/most-recent/2018-year-end-foreclosure-market-report/, January 2019.
+
+\leavevmode\hypertarget{ref-walker2020tidycensus}{}%
+Walker, Kyle, Kris Eberwein, and Matt Herman. ``Tidycensus: Load US Census Boundary and Attribute Data as 'Tidyverse' and 'Sf'-Ready Data Frames,'' January 2020.
+
+\leavevmode\hypertarget{ref-walker2020tigris}{}%
+Walker, Kyle, and Bob Rudis. ``Tigris: Load Census TIGER/Line Shapefiles,'' February 2020.
 
 \leavevmode\hypertarget{ref-wheelockChangingRulesState2008}{}%
 Wheelock, David C. ``Changing the Rules: State Mortgage Foreclosure Moratoria During the Great Depression.'' \emph{Federal Reserve Bank of St. Louis Review} 90, no. 6 (n.d.): 569--83.
