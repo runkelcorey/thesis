@@ -11,30 +11,30 @@ output:
 # Conclusion {#conclusion}
 
 Between 2008 and 2012, more than 10 million Americans lost their homes.[@martin2015foreclosed]
-While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.[@ferreira]
-In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,[@mew] or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.[@fed]
+While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.[@ferreira2015new]
+In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,[@lasky2007housing] or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.[@2019caseshiller]
 
 The structures that facilitated this unprecedented growth were scaffolded with a "social compact" ushered in by the New Deal.
-This compact promised subsidized, predictable home mortgages and organized employment in return for the political support of the subset who profited most from these homes and jobs.[@stoller]
+This compact promised subsidized, predictable home mortgages and organized employment in return for the political support of the subset who profited most from these homes and jobs.[@stollerHousingCrashEnd2016]
 These policies responded to general economic turmoil and, I believe, learned from the lessons of farm foreclosures in the Midwest.
 Flunking crop prices and the ecological devastation of the Dust Bowl bore epidemiological resemblance to the foreclosure crisis: the diseases and dust storms in the 1920s and 1930s concentrated geographically much as the foreclosures in master planned developments (or close-knit neighborhoods) did in the 2000s and 2010s.
 But the responses of farmers bore little resemblance to the responses of homeowners.
-Farmers had been trained in debt politics, going back all the way to Shay's Rebellion.[@beard]
+Farmers had been trained in debt politics, going back all the way to Shay's Rebellion.[@beard1913economic]
 Moreover, sociological forces made talking shop a respectable subject among farmers, rather than the shame that foreclosure connoted in the 2000s.
 The system to emerge subsidized long-term fixed-rate mortgages at what then were low interest rates and small downpayments.
-These policies increased demand for homeownership and fixed people in their suburban communities.[@crabgrassfrontier]
+These policies increased demand for homeownership and fixed people in their suburban communities.[@jacksonCrabgrassFrontierSuburbanization1985]
 
-However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.[@schwartz]
-This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.[@lewis]
+However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.
+This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.[@lewis2010fat]
 Meanwhile, taxation became a national political discussion.
 After the tax rates of top-bracket earners were cut in the 1960s from above 90%, homeowners in California awoke to a rationalized and modern property tax system that edged assessed property values higher.
-These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.[@martin]
+These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.[@martin2008welcome]
 
 The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
-In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.[@campbell]
-At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay] while simultaneously with increasing military expenditure.
+In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.[@campbell2009what]
+At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay201613th] while simultaneously with increasing military expenditure.
 In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@???]
-Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.[@lewis]
+Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.[@lewis2010fat]
 Better positioned in the market, and with fewer competitors, investment banks ramped up production of home mortgages.
 
 This acceleration was aided by successive federal policies from George H. W. Bush and Bill Clinton aimed at boosting affordability.
@@ -42,15 +42,15 @@ For current homeowners, this sustained demand meant that home prices seemed to b
 For prospective homeowners lured by the good fortune currently being enjoyed, global disinflation (partially due to outsourced manufacturing) meant that home mortgages, now packaged into mortgage-backed securities, offered enough return on investment to persuade international capital to provide the financial supply.[@schwartz2009subprime]
 Once this demand and supply saw consistency in each other, they became apparently dependent on one another: increased demand let in more investors on these assets made riskless by yet more demand, allowing homeowners to borrow against their inflated home prices.
 This mechanism crystallized a successive, asset-backed social compact.
-Instead of organized employment, citizens received organized credit with relatively predictable gains while accepting uncertain wage employment.[@stoller]
+Instead of organized employment, citizens received organized credit with relatively predictable gains while accepting uncertain wage employment.[@stollerHousingCrashEnd2016]
 
 Whether as social compact or opportunism, these political and financial swings made homeowners sensitive to real estate deflation as their parents, parties to the previous compact, were sensitive to inflation in the basket of everyday goods.
 When employment was unpredictable, or wages flat, homeowners relied on surging home prices to smooth their consumption.
-When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills[@scf] or necessary expenses.
+When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills[@buchholz2016federal] or necessary expenses.
 Home equity and increasing prices (that could be realized as income) acted as a form of private insurance, replacing unemployment benefits and welfare provisions.
 Dropping demand for those programs would also agree with lower taxation to further loosen households' financial constraints.
-The conservatizing effects of this logic on political behavior have been thoroughly theorized[schwartz, seabrooke, who else?] but somewhat less-thoroughly observed.
-Empirical work has focused on the existence of preferences rather than their priority,[@ansell] as data on individual home wealth and bespoke polling are expensive.
+The conservatizing effects of this logic on political behavior have been thoroughly theorized[@gingrich2012preferences; @schwartz2009subprime; @seabrooke2009politics] but somewhat less-thoroughly observed.
+Empirical work has focused on the existence of preferences rather than their priority,[@ansellPoliticalEconomyOwnership2014a] as data on individual home wealth and bespoke polling are expensive.
 
 This thesis has exploited the coincidence of unusually-precise data with political changes that sharpened (and possibly made explicit) the connections between homeownership, unstable employment, and taxation.
 In the former category, the decennial census and the first wave of nationwide efforts at precinct-level voting returns happened to occur in 2010.
@@ -58,7 +58,7 @@ In the latter category, Americans processed nationally the depth of the Great Re
 The Great Recession was triggered by the Global Financial Crisis, which saw liquidity frozen in place and financiers around the North Atlantic thoroughly traumatized.
 The Crisis, in turn, began with plateauing home buying (and thus speculation and prices) in the mid-2000s.
 As prices evened out, equity to borrow against disintegrated, and foreclosures increased.
-With vacant properties and increased housing stock, prices fell nationally by 20% from February 2007 to May 2009, ultimately settling 26% down in February 2012.[@caseshiller]
+With vacant properties and increased housing stock, prices fell nationally by 20% from February 2007 to May 2009, ultimately settling 26% down in February 2012.[@2019caseshiller]
 
 Declining prices meant declining property tax revenues (or at least the future threat of such changes), which hamstrung cities, already shorn of much of their expected responsibility by state and federal governments.
 As for banks, the process of mortgage-backed securitization separated lines of communication from creditors who would rather take haircuts or extend loan maturities than foreclose.
@@ -70,8 +70,8 @@ They had been retrained as tax activists and expected positive direct benefits, 
 A federal response would be required.
 In addition to the X trillion authorized by the Troubled Asset Relief Program (TARP), the Economic Stimulus Act of 2008 (ESA), and the other stimulating acronyms, George W. Bush enacted the Housing and Economic Recovery Act of 2008 (HERA), which authorized $3.9 billion in funds for, among other channels, the Neighborhood Stabilization Program.
 HERA included titles that tried to ease mortgage payments and incentivize resolution aside from foreclosure.
-While its benefits were far below what foreclosure activists considered adequate,[@dayen2016chain] actors on the right saw HERA as emblematic of the profligate welfare state that would burden the nation (as a collection of individual taxpayers) with perpetual debt.
-This narrative was essentialized in the profligate spending of highly-leveraged homeowners---the losers attached to "losers' mortgages".[@santelli]
+While its benefits were far below what foreclosure activists considered adequate,[@dayenChainTitleHow2016] actors on the right saw HERA as emblematic of the profligate welfare state that would burden the nation (as a collection of individual taxpayers) with perpetual debt.
+This narrative was essentialized in the profligate spending of highly-leveraged homeowners---the losers attached to "losers' mortgages".[@santelli2009cnbc]
 Though short-lived, the Tea Party effectively wove subprime borrowing into the larger Republican animus of higher taxation and more subsidies.
 Its visibility may have made the financial health of neighborhoods legible to voters as voting issues.
 
@@ -90,7 +90,7 @@ Additionally, there were questions of model selection and spatial dependence, wh
 
 An alternative possibility is that housing politics concentrates at the municipal level.
 Planning departments, which operate mostly at the city or county level in the United States, say a great deal about which properties profit.
-Urban planners today are much closer to wealth managers as they are to architects.[@stein]
+Urban planners today are much closer to wealth managers as they are to architects.[@stein2019capital]
 The responsivity of localities, in conjunction with the lower profiles of city government affairs, make cities prime targets for activist voices and more extreme voting behaviors.
 As I write this thesis, rent strikes---unheard of even during the Great Recession---are igniting in cities and counties around the United States.
 America's first recession since the foreclosure crisis has been met with much greater ferocity.
@@ -102,9 +102,9 @@ The Tea Party's counterpart on the left was Occupy Wall Street, a failure by any
 The subsequent election of Donald Trump in 2016 is associated with the death of the Tea Party.
 What had been a rhetorically-negative movement (anti-tax, anti-welfare, anti-immigrant) spurred the politics that elected Trump, but left little new foundation on which a broader realignment could be built.
 A socially conservative but economically left-wing movement has begun to emerge from the Republican party.
-This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain Capital, speak out against private equity.[@letter]
-It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization, which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.[@news]
-And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.[@stoller]
+This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain Capital, speak out against private equity.[@romney2019sen]
+It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization,[@rubio2019american] which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.
+And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.[@hawley2020getting]
 
 While the sharpest political moment may have passed, he financial and political forces at work during the foreclosure crisis and its reaction continue to influence American politics.
 I have elaborated on other scholars' theoretical and empirical work with an analysis of the 2010 midterms, concluding that economic anxiety can magnify the impacts of housing prices on political behavior.
