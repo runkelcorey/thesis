@@ -18,11 +18,10 @@ wide <- read_csv("wide.csv", col_types = cols(GEOID10 = col_character(), STATE =
 ```
 
 Complete data were available for 27,098 census tracts, covering more than half of the inhabited census tracts of 24 states, and more than half of the tracts where a self-described member of the Tea Party sought election.
-Most of the census tracts missing belonged to states where connecting voting returns with census geography was infeasible.
+Most of the census tracts missing belonged to states where the process of connecting voting returns with census geography was infeasible.
 For instance, Michigan does not make clear the links between a voting tabulation district (VTD) as the Census Bureau defines it, and the county-precinct-ward system the state uses to publicize its results.
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
 
-Since 1990, the Census Bureau has delineated census blocks covering the entire United States, standardizing units of analysis and making trivial the aggregation of data at various granularity.
 While much of this analysis relies on data collected in 2010 census geographies, some key variables---including voting returns---were originally collected at a different geography.
 Translating these data to the census-tract level was fundamental to my analysis, so it is important that I describe the relationships between statistical geographies as well as my process of translation.
 
@@ -90,7 +89,7 @@ Figure \@ref(fig:palmbeach) shows how this geometry is possible.
 include_graphics(c("figure/wotracts.png", "figure/withtracts.png"))
 ```
 
-There are, however, more than one ways to cut a census tract.
+There is, however, more than one way to cut a census tract.
 The obvious way to slice census tracts is by geography: the spatial intersection forms the basis for dividing up votes.
 The better way to slice census tracts is by voting-age population: the intersection of eligible people forms the basis for dividing up votes.
 This method better leverages even more granular data that the Census Bureau publishes to partially overcome ecological approximations and account for differing population densities *within* tracts.
@@ -116,45 +115,51 @@ votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_
 (\#eq:vtd)
 \end{equation}
 
-To recap, this process first decomposes precincts P into blocks B, and then recomposes precincts from tracts T each with particular allocations of votes according to their relative share of the total precinct population.
+To recap, this process first decomposes precincts into blocks, and then recomposes precincts from tracts (where the block-tract connection is trivial by construction).
+Each tract is allocated votes according to its share of the total precinct population.
 
-In this dataset, each tract's votes were calculated by this method, with the exception of Californian tracts.
+Each tract in this dataset was allocated votes by this method, with the exception of Californian tracts.
 The Redistricting Database for the State of California, hosted at the University of California Berkeley School of Law, had already performed a more precise version of this process using voting registration records.[@20112010]
 Voter registration records allow researchers to locate each address---and thus each resident voter---precisely within tracts and precincts.
-A more careful version of my analysis would implement such methods, as the time required to aggregate each state's registration records exceeded my timeframe.
+A more careful version of my analysis would implement such methods, but the time required would have exceeded my timeframe.
 
-A similar process of decomposition followed by recomposition was used for the Department of Housing and Urban Development's foreclosure data,[@bucholtz2008neighborhood; @cody2010neighborhood; @richardson2009nsp2] which was tabulated at the 2000 tract- and block group--level.
+A similar process of de/recomposition was used for the Department of Housing and Urban Development's foreclosure data,[@bucholtz2008neighborhood; @cody2010neighborhood; @richardson2009nsp2] which was tabulated at the 2000 tract- and block group--level.
+While most of these tracts are the same, and almost all 2010 tracts only subdivide a single 2000 tract, updates to geographic surveying, changes in the landforms, and population fluctuations necessitate updated tracts.
 The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
+Housing units were used here instead of persons since the relevant statistics concern properties, not people.
 I first decomposed 2000 tracts by the percentage of housing units intersecting with a particular 2010 tract, and then recomposed those 2010 tract figures by allocating foreclosure starts and total housing units according to the percentage each 2010 tract contained.
 
-Lastly, data from the 2010 US Religion Census[@grammich2018religion] and the Bureau of Labor Statistics[@2020local] is collected at the county-level.
+Lastly, data from the 2010 US Religion Census[@grammich2018religion] and the Bureau of Labor Statistics[@2020local] were collected at the county-level.
 Since tract geography follows county geography, I simply joined those county figures to each tract, so for each tract the county average was used.
 All other data used were native to the 2010 tract level, without translation.
-These data were primarily from the 2010 decennial census,[@20112010b; @walker2020tigris] with some additional information from the 2005-2009 American Community Survey.[@201120062010; @walker2020tidycensus]
-American Community Survey data comes attached with margins of error, but, no other variables had these margins of error.
-In the interest of time and observations, I took the Census Bureau at their word that errors were distributed evenly.
+They came primarily from the 2010 decennial census,[@20112010b; @walker2020tigris] with some additional information from the 2005-2009 American Community Survey.[@201120062010; @walker2020tidycensus]
+American Community Survey data comes attached with margins of error, but, as no other variables had these margins of error, they were entirely ignored so as not to complicate calculations.
+In the interest of time and data *quantity*, I took the Census Bureau at their word that errors were distributed evenly.
 
-The only data natively at the 2010 tract level from outside the Census Bureau were house price indices calculated by the Federal Housing Finance Agency.
+Outside the Census Bureau, the Federal Housing Finance Agency located addresses within their 2010 tracts, requiring no further pre-processing.
 Those data were constructed from tens of millions of federally-financed home loans.
 By virtue of that source, the indices are *only* composed of prime mortgages.
 However, two factors work in my favor here.
 First, significantly more prime mortgages than subprime mortgages defaulted during the foreclosure crisis.[@ferreira2015new]
-Second, the FHFA's index only considers properties with at least 100 sales (and purchases).
-This feature matters because housing prices are strongly spatial dependent: nearby homes with nonconforming mortgages will likely sell for similar amounts as homes with conforming mortgages.
-Still, this limitation means that some tracts with high levels of nonconforming loans were ommitted.
-There are many neighborhoods, for instance, with complete homogeneity of conforming or nonconforming loans, enclaves
-often connected by mortgage brokers who handled large numbers of subprime loans or specific developments.[@dayenChainTitleHow2016]
+Second, the FHFA's index only considers properties with at least 100 sales (and purchases).[@bogin2019local]
+This feature matters because housing prices are strongly dependent spatially: nearby homes with nonconforming mortgages will likely sell for similar amounts as homes with conforming mortgages.
+Still, this limitation means that some tracts with high levels of nonconforming loans were omitted.
+There are many neighborhoods, for instance, with complete homogeneity of conforming or nonconforming loans, enclaves connected by mortgage brokers who handled large numbers of subprime loans or specific developments.[@dayenChainTitleHow2016]
 The political behavior of these developments is interesting due to their uniformity, but beside the aims of this thesis.
 
 ## Data Analysis {#analysis}
 
-My approach will be simple: I will test my assumption that the Neighborhood Stabilization Program increased housing prices; then, I will model the effect of the NSP on voting with and without home price controls.
-If the NSP did raise home prices, then its presence ought to be associated with an increase in Republican voting over the model that controls for home prices.
-A HUD evaluation of the second NSP round did not find strong evidence for an price increase, so I will only examine the effects of NSP1.
-Additionally, I allow for the possibility that impacts on voting only occurred where housing was politically stigmatized by a Tea Party candidate, as Chapter \@ref(motive-opportunity) suggested.
-To evaluate localized effects, I run additional models using only the Tea Party tracts.
+My approach is simple: I will test my assumption that the Neighborhood Stabilization Program increased housing prices; then, I will model the effect of the NSP on voting with and without home price controls.
+If the NSP did raise home prices, then its presence ought to be associated with an increase in Republican voting over the model that controls for home prices, where no change in voting should be associated with the NSP.
+Additionally, this section allows for the possibility that impacts on voting were sharpened where housing was politically stigmatized by Tea Party politics, as Chapter \@ref(motive-opportunity) suggested.
+To evaluate those localized effects, trials are run that only include tracts in which a Tea Party candidate ran for office.
 
 ### Did NSP1 increase home prices?
+
+Table \@ref(tab:prices) lists the effects of NSP1 on prices.
+Additional models remove state-level fixed effects and variables that were included in the allocation formula for NSP1, and thus covary highly with which tracts actually received NSP1 funding.
+To avoid price spillovers from interfering with measurement, I only included tracts which were at least 1 mile away from a tract receiving NSP1 funding.
+The results are plain and robust to several possible covariates: tracts receiving NSP1 funding were associated with statistically significant home prices declines, estimated between one and two points lower, compared to tracts not receiving aid.
 
 ``` {r nsprice, echo=FALSE, results='asis', eval=TRUE}
 mod1 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ + STATE, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
@@ -163,15 +168,14 @@ mod3 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + 
 stargazer(mod1, mod2, mod3, type = "latex", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density (per sq.mi.)", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change `05--`10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010", column.sep.width = "2pt")
 ```
 
-Table \@ref(tab:prices) lists the effects of NSP1 on prices.
-Additional models remove state-level fixed effects and variables that were included in the allocation formula for NSP1, and thus covary highly with which tracts actually received NSP1 funding.
-To avoid price spillovers from interfering with measurement, I only included tracts which were at least 1 mile away from a tract receiving NSP1 funding.
-The results are plain and robust to several possible covariates: tracts receiving NSP1 funding were associated with statistically significant home prices declines, estimated between one and two points lower, compared to tracts not receiving aid.
-
 Results (not shown) of these models for NSP2 funding, allocated competitively within at-risk tracts, are similarly sobering.
 The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.[@spader2015evaluation]
-Further, these models appear to be good predictors of home prices, acounting for 79% to 85% of total price variations among the 12,234 tracts included.
+Further, these models appear to be good predictors of home prices, accounting for 78% to 85% of total price variation among the 11,992 tracts included.
 Diagnostic plots of the best model are available in Figures \@ref(fig:priceresid) and \@ref(fig:priceqq).
+
+Differential effects of NSP1 in Tea Party tracts are explored in Model 3.
+These results closely align with the full model augmented by state fixed effects and potential covariates, even retaining statistical significance despite only considering a fourth of the number of observations.
+By any standard, the first round of NSP funding did not raise home prices.
 
 While this evidence drives a nail into the coffin of foreclosure relief programs directly supporting anti-relief candidates, it still leaves open questions about the validity of the labor risk--equity model of voting explored in Chapters \@ref(motive-opportunity) and \@ref(methods).
 Continuing the approach laid out above yields answers to two questions.
@@ -191,18 +195,19 @@ mod5 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + AD
 stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage")
 ```
 
-Consistent with expecations, in both models the presence of the Neighborhood Stabilization Program is associated with a half- to full percentage point lower Republican voting.
-I will shortly detail reasons why *not* to accept this model's validity, but, the consistency of the expectations with the model---and prior literature---is a good reason (though not sufficient) to accept the model's capacity to describe the impacts of specific economic and demographic variables on majoritarian voting behavior.
-Down the line, from residential tenure through the weighted portion of white people with less education than a college degree, demographic factors identified by prior research as impacting the outcome of elections in particular directions were similarly associated in my model.
+Consistent with expectations, the presence of the Neighborhood Stabilization Program is associated with a half point lower Republican voting in the model without prices and significant at the 5% level.
+When taking into account prices, the presence of the Neighborhood Stabilization Program is not statistically significant, though still points negative.
+While there are certainly reasons *not* to accept this model's validity, the consistency of the expectations with the model---and prior literature---is a good reason to believe in its capacity to describe impacts of economic and demographic variables on majoritarian voting behavior.
+Down the line, from residential tenure through religious adherents, factors identified by prior research as impacting Republican turnout were similarly associated in my model.
 
-Moreover, key features of the labor risk--equity model of political behavior found strong evidence in model 2.
+Moreover, key features of the labor risk--equity model of political behavior found strong evidence in Model 5.
 The interaction effects between price changes, foreclosure rates, and labor risk are of interest here (uninteracted forms are provided for completeness and their effects are not predicted by the labor risk--equity literature).
 The magnifying effects of labor risk and foreclosure rate on price changes were directly proportional.
-They were---in addition to most every other variable---statistically-significant at the 1% level.
-For instance, in our Palm Beach County tract 12099005947, my model estimated a 5.7-point increase in Republican vote share due to the combination of home price decline, foreclosure rate, and variance of employment, all in a non--Tea Party district that voted heavily Democratic.
+They were---in addition to most every other variable---statistically significant at the 1% level.
+For instance, in our Palm Beach County tract 12099005947, my model estimated a <!--update-->5.7-point increase in Republican vote share due to the combination of home price decline, foreclosure rate, and variance of employment.
 Both the triple interaction between prices, foreclosures, and labor risk, as well as the price change--foreclosure rate interaction hold positive coefficients, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
 
-But curiously, the interaction between price change and labor risk carries an inverse relationship with Republican voting.
+Curiously, the pairwise interaction between price change and labor risk carries an inverse relationship with Republican voting.
 In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
 This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
 I account for this with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).[@mota2015spatial, Table 1]
@@ -213,8 +218,8 @@ Because of these reasons, I urge acceptance of the model's capacity to understan
 Here it is important to understand this specific sense of model validity.
 The point here is not to predict vote outcomes, but to infer the effects of certain variables.
 While prediction would be nice (and would be sufficient to validate a model's inferential power), all that need be true is that the unexplained variance be independent of the parameter(s) of interest.
-For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[@dymski2013race; @faber2013racial] since race is also associated with Republican voting, I have included descriptive variables in my models.
-Though I am somewhat worried about data quality with regards to ecological methods, the care taken to remove unobserved variable bias and the congruence of my results with expectations leads me to confidence in my *model*, and explains why I do not worry about fact that only half of the variation in Republican voting share is explained by my model.
+For instance, there is evidence that subprime mortgage brokers lent to Black and Latin-American families at systematically higher rates than White families;[@dymski2013race; @faber2013racial] since race is also associated with Republican voting, I have included the relevant descriptive variables in my models.
+Though I am worried about data quality with regards to ecological methods, the care taken to remove unobserved variable bias and the congruence of my results with expectations leads me to confidence in my *model*, and explains why I do not worry about fact that only half of the variation in Republican voting share is explained by my model.
 
 How then did this model fare in Tea Party tracts?
 In these next trials, more pronounced home price effects should be expected, though it may also be possible that "deadbeat" homeowners are further stigmatized by Tea Party candidates, leading to more conservatizing effects of increased foreclosure rates.
@@ -227,7 +232,7 @@ mod7 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + AD
 stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:justp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage")
 ```
 
-These trials offer promising results but less statistical significance.
+These trials offer promising results but less statistical significance.^[The [unprinted] p-value attached to Model 6 is just above .10, nearly an academically-acceptable level of significance.]
 First, the evidence that NSP1 had any effect on voting is far from conclusive, with statistically insignificant associations between round one funding and Republican vote shares.
 Second, home price interaction terms are significant and carry the same signs as in trials run on the full slate of observations, but insignificant when uninteracted.
 Third, the foreclosure rate switches signs when combined with the effects of home prices.
@@ -237,10 +242,13 @@ This finding agrees with the narrative that Tea Party candidates cast foreclosed
 It seems that, since the NSP is associated with higher rates of Republican voting in the face of negative price effects, cultural (rather than economic) factors may have been at play.
 One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
 Table \@ref(tab:compnsp) compares how each of the NSP rounds fared with respect to Republican votes.
-The first round saw increased levels of Republican voting, while rounds two and three saw decreases in Republican vote share.
-I excluded the second and third NSP rounds because, as of July 2011, respectively 20.6% and 0.4% of funds had been expended from NSP2 and NSP3.[@185682011hud; @185682011huda]
-Thus, any perceived effects could not been due to the price effects sought by the program.
+The first round saw statistically-insignificant effects on Republican voting, while rounds two and three saw decreases in Republican vote share of 3.2% and 6.0% respectively.
+I excluded the second and third NSP rounds in my formal analysis because, as of July 2011, respectively 20.6% and 0.4% of funds had been expended from NSP2 and NSP3.[@185682011hud; @185682011huda]
 Though NSP1 had expended 43.4% of funds and fully committed its allocations to grantees by September 2010,[@185682010huda] the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
+This fact should imply that even later rounds had less time to deploy price-stabilization measures.
+Thus, any perceived effects could not been due to the price effects sought by the program, but rather by those factors which caused HUD to designate such tracts for funding, and I propose, by the designation itself.
+By directing funding towards these neighborhoods, administrations *could* try to implement a licit form of vote buying.
+That these effects would be so pronounced, and that residents would not also be motivated by an anti-welfare pride, is difficult to believe, however.
 
 Explaining the cultural dynamics of this phenomenon (and teasing out its existence) opens opportunities for further research, but I present one theory now.
 Eagle-eyed readers will have noted that, while the foreclosure rate and population density were included in Section \@ref(model), the interaction between them was left unexplained.
@@ -262,7 +270,7 @@ Additionally, using individual-level demographics and vote results would have av
 
 The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
-On that count, the attached .43-.56 $R^{2}$ values are not concerning.
+On that count, the attached .45-.59 $R^{2}$ values are not concerning.
 However, further analysis of the residuals demonstrates weaknesses in model selection.
 Figure \@ref(fig:linearesid) shows the residuals against fitted values for the full-sample, fixed-effects model.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
@@ -275,18 +283,16 @@ include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
 
 In order to validate the results of these models, I also modeled Republican vote share by different distributions.
 I settled on reporting results for regressions on the Beta distribution because of its flexibility and ability to approximate the distribution of Republican voting share.
-The Beta distribution is a basic (but complicated) distribution used for response variables bounded between 0 and 1.
+The Beta distribution is a fundamental (but complicated) distribution used for response variables bounded between 0 and 1.
 It easily incorporates changing variance and does not assume linearity, which is helpful when considering social interactions generally, and electoral data specifically.
-As Figure \@ref(fig:linearquant) shows, the variance of actual versus fitted values skyrockets at the upper end of my model.
 
 ``` {r betaresid, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Residuals of beta regression.", message=FALSE}
 include_graphics("figure/betaresid.png")
 ```
 
-In contrast, the behavior of Figure \@ref(fig:betaresid) conforms more closely to an ideal distribution, with less-pronounced upper and lower bounds.
+Though there are still the artifacts of upper and lower bounds, the behavior of Figure \@ref(fig:betaresid) conforms more closely to an ideal distribution.
 Results of the beta regressions can be seen in Table \@ref(tab:beta).
-Coefficients are altogether similar to what the linear models predict, making me more secure in my belief of their validity.
-
+Coefficients are altogether similar^[For entirely computational reasons, the dependent variable, Republican voting percentage, had to be scaled to fit between 0 and 1. The predictors, therefore, were also reduced by a factor of 100 in order to remain comparable to the linear models. While this adjustment worked on all independent variables, the interaction terms---which had been products of numbers between 0 and 100---were then made to be products of numbers between 0 and 1. This translation is analogous to that from 10 to 0.1: $10 \times 10 = 100$, growing in magnitude, while $.1 \times .1 = .01$, shrinking by the same number of decimal places.] to what the linear models predict, making me more secure in my belief of their validity.
 
 ```{r beta, echo=FALSE, results='asis', eval=TRUE, warning=FALSE}
 mod8 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, mutate_at(wide, vars(ADJ_FORQ, EMPLOYRISK, UNEMCHG, MEDHHI, DENSITY, TENURE, TENURE2, OLD, VAP_B, VAP_H, VAP_H2, VAP_W, WHITESOMECOL, EVANRATE, LDSRATE), funs(./100)))
@@ -294,7 +300,7 @@ mod9 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + ME
 stargazer(mod8, mod9, type = "latex", title = "Beta regression of NSP1 on Voting", label = "tab:beta", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage")
 ```
 
-Lastly, as mentioned, I believe these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
+Lastly, as mentioned, these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
 Using state-level fixed effects and tract-level housing prices corrected some of this behavior, but the local nature of politics cannot be underestimated.
 I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as a lack of remote access to better hardware, quashed that opportunity.^[This chapter was completed during 2020's novel coronavirus pandemic, which restricted access to University resources.]
 Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.
@@ -313,16 +319,16 @@ kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spat
 ## Conclusion
 
 In sum, 2010 prices were negatively associated with the Neighborhood Stabilization Program's first round of funding.
-This fact may be due to unobserved variable bias, but, given the normalcy of regression diagnostics, it may instead be due to the NSP's timeline.
-Due to the mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
+Perhaps this result was due to unobserved variable bias, but, given the normalcy of regression diagnostics, and the results of later NSP rounds, it may instead result from the NSP's timeline.
+Due to the legislative mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
 My results indicate that the NSP reduced prices between 1.3% and 2.0%, a small reduction keeping with size of the mandated discount.
 Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.[@185682010hud; @hud2013hud]
 
 The labor risk--equity model was evaluated in spite of this fact, and evidence suggested the theorized effects were present in the 2010 midterms, though oddly not when only Tea Party tracts were considered.
-Economic anxiety, composed of low equity---represented by high foreclosure rates---and risky employment---represented by high variance of unemployment rate---magnified the conservatizing effects of increased home prices.
+Economic anxiety, composed of low equity and risky employment magnified the conservatizing effects of increased home prices.
 These results were statistically significant and robust to several covariates.
 Still to be explained are the mechanisms by which labor risk propagates through mortgage markets, HELOCs, and political behavior.
-These variables provided "liberalizing" effects on voters (though not when combined with high foreclosure rates), confounding prior literature on the subject.
+This variable proved "liberalizing", in tension with prior literature on the subject.
 
 Limitations of the measurement and statistical methods were explored, with strong evidence that further work is needed to extricate the impacts studied from spatial dependence and bounded response assumptions.
 Beta distribution regression was employed to correct for the latter issue, with slightly more ideal measures of model fitness and similarly strong evidence for the labor risk--equity model's capacity to explain voter behavior in the full sample as well as the Tea Party tracts.
