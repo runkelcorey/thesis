@@ -2,17 +2,14 @@
 
 # Data Quality
 
-```{r appendixsetup, echo=FALSE, message=FALSE}
+```{r compnsp, echo=FALSE, message=FALSE, results='asis'}
 library(knitr)
 library(kableExtra)
 library(stargazer)
-mod4 <- lm(RPCT ~ NSP1 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
-mod10 <- lm(RPCT ~ NSP2 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
-mod11 <- lm(RPCT ~ NSP3 + ANXIETY + ADJ_FORQ + EMPLOYRISK + UNEMCHG + UNEM10 + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + STATE, wide)
-```
-
-```{r compnsp, echo=FALSE, message=FALSE, results='asis'}
-stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Rounds", omit = c("^STATE"), label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed effects?", "Y", "Y", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "Economic anxiety", "2010 foreclosure rate", "Labor risk", "Unemployment change `05--`10", "2010 unemployment rate", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Price change $\\times$ anxiety", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "2pt")
+mod4 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
+mod10 <- lm(RPCT ~ NSP2 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
+mod11 <- lm(RPCT ~ NSP3 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
+stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Effects", label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage", column.sep.width = "2pt")
 ```
 
 ```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the regression of prices on NSP1.", fig.subcap=c("Residuals on fitted.\\label{fig:priceresid}", "Quantile-quantile distribution.\\label{fig:priceqq}"), dev='pdf'}
