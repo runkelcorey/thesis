@@ -17,6 +17,7 @@ In two years, median net worth plunged 45%.[@stollerHousingCrashEnd2016, 1214]
 Countrywide, which two years earlier had serviced 20% of United States mortgages,[@schwartz2009politics] collapsed in July (and subsequently resurrected under Bank of America).
 Mortgages originated in 2006 and 2007 suffered 45% default rates,[@schwartz2009politics, 200] much of them clustering in the Sand States of California, Nevada, Arizona, and Florida.
 Yet, neither homeowners, banks, nor local governments wielded much power in the response to the subprime mortgage crisis.
+This in a country where the housing stock accounts for fully 9% of global wealth.[@toozeCrashedHowDecade2018, 43]
 Unlike in the Great Depression, homeowners barely organized their political power as financial institutions imposed very modest debtor-relief programs.
 Meanwhile, the long-term trend of municipal disinvestment emphasized the need to remove neighborhood blight instead of create or subsidize housing.
 
@@ -75,9 +76,10 @@ This argument serves dual purposes, simultaneously introducing the political-fin
 ## Why Homeowners were Unable to Organize {#homeowners}
 
 The powerlessness of anti-foreclosure organizing can be explained by comparison with the most successful anti-foreclosure campaigns of the Great Depression.
+I compare the two on their positions within the greater economy: where the food system of the 1930s allowed for relatively immediate connections between Midwestern farmers and the nation's supermarket shelves,[@pollan2006omnivore] the American welfare and credit system exaggerated the multiplier effects of housing in American economic growth.[@schwartz2009politics, 27]
 Legislative movements require a base of public opinion and support, a mouthpiece through which opinion can be articulated, and a powerful audience to hear those articulated opinions and demands.
 Foreclosed housing's base of public opinion and support was attenuated by geographic particularities of subprime mortgages which limited fora for communication, both internally and externally.
-In addition, the organizers' audience was blocked partially by other demands, including the presence of mortgage servicers.
+In addition, the organizers' audience was crowded out by other demands, including the political presence of mortgage servicers.
 The Great Depression, however, saw these factors come together in the Midwest, where farms were physically parched and thus, financially underwater.
 Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they relied on their land for its income.
 
@@ -85,7 +87,7 @@ However, farmers in the Great Depression differed from early 2000s subprime borr
 In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting *per se* or *de facto* moratoria on foreclosures.[@wheelockChangingRulesState2008, 537]
 The lack of such conditions pitched the struggle for foreclosure legislation in the subprime mortgage crisis to a severe angle.
 
-The most important difference between the foreclosure crisis in the Great Depression and that which preceded the Great Recession was the outsize effect of farming.
+The most important differences between the foreclosure crisis in the Great Depression and that which preceded the Great Recession were the complementarities of farming with organizing.
 Farms were both the workplace and home of farmers.
 Unlike the foreclosure crisis in the 2000s, losing a home implied also losing a job.
 This raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
@@ -150,7 +152,7 @@ Allied state attorneys general settled with 13 banks over their roles in using f
 The fraudulent documents meant that contestation in foreclosure courts was possible, against the assumptions for foreclosures.
 In fact, the New Jersey Supreme Court in 2010 ordered lower courts to stop hearing foreclosure cases due to the prevalence of fraudulent documents.[@comfort2010new]
 Organizers cited the political influence of foreclosure mills---particularly in hard-hit Florida, the only Sand State with mandatory judicial foreclosure---as cause for the inefficacy of activism around foreclosure fraud.
-In several cases, the Florida Attorney General and elected representatives backed out of supporting investigations after meeting with employees of mortgage servicers (who were, in two cases, also employees of the Attorney General).[@dayenChainTitleHow2016]
+In several cases, the Florida Attorney General and elected representatives backed out of supporting investigations after meeting with employees of mortgage servicers (who were, in two cases, also employees of the Attorney General),[@dayenChainTitleHow2016] while several politicians including Senate Banking Committee Chairman Christopher Dodd were embroiled in a scandal that saw them receive below-market interest rates and reductions on mortgage payments.[@hagerty2008countrywide]
 Whatever the cause, the fraudulent mortgage documents offered a concrete opportunity for organizing that resulted in the dislocation of millions, and undermined a tradition of impeccably-kept land records that extended well before 1776.
 
 Geographic and economic features of farming compounded its larger-scale mortgage crisis to foment conditions ripe for organizing compared to the subprime housing crisis.
