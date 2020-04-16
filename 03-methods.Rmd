@@ -3,63 +3,68 @@
 \epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{\textit{A Theory of the Consumption Function \\ Milton Friedman}}
 
 How do asset prices affect voter decisions *in extremis*?
-Political economists have investigated the impacts of wealth on welfare preferences and labor market risk on welfare preferences, but it has not investigated how such policy preferences are represented in political decision-making, nor how such preferences change along the wealth distribution.
-This analysis seeks to use the Neighborhood Stabilization Program, which aimed to affect neighborhoods in greatest need, to tease out these impacts, lengthening the focal point from groups to individuals.
+Political economists have investigated the impacts of wealth and labor market risk on welfare preferences, but they have yet to investigate how such policy preferences are represented in political decision-making, or how such preferences are changed by movement along the wealth distribution.
+This analysis seeks to use the Neighborhood Stabilization Program, which aimed to affect neighborhoods in greatest need, to tease out these impacts.
+Pursuing this question lengthens the focal point from groups to individuals.
 
 ```{r, include=FALSE}
 library(knitr)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
-This chapter begins by reviewing the relevant literature on asset-based social insurance preferences, psychology of lost and gained wealth, and American voting behavior.
-It works towards a model of voting to analyze returns from the 2010 midterm elections, when the Tea Party experienced its first and greatest victories.
+This chapter begins by reviewing the political science, sociology, and economic literature on asset-based social insurance preferences, the psychology of lost and gained wealth, and standard models of American voting behavior.
+It works to develop its own model of voting that will be leveraged in Section \@ref(analysis) to analyze returns from the 2010 midterm elections, when the Tea Party experienced its first and greatest victories.
 This chapter stands logically between my last two.
-It describes how the financial crisis---whose characteristics were explored in Chapter \@ref(actors-motive)---mutated individual preferences, preferences which could then be located in the political landscape described in Chapter \@ref(motive-opportunity).
+It describes how the financial crisis---the characteristics of which were explored in Chapter \@ref(actors-motive)---mutated individual preferences, preferences which then found a home among the political landscape described in Chapter \@ref(motive-opportunity).
 
 ## The Role of Home Prices {#home-prices}
+
 At base, I describe individual consumption preferences from a life-cycle/permanent income perspective.
 Milton Friedman opened his foundational work in life-cycle analysis by noting that Keynes understood economic fluctuations and crises in terms of the past and present, as gluts or dearths of savings.[@keynes2007general]
-What future tense that did factor into his understanding was almost immediate---the "animal spirits", for instance, or the plunes in the business cycle---rather than the long swings of Kuznets.
+What future tense that did factor into his understanding was almost immediate---the notorious "animal spirits", for instance, or plunges in the business cycle---rather than the decades-long swings described by Simon Kuznets.
 Friedman addressed the idea that individuals' income derives not simply from current income, or previous savings, but from all future earnings.
-In an extreme example, a toddler able to form "rational" (some fuzziness on this term's definition) expectations of future income could finance their upbringing and education by borrowing aginst those predictions, this would be a rational choice for both toddler and financier.
+In an extreme example, a toddler able to form "rational" (some fuzziness on this term's definition) expectations of future income could finance their upbringing and education by borrowing against those predictions, this would be a rational choice for both toddler and financier.
 This framework sees wealth, and therefore housing, as potentially permanent income.
 
 But housing can also be used as a financial "buffer stock" against emergencies.
 This refinement is motivated by historical facts about American saving habits.[@carroll1997bufferstock, 1]
 In 2007, about as many households saved for retirement (33.9%) as for unexpected expenses (32.0%).
 In addition, only 56% of households saved in 2007, with dramatically lower rates at lower levels of the income distribution.[@bucks2009changes, 9-10]
-Regardless of whatever official statistics can show the trends in labor market risk to be, it is the perception of homeowners that such risks necessitate savings.
+Combined with relatively strict unemployment insurance benefits, these behaviors mean that Americans are by and large exposed to income shocks.
 
-I argue that understanding the home doubly as an asset shapes homeowners' political decisions.
 In light of their perceptions regarding risk, how one plans to pay for emergencies feeds into that person's politics.
+Understanding the home doubly as an insurance-supplying asset shapes homeowners' political decisions.
 This claim is supported in no small part by the fact that homeowners are represented worldwide by conservative political parties.[@ansellPoliticalEconomyOwnership2014, 387]
 Of course, it could simply be the case that high-income people, those who are more likely to own a home, tend to be more conservative.
 Or, perhaps those who own homes value it as "a refuge from urban corruption,"[@stern2010inviolate] and the idea of leveraging one's home instrumentally for financial gain is vulgar to such a person's traditional social values.
-But these alternative narratives cannot embrace the facts of American household finances.
+But these alternative narratives cannot embrace particular features of American household finances.
 
-Understandings of housing as an asset are not foreign to homeowners.
 1982, the year following Reagan's Economic Recovery Tax Act, simultaneously saw a 35-year high for personal savings and 35-year low for mortgage equity withdrawal (MEW), as a percentage of disposable income.
 By 2005, these lows and highs had flipped.
-Figure \@ref(fig:mew) shows the outstanding inverse relationship between the ratios of personal saving and MEW to disposable income.
-For at least the XX% of Americans who use home equity to finance personal consumption, housing expands opportunities.(pretty sure I got this from your book...will find later, at any rate)
+Figure \@ref(fig:mew) shows this outstanding inverse relationship between the ratios of personal saving and MEW to disposable income.
+Additionally, @mian2011house found that, as a home increased in value, that household invested less elsewhere.
+While estimates vary on the uses of extracted mortgage equity that funds personal consumption,^[Per @greenspan2007sources, estimates range from 1% to over 50% of gross mortgage equity withdrawn.] it is clear that homeowners use funds to pay down debt and renovate their homes.
+In other words, understandings of housing as an asset are not foreign to homeowners, especially those who bought in the crest of that Minsky cycle.
+Homeowners who bought in between 1999 and 2005 saw median net worth jump "from $11,000 to $88,000 in real terms, driven largely by rising home equity."[@seabrooke2009politics]
 
 ```{r mew, fig.align='center', echo=FALSE, out.width='90%', fig.cap="Personal saving and mortgage equity withdrawal as a percentage of disposable income.", dev='pdf'}
 include_graphics("figure/mew.png")
 ```
 
-While these effects are not unique to housing, they are most significant in housing.
-Mortgage equity exhibits greater wealth effects than investments in stocks: research by Case, Shiller, and Quigley (2005) found statistically significant increases in the consumption patterns of housing welath over stock market wealth.
+While these consumption effects are not unique to housing, they are most significant in housing.
+Mortgage equity exhibits greater wealth effects than investments in stocks: research by Case, Shiller, and Quigley (2005) found statistically significant increases in the consumption patterns of housing wealth over stock market wealth.
 Specifically, every new dollar of housing income generated 6 cents of new consumption over the same dollar in stock market income.
 Economists disagree as to the cause and level of this wealth effect, but its primacy over other financial holdings is broadly agreed upon,[@lasky2007housing] and fits into the view that America has transitioned into a consumption- and import-oriented economy.
 Compounding the significance of housing wealth was the sheer size and volatility of housing: Ansell notes that, "between 1985 and 2006, real house price inflation was three times greater than between 1970 and 1985, with a standard deviation almost twice as large."[@ansellPoliticalEconomyOwnership2014, 383]
+And mortgage equity withdrawal increased from $300 billion annually between 1991 and 2000 to $1 trillion between 2001 and 2005.[@schwartz2009subprime, 100]
 
 Subsidizing housing and home mortgages privatizes government spending otherwise recognizable as welfare.
 In doing so, the policies and implementations change how citizens view the state's role in their personal finances.
 More specifically, individuals' preferences for welfare depend "on how existing policies shape their experience of individual risk."[@gingrich2012preferences]
 A stronger claim would be that policies *train* beneficiaries, a view held by Isaac William Martin.
 He uses this mechanism to explain the great political diversity of organizers for Proposition 13 in California: homeowners protect the welfare afforded to them.[@martin2008welcome]
-At the local level, homeowners have long lobbied as a class, enclosing their neighborhoods from Black applicants, breaking fervent upzoning factions, and rejecting otherwise welcome industry.
-Thus, it should come as no surprise that homeowners react to direct and indirect subsidies in similar ways as they react to market-caused fluctuations in their home values.
+At the local level, homeowners have long lobbied as a class, enclosing their neighborhoods from Black applicants, breaking calls for more affordable up-zoning, and rejecting industry that would be welcome 5 miles away.
+It should come as no surprise that homeowners react to direct and indirect subsidies in similar ways as they react to market-caused fluctuations in their home values.
 
 By privatizing government spending, the subsidies offered by the Neighborhood Stabilization Program individualize housing gains, differentiating this form of "invisible welfare" from the bureaucratic programs debated by the Republican and Democratic parties.
 Visible welfare programs transfer individual risk to social risk,[@gingrich2012preferences] and make more equitable[@prasad2012land, 229] the public goods of a society (in the Rawlsian sense).
@@ -79,7 +84,7 @@ Disentangling the two sub-routines is difficult, if not impossible, but the rule
 
 While the mortgage crisis, financial meltdown, and ensuing Great Recession delivered onto unsuspecting citizens heaps of information---much of it likely inconsistent with individual beliefs about meritocracy, personal financial stability, and government oversight---survey data suggests that the government response delivered similarly-sized heaps of information.
 Pew Research's American Values polling series has tracked opposition and support of various political positions since the late 1980s.[@kohut2012partisan]
-This longitudinal sureying shows sharp divergence between the economic beliefs of Democrats and Republicans *as well as* between independents who lean either way.
+This longitudinal surveying shows sharp divergence between the economic beliefs of Democrats and Republicans *as well as* between independents who lean either way.
 For partisan divides, Figure \@ref(fig:partisan) shows how Republican beliefs regarding social insurance regress to a conservative ideal more aggressively than both Democrats and independents.
 I split hairs over this behavior with Ansell (2014), who maintains it is self-identifying liberals who maintain an ideological opposition to spending cuts.[@ansellPoliticalEconomyOwnership2014, 387]
 This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle section) falls relative to Democratic support after 2007, independent support for maintaining (left section) or expanding (right section) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
@@ -96,12 +101,12 @@ Therefore, my model aims at marginal voters, those independents whose picture of
 include_graphics(c("figure/partisan_social.png", "figure/ideological_social.png"))
 ```
 
-And I expect the effects to be marginal, as the Neighborhood Stabilization Program really enriched no one.
+And I expect the effects to be marginal, as the Neighborhood Stabilization Program likely enriched no one by 2010.
 If each foreclosure costs, on average, $159,000 in decreased property values,[@immergluck2011foreclosed, 151] then each surrounding home value decreases by only a fraction of that number.
 Conversely, if a vacant property is fixed and resold, surrounding home values would only increase by a fraction.
 Additionally, the hefty oversight on the NSP targeted profiteering by local actors, preventing any get-rich-quick schemes.
 The Neighborhood Stabilization Program receives high marks methodologically from its under-the-radar nature: if voters knew, and could filter, their wealth gains through an ideological sieve, it could skew results.
-Rather, its small effects and lack of advertising[@gass2010guide, 5] (and reciprocal press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
+Rather, its small effects and lack of advertising[@gass2010guide, 5] (matched by equally-tiny press coverage) simplify an analysis that would otherwise seek to account for the media narrative surrounding such a program.
 
 While these factors simplify my analysis and attenuate its potential for strong conclusions, my model is complicated by the way that humans value equal amounts of money lost and gained.
 In behavioral economics and cognitive psychology, the endowment effect describes the premium that individuals place on ownership.
@@ -112,17 +117,17 @@ Even with "buffer shocks" added in, the hypothesis asserts that wealth shocks wi
 
 To give a concrete example, consider a home worth $100,000 in 2000.
 If that home increased in value \$50,000, a marginal propensity to consume (MPC)---the economist's term for the extra spending per dollar---of .06 would predict that $.06 \times \$50,000 = \$3,000$ of extra consumption would result.
-However, what if that home decresed in value $50,000?
+However, what if that home decreased in value $50,000?
 Would spending decrease $3,000?
 It seems unlikely that, in the midst of an event labeled as a 'crisis' or the 'Great Recession', spending would not decrease even more dramatically, and would be reluctant to rise for fear that momentary gains would be washed away by another crashing wave of home prices.
-Or, maybe contractions exhibit a linear relationship with the *rate* of price changes, but a second relationship results from the endowment effect.
+Or, maybe contractions exhibit a linear relationship with the *rate* of price changes, but a different relationship results from the endowment effect.
 In this second case, consumption is a function not only of price changes, but also of net positions: a homeowner spends freely so long as their home is worth more than their original purchase price, but is averse or highly-sensitive to dips below the original price.
 
 Angrisani et al. (2019) demonstrated that the marginal propensity to consume changed during the recession (2008--2010) from its run-up (2005--2008).
 That these dates do not align perfectly with those of the foreclosure crisis (2007--2012) is not significant; these dates contain the three phases of the Neighborhood Stabilization Program as well as the 2010 midterms, and overlap significantly with the foreclosure crisis.
 Angrisani et al. used an instrumental variables approach to estimate the MPC of non-recessionary periods to be statistically insignificant, while that of the recession to be 0.062.[@angrisani2019effect, 986]
 His finding that non-recessionary periods exhibit no change in marginal propensity to consume conforms to the rational expectations model of microeconomic behavior---given an *expected* change in income, individuals will not alter consumption.
-Rather, it is only during an unexepcted change in expectations (such as a recession) that consumption changes.
+Rather, it is only during an unexpected change in expectations (such as a recession) that consumption changes.
 This understanding integrates Angrisani's research with most of the work on housing wealth effects pre- and post-crisis.[@greenspan2007sources; @lasky2007housing; @mianPoliticalEconomyUS2010; @schwartz2009subprime]
 Further, Angrisani et al. is the only approach I have found that disaggregates housing wealth MPC before and after the crisis in the familiar permanent income hypothesis framework.
 
@@ -131,7 +136,7 @@ The first is the body of work on endowment effects and the psychological costs o
 Angrisani et al. acknowledges this by saying "If, as documented in previous work, wealth losses are more likely to induce changes in behavior than gains, our estimates may reflect a more pronounced sensitivity of household spending to falling house values."[@angrisani2019effect, 987]
 The second piece is the work done by Berger et al.
 This paper understands data that points to large consumption effects as running contrary to the permanent income hypothesis, which predicts that wealth shocks will be amortized over an individuals' lifetime.
-They then build a new model that attempts to model homeowener expectations based on realistic features of the housng market such as debt levels, collateralization, and variable home price expectations.
+They then build a new model that attempts to model homeowner expectations based on realistic features of the housing market such as debt levels, collateralization, and variable home price expectations.
 These features result in larger marginal propensities to consume, and larger effects of lost wealth than gained wealth.[@berger2016house]
 
 The upshot this literature yields for my analysis is that neighborhoods not targeted by the Neighborhood Stabilization Program should see consumption decrease greater from the bust than consumption increased from the boom.
@@ -139,7 +144,7 @@ This behavior should heighten labor market risk, meaning that, in untargeted are
 An additional---but less controversial---tension to consider is the relationship between change of wealth and total position of wealth.
 In general, the marginal propensity of wealth decreases as individuals get wealthier.[@arrondel2015wealth]
 While there is some squirreliness regarding housing MPC at the very high end of the wealth distribution (second and third homes may truly be just assets, so the purpose would be extra consumption), given the size and location of such high wealth individuals, it is unlikely the Neighborhood Stabilization Program affected those individuals' houses.
-This result implies that those tracts targeted by the NSP should be especially sensitive to its marginal price increases and therefore exhibit higher Republican voting returns.
+This result implies that those tracts targeted by the NSP should be especially sensitive to its marginal price increases (or decreases) and therefore exhibit higher (or lower) Republican voting returns.
 
 
 ## Control Variables {#controls}
@@ -170,39 +175,40 @@ The upshot of this feature is that records are easily available, but this availa
 On the other hand, while partisan voting support may have counter-intuitive logic that necessitates complex research methodologies, rational explanations for identity-based support are often at hand in visible identities.
 
 For instance, Black voters long supported the Republican Party as the party of Abraham Lincoln, Congress' first Black legislators, and as proponents of programs benefitting African Americans.
-This support changed first with the New Deal, with Franklin Delano Roosevelt won 71% of the votes cast by African Americans in 1936, though party identification by African Americans reamined even between the two parties over the next ten years.
+This support changed first with the New Deal, with Franklin Delano Roosevelt won 71% of the votes cast by African Americans in 1936, though party identification by African Americans remained even between the two parties over the next ten years.
 During the Civil Rights Movement this support changed again, when votes for Lyndon B. Johnson's first elected term commanded 94% of the Black vote.[@jackson2008blacks]
 Some of the United States' pre-eminent segregationists were staunch Democrats, but federal action by Lyndon B. Johnson and subsequent campaigning by Richard Nixon effectively fractured Democratic support in the South.
 In the contemporary Democratic Party, redistributionist welfare programs aligned with integration to remedy both the economic and social disparities between white and Black Americans, turning the Democratic Party towards the majority of African Americans.
 
 Similar stories cannot be told for American Indians, Asian Americans, or ethnically Hispanic Americans, but each has their *own* story with the Republican or Democratic parties.
-While American Indians have comprised a small percentage of the United States voting population, a fact owing to their legal disenfranchisement and decimation by civilian and military forces, their vote swings heavily Democratic.
-This behavior is not due to historical reasons---no party has sustained Indian issues at the national scale---but to reactions for the supply of social welfare programs.
-On average, 48% more reservation residents receive cash or food stamps from the federal government than do households in the general population.[@2010public]
-While their turnout rates and absolute population size is low, including a variable for their population could explain the voting behavior of Census Tracts where reservations are located.
-I will employ a binary cut-off metric: should a Census Tract contain a large population of Native Americans (25%, for instance, compared to the national average of 0.9%), then that tract would be labeled as such.
+While the American Indians vote swings heavily Democratic, very few of the tracts in my dataset have significant populations, a fact also owing to their legal disenfranchisement and decimation by civilian and military forces.
+Even as reservation residents disproportionately receive cash or food stamps from the federal government compared with households in the general population,[@2010public] I will not consider the effects of American Indian population in my analysis due to their diffusion throughout my sample and low turnout rates.
 
 The stories of Asian Americans and ethnically Hispanic Americans are perhaps the most fractured among racial political narratives.
 The "Hispanic vote" is often pointed to as a core aspirational piece of the Democratic coalition, though Democratic candidates maintain a checkered record in attracting and serving ethnically Hispanic voters.
 Nonetheless, there are compelling reasons to include a measure of Hispanic voters.
 Until a certain point, an increased Hispanic population raises fears of white job loss, increasing conservative---and especially Tea Party---voting, though no consensus regarding this "racial threat" hypothesis has emerged.[@campbell2006racial]
 As white voters compose between 60% and 70% of the national electorate, fears inflected through them lead to significant effects.
-Interestingly, Republicans used housing policy as a way to attract Hispanic voters.
-With more than 50% of Hispanic people living in America identifying themselves as Catholic,[@2014shifting] adding the promise of a home to conservative social values would further cement the 40% of the "Hispanic vote" achieved by Republicans in the 2004 presidential election.[@abrajano2008hispanic]
-While the motives for voting Republican by Hispanics are complex, the reasons do not cancel out one another, so I will include their population percentages as a predictor.
 
-On the other hand, Asian Americans have pushed back against the "Model Minority" myth to contextualize the fact that the median Asian American income earner---come their families (or they) from India, China, Vietnam, Japan, Korea, Iran, Uzbekistan, or the Philippines---made in 2016 $3,330 more than the average white household.
+Additionally, Hispanic and Latinx people were integral to both the political and financial nature of early-2000s housing.
+Republicans used housing policy as a way to attract Hispanic voters.
+With more than 50% of Hispanic people living in America identifying themselves as Catholic,[@2014shifting] adding the promise of a home to conservative social values would further cement the 40% of the "Hispanic vote" achieved by Republicans in the 2004 presidential election.[@abrajano2008hispanic]
+Conversely, Adam Tooze notes that "Democrats had a lot riding" on the rise of Black and Latinx middle classes.[@toozeCrashedHowDecade2018, 47]
+Whichever way the needle points, Hispanic voters were important features of the electorate.
+On the financial side, "Latinos were more likely and Asians less likely to receive subprime loans than whites were."[@faber2013racial, 328]
+
+While Asian Americans are certainly implicated in the mortgage lending processes that affected NSP allocations, there are huge fractures within Asian American communities that complicate expectations of national partisanship.
+Asian-American commenters have pushed back against the "Model Minority" myth to contextualize the fact that the median Asian American income earner---come their families (or they) from India, China, Vietnam, Japan, Korea, Iran, Uzbekistan, or the Philippines---made in 2016 $3,330 more than the average white household.
 But inequality among Asian Americans is worse than for any other group; Pew notes that income earners in the 90th percentile made nearly 11 times as much as those in the 10th percentile.[@kochhar2018income]
-Across historical, religious, and cultural factors, it is arguable that Asian Americans are the most heterogeneous group of immigrants, which makes their inclusion in Ben Ansell's 2014 paper puzzling.
-Given the contemporaneous heterogeneity of voting patterns by Asian Americans, and the shifting patterns of ethnicities throughout time, I find little reason for their inclusion in this model.
+I include Asian-American portion of voters for much the same reason as I include Hispanic portion: while indeterminate, Asian Americans (at times homogenized in such terms by politicians) were differentially implicated in mortgage lending and politics.
 
 Lastly, age comes into play as a proxy for an invisible identity, that of retiree.
-Fixed-income voters are highly sensitive to home price increases, because asset prices are the only variable piece of their budget.
+Fixed-income voters are highly sensitive to home price increases, because home equity can be the only variable piece of their budget.
 Additionally, a wealth change amortized over a shorter lifespan will present as higher average income, and therefore consumption.
 Rather than use the median or average age of the U.S. population, the decennial Census tracks the number of people in five-year bins.
-Therefore, I use the percentage of people 60 years of age or older---401(k) plans can be cashed out tax-free after age 59 1/2---to estimate the amount of retirees (or those whose thoughts are largely on retirement).
+Therefore, I use the percentage of people 65 years of age or older to estimate the amount of retirees (or those whose thoughts are largely on retirement).
 Additionally, older Americans generally hold more conservative social views.
-In my view, these forces cannot be disentangled without microdata on labor force participation, which could distinguish a retiree from an old person.
+In my view, these forces cannot be disentangled without microdata on labor force participation, which could distinguish a retiree from merely an old person, but nation-wide data by age does not exist on the local level.
 
 ### Economic Identity
 
@@ -248,18 +254,35 @@ And on the side of push factors, residents of rural areas are often more religio
 These factors do not imply that those areas are in stasis, but rather that the rigidity of beliefs is compounded by the institutions and political economy of rural areas.
 These beliefs, in long historical sweep, are generally better represented by conservative legislators currently residing in the Republican party.
 
-Lastly, the highest level of education attained is a huge predictor of one's party affiliation, but only for white voters.
+Additionally, the highest level of education attained is a huge predictor of one's party affiliation, but only for white voters.
 A 15-point gap persists between white voters with and without a college degree: 45% percent of college-educated white voters cast their ballots for Republicans, while more than 60% of those with a college degree did the same.[@harris2018america]
 This trait has worsened since George H. W. Bush's presidency, before which educated and uneducated voters were more or less aligned.
 I weight the importance of this variable by its frequency: a tract with a single white voter who is not college educated is far less significant than one with 2,000 white voters, 45% of whom are not college educated.
+
+Lastly, I attempted to deal with the specific political circumstances of each state.
+Usually, the strategy would be to include state-level fixed effects, which essentially groups a state together and tries to explain inter-state variations.
+However, adopting this strategy may bias my results in two ways.
+First, connecting votes to specific precincts (as I will detail in Section \@ref(aggregation)) was fraught with local variations in naming conventions.
+This meant that available data congregated in specific counties or cities that adopted standard naming conventions, which often were large cities and counties with well-staffed registrar offices.
+Since home prices are so local, and more populous cities and counties often denser, this irregularity of errors could bias particular states' fixed effects such that a fixed-effects term captures some of the price-change variation rather than the political content of that state.
+
+Second, home price data were only available in tracts which saw greater than 100 sales (and correlative purchases).
+As such, tracts that were particularly populous, highly transient, with high owner-occupancy rates, or saw large price swings (triggering sell-offs) are disproportionately represented in the data.
+These features should generally bias the data in a similar way as vote-return availability, and a state fixed-effect term would captures some of this variation.
+Instead, I use the 2008 Cook Partisan Voting Index (PVI) to measure state-level politics.
+In a nation-wide voting sample, a fixed effects term and the PVI should be similar.
+But with a limited sample, this nationwide measure is more appropriate.
+The Cook PVI takes the difference of a state's vote margin for a presidential candidate with the national vote margin.
+For instance, John McCain won 46.3% of the national popular vote in 2008.
+Since Virginia went 46.8% for McCain, its 2008 Cook PVI would be +.5; Massachusetts, on the other hand, went 36.8% for McCain, giving it a 2008 PVI of -9.5.
+
 
 ## A Model of Voting {#model}
 
 The discussion above leaves me with a model of Republican voting:
 
 \begin{multline}
-rep_i = \beta_0 + \beta_1NSP_i + \beta_2{PriceChg_i \times LaborRisk_i \times ForeclosureRate_i}  + \\ \beta_3UnemploymentChg_i + \beta_4UnemploymentRate_i + \beta_5medHHI_i + \beta_6Density_i + \\
-\beta_7Tenure_i + \beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\
-\beta_{12}Hispanic^2_i + \beta_{13}(White_i + SomeCol_i) + \beta_{13}Evangelical_i + \beta_{14}LDS_i + \epsilon_i
+rep_i = \beta_0 + \beta_1NSP_i + \beta_2(PriceChg_i \times LaborRisk_i \times ForeclosureRate_i) + \\ \beta_3UnemploymentChg_i + \beta_4UnemploymentRate_i + \beta_5medHHI_i + \\ \beta_6Density_i +
+\beta_7Tenure_i + \beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\ \beta_{12}Hispanic^2_i + \beta_{13}Asian + \beta_{13}(White_i + SomeCol_i) + \beta_{13}Evangelical_i \\ + \beta_{14}LDS_i + \beta_{15}PVI_i + \epsilon_i
 (\#eq:model)
 \end{multline}

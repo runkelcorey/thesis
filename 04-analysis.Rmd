@@ -63,7 +63,7 @@ This means that the nightmare problem of gerrymandering deliberately undermining
 Gerrymandering divides *districts* into a biased collection of precincts, it does not redraw precinct lines.
 Since my analysis deals with already-made and locally-created voting precincts, it skirts this particular problem potentially befalling analyses that begin at the county or Congressional-district level.
 
-## Data collection and aggregation
+## Data collection and aggregation {#aggregation}
 
 I built my data almost exclusively from official statistics and estimates.
 Given that most of my sources would eventually lead back to the Census Bureau, which covers the entire United States, I knew that the factors limiting my coverage would lie outside the Census Bureau.
