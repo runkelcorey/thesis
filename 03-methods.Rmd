@@ -45,7 +45,7 @@ Figure \@ref(fig:mew) shows this outstanding inverse relationship between the ra
 Additionally, @mian2011house found that, as a home increased in value, that household invested less elsewhere.
 While estimates vary on the uses of extracted mortgage equity that funds personal consumption,^[Per @greenspan2007sources, estimates range from 1% to over 50% of gross mortgage equity withdrawn.] it is clear that homeowners use funds to pay down debt and renovate their homes.
 In other words, understandings of housing as an asset are not foreign to homeowners, especially those who bought in the crest of that Minsky cycle.
-Homeowners who bought in between 1999 and 2005 saw median net worth jump "from $11,000 to $88,000 in real terms, driven largely by rising home equity."[@seabrooke2009politics]
+Homeowners who bought in between 1999 and 2005 saw median net worth jump "from $11,000 to $88,000 in real terms, driven largely by rising home equity."[@schwartz2009politics]
 
 ```{r mew, fig.align='center', echo=FALSE, out.width='90%', fig.cap="Personal saving and mortgage equity withdrawal as a percentage of disposable income.", dev='pdf'}
 include_graphics("figure/mew.png")
@@ -74,7 +74,7 @@ The political scientist's point is that they are substitutable: preference for t
 Then, the task for the individual political actor is simply to follow these preferences to their political implications by stepping back through the argument in Chapter \@ref(motive-opportunity).
 This argument says that, under the narrative of balanced budgets and concerns over the national debt, lower expenditure makes possible lower revenue.
 Therefore, lower preference for social insurance justifies preferences for lower taxation.
-Additionally, early research by Frank Castles and Jim Kemeny suggest that downpayments and mortgages factor into household expenditures early, while property taxes are considered only after necessary expenses have been paid.[@seabrooke2009politics, 13]
+Additionally, early research by Frank Castles and Jim Kemeny suggest that downpayments and mortgages factor into household expenditures early, while property taxes are considered only after necessary expenses have been paid.[@schwartz2009politics, 13]
 Tea Party candidates then, merely augmented this aversion to taxes with a political logic, clearing a spot for the preferences of privately-insured, but tax-burdened voters.
 
 However, it is important to understand that, just like the contingencies of party platforms, there are contingencies in how individuals process economic data and political propositions.

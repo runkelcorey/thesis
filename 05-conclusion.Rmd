@@ -10,7 +10,7 @@ output:
 
 # Conclusion {#conclusion}
 
-Between 2008 and 2012, one of every twenty American adults lost their homes.[@martin2015foreclosed]
+Between 2007 and 2012, one of every twenty American adults lost their homes.[@martin2015foreclosed, 5]
 While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.[@ferreira2015new]
 In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,[@lasky2007housing] or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.[@2019caseshiller]
 
@@ -19,10 +19,11 @@ This compact promised subsidized, predictable home mortgages and organized emplo
 These policies responded to general economic turmoil and, I believe, learned from the lessons of farm foreclosures in the Midwest.
 Flunking crop prices and the ecological devastation of the Dust Bowl bore epidemiological resemblance to the foreclosure crisis: the diseases and dust storms in the 1920s and 1930s concentrated geographically much as the foreclosures in master planned developments (or close-knit neighborhoods) did in the 2000s and 2010s.
 But the responses of farmers bore little resemblance to the responses of homeowners.
-Farmers had been trained in debt politics, going back all the way to Shay's Rebellion.[@beard1913economic]
+Farmers had been trained in debt politics, going back all the way to Shay's Rebellion,[@beard1913economic] while homeowners had been trained to favor low inflation rates to unlock more credit.[@schwartz2009subprime, 178]
 Moreover, sociological forces made talking shop a respectable subject among farmers, rather than the shame that foreclosure connoted in the 2000s.
 The system to emerge subsidized long-term fixed-rate mortgages at what then were low interest rates and small downpayments.
 These policies increased demand for homeownership and fixed people in their suburban communities.[@jacksonCrabgrassFrontierSuburbanization1985]
+"Politically and psychologically, homes were homes---inert, immobile, and illiquid---during Bretton Woods."[@schwartz2009politics, 210]
 
 However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.[@schwartz2009subprime, 111]
 This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.[@lewis2010fat]
@@ -50,7 +51,7 @@ When employment was unpredictable, or wages flat, homeowners relied on surging h
 When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills[@greenspan2007sources] or necessary expenses.
 Home equity and increasing prices (that could be realized as income) acted as a form of private insurance, replacing unemployment benefits and welfare provisions.
 Dropping demand for those programs would also agree with lower taxation to further loosen households' financial constraints.
-The conservatizing effects of this logic on political behavior have been thoroughly theorized[@gingrich2012preferences; @schwartz2009subprime; @seabrooke2009politics] but somewhat less-thoroughly observed.
+The conservatizing effects of this logic on political behavior have been thoroughly theorized[@gingrich2012preferences; @schwartz2009subprime; @schwartz2009politics] but somewhat less-thoroughly observed.
 Empirical work has focused on the existence of preferences rather than their priority,[@ansellPoliticalEconomyOwnership2014a] as data on individual home wealth and bespoke polling are expensive.
 
 This thesis has exploited the coincidence of unusually-precise data with political changes that sharpened (and possibly made explicit) the connections between homeownership, unstable employment, and taxation.

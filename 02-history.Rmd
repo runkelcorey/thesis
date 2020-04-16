@@ -6,7 +6,7 @@ The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis wi
 This aim ran parallel with the Bush administration's "ownership society", which added moral heft to the legal responsibilities associated with private property.
 By mitigating spillover effects, the Neighborhood Stabilization Program would work in service of this doctrine, isolating homes from the "animal spirits"[@keynes2007general] of tumultuous housing markets and ensuring that the success or failure of a person's finances depended on their own actions.
 Despite the ideological congruence between the NSP and Bush's ownership society, the Neighborhood Stabilization Program departed from the Republican Party by privatizing government money for less (or even negatively) wealthy people.
-Recently in the United States, both Republican and Democratic parties have connected this behavior---support for programs that transfer taxpayer money to less affluent people---with higher taxation, and with the post--New Deal Democratic Party.[@seabrooke2009politics, 212]
+Recently in the United States, both Republican and Democratic parties have connected this behavior---support for programs that transfer taxpayer money to less affluent people---with higher taxation, and with the post--New Deal Democratic Party.[@schwartz2009politics, 212]
 So, while the policies fit with the Bush administration, ideologically they tended more towards the Democratic Party.
 
 ```{r knit, include=FALSE}
