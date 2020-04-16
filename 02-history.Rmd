@@ -2,25 +2,23 @@
 
 \epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{\textit{George W. Bush, October 2004}}
 
-The Housing and Economic Recovery Act (HERA) countered the unfurling crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
+The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis with a ream of policies aimed, variously, at mitigating spillover effects of the subprime mortgage crisis.
 This aim ran parallel with the Bush administration's "ownership society", which added moral heft to the legal responsibilities associated with private property.
-By mitigating spillover effects, the Neighborhood Stabilization Program would work in service of this doctrine.
-The NSP would attempt to isolate homes from the "animal spirits"[@keynes2007general] of tumultuous housing markets and ensure that the success or failure of a person's finances depended on their own actions.
-However, despite the ideological congruence between the NSP and Bush's ownership society, the Neighborhood Stabilization Program departed from the Republican Party by privatizing government money for less (or even negatively) wealthy people.
-Recently in the United States, both Republican and Democratic parties have connected this behavior---support for programs that transfer taxpayer money to less affluent people---with higher taxation, and with the post--New Deal Democratic Party.
-So, while the policies fit with the Bush administration, their ideological dimension tended more towards the Democratic Party.
+By mitigating spillover effects, the Neighborhood Stabilization Program would work in service of this doctrine, isolating homes from the "animal spirits"[@keynes2007general] of tumultuous housing markets and ensuring that the success or failure of a person's finances depended on their own actions.
+Despite the ideological congruence between the NSP and Bush's ownership society, the Neighborhood Stabilization Program departed from the Republican Party by privatizing government money for less (or even negatively) wealthy people.
+Recently in the United States, both Republican and Democratic parties have connected this behavior---support for programs that transfer taxpayer money to less affluent people---with higher taxation, and with the post--New Deal Democratic Party.[@seabrooke2009politics, 212]
+So, while the policies fit with the Bush administration, ideologically they tended more towards the Democratic Party.
 
 ```{r knit, include=FALSE}
 library(knitr)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
-
 But, as mentioned early in Chapter \@ref(actors-motive), opposing the leftward pull of ideology was the rightward push of rising wealth.
-While higher levels of wealth and income are colloquially associated with conservatism, but there is less research on how asset ownership pushes people towards their political decisions.<!--(BRING IN EMBOURGEOISIEMENT HERE?)-->
-And, historically, the political effects of taxation were not a given: after World War II, taxation was not a weighty political issue,[@campbell2009how, 160] let alone a wedge issue.
+While higher levels of wealth and income are colloquially associated with conservatism, there is less research on how asset ownership pushes people towards their political decisions.<!--(BRING IN EMBOURGEOISIEMENT HERE?)-->
+Furthermore, citizens had not always expressed widespread loathing for taxes: after World War II, taxation was not a weighty political issue,[@campbell2009how, 160] let alone a wedge issue.
 Rather, responses to California's Proposition 13 and reverberations of Reaganite rhetoric led Republicans "to define themselves and their party in opposition to taxes."[@martin2008welcome, 128]
-Politicians of all stripes followed, with Third Way Democrats, led by President Bill Clinton, accepted tax cuts in their successful political bids; it was only in the 2000s that Democrats united (more or less) in warning against lower taxation.
+Politicians of all stripes followed, with Third Way Democrats, led by President Bill Clinton, accepting tax cuts in their successful political bids; it was only in the 2000s that Democrats united (more or less) in warning against lower taxation.
 
 The mortgage crisis hit after this crystallization of interests: a moment in American politics when the two parties agreed on the content of their debates.
 Specifically, they agreed that---along with wars in the Middle East---taxation and visible, means-tested welfare were the political issues of the day.
@@ -32,7 +30,7 @@ In response, grassroots anti-tax movements (thoroughly astroturfed by conservati
 
 The Tea Party Movement sharpened the debate over taxes.
 What had been salient in the decades before the trauma of the financial and mortgage crises re-emerged as the guiding issue of the Republican Party.
-The salience of taxation, and the formalization of candidates as members of the Tea Party Caucus, made the theoretical underpinnings legibile to voting analysis.
+The salience of taxation, and the formalization of candidates as members of the Tea Party Caucus, made the theoretical underpinnings legible to voting analysis.
 Without the self-professed and much-discussed focus on taxation during the 2010 midterm elections, analyzing voters' awareness of candidates' tax positions would be required in order to effectively argue that voting behavior ran with tax policies.
 The focus on taxation, and the clear connection between expenditures on visible welfare programs and higher taxation, make possible the aggregation of individual tax preferences into party voting.
 
@@ -40,6 +38,7 @@ In this chapter, I dive into how the Neighborhood Stabilization Program fit ideo
 I argue that the NSP, by virtue of its targeted recipients, hewed more closely to the ideology of the Democratic Party than that of the Republican Party between 2008 and 2010.
 Further, the snugness of this fit was not a given, but was contingent on a tax protest movement like that of the Tea Party.
 American party politics were crucial to corralling the effects of foreclosure relief programs into distinctions legible to vote analysts.
+Further, these historical contingencies make the US housing-politics interface worthy of analysis, as taxation, welfare, and housing finance cannot be considered necessary or neutral features of American society.
 
 
 ## The Neighborhood Stabilization Program, Ideologically
@@ -103,7 +102,7 @@ Bush's ownership society provisions also included a "tripling of funding"[@2002h
 These programs in aggregate, pushed a narrative of meritocratic access to consumer credit spurring individual ownership.
 The NSP, in turn, slotted into this story by insulating responsible (i.e. those who have not yet defaulted) debtors from wily housing markets.
 
-Such a conformity with Bush's animating philosophy, despite the program's brief opposition by the president, places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.
+Such a conformity with both Bush's animating philosophy and with Democratic pushes to expand access to homes[@toozeCrashedHowDecade2018, 47] places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.
 If voters were unable to locate programs like the NSP within Democratic or Republican platforms, then there would be no clear reason why pro--home price policies translate into Republican votes.
 But while the values cherished by Bush's ownership society aligned ideologically with American conservatism, its distinctive policies were afield of the Republican platform.
 Part of this separation was because Bush's ownership society was not too different than the messages had pushed by presidents on both sides of the aisle since at least the Great Depression.[@stollerHousingCrashEnd2016]
@@ -129,6 +128,7 @@ His answer is that the consumption-driven American economy leveraged the credit 
 Global disinflation resulted partially from the sheer supply of credit, in turn making the interest rates offered by US mortgage-backed securities a viable alternative to dampening rates of return on traditional investments.
 This process fueled itself for a while: lower interest rates meant that buyers could afford more expensive homes on the same monthly payments, bidding up the prices of homes; when nearby home prices appreciated, homeowners could refinance, paying off the first mortgage, marginally lowering the risk and thus interest rate for the next mortgagee in the market.
 This process played out in every country able to profitably securitize mortgages, but the Reagan administration's reconfiguration of credit enabled the United States to reap the world's largest benefits---Schwartz credits this system with driving the United States' differential growth above the rich Organization for Economic Cooperation and Development (OECD) countries between 1991 and 2005.[@schwartz2009subprime, 4]
+Adam Tooze credits Fed Chairman Alan Greenspan pushing the levers of housing most opportunistically, explaining how he plunged interest rates to 1% following 9/11 and the Dot-com crash to entice homeowners to refinance.[@toozeCrashedHowDecade2018, 55]
 
 ```{r hhdebt, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Outstanding US residential mortgage debt as a percentage of US gross domestic product.", dev='pdf'}
 include_graphics("figure/residential_debt_gdp.png")
@@ -146,8 +146,9 @@ In return, the asset-backed social contract offered cheap credit and the Minskya
 By locating this process in the Reagan administration, I have obviously extended beyond my self-imposed 1991 start date for continually-increasing home prices.
 The point I make here is that the infrastructure for that incredibly-long price surge was built a decade before.
 Then, in the 1990s, the endogenous ability of speculative home buying ramped up.
-I point to somwhere in the later part of that decade as an inflection point in the Minsky cycle (pictured in Figure \@ref(fig:minsky)) between speculative and Ponzi financing, a point before which home building and buying was foundational to this new "social contract" but still directly dependent on the income swings and employment patterns of millions (what consultants call "market fundamentals").
-Despite 1991's brief negative sojourn, this social contract was contingent on rising home prices,[@stollerHousingCrashEnd2016] and leveraged by Bush the elder as well as Bill Clinton in their presidencies.
+I point to somewhere in the later part of that decade as an inflection point in the Minsky cycle (pictured in Figure \@ref(fig:minsky)) between speculative and Ponzi financing, a point before which home building and buying was foundational to this new "social contract" but still directly dependent on the income swings and employment patterns of millions.
+
+Despite 1991's brief negative sojourn, this social contract contingent on rising home prices[@stollerHousingCrashEnd2016] was leveraged by Bush the elder as well as Bill Clinton in their presidencies.
 Housing, often couched in the language of the American Dream, garnered vaguely nonpartisan support at the national level: while there were differences between Republican and Democratic housing policies, their approaches were united by a vocabulary of taxation and credit, not debt.
 Despite the rich history of debt politics among American farmers, parties focused on expanding access to credit and limiting the toll to government expenditures, rather than limiting the burden of debt and expanding government revenues.
 
@@ -155,7 +156,7 @@ Despite the rich history of debt politics among American farmers, parties focuse
 include_graphics("figure/minsky.png")
 ```
 
-To be sure, this vocabulary was a rational response to the rising home prices---so long as markets showed signs of growth, debt relief would be a minor issue, while tax reductions and access to credit extended individual budgets.
+To be sure, this vocabulary constituted a rational response---so long as markets showed signs of growth, debt relief would be a minor issue, while tax reductions and access to credit extended individual budgets.
 But it was not uniquely rational: dependable debt relief could, if annualized, be indistinguishable from a similarly-sized mortgage tax credit; after all, with all the easy credit, there was certainly enough debt to go around---in addition to mortgage debt equaling 82% of gross domestic product, mortgage debt service payments in 2007 increased 75% over 1981 levels.[@boardofgovernorsofthefederalreservesystemus1980mortgage]
 
 To summarize, the Neighborhood Stabilization Program sought to insulate homeowners from the market by using the buying power of the federal government to fix local home prices.
@@ -185,7 +186,7 @@ The fiscally-conservative Southern Democrats who controlled Congress' tax-writin
 
 Then, in 1978, Californians voted in favor of Proposition 13, which limited the property tax rate to 1%.
 Proposition 13 emerged out of a long-fought battle by tax activists against the rationalization and modernization of property tax assessment.[@martin2008welcome]
-Tax assessors declined to re-appraise property values at common intervals, leading to "fractional assessment" that, in 1971, "was ten times greater than the home mortgage interest deduction,"[@martin2008welcome, 9] mentioned above as a quintessentially bouregois example of the relatively-regressive American tax policies.
+Tax assessors declined to re-appraise property values at common intervals, leading to "fractional assessment" that, in 1971, "was ten times greater than the home mortgage interest deduction,"[@martin2008welcome, 9] mentioned above as a quintessentially bourgeois example of the relatively-regressive American tax policies.
 The success of Proposition 13 realized the potential of anti-tax movements in post-war, post--New Deal American politics.
 Interviews of Congressional staffers at the time referred to a 'Proposition 13 mentality'[@kingdon1995agendas, 97] and President Jimmy Carter said the result "sent a shock wave through the consciousness of every public servant."[@jarvis1979mad, 3]
 Interestingly, Proposition 13 was not destined for the Republican platform from the outset.
@@ -321,7 +322,8 @@ The movement had outsize influence due to its insurgency, receiving a jolt of en
 
 In sum, the Neighborhood Stabilization Program, by insulating homeowners from the wiles of the market, sought to construct an artificial environment where ownership would bring success.
 By this aim, the NSP fit in President George W. Bush's ownership society doctrine, and the asset-backed political economy that had propelled presidential campaigns since Ronald Reagan's second term as well as the American economy more generally.
-However, this asset-backed political economy had not received the functional blessing of the Republican party. At the subnational level, the party focused far more on taxation than on assets; these priorities were complementary (or at least independent of each other) so long as asset prices rose.
+However, this asset-backed political economy had not received the explicit blessing of the Republican party.
+At the subnational level, the party focused far more on taxation than on assets; these priorities were complementary (or at least independent of each other) so long as asset prices rose.
 When these prices fell, and an economy that had reconfigured itself to feed off rising asset prices sputtered, the governmental outlays required to remedy the situation totaled several hundred billion dollars.
 This price tag met simmering rhetoric about balanced budgets and decreased welfare spending, neither of which came to pass under the economic crisis policies of Bush's later and Obama's early years.
 Preheated by wealthy conservatives, anti-tax organizers heeded the call of Rick Santelli to advocate for lower taxes coupled with lower spending, all wrapped up in the Tea Party movement.

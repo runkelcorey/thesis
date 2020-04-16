@@ -1,4 +1,4 @@
-# An Unfurling Crisis {#actors-motive}
+# Introduction {#actors-motive}
 
 Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.[@martin2015foreclosed]
 It was clear then that homeowners needed an intervention.
@@ -13,7 +13,7 @@ library(knitr)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
-In reponse, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute $3.9 billion to state and local governments for the purchase and repair of foreclosed properties.[@pelosi2008housing]
+In response, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute $3.9 billion to state and local governments for the purchase and repair of foreclosed properties.[@pelosi2008housing]
 This program, later termed the Neighborhood Stabilization Program (NSP), is my focus.
 In purchasing, repairing, and in most cases reselling foreclosed properties, the NSP sought to mitigate the effects of foreclosures on their surroundings.
 Primarily, foreclosures tear people from their homes.
@@ -60,7 +60,7 @@ These factors make homeowners *very* sensitive to falling or stagnant home price
 In their sensitivity, they may have voted for parties, candidates, and policies they believed would drive up home prices, such as property tax cuts, muscular code enforcement, and spacious zoning regulations.
 Each of these policies reduces the resources available for non-homeowners, pitting homeowners against renters, the homeless, and anyone else without a direct financial stake in the asset.
 For example, tax cuts, take they the form of directly-decreased property taxes or the homeowner tax credit, reduce the monies available to fund public goods.
-In the United States, party ideology also ties higher taxes with explicitly redistributive policies, though Democrats and Republicans archetypically differ as to whether high taxes--more redistribution is good or bad.
+"Housing elements of the U.S. welfare state," Schwartz & Seabrooke note, "favor everyone but the 'poor'".[@seabrooke2009politics, 212]
 The rigidity of these ideologies rationalizes the fear that rents extracted from higher taxation will not return to the homeowners.
 Circling back to the original home-price dynamic, higher home values fund greater consumption, while lower property values and higher taxes (as they always have) limit homeowners' capacities to spend, an activity Americans very much enjoy.
 
@@ -74,7 +74,7 @@ Third, I point to municipal disinvestment and the trajectory of the Commerce Cla
 This critique I believe to be sufficient, though by no means necessary, to explaining why each was functionally barred from substantial action.
 
 This argument serves dual purposes.
-First, it justifes the motives of actors external to the creation of the Neighborhood Stabilization Program, to which internal actors, such as George W. Bush and members of Congress, responded.
+First, it justifies the motives of actors external to the creation of the Neighborhood Stabilization Program, to which internal actors, such as George W. Bush and members of Congress, responded.
 Second, it offers a story about why external actors may not have acted decisively.
 Readers should come away from this chapter understanding why federal foreclosure relief programs were necessary.
 
@@ -87,14 +87,15 @@ Foreclosed housing's base of public opinion and support was attenuated by geogra
 In addition, the organizers' audience was blocked partially by other demands, including the presence of mortgage servicers.
 The Great Depression, however, saw these factors come together in the Midwest, where farms were physically parched and thus, financially underwater.
 Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they relied on their land for its income.
+
 However, farmers in the Great Depression differed from early 2000s subprime borrowers in that farming did not *supplement* wage income, it *replaced* wage incomes.
 In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting *per se* or *de facto* moratoria on foreclosures.[@wheelockChangingRulesState2008, 537]
 The lack of such conditions pitched the struggle for foreclosure legislation in the subprime mortgage crisis to a severe angle.
 
 The most important differentiator between the foreclosure crisis in the Great Depression and that which preceded the Great Recession was the outsize effect of farm foreclosures.
 Farms were both the workplace and home of farmers.
-Unlike the foreclosure crisis in the 2000s, losing a home implied losing a job, though that job could be lost in other ways (drought, crop disease, low prices).
-This fact raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
+Unlike the foreclosure crisis in the 2000s, losing a home implied also losing a job.
+This raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
 Of the 100,000 farmers who lost their farms each year between 1926 and 1940,[@alston1983farm] the Midwest saw the highest concentrations.
 Figure \@ref(fig:wheelock-farms) shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
 In 1933, by far the worst year for farm mortgages, failure rates topped 3.7%; during the rest of 1926-1940, rates were often above 1.5%.[@wheelockChangingRulesState2008, 571]
@@ -161,10 +162,12 @@ Whatever the cause, the fraudulent mortgage documents offered a concrete opportu
 
 Geographic and economic features of farming compounded its larger-scale mortgage crisis to foment conditions ripe for organizing compared to the subprime housing crisis.
 The Internet forums where foreclosures were discussed and debated turned out to be silos, with arguments accumulating while few asked outside sought answers.
-In contrast, farming's power to determine social interactions pushed together those in distress, joining a long line of Progressive debtor's rights movements in the Midwest.
-These movements organized, articulating political demands most remarkably on March 22, 1933, when "a caravan of two to three thousand farmers descended upon St. Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol."[@fliter2012fighting]
+In contrast, farming's power to determine social interactions pushed together those in distress.
+As farmers often find themselves in financial distress, they built on top of established organizing networks, joining a long line of Progressive debtor's rights movements in the Midwest.
+In contrast, homeowners had been trained to prefer low inflation rates: here access was more important that the burden of debt.
+The organized farmers articulated political demands most remarkably on March 22, 1933, when "a caravan of two to three thousand farmers descended upon St. Paul from southern Minnesota, in an astonishing array of antediluvian automobiles, and swarmed over the capitol."[@fliter2012fighting]
 This swarm presaged the unanimous passage of the Minnesota Moratorium Act, a key piece of state mortgage legislation whose constitutionality would be upheld in *Home Building & Loan Association v. Blaisdell*,[@1934home] paving the way for further states to enact statutory protections for mortgagors during the Great Depression.
-In contrast, each call for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on *Blaisdell*.
+In contrast, calls for mortgage moratoria in the subprime mortgage crisis was met with consternation, as scholarly opinion soured on *Blaisdell*.
 To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
 
 
@@ -179,9 +182,9 @@ This influence combined with the altered expectation of federal policy regulatin
 This turn away from local economic regulation starved states and cities of the resources needed to handle foreclosures.
 
 Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in Figure \@ref(fig:spending-shift).
-While scholarhsip has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, @beard1913economic retains its value by its analysis of primary sources.
+While scholarship has elaborated (and debated) Charles Beard's story of private interests in the Constitutional Convention, @beard1913economic retains its value by its analysis of primary sources.
 In it, Beard argues that the United States has a long history of enforcing the rights of creditors over the sovereignty of states.
-Linking uprisings such as Shays Rebellion to foreign credit demands and the interests of individual urban bondholders, he suggests that the Constiution can be seen broadly as a struggle between farmers and bondholders, not unlike Depression-era rhetoric between Midwest farmers leaden with debts and their Eastern creditors.
+Linking uprisings such as Shays Rebellion to foreign credit demands and the interests of individual urban bondholders, he suggests that the Constitution can be seen broadly as a struggle between farmers and bondholders, not unlike Depression-era rhetoric between Midwest farmers leaden with debts and their Eastern creditors.
 
 The primary result of this struggle was the Contract Clause:
 

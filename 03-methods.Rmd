@@ -74,7 +74,8 @@ The political scientist's point is that they are substitutable: preference for t
 Then, the task for the individual political actor is simply to follow these preferences to their political implications by stepping back through the argument in Chapter \@ref(motive-opportunity).
 This argument says that, under the narrative of balanced budgets and concerns over the national debt, lower expenditure makes possible lower revenue.
 Therefore, lower preference for social insurance justifies preferences for lower taxation.
-Tea Party candidates espoused this logic, clearing a spot into which voter preferences could fit.
+Additionally, early research by Frank Castles and Jim Kemeny suggest that downpayments and mortgages factor into household expenditures early, while property taxes are considered only after necessary expenses have been paid.[@seabrooke2009politics, 13]
+Tea Party candidates then, merely augmented this aversion to taxes with a political logic, clearing a spot for the preferences of privately-insured, but tax-burdened voters.
 
 However, it is important to understand that, just like the contingencies of party platforms, there are contingencies in how individuals process economic data and political propositions.
 Larry Bartels (2002) accepts this basic assumption while rejecting the idea that ideology or partisanship are static filters through which people see selectively.

@@ -10,7 +10,7 @@ output:
 
 # Conclusion {#conclusion}
 
-Between 2008 and 2012, more than 10 million Americans lost their homes.[@martin2015foreclosed]
+Between 2008 and 2012, one of every twenty American adults lost their homes.[@martin2015foreclosed]
 While some of these former homeowners were exploiting the cheap credit and lax underwriting standards of subprime mortgage brokers, many more were caught up in the speculative twister that tore through the Sand States of California, Florida, Arizona, and Nevada.[@ferreira2015new]
 In the face of stagnating wages, outsourced manufacturing, and uncertain career mobility, homeowners became asset managers, supplementing their incomes with home equity lines of credit and reverse mortgages,[@lasky2007housing] or placing their retirement dreams in a national housing market that had climbed every month of every year from May, 1991 to March, 2006.[@2019caseshiller]
 
@@ -24,29 +24,30 @@ Moreover, sociological forces made talking shop a respectable subject among farm
 The system to emerge subsidized long-term fixed-rate mortgages at what then were low interest rates and small downpayments.
 These policies increased demand for homeownership and fixed people in their suburban communities.[@jacksonCrabgrassFrontierSuburbanization1985]
 
-However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.
+However, continuously-improving overseas manufacturing combined with an increasingly-large and wealthy financial sector to displace organized labor in, respectively, economic and political importance.[@schwartz2009subprime, 111]
 This financial sector's dominance was partially spurred by relaxed regulations on the packaging and resale of home mortgages, which had, since the New Deal, been the exclusive purview of Fannie Mae, Freddie Mac, the Federal Housing Authority, and local savings and loan banks.[@lewis2010fat]
 Meanwhile, taxation became a national political discussion.
 After the tax rates of top-bracket earners were cut in the 1960s from above 90%, homeowners in California awoke to a rationalized and modern property tax system that edged assessed property values higher.
 These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.[@martin2008welcome]
 
 The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
+During his campaign, Reagan focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay201613th] while simultaneously with increasing military expenditure.
 In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.[@campbell2009what]
-At the same time, he focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay201613th] while simultaneously with increasing military expenditure.
-In his second term, the fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@stollerHousingCrashEnd2016]
+The fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@stollerHousingCrashEnd2016; @toozeCrashedHowDecade2018, 45]
 Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.[@lewis2010fat]
 Better positioned in the market, and with fewer competitors, investment banks ramped up production of home mortgages.
 
-This acceleration was aided by successive federal policies from George H. W. Bush and Bill Clinton aimed at boosting affordability.
+This acceleration was boosted by successive federal policies from George H. W. Bush and Bill Clinton aimed at boosting affordability.
 For current homeowners, this sustained demand meant that home prices seemed to be stably increasing, and that eventual sale would bring certain profits.
 For prospective homeowners lured by the good fortune currently being enjoyed, global disinflation (partially due to outsourced manufacturing) meant that home mortgages, now packaged into mortgage-backed securities, offered enough return on investment to persuade international capital to provide the financial supply.[@schwartz2009subprime]
 Once this demand and supply saw consistency in each other, they became apparently dependent on one another: increased demand let in more investors on these assets made riskless by yet more demand, allowing homeowners to borrow against their inflated home prices.
 This mechanism crystallized a successive, asset-backed social compact.
-Instead of organized employment, citizens received organized credit with relatively predictable gains while accepting uncertain wage employment.[@stollerHousingCrashEnd2016]
+Instead of organized employment, citizens received organized credit with relatively predictable gains while accepting uncertain wage employment.[@stollerHousingCrashEnd2016, 1212]
+The success of these policies was immense: in 2016, after the crash, 9% of global wealth was American homes.[@toozeCrashedHowDecade2018, 43]
 
-Whether as social compact or opportunism, these political and financial swings made homeowners sensitive to real estate deflation as their parents, parties to the previous compact, were sensitive to inflation in the basket of everyday goods.
+Whether as social compact or opportunism, these political and financial swings made homeowners sensitive to real estate deflation as their parents---parties to the previous compact---were sensitive to inflation in the basket of everyday goods.
 When employment was unpredictable, or wages flat, homeowners relied on surging home prices to smooth their consumption.
-When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills[@buchholz2016federal] or necessary expenses.
+When equity was low, and mortgage (or second mortgage) debt was still present, a bump in prices could give the necessary loft to pay off credit card bills[@greenspan2007sources] or necessary expenses.
 Home equity and increasing prices (that could be realized as income) acted as a form of private insurance, replacing unemployment benefits and welfare provisions.
 Dropping demand for those programs would also agree with lower taxation to further loosen households' financial constraints.
 The conservatizing effects of this logic on political behavior have been thoroughly theorized[@gingrich2012preferences; @schwartz2009subprime; @seabrooke2009politics] but somewhat less-thoroughly observed.
@@ -60,7 +61,7 @@ The Crisis, in turn, began with plateauing home buying (and thus speculation and
 As prices evened out, equity to borrow against disintegrated, and foreclosures increased.
 With vacant properties and increased housing stock, prices fell nationally by 20% from February 2007 to May 2009, ultimately settling 26% down in February 2012.[@2019caseshiller]
 
-Declining prices meant declining property tax revenues (or at least the future threat of such changes), which hamstrung cities, already shorn of much of their expected responsibility by state and federal governments.
+Declining prices meant the threat of declining property tax revenues (property taxes make up 70% of local government revenues[@schwartz2009subprime, 181]) which hamstrung cities already shorn of much of their expected responsibility by state and federal governments.
 As for banks, the process of mortgage-backed securitization separated lines of communication from creditors who would rather take haircuts or extend loan maturities than foreclose.
 Home mortgages are usually backed by one party (a bank with a good name), and then serviced by another.
 This legal relationship rewarded prompt and reliable servicing of loans, even if such servicing meant foreclosure.
