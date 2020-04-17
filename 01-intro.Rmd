@@ -67,7 +67,7 @@ mermaid("graph TB; A[Proposition 13]-->|Tax cutting|C{Reagan<br>admin.};
         ")
 ```
 
-```{r analysis, echo=FALSE, eval=TRUE, out.width='80%', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
+```{r analysis, echo=FALSE, eval=TRUE, out.height='70%', fig.align='center', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
 include_graphics("figure/analysis.png")
 ```
 
