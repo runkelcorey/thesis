@@ -1,30 +1,84 @@
 # Introduction {#actors-motive}
 
+``` {r setup, include=FALSE}
+library(knitr)
+library(DiagrammeR)
+options(knitr.graphics.auto_pdf = TRUE)
+```
+
 This thesis considers two lines of analysis, the first a question of method and mechanism, the second a question of politics and historical contingency.
 These two lines converge with the Neighborhood Stabilization Program (NSP) amid the rise of the Tea Party.
 The first attempts to add to the political science and sociology literature around the connections between housing, political preferences, and voting.
 This line of analysis is motivated by the opportunity presented by the Neighborhood Stabilization Program, 2010 decennial census, and 2010 midterm elections to bridge a gap in the measurement of political behavior.
 While the first two components offer unusually granular and contemporary data, the midterm elections posed a unique brand of politics to American voters.
-This brand of politics was neither usual nor inevitable, an observation I take great pains to make in Chapter \@ref(motive-opportunity).
-Rather, it was a product of the political and economic mechanisms investigated by the literature I engage methodologically in my first line of analysis.
+The creation of this brand of politics constitutes my second line of analysis, for this brand of politics was neither usual nor inevitable.
+Rather, it was a product of the political and economic mechanisms that bind welfare, taxation, and housing together.
 The historical claims are not new; they have been fashioned directly from the work of others.
-I zoom in on a particular corner of political economy and housing, however, to beef up my methodological assumptions.
+But reframing my analysis is crucial to understanding the significance of my claims beyond their contribution to the literature.
+
 Understanding the relationship between these two lines of analysis is imperative to evaluating my argument about the impact of the Neighborhood Stabilization Program.
-<!-- To that end, I have provided Figure \@ref(fig:analysis) to aid readers. -->
+To that end, I have provided Figure \@ref(fig:analysis) to aid readers.
+A big theme here is the enduring power of anti-tax rhetoric to cast features previously invisible to politics in a political light.
+For instance, I will argue that this rhetoric politicized particular welfare programs in the 1980s (not very contentious) and then residential foreclosures a generation later (somewhat more contentious).
+Also evident in this diagram is a bifurcation of rhetoric and policy (I take pains not to identify it as *the* bifurcation, if there ever was one).
+This bifurcation bluntly describes a historical process but nicely captures my argument's flow: on the one hand an anti-tax movement led Reagan to the presidency and grew to color much of the ensuing presidential elections, even as its objects were marginal differences in revenue and small chunks of expenditure; on the other hand, policies that defined American economic growth in the 1990s and early 2000s were left out of the political limelight.
+
+Another theme is that policies and politics can make available for public inspection previously unknowable private preferences.
+This mechanism operates much like demand for an innovative product can demonstrate an appetite never before imagined.
+Here that demand is measured in votes, the product is a well-defined conservative candidate, and the appetite is a home-equity induced penchant for low taxes and less welfare.
+The crucial feature to measuring the effects of home equity on political behavior was not the presence of such well-defined conservatism in the Tea Party.
+Nor was it the clear-cut subsidies of the Neighborhood Stabilization Program.
+Rather, their *coincidence* allowed for differences among the electorate to map on to choices at the ballot box.
+
+```{r mermaid, echo=FALSE, eval=FALSE}
+mermaid("graph TB; A[Proposition 13]-->|Tax cutting|C{Reagan<br>admin.};
+        C-->E(Welfare = Taxation);
+        D(National debt rhetoric)-->E;
+        E-->F{Tea Party};
+        C-->G[Subprime lending];
+        G-->|Increased consumption|H(Boom);
+        H-->I(Bust);
+        I-->|Local inaction|J[Stimulus & Relief];
+        J-->F;
+        K{Presidents<br>41-43}-->G;
+        M{Investment banks}-->|Global capital|G;
+        J-->|NSP|N(Home price changes);
+        F-->L{Partisan<br>preferences};
+        N-->L;
+        L-->O[2010 midterms];
+
+        style I fill:#899DA4
+        style J fill:#899DA4
+
+        style A fill:#FAEFD1
+        style C fill:#FAEFD1
+        style D fill:#FAEFD1
+        style E fill:#FAEFD1
+        style F fill:#FAEFD1
+        style M fill:#FAEFD1
+        style K fill:#FAEFD1
+        style H fill:#FAEFD1
+        style G fill:#FAEFD1
+
+        style L fill:#DC863B
+        style N fill:#DC863B
+
+        style O fill:#C93312
+        ")
+```
+
+```{r analysis, echo=FALSE, eval=TRUE, out.width='80%', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
+include_graphics("figure/analysis.png")
+```
+
+## An Unfurling Crisis {#crisis}
 
 Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.[@martin2015foreclosed, 5]
-In two years, median net worth plunged 45%.[@stollerHousingCrashEnd2016, 1214]
-Countrywide, which two years earlier had serviced 20% of United States mortgages,[@schwartz2009politics] collapsed in July (and subsequently resurrected under Bank of America).
 Mortgages originated in 2006 and 2007 suffered 45% default rates,[@schwartz2009politics, 200] much of them clustering in the Sand States of California, Nevada, Arizona, and Florida.
+Countrywide Financial, which two years earlier had serviced 20% of United States mortgages,[@schwartz2009politics] collapsed in July 2008 (and subsequently resurrected under Bank of America).
+By 2009, median net worth had plunged 45%.[@stollerHousingCrashEnd2016, 1214].
 Yet, neither homeowners, banks, nor local governments wielded much power in the response to the subprime mortgage crisis.
 This in a country where the housing stock accounts for fully 9% of global wealth.[@toozeCrashedHowDecade2018, 43]
-Unlike in the Great Depression, homeowners barely organized their political power as financial institutions imposed very modest debtor-relief programs.
-Meanwhile, the long-term trend of municipal disinvestment emphasized the need to remove neighborhood blight instead of create or subsidize housing.
-
-``` {r setup, include=FALSE}
-library(knitr)
-options(knitr.graphics.auto_pdf = TRUE)
-```
 
 In response, the Housing and Economic Recovery Act of 2008 (HERA) authorized the Department of Housing and Urban Development (HUD) to distribute $3.9 billion to state and local governments for the purchase and repair of foreclosed properties.[@pelosi2008housing]
 This program, later termed the Neighborhood Stabilization Program, purchased, repaired, and resold vacant properties in order to mitigate the effects of foreclosures on their surroundings.
@@ -68,12 +122,14 @@ On the other hand, falling housing prices conformed the immediate interests of c
 Fears of a debt spiral triggered by falling home prices also beset cities,[@muro2009fiscal] though there is some doubt that those fears were justified.[@gross2012local; @lutz2011housing]
 With these interests in syzygy, why didn't homeowners, investors, or cities assert solutions, even ones that were done chiefly in their own interest?
 
+## Why was federal relief needed?
+
 I argue in this chapter first that homeowners remained quiet due to changes in the foreclosure process from the Great Depression, the differential character of housing versus farming, and narratives about mortgage debtors.
 Second, the incongruity---spurred by the demise of savings and loans---between incentives for principals in mortgage-backed securities and agents tasked with servicing the underlying mortgages, along with fraudulent mortgage transfers, resulted in foreclosures that may have otherwise been unwanted by creditors.
 Third, I point to municipal disinvestment and the trajectory of the Commerce Clause as reasons why cities were unable or willing to respond to mass foreclosures.
 This argument serves dual purposes, simultaneously introducing the political-financial-legal interfaces at work in housing politics, and explaining why federal action was necessary in the first place.
 
-## Why Homeowners were Unable to Organize {#homeowners}
+### Homeowners were Unable to Organize {#homeowners}
 
 The powerlessness of anti-foreclosure organizing can be explained by comparison with the most successful anti-foreclosure campaigns of the Great Depression.
 I compare the two on their positions within the greater economy: where the food system of the 1930s allowed for relatively immediate connections between Midwestern farmers and the nation's supermarket shelves,[@pollan2006omnivore] the American welfare and credit system exaggerated the multiplier effects of housing in American economic growth.[@schwartz2009politics, 27]
@@ -166,14 +222,14 @@ In contrast, calls for mortgage moratoria in the subprime mortgage crisis was me
 To see why state resources went unspent, I look again to the legal history of economic regulation in the United States, and tour briefly the trend of municipal disinvestment.
 
 
-## Why City & State Administrations Could Not Handle Foreclosures {#cities-states}
+### City & State Administrations Could Not Handle Foreclosures {#cities-states}
 
 The Commerce Clause was written, and did develop, with the express purpose of pre-empting states' right to economic legislation.
 Indeed, it's development in legal precedent followed such a pattern in the 1800s and 1900s, upholding regulation based on the Commerce Clause as constitutional essentially whenever business touched multiple states.
 This criterion is important to foreclosure policy because I analyze in later chapters the spillover effect of foreclosures.
 Spillover effects respect no legal boundary, and, as such, found themselves under federal jurisdiction by way of the Commerce Clause.
-Later in the twentieth century, taxpayer reform organizations yanked the reins of state and municipal budgets.
-This influence combined with the altered expectation of federal policy regulating economics, leaving only growth-oriented tax incentives and zoning regulations in the regulatory toolbox of cities and states.
+Later in the twentieth century, tax reform organizations yanked the reins of state and municipal budgets.
+This influence combined with federal urban policy, altering expectations about the level of regulation cities should undertake, leaving only growth-oriented tax incentives and zoning protocol in the regulatory toolbox of cities and states.
 This turn away from local economic regulation starved states and cities of the resources needed to handle foreclosures.
 
 Features of the U.S. Constitution were interpreted by the Supreme Court to justify federal action, which is partially responsible for the shift in spending from states and municipalities to the federal government as seen in Figure \@ref(fig:spending-shift).
@@ -223,7 +279,7 @@ This stands in contrast to the Contract Clause, the interpretation of which has 
 include_graphics("figure/spending-shift.png")
 ```
 
-Running alongside these legal developments and historical acts by the federal government, taxpayers had been throttling local revenues.
+Running alongside these legal developments and historical acts by the federal government, homeowners had been throttling property taxes, which account for 70% of municipal revenues.[@schwartz2009subprime, 181]
 The tax revolts, beginning with California in 1978, play a crucial part in the ideological formatting of reactions to the subprime mortgage crisis, but for now I will focus on their effects on revenues.
 Tax revolts, and tax reform movements more generally, have been significant political forces at all levels of American politics.
 Whether in regards to a specific tax or taxation generally, taxpayer movements focus on limiting or rolling back tax rates and taxable activity.
@@ -235,19 +291,20 @@ For instance, the original California movement succeeded in restraining property
 Provisions such as this have been successful at limiting property tax receipts,[@kioko2012impact] effects which bear directly on state and local abilities to raise revenue from housing.
 In housing-rich states---such as California, Florida, Nevada, and Arizona---that saw so much of their housing stock go vacant, this feature puts a double-bind on states and localities.
 It implements a strongly pro-cyclic revenue structure that conflicts with the anti-cyclic need for government investment,[@keynes2007general] though such a gap would not grow until assessments had revalued property in the face of the housing bust.
+
 In 2007, 2008, and 2009, this feature likely acted as the lower arm of a pair of price scissors to homeowners---though they were *very* rusty, unable to close completely since property taxes rarely top 2%---holding stable as housing prices plummeted.
 There is little research of this effect on municipal finances, but more recent scholarship points to large decreases beginning in 2009 or 2010 and extending as late as 2013.[@chernick2017effect; @gross2012local]
-The size of this lag may account for the lack of consensus on the topic, with 2011 research by the Federal Reseve Board of Governors denying significant fiscal effects of foreclosures.[@lutz2011housing]
+The size of this lag may account for the lack of consensus on the topic, with 2011 research by the Federal Reserve Board of Governors denying significant fiscal effects of foreclosures.[@lutz2011housing]
 At any rate, while property taxes did strain municipal budgets, and while cities did not feel the effects until after the foreclosure crisis elicited policy responses, anxiety over the coming problems mounted.[@dennis2011falling; @saulny2008financial]
 
-I have outlined structural forces that limited the legal and fiscal capacities of states to intervene in private activities, even when such activites have heavily public effects.
+I have outlined structural forces that limited the legal and fiscal capacities of states to intervene in private activities, even when such activities have heavily public effects.
 While the structural forces clearly affect much more than housing, the funding of American states and towns is heavily indebted towards property taxes, bringing one of every three municipal dollars.[@gross2012local, 1]
 While property taxes had not yet declined when the foreclosure crisis hit its lows, anxieties were rising, and taxpayer reform movements had already bit large chunks out of the ability to raise money.
 These forces starved states and cities of the resources necessary to handle foreclosure.
 Endowed only with powers to issue zoning regulations, tax *incentives*, and other growth-oriented policies,[@stein2019capital] cities and states were less able to handle the wave of foreclosures that pushed one of every twenty American adults out of their home.[@martin2015foreclosed, 5]
 
 
-## Why Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
+### Investors were Unable, and Banks Unwilling, to Limit Foreclosures {#banks}
 
 The separation of investors from mortgage servicers constituted a separation of ownership from control.
 Following the institutional literature,[@berle1991modern] this separation led to perverse incentives: while investors lost money from foreclosures, the trustees of mortgage-backed securities gained money from foreclosures.
@@ -300,7 +357,4 @@ Securitization, in separating ownership from control of the underlying mortgages
 I have identified structural factors that explain why three of the four direct interests in housing---homeowners, cities and states, and investors in residential mortgage-backed securities---were unable or unwilling to organize large foreclosure relief efforts.
 In the first and third cases, actors were unable to organize due to differences in the political economy (and often, geography) of the subprime mortgage crisis when compared to the Great Depression.
 In the case of cities and states, federal pre-emption and strained finances limited their legal and fiscal capabilities.
-None of these three arguments deliver the kind of logical suplex blow that they deserve, but they serve to quickly explain why federal intervention in foreclosure relief efforts was necessary.
-My next chapter will describe how this motivation crystallized into the raft of relief policies that the Bush administration delivered, including the Neighborhood Stabilization Program.
-It will then detail how the program was administered.
-I will bookend these discussions with theoretical and historical understandings of American party politics, for the crucial link between taxes, housing, and party politics aids explanations of why the Bush administration and Congress did what they did.
+These arguments are not exhaustive, but serve to quickly explain why federal intervention in foreclosure relief efforts was necessary.
