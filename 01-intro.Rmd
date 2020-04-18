@@ -6,11 +6,13 @@ library(DiagrammeR)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
-This thesis considers two lines of analysis, the first a question of method and mechanism, the second a question of politics and historical contingency.
-These two lines converge with the Neighborhood Stabilization Program (NSP) amid the rise of the Tea Party.
+This thesis takes up two different kinds of questions.
+The first asks, how can the political effects of housing policy and labor risk be measured in voting returns?
+The second asks, why was it the case that housing policy was in a position to affect millions of votes?
+These two lines of questioning converge with the Neighborhood Stabilization Program (NSP) amid the rise of the Tea Party.
 The first attempts to add to the political science and sociology literature around the connections between housing, political preferences, and voting.
 This line of analysis is motivated by the opportunity presented by the Neighborhood Stabilization Program, 2010 decennial census, and 2010 midterm elections to bridge a gap in the measurement of political behavior.
-While the first two components offer unusually granular and contemporary data, the midterm elections posed a unique brand of politics to American voters.
+While the NSP and census provide unusually granular and contemporary data, the midterm elections posed a unique brand of politics to American voters that politicized key features of housing in the United States.
 The creation of this brand of politics constitutes my second line of analysis, for this brand of politics was neither usual nor inevitable.
 Rather, it was a product of the political and economic mechanisms that bind welfare, taxation, and housing together.
 The historical claims are not new; they have been fashioned directly from the work of others.
@@ -74,8 +76,8 @@ include_graphics("figure/analysis.png")
 ## An Unfurling Crisis {#crisis}
 
 Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.[@martin2015foreclosed, 5]
-Mortgages originated in 2006 and 2007 suffered 45% default rates,[@schwartz2009politics, 200] much of them clustering in the Sand States of California, Nevada, Arizona, and Florida.
-Countrywide Financial, which two years earlier had serviced 20% of United States mortgages,[@schwartz2009politics] collapsed in July 2008 (and subsequently resurrected under Bank of America).
+Mortgages originated in 2006 and 2007 respectively suffered double and quadruple rates of default as those originated in 2004,[@schwartz2009politics, 200] with many of them clustering in the Sand States of California, Nevada, Arizona, and Florida.
+Countrywide Financial, which two years earlier had serviced 20% of US mortgages,[@schwartz2009politics] collapsed in July 2008 (and subsequently resurrected under Bank of America).
 By 2009, median net worth had plunged 45%.[@stollerHousingCrashEnd2016, 1214].
 Yet, neither homeowners, banks, nor local governments wielded much power in the response to the subprime mortgage crisis.
 This in a country where the housing stock accounts for fully 9% of global wealth.[@toozeCrashedHowDecade2018, 43]

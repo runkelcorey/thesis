@@ -5,14 +5,14 @@
 The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis with a ream of policies aimed at mitigating spillover effects of the subprime mortgage crisis.
 At first glance, these policies appear as nothing more than containment measures to halt the spread of foreclosure and dislocation.
 While HERA was that, it was much more.
-A product of contentious debate on the House floor (the bill was nixed XX times in subcommittee), HERA reflected a cacophony of political voices.
+A product of contentious debate on the House floor (the bill faced 17 different roll call votes on its route to the President's desk),[@pelosi2008housing] HERA reflected a cacophony of political voices.
 While federal legislation is more a product of compromise than parliamentary legislation, American laws can be decomposed into smaller titles and programs that closer reflect the wills of particular caucuses or politicians.^[It is this by this characteristic that we finger individual buildings and projects as "pork-barrel" politics.]
 
 In this spirit I try to isolate the partisan content of the Neighborhood Stabilization Program in the hope of conveying how the NSP as a concept may have presented to a voter.
 To do so, I plumb the recent history of subprime housing and the centering of tax policy in Republican platforms.
 I find that slotting the NSP unambiguously into one party's platform is difficult: while housing was a large-scale tool used by every president from Reagan to George W. Bush, it was not part of most political debates.
 The housing programs created out of the Great Depression were largely directed from the executive branch, while state- and local-level programs lacked the legal authority, financial power, or political base to be anywhere near as effective.
-Because of the distinctly federal flavor of housing, it was largely excluded from the kind of multilevel alignment that has shaped, say, gun policy.
+Because of the distinctly presidential flavor of housing, it was largely excluded from the kind of multilevel alignment that has shaped, say, gun policy.
 Nonetheless, this legislative and executive history presents an important prologue to the further politicization of taxes, welfare, and housing subsidies by the Tea Party.
 It explains how actors responded to political stimuli with policies that created the large-scale system of subprime borrowing that triggered so many of the events detailed in Section \@ref(crisis).
 
@@ -94,10 +94,16 @@ These policies included the American Dream Downpayment Initiative (fairly self-e
 By encouraging single-family homes in the "Nation’s inner cities", thinning the density of apartment complexes and tenements, this last provision hearkened back to New Deal marketing, which idealized the home as a Romantic "refuge from urban corruption"[@stern2010inviolate, 910] associated with a high-density cityscape and the web of problems spun around public housing complexes.
 Bush's ownership society provisions also included a "tripling of funding"[@2002homeownership] for a program that swapped personal or volunteer labor for housing assistance, known in low-income housing development as "sweat equity".
 These programs in aggregate, pushed a narrative of meritocratic access to consumer credit spurring individual ownership.
-The NSP, in turn, slotted into this story by insulating responsible (i.e. those who have not yet defaulted) debtors from wily housing markets.
 
+The benefits extended to Latinx borrowers.
+In 2005, the Bush administration chose not to extend regulations over non-FDIC lenders that supplied minority borrowers in an effort to quash Democratic gains in the Southwest.
+Karl Rove, in fact, claimed that homeownership could economically conservativze Black and Latinx voters.
+The 9% drop in Democratic share of Latinx voting between 2000 and 2004 may be partially attributable to the 2.8% spike in homeownership in that time.[@schwartz]
+But since all this movement ocurred at the level of the executive, and the implications of easy mortgage credit seemed not to be picked up by politicians outside Florida, a distance sustained between Republican rhetoric and the *de facto* party policy led by the Bush administration.
+
+The NSP slotted into Bush's story by insulating responsible (i.e. those who have not yet defaulted) debtors from wily housing markets.
 Such a conformity with both Bush's animating philosophy and with Democratic pushes to expand access to homes[@toozeCrashedHowDecade2018, 47] places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.
-If voters were unable to locate programs like the NSP within Democratic or Republican platforms, then there would be no clear reason why pro--home price policies translate into Republican votes.
+If voters were unable to locate programs like the NSP within distinctly Democratic or Republican platforms, then there would be no clear reason why pro--home price policies translate into Republican votes.
 But while the values cherished by Bush's ownership society aligned ideologically with American conservatism, its distinctive policies were afield of the Republican platform.
 Part of this separation was because Bush's ownership society was not too different than the messages had pushed by presidents on both sides of the aisle since at least the Great Depression.[@stollerHousingCrashEnd2016]
 Rather, the policies looked like a [more] moralistic version of Democratic plans for affordable housing and access to credit.
@@ -105,7 +111,7 @@ Rather, the policies looked like a [more] moralistic version of Democratic plans
 
 ## Shifting Priorities in the Grand Old Party
 
-Republican antipathy to taxation and opposition to visible, continuing welfare assistance crowded out other domestic policy issues, like the politics of debt that had been so visible to Midwest farmers in the 1930s, Massachusetts farmers in the 1780s, and opponents of the Cross of Gold in the late 19th century.
+Republican antipathy to taxation and opposition to continuing welfare assistance crowded out other domestic policy issues, like the politics of debt that had been so visible to Midwest farmers in the 1930s, Massachusetts farmers in the 1780s, and opponents of the Cross of Gold in the late 19th century.
 Instead, what talk there was regarding debt resulted from a more general concern over asset prices.
 This talk proceeded from the expansion of finance's place in the economy and culture of the United States.
 While bankers had always been handsomely paid, it was not until the liberalizations of the Reagan era that its ranks swelled in quantity and individual wealth.
@@ -133,7 +139,7 @@ In conjunction with liberalized finance, norms and regulations were repealed tha
 While these repeals have wrought huge blows to bargaining power, their perceived impact was aided---and perhaps eclipsed---by the spatial and international movements of manufacturing jobs away from the organized mid-Atlantic and Midwest, to the unorganized American South, and ultimately to the Global South.
 In any case, labor markets became increasingly volatile in the United States, necessitating some form of insurance.
 Matt Stoller argues that the exaltation of finance, subordination of labor, and mitigation of social insurance policies can be viewed macrosocially as a renegotiation of the American social contract inaugurated by the New Deal.[@stollerHousingCrashEnd2016]
-Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy^[Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than $2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars)[@poterba1995stock, 321]] discarded with the need for stable, steadily increasing salaries.<!--(CHECK WITH SCHWARTZ ON THIS. HIS COMMENT SEEMS TO BE IN TENSION WITH WHAT HE TAUGHT IN PLCP 4315 ABOUT THE NORMALCY OF SLACK WAGES)-->
+Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy dampened the need for stable, steadily increasing salaries.
 These jobs, salaries, and benefits then acted as dragnets on profits, ultimately to be jettisoned at the behest of shareholders.
 In return, the asset-backed social contract offered cheap credit and the Minskyan promise of speculative returns to supplement, or supplant, income.
 
@@ -319,7 +325,7 @@ The movement had outsize influence due to its insurgency, receiving a jolt of en
 In sum, the Neighborhood Stabilization Program, by insulating homeowners from the wiles of the market, sought to construct an artificial environment where ownership would bring success.
 By this aim, the NSP fit in President George W. Bush's ownership society doctrine, and the asset-backed political economy that had propelled presidential campaigns since Ronald Reagan's second term as well as the American economy more generally.
 However, this asset-backed political economy had not received the explicit blessing of the Republican party.
-At the subnational level, the party focused far more on taxation than on assets; these priorities were complementary (or at least independent of each other) so long as asset prices rose.
+At the subnational level, the party focused far more on taxation than on homes; these priorities were complementary (or at least independent of each other) so long as asset prices rose.
 When these prices fell, and an economy that had reconfigured itself to feed off rising asset prices sputtered, the governmental outlays required to remedy the situation totaled several hundred billion dollars.
 This price tag met simmering rhetoric about balanced budgets and decreased welfare spending, neither of which came to pass under the economic crisis policies of Bush's later and Obama's early years.
 Preheated by wealthy conservatives, anti-tax organizers heeded the call of Rick Santelli to advocate for lower taxes coupled with lower spending, all wrapped up in the Tea Party movement.
