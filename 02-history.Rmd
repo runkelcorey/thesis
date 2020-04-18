@@ -152,7 +152,7 @@ Despite 1991's brief negative sojourn, this social contract contingent on rising
 Housing, often couched in the language of the American Dream, garnered vaguely nonpartisan support at the national level: while there were differences between Republican and Democratic housing policies, their approaches were united by a vocabulary of taxation and credit, not debt.
 Despite the rich history of debt politics among American farmers, parties focused on expanding access to credit and limiting the toll to government expenditures, rather than limiting the burden of debt and expanding government revenues.
 
-```{r minsky, fig.align='center', out.width='90%', fig.cap="Minsky cycle, theorized by Hyman Minsky.", echo=FALSE, dev='pdf'}
+```{r minsky, fig.align='center', out.width='90%', fig.cap="A cycle of speculative finance theorized by Hyman Minsky.", echo=FALSE, dev='pdf'}
 include_graphics("figure/minsky.png")
 ```
 

@@ -156,7 +156,7 @@ By contrast, U.S. residential foreclosures reached 2.23% in 2010, the worst year
 In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
 
-```{r wheelock-farms, fig.cap="Figure taken from Wheelock (2008).", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
+```{r wheelock-farms, fig.cap="Spatial clustering of farm foreclosures. From Wheelock (2008).", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
 include_graphics("figure/wheelock.png")
 ```
 
@@ -193,7 +193,7 @@ The "ropes under [farmers'] coats [...] stopped thousands more foreclosures than
 There were more than 100 recorded instances of farmers, sometimes numbering in the thousands, packing county sheriff offices to discourage any would-be buyers, allowing the borrower to re-purchase their farm in full for sometimes as little as a penny.[@fliter2012fighting, 63]
 Direct action of this nature was nowhere in the subprime mortgage crisis; Figure \@ref(fig:tradingecon) shows the spike in existing home sales after several million foreclosures had been filed.
 
-```{r tradingecon, fig.cap = "Existing Home Sales versus New Home Sales, 2000-2014", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
+```{r tradingecon, fig.cap = "Existing Home Sales versus New Home Sales, 2000-2014.", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
 include_graphics("figure/united-states-existing-home-sales@2x.png")
 ```
 
@@ -277,7 +277,7 @@ Home construction, and possibly foreclosure, given their spillover effects, cert
 Effectively, I argue that a coincidence of responsibility, and a history of the federal government taking on responsibility in times of crisis, meant that states presumed the ball was in Washington's court.
 This stands in contrast to the Contract Clause, the interpretation of which has limited state options.
 
-```{r spending-shift, fig.cap = "While secular growth is present at all levels of government, note the spikes during the Great Depression and Recession, and of course in wars.", fig.align='center', out.width='90%', echo=FALSE, dev='pdf'}
+```{r spending-shift, fig.cap = "Government spending and revenue as a percentage of GDP. While secular growth is present at all levels of government, note the spikes during the Great Depression, Recession, and wars.", fig.align='center', out.width='90%', echo=FALSE, dev='pdf'}
 include_graphics("figure/spending-shift.png")
 ```
 
@@ -335,7 +335,7 @@ The special purpose vehicle took on the mortgage pool itself, thus obligating it
 SPVs, with no legal employees, designated companies in their founding documents to act as servicers, scheduling fees for particular services.
 While investors could open informal lines of communication with those tasked by securitizers to administer payments, there was no formal mechanism by which investors could exercise the kind of shareholder democracy that had become so near and dear to their hearts.
 
-```{r immergluck, fig.align='center', fig.cap="Taken from Immergluck (2011).", echo=FALSE, out.width="90%", dev='pdf'}
+```{r immergluck, fig.align='center', fig.cap="Organization of securitized mortgage lending. Taken from Immergluck (2011).", echo=FALSE, out.width="90%", dev='pdf'}
 include_graphics("figure/immergluck.png")
 ```
 

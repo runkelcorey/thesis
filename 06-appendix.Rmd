@@ -12,10 +12,10 @@ mod11 <- lm(RPCT ~ NSP3 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + A
 stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Effects", label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage", column.sep.width = "2pt")
 ```
 
-```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the regression of prices on NSP1.", fig.subcap=c("Residuals on fitted.\\label{fig:priceresid}", "Quantile-quantile distribution.\\label{fig:priceqq}"), dev='pdf'}
+```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the home price change estimation.", fig.subcap=c("Residuals on fitted.\\label{fig:priceresid}", "Quantile-quantile distribution.\\label{fig:priceqq}"), dev='pdf'}
 include_graphics(c("figure/priceresid.png", "figure/priceqq.png"))
 ```
 
-```{r resids, echo=FALSE, message=FALSE, fig.align='center', out.width='40%', fig.cap="Comparison of residuals between the linear and beta regressions by subset.", dev='pdf', fig.ncol=2}
+```{r resids, echo=FALSE, message=FALSE, fig.align='center', out.width='40%', fig.cap="Comparison of residuals between the linear and beta regressions by subset.", dev='pdf', fig.ncol=2, fig.subcap=c("Full linear regression.", "Full beta regression.", "Tea Party--only linear regression.", "Tea Party--only beta regression.")}
 include_graphics(c("figure/linearesid.png", "figure/betaresid.png", "figure/lineartpresid.png", "figure/betatpresid.png"))
 ```

@@ -277,7 +277,7 @@ Ideally, residuals show no conclusive pattern, and are independent against the f
 Here, there is a clear inverse relationship framed by the bounds of the Republican voting share at 0 and 100 percent.
 Linear models are not built to handle bounded response variables, though I used one for the ease of computation and interpretation.
 
-``` {r linear, echo=FALSE, out.width='45%', fig.align='center', fig.cap="Diagnostic plots of the linear models.", fig.subcap=c("Residuals of full linear model.\\label{fig:linearesid}","Acutal vs. fitted quantiles of full linear model.\\label{fig:linearquant}")}
+``` {r linear, echo=FALSE, out.width='45%', fig.align='center', fig.cap="Diagnostic plots of the full linear model.", fig.subcap=c("Residuals on fitted values.\\label{fig:linearesid}","Acutal vs. fitted quantiles.\\label{fig:linearquant}")}
 include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
 ```
 
@@ -286,7 +286,7 @@ I settled on reporting results for regressions on the Beta distribution because 
 The Beta distribution is a fundamental (but complicated) distribution used for response variables bounded between 0 and 1.
 It easily incorporates changing variance and does not assume linearity, which is helpful when considering social interactions generally, and electoral data specifically.
 
-``` {r betaresid, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Residuals of beta regression.", message=FALSE}
+``` {r betaresid, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Standardized weighted residuals of full beta regression.", message=FALSE}
 include_graphics("figure/betaresid.png")
 ```
 
