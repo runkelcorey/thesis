@@ -26,4 +26,5 @@ bibliography: bib/thesis.bib
 csl: csl/chicago-fullnote-bibliography.csl
 lot: true
 lof: true
+loa: true
 ---

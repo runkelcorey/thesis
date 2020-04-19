@@ -1,6 +1,6 @@
 # Connecting Home Prices to Voting {#motive-opportunity}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{\textit{George W. Bush, October 2004}}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}}
 
 The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis with a ream of policies aimed at mitigating spillover effects of the subprime mortgage crisis.
 At first glance, these policies appear as nothing more than containment measures to halt the spread of foreclosure and dislocation.
@@ -97,9 +97,9 @@ These programs in aggregate, pushed a narrative of meritocratic access to consum
 
 The benefits extended to Latinx borrowers.
 In 2005, the Bush administration chose not to extend regulations over non-FDIC lenders that supplied minority borrowers in an effort to quash Democratic gains in the Southwest.
-Karl Rove, in fact, claimed that homeownership could economically conservativze Black and Latinx voters.
-The 9% drop in Democratic share of Latinx voting between 2000 and 2004 may be partially attributable to the 2.8% spike in homeownership in that time.[@schwartz]
-But since all this movement ocurred at the level of the executive, and the implications of easy mortgage credit seemed not to be picked up by politicians outside Florida, a distance sustained between Republican rhetoric and the *de facto* party policy led by the Bush administration.
+Karl Rove, in fact, claimed that homeownership could economically conservatize Black and Latinx voters.
+The 9% drop in Democratic share of Latinx voting between 2000 and 2004 may be partially attributable to the 2.8% spike in homeownership in that time.[@schwartz2018politics]
+But since all this movement occurred at the level of the executive, and the implications of easy mortgage credit seemed not to be picked up by politicians outside Florida, a distance sustained between Republican rhetoric and the *de facto* party policy led by the Bush administration.
 
 The NSP slotted into Bush's story by insulating responsible (i.e. those who have not yet defaulted) debtors from wily housing markets.
 Such a conformity with both Bush's animating philosophy and with Democratic pushes to expand access to homes[@toozeCrashedHowDecade2018, 47] places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.

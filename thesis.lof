@@ -1,0 +1,45 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Diagram of the argument, by chapter: gray = \ref {actors-motive}; tan = \ref {motive-opportunity}; orange = \ref {methods}; red = \ref {outcome}.\relax }}{3}{figure.caption.6}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Spatial clustering of farm foreclosures. From Wheelock (2008).\relax }}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Existing Home Sales versus New Home Sales, 2000-2014.\relax }}{13}{figure.caption.9}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Government spending and revenue as a percentage of GDP. While secular growth is present at all levels of government, note the spikes during the Great Depression, Recession, and wars.\relax }}{20}{figure.caption.10}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces Organization of securitized mortgage lending. Taken from Immergluck (2011).\relax }}{24}{figure.caption.11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Measures of homeowner distress timing.\relax }}{33}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Total foreclosures and short sales by owner type}}}{33}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Probability of home loss by owner type.}}}{33}{subfigure.1.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Outstanding US residential mortgage debt as a percentage of US gross domestic product.\relax }}{38}{figure.caption.13}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A cycle of speculative finance theorized by Hyman Minsky.\relax }}{40}{figure.caption.14}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Taxation mentions by presidential campaigns.\relax }}{46}{figure.caption.15}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Number of tax mentions by party in presidential nomination acceptance speeches.}}}{46}{subfigure.4.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Percentage of general election TV ads to feature taxation.}}}{46}{subfigure.4.2}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Federal public debt as a percentage of gross domestic product.\relax }}{50}{figure.caption.16}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.\relax }}{51}{figure.caption.17}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Personal saving and mortgage equity withdrawal as a percentage of disposable income.\relax }}{59}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ideological and partisan divides over social insurance programs.\relax }}{63}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Support for social insurance programs by party.}}}{63}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Support for social insurance programs by ideology.}}}{63}{subfigure.2.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Census geography relationships.\relax }}{79}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {To-scale breakdown of nested census geography, with street names.}}}{79}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Organizational hierarchy of different geographies.}}}{79}{subfigure.1.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Voting precincts and census tracts in Palm Beach County, Florida.\relax }}{82}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Without census tracts.}}}{82}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {With census tracts.}}}{82}{subfigure.2.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagnostic plots of the full linear model.\relax }}{97}{figure.caption.25}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Residuals on fitted values.}}}{97}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Acutal vs. fitted quantiles.}}}{97}{subfigure.3.2}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Standardized weighted residuals of full beta regression.\relax }}{98}{figure.caption.26}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagnostic plots of the home price change estimation.\relax }}{112}{figure.caption.30}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Residuals on fitted.}}}{112}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Quantile-quantile distribution.}}}{112}{subfigure.1.2}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Comparison of residuals between the linear and beta regressions by subset.\relax }}{114}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Full linear regression.}}}{114}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Full beta regression.}}}{114}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tea Party--only linear regression.}}}{114}{subfigure.2.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Tea Party--only beta regression.}}}{114}{subfigure.2.4}
+\addvspace {10\p@ }

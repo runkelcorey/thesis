@@ -262,7 +262,7 @@
 
 \renewcommand{\maketitle}{%
   {\pagestyle{empty}
-  \setlength{\textwidth}{7in}
+  \setlength{\textwidth}{6in}
   \fontsize{14}{16}\selectfont
   \begin{titlepage}
   \newpage
@@ -290,7 +290,7 @@
     {\fontsize{12}{14}\selectfont in partial fulfillment of the requirements for the degree of \@degree .}
     \vfil
     \@date \\
-    \bigskip
+    \vfil
     Advisor: \makebox[\widthof{\@advisor}]{\hrulefill} \\
     \hspace*{0cm}\phantom{Advisor:} \@advisor
   \end{center}\par

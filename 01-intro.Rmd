@@ -19,17 +19,16 @@ The historical claims are not new; they have been fashioned directly from the wo
 But reframing my analysis is crucial to understanding the significance of my claims beyond their contribution to the literature.
 
 Understanding the relationship between these two lines of analysis is imperative to evaluating my argument about the impact of the Neighborhood Stabilization Program.
-To that end, I have provided Figure \@ref(fig:analysis) to aid readers.
+To that end, I have provided Figure \@ref(fig:analysis).
 A big theme here is the enduring power of anti-tax rhetoric to cast features previously invisible to politics in a political light.
 For instance, I will argue that this rhetoric politicized particular welfare programs in the 1980s (not very contentious) and then residential foreclosures a generation later (somewhat more contentious).
-Also evident in this diagram is a bifurcation of rhetoric and policy (I take pains not to identify it as *the* bifurcation, if there ever was one).
+Also evident in this diagram is a bifurcation of rhetoric and policy.
 This bifurcation bluntly describes a historical process but nicely captures my argument's flow: on the one hand an anti-tax movement led Reagan to the presidency and grew to color much of the ensuing presidential elections, even as its objects were marginal differences in revenue and small chunks of expenditure; on the other hand, policies that defined American economic growth in the 1990s and early 2000s were left out of the political limelight.
 
 Another theme is that policies and politics can make available for public inspection previously unknowable private preferences.
-This mechanism operates much like demand for an innovative product can demonstrate an appetite never before imagined.
-Here that demand is measured in votes, the product is a well-defined conservative candidate, and the appetite is a home-equity induced penchant for low taxes and less welfare.
-The crucial feature to measuring the effects of home equity on political behavior was not the presence of such well-defined conservatism in the Tea Party.
-Nor was it the clear-cut subsidies of the Neighborhood Stabilization Program.
+This mechanism operates in the same way demand for an innovative product demonstrates an appetite never before imagined.
+Here that demand is measured in votes, the product a well-defined conservative candidate, and the appetite a home-equity induced penchant for low taxes and less welfare.
+The crucial feature to measuring the effects of home equity on political behavior is not the presence of such well-defined conservatism in the Tea Party, nor was it the public boundaries of the Neighborhood Stabilization Program.
 Rather, their *coincidence* allowed for differences among the electorate to map on to choices at the ballot box.
 
 ```{r mermaid, echo=FALSE, eval=FALSE}
@@ -69,7 +68,7 @@ mermaid("graph TB; A[Proposition 13]-->|Tax cutting|C{Reagan<br>admin.};
         ")
 ```
 
-```{r analysis, echo=FALSE, eval=TRUE, out.height='70%', fig.align='center', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
+```{r analysis, echo=FALSE, eval=TRUE, out.width='70%', fig.align='center', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
 include_graphics("figure/analysis.png")
 ```
 

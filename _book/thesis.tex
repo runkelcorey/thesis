@@ -36,7 +36,10 @@
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
 \usepackage[none]{hyphenat}
-\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks,breaklinks]{hyperref}
+%\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage[anythingbreaks]{breakurl}
 % Added by CII
 \usepackage{lmodern}
 \usepackage{float}
@@ -45,7 +48,27 @@
 % End of CII addition
 \usepackage{rotating}
 \usepackage{epigraph}
+    \renewcommand\textflush{flushright}%these lines change the epigraph style CNR
+
+    \usepackage{etoolbox}
+    \makeatletter
+    \newlength\epitextskip
+    \pretocmd{\@epitext}{\em}{}{}
+    \apptocmd{\@epitext}{\em}{}{}
+    \patchcmd{\epigraph}{\@epitext{#1}\\}{\@epitext{#1}\\[\epitextskip]}{}{}
+    \makeatother
+
+    \setlength\epigraphrule{0pt}
+    \setlength\epitextskip{2ex}
+    \setlength\epigraphwidth{.6\textwidth}
+
 \usepackage{dcolumn}
+
+% Added by CNR to create a list of abbreviations
+\usepackage{nomencl}
+%\makenomenclature %this only needs to be used once per document
+
+%\renewcommand{\nomname}{List of Abbreviations}
 
 % Next line commented out by CII
 %%% \usepackage{natbib}
@@ -159,17 +182,20 @@ I find some evidence that the behavior theorized did occur among races featuring
 \frontmatter % this stuff will be roman-numbered
 
   \setcounter{tocdepth}{2}
+  \thispagestyle{plain}
   \tableofcontents
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
 
+  \thispagestyle{plain}
   \listoftables
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
 
+  \thispagestyle{plain}
+  \printnomenclature
+
+  \thispagestyle{plain}
   \listoffigures
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
+
+  \thispagestyle{plain}
   \begin{abstract}
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
-  \doublespacing
     The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
     In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
     The program operated by purchasing, repairing, and re-selling vacant homes in neighborhoods at high risk of even more foreclosures.
@@ -191,32 +217,33 @@ I find some evidence that the behavior theorized did occur among races featuring
 \hypertarget{actors-motive}{%
 \chapter{Introduction}\label{actors-motive}}
 
-This thesis considers two lines of analysis, the first a question of method and mechanism, the second a question of politics and historical contingency.
-These two lines converge with the Neighborhood Stabilization Program (NSP) amid the rise of the Tea Party.
+This thesis takes up two different kinds of questions.
+The first asks, how can the political effects of housing policy and labor risk be measured in voting returns?
+The second asks, why was it the case that housing policy was in a position to affect millions of votes?
+These two lines of questioning converge with the Neighborhood Stabilization Program (NSP) amid the rise of the Tea Party.
 The first attempts to add to the political science and sociology literature around the connections between housing, political preferences, and voting.
 This line of analysis is motivated by the opportunity presented by the Neighborhood Stabilization Program, 2010 decennial census, and 2010 midterm elections to bridge a gap in the measurement of political behavior.
-While the first two components offer unusually granular and contemporary data, the midterm elections posed a unique brand of politics to American voters.
+While the NSP and census provide unusually granular and contemporary data, the midterm elections posed a unique brand of politics to American voters that politicized key features of housing in the United States.
 The creation of this brand of politics constitutes my second line of analysis, for this brand of politics was neither usual nor inevitable.
 Rather, it was a product of the political and economic mechanisms that bind welfare, taxation, and housing together.
 The historical claims are not new; they have been fashioned directly from the work of others.
 But reframing my analysis is crucial to understanding the significance of my claims beyond their contribution to the literature.
 
 Understanding the relationship between these two lines of analysis is imperative to evaluating my argument about the impact of the Neighborhood Stabilization Program.
-To that end, I have provided Figure \ref{fig:analysis} to aid readers.
+To that end, I have provided Figure \ref{fig:analysis}.
 A big theme here is the enduring power of anti-tax rhetoric to cast features previously invisible to politics in a political light.
 For instance, I will argue that this rhetoric politicized particular welfare programs in the 1980s (not very contentious) and then residential foreclosures a generation later (somewhat more contentious).
-Also evident in this diagram is a bifurcation of rhetoric and policy (I take pains not to identify it as \emph{the} bifurcation, if there ever was one).
+Also evident in this diagram is a bifurcation of rhetoric and policy.
 This bifurcation bluntly describes a historical process but nicely captures my argument's flow: on the one hand an anti-tax movement led Reagan to the presidency and grew to color much of the ensuing presidential elections, even as its objects were marginal differences in revenue and small chunks of expenditure; on the other hand, policies that defined American economic growth in the 1990s and early 2000s were left out of the political limelight.
 
 Another theme is that policies and politics can make available for public inspection previously unknowable private preferences.
-This mechanism operates much like demand for an innovative product can demonstrate an appetite never before imagined.
-Here that demand is measured in votes, the product is a well-defined conservative candidate, and the appetite is a home-equity induced penchant for low taxes and less welfare.
-The crucial feature to measuring the effects of home equity on political behavior was not the presence of such well-defined conservatism in the Tea Party.
-Nor was it the clear-cut subsidies of the Neighborhood Stabilization Program.
+This mechanism operates in the same way demand for an innovative product demonstrates an appetite never before imagined.
+Here that demand is measured in votes, the product a well-defined conservative candidate, and the appetite a home-equity induced penchant for low taxes and less welfare.
+The crucial feature to measuring the effects of home equity on political behavior is not the presence of such well-defined conservatism in the Tea Party, nor was it the public boundaries of the Neighborhood Stabilization Program.
 Rather, their \emph{coincidence} allowed for differences among the electorate to map on to choices at the ballot box.
 \begin{figure}
 
-{\centering \includegraphics[width=6.39in,height=0.8\textheight]{figure/analysis} 
+{\centering \includegraphics[width=0.7\linewidth]{figure/analysis} 
 
 }
 
@@ -226,8 +253,8 @@ Rather, their \emph{coincidence} allowed for differences among the electorate to
 \section{An Unfurling Crisis}\label{crisis}}
 
 Between 2007 and 2012, 10 million Americans---1 of every 20 adults---lost their homes.\footnote{Isaac William Martin and Christopher Niedt, \emph{Foreclosed America} (Stanford, California: Stanford University Press, 2015), 5.}
-Mortgages originated in 2006 and 2007 suffered 45\% default rates,\footnote{Herman M. Schwartz and Leonard Seabrooke, eds., \emph{The Politics of Housing Booms and Busts}, International Political Economy Series (Palgrave Macmillan UK, 2009), 200, \url{https://doi.org/10.1057/9780230280441}.} much of them clustering in the Sand States of California, Nevada, Arizona, and Florida.
-Countrywide Financial, which two years earlier had serviced 20\% of United States mortgages,\footnote{Schwartz and Seabrooke, \emph{The Politics of Housing Booms and Busts}.} collapsed in July 2008 (and subsequently resurrected under Bank of America).
+Mortgages originated in 2006 and 2007 respectively suffered double and quadruple rates of default as those originated in 2004,\footnote{Herman M. Schwartz and Leonard Seabrooke, eds., \emph{The Politics of Housing Booms and Busts}, International Political Economy Series (Palgrave Macmillan UK, 2009), 200, \url{https://doi.org/10.1057/9780230280441}.} with many of them clustering in the Sand States of California, Nevada, Arizona, and Florida.
+Countrywide Financial, which two years earlier had serviced 20\% of US mortgages,\footnote{Schwartz and Seabrooke, \emph{The Politics of Housing Booms and Busts}.} collapsed in July 2008 (and subsequently resurrected under Bank of America).
 By 2009, median net worth had plunged 45\%.\footnote{Matt Stoller, ``The Housing Crash and the End of American Citizenship,'' \emph{Fordham Urban Law Journal} 39, no. 4 (February 2016): 1214.}.
 Yet, neither homeowners, banks, nor local governments wielded much power in the response to the subprime mortgage crisis.
 This in a country where the housing stock accounts for fully 9\% of global wealth.\footnote{J. Adam Tooze, \emph{Crashed: How a Decade of Financial Crises Changed the World} (New York: Viking, 2018), 43.}
@@ -316,7 +343,7 @@ In large part, however, the differences between farms and homes accounted for th
 
 }
 
-\caption{Figure taken from Wheelock (2008).}\label{fig:wheelock-farms}
+\caption{Spatial clustering of farm foreclosures. From Wheelock (2008).}\label{fig:wheelock-farms}
 \end{figure}
 The geography of farmland created several features that made easier mass organizing.
 Lower population densities meant that fewer people exercised political power over a fixed-size jurisdiction, when compared to a densely-populated district.
@@ -356,7 +383,7 @@ Direct action of this nature was nowhere in the subprime mortgage crisis; Figure
 
 }
 
-\caption{Existing Home Sales versus New Home Sales, 2000-2014}\label{fig:tradingecon}
+\caption{Existing Home Sales versus New Home Sales, 2000-2014.}\label{fig:tradingecon}
 \end{figure}
 But organizing need not adopt the character of halting foreclosure sales; rather, the foreclosure itself could have been the point of action.
 Changes to bankruptcy laws made foreclosures less defensible by making judicial hearings an opt-in rather than mandatory system.
@@ -442,7 +469,7 @@ This stands in contrast to the Contract Clause, the interpretation of which has 
 
 }
 
-\caption{While secular growth is present at all levels of government, note the spikes during the Great Depression and Recession, and of course in wars.}\label{fig:spending-shift}
+\caption{Government spending and revenue as a percentage of GDP. While secular growth is present at all levels of government, note the spikes during the Great Depression, Recession, and wars.}\label{fig:spending-shift}
 \end{figure}
 Running alongside these legal developments and historical acts by the federal government, homeowners had been throttling property taxes, which account for 70\% of municipal revenues.\footnote{Herman M. Schwartz, \emph{Subprime Nation: American Power, Global Capital, and the Housing Bubble}, Cornell Studies in Money (Ithaca: Cornell University Press, 2009), 181.}
 The tax revolts, beginning with California in 1978, play a crucial part in the ideological formatting of reactions to the subprime mortgage crisis, but for now I will focus on their effects on revenues.
@@ -503,7 +530,7 @@ While investors could open informal lines of communication with those tasked by 
 
 }
 
-\caption{Taken from Immergluck (2011).}\label{fig:immergluck}
+\caption{Organization of securitized mortgage lending. Taken from Immergluck (2011).}\label{fig:immergluck}
 \end{figure}
 The practical particularities of SPVs thus severed any remaining lines of communication by which investors could express their interests.
 While interests would not have been \emph{congruent} with homeowners, they may have been coincident.
@@ -530,19 +557,19 @@ These arguments are not exhaustive, but serve to quickly explain why federal int
 \hypertarget{motive-opportunity}{%
 \chapter{Connecting Home Prices to Voting}\label{motive-opportunity}}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{\textit{George W. Bush, October 2004}}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}\}
 
 The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis with a ream of policies aimed at mitigating spillover effects of the subprime mortgage crisis.
 At first glance, these policies appear as nothing more than containment measures to halt the spread of foreclosure and dislocation.
 While HERA was that, it was much more.
-A product of contentious debate on the House floor (the bill was nixed XX times in subcommittee), HERA reflected a cacophony of political voices.
+A product of contentious debate on the House floor (the bill faced 17 different roll call votes on its route to the President's desk),\footnote{Pelosi, ``HERA.''} HERA reflected a cacophony of political voices.
 While federal legislation is more a product of compromise than parliamentary legislation, American laws can be decomposed into smaller titles and programs that closer reflect the wills of particular caucuses or politicians.\footnote{It is this by this characteristic that we finger individual buildings and projects as ``pork-barrel'' politics.}
 
 In this spirit I try to isolate the partisan content of the Neighborhood Stabilization Program in the hope of conveying how the NSP as a concept may have presented to a voter.
 To do so, I plumb the recent history of subprime housing and the centering of tax policy in Republican platforms.
 I find that slotting the NSP unambiguously into one party's platform is difficult: while housing was a large-scale tool used by every president from Reagan to George W. Bush, it was not part of most political debates.
 The housing programs created out of the Great Depression were largely directed from the executive branch, while state- and local-level programs lacked the legal authority, financial power, or political base to be anywhere near as effective.
-Because of the distinctly federal flavor of housing, it was largely excluded from the kind of multilevel alignment that has shaped, say, gun policy.
+Because of the distinctly presidential flavor of housing, it was largely excluded from the kind of multilevel alignment that has shaped, say, gun policy.
 Nonetheless, this legislative and executive history presents an important prologue to the further politicization of taxes, welfare, and housing subsidies by the Tea Party.
 It explains how actors responded to political stimuli with policies that created the large-scale system of subprime borrowing that triggered so many of the events detailed in Section \ref{crisis}.
 
@@ -623,10 +650,16 @@ These policies included the American Dream Downpayment Initiative (fairly self-e
 By encouraging single-family homes in the ``Nation's inner cities'', thinning the density of apartment complexes and tenements, this last provision hearkened back to New Deal marketing, which idealized the home as a Romantic ``refuge from urban corruption''\footnote{Stern, ``The Inviolate Home,'' 910.} associated with a high-density cityscape and the web of problems spun around public housing complexes.
 Bush's ownership society provisions also included a ``tripling of funding''\footnote{``Homeownership Policy Book.''} for a program that swapped personal or volunteer labor for housing assistance, known in low-income housing development as ``sweat equity''.
 These programs in aggregate, pushed a narrative of meritocratic access to consumer credit spurring individual ownership.
-The NSP, in turn, slotted into this story by insulating responsible (i.e.~those who have not yet defaulted) debtors from wily housing markets.
 
+The benefits extended to Latinx borrowers.
+In 2005, the Bush administration chose not to extend regulations over non-FDIC lenders that supplied minority borrowers in an effort to quash Democratic gains in the Southwest.
+Karl Rove, in fact, claimed that homeownership could economically conservatize Black and Latinx voters.
+The 9\% drop in Democratic share of Latinx voting between 2000 and 2004 may be partially attributable to the 2.8\% spike in homeownership in that time.\footnote{Herman M. Schwartz, ``The Politics of Housing Provision and Property Bubbles in the United States and Europe'' (Book Chapter, January 2018).}
+But since all this movement occurred at the level of the executive, and the implications of easy mortgage credit seemed not to be picked up by politicians outside Florida, a distance sustained between Republican rhetoric and the \emph{de facto} party policy led by the Bush administration.
+
+The NSP slotted into Bush's story by insulating responsible (i.e.~those who have not yet defaulted) debtors from wily housing markets.
 Such a conformity with both Bush's animating philosophy and with Democratic pushes to expand access to homes\footnote{Tooze, \emph{Crashed}, 47.} places the Neighborhood Stabilization Program in murky territory with regard to party affiliation.
-If voters were unable to locate programs like the NSP within Democratic or Republican platforms, then there would be no clear reason why pro--home price policies translate into Republican votes.
+If voters were unable to locate programs like the NSP within distinctly Democratic or Republican platforms, then there would be no clear reason why pro--home price policies translate into Republican votes.
 But while the values cherished by Bush's ownership society aligned ideologically with American conservatism, its distinctive policies were afield of the Republican platform.
 Part of this separation was because Bush's ownership society was not too different than the messages had pushed by presidents on both sides of the aisle since at least the Great Depression.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
 Rather, the policies looked like a {[}more{]} moralistic version of Democratic plans for affordable housing and access to credit.
@@ -634,7 +667,7 @@ Rather, the policies looked like a {[}more{]} moralistic version of Democratic p
 \hypertarget{shifting-priorities-in-the-grand-old-party}{%
 \section{Shifting Priorities in the Grand Old Party}\label{shifting-priorities-in-the-grand-old-party}}
 
-Republican antipathy to taxation and opposition to visible, continuing welfare assistance crowded out other domestic policy issues, like the politics of debt that had been so visible to Midwest farmers in the 1930s, Massachusetts farmers in the 1780s, and opponents of the Cross of Gold in the late 19th century.
+Republican antipathy to taxation and opposition to continuing welfare assistance crowded out other domestic policy issues, like the politics of debt that had been so visible to Midwest farmers in the 1930s, Massachusetts farmers in the 1780s, and opponents of the Cross of Gold in the late 19th century.
 Instead, what talk there was regarding debt resulted from a more general concern over asset prices.
 This talk proceeded from the expansion of finance's place in the economy and culture of the United States.
 While bankers had always been handsomely paid, it was not until the liberalizations of the Reagan era that its ranks swelled in quantity and individual wealth.
@@ -665,7 +698,7 @@ In conjunction with liberalized finance, norms and regulations were repealed tha
 While these repeals have wrought huge blows to bargaining power, their perceived impact was aided---and perhaps eclipsed---by the spatial and international movements of manufacturing jobs away from the organized mid-Atlantic and Midwest, to the unorganized American South, and ultimately to the Global South.
 In any case, labor markets became increasingly volatile in the United States, necessitating some form of insurance.
 Matt Stoller argues that the exaltation of finance, subordination of labor, and mitigation of social insurance policies can be viewed macrosocially as a renegotiation of the American social contract inaugurated by the New Deal.\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''}
-Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy\footnote{Note too the growth in equity holdings by Americans. In 1962, 1 in 7 households held more than \$2,000 in stocks; by 1983, with the growth of IRAs and defined-contribution plans, nearly 1 in 4 households held more than \$2,000 in stock (1992 dollars), James M. Poterba et al., ``Stock Ownership Patterns, Stock Market Fluctuations, and Consumption,'' \emph{Brookings Papers on Economic Activity} 1995, no. 2 (1995): 321, \url{https://doi.org/10.2307/2534614}} discarded with the need for stable, steadily increasing salaries.
+Where businesses had profited on the aggregate demand generated by collectively-bargained salaries and the commensurate long-term commitments by employer and employee, the new asset-backed political economy dampened the need for stable, steadily increasing salaries.
 These jobs, salaries, and benefits then acted as dragnets on profits, ultimately to be jettisoned at the behest of shareholders.
 In return, the asset-backed social contract offered cheap credit and the Minskyan promise of speculative returns to supplement, or supplant, income.
 
@@ -674,7 +707,7 @@ The point I make here is that the infrastructure for that incredibly-long price 
 Then, in the 1990s, the endogenous ability of speculative home buying ramped up.
 I point to somewhere in the later part of that decade as an inflection point in the Minsky cycle (pictured in Figure \ref{fig:minsky}) between speculative and Ponzi financing, a point before which home building and buying was foundational to this new ``social contract'' but still directly dependent on the income swings and employment patterns of millions.
 
-Despite 1991's brief negative sojourn, this social contract contingent on rising home prices\footnote{Stoller, ``The Housing Crash and the End of American Citizenship.''} was leveraged by Bush the elder as well as Bill Clinton in their presidencies.
+Despite 1991's brief negative sojourn, this social contract contingent on rising home prices\footnote{Stoller.} was leveraged by Bush the elder as well as Bill Clinton in their presidencies.
 Housing, often couched in the language of the American Dream, garnered vaguely nonpartisan support at the national level: while there were differences between Republican and Democratic housing policies, their approaches were united by a vocabulary of taxation and credit, not debt.
 Despite the rich history of debt politics among American farmers, parties focused on expanding access to credit and limiting the toll to government expenditures, rather than limiting the burden of debt and expanding government revenues.
 \begin{figure}
@@ -683,7 +716,7 @@ Despite the rich history of debt politics among American farmers, parties focuse
 
 }
 
-\caption{Minsky cycle, theorized by Hyman Minsky.}\label{fig:minsky}
+\caption{A cycle of speculative finance theorized by Hyman Minsky.}\label{fig:minsky}
 \end{figure}
 To be sure, this vocabulary constituted a rational response---so long as markets showed signs of growth, debt relief would be a minor issue, while tax reductions and access to credit extended individual budgets.
 But it was not uniquely rational: dependable debt relief could, if annualized, be indistinguishable from a similarly-sized mortgage tax credit; after all, with all the easy credit, there was certainly enough debt to go around---in addition to mortgage debt equaling 82\% of gross domestic product, mortgage debt service payments in 2007 increased 75\% over 1981 levels.\footnote{Board of Governors of the Federal Reserve System (US), ``Mortgage Debt Service Payments as a Percent of Disposable Personal Income,'' \emph{FRED, Federal Reserve Bank of St. Louis} (https://fred.stlouisfed.org/series/MDSP, January 1980).}
@@ -865,7 +898,7 @@ The movement had outsize influence due to its insurgency, receiving a jolt of en
 In sum, the Neighborhood Stabilization Program, by insulating homeowners from the wiles of the market, sought to construct an artificial environment where ownership would bring success.
 By this aim, the NSP fit in President George W. Bush's ownership society doctrine, and the asset-backed political economy that had propelled presidential campaigns since Ronald Reagan's second term as well as the American economy more generally.
 However, this asset-backed political economy had not received the explicit blessing of the Republican party.
-At the subnational level, the party focused far more on taxation than on assets; these priorities were complementary (or at least independent of each other) so long as asset prices rose.
+At the subnational level, the party focused far more on taxation than on homes; these priorities were complementary (or at least independent of each other) so long as asset prices rose.
 When these prices fell, and an economy that had reconfigured itself to feed off rising asset prices sputtered, the governmental outlays required to remedy the situation totaled several hundred billion dollars.
 This price tag met simmering rhetoric about balanced budgets and decreased welfare spending, neither of which came to pass under the economic crisis policies of Bush's later and Obama's early years.
 Preheated by wealthy conservatives, anti-tax organizers heeded the call of Rick Santelli to advocate for lower taxes coupled with lower spending, all wrapped up in the Tea Party movement.
@@ -891,7 +924,7 @@ The focus on taxation, and the clear connection between expenditures on visible 
 \hypertarget{methods}{%
 \chapter{Asset Prices, Individual Preferences, and Foreclosures}\label{methods}}
 
-\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{\textit{A Theory of the Consumption Function \\ Milton Friedman}}
+\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{Milton Friedman, \textit{A Theory of the Consumption Function}}
 
 How do asset prices affect voter decisions \emph{in extremis}?
 Political economists have investigated the impacts of wealth and labor market risk on welfare preferences, but they have yet to investigate how such policy preferences are represented in political decision-making, or how such preferences are changed by movement along the wealth distribution.
@@ -1184,7 +1217,7 @@ rep_i = \beta_0 + \beta_1NSP_i + \beta_2(PriceChg_i \times LaborRisk_i \times Fo
 \hypertarget{outcome}{%
 \chapter{The Neighborhood Stabilization Program and Voting}\label{outcome}}
 
-\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{\textit{William Levitt}}
+\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt}
 
 Complete data were available for 27,098 census tracts, covering more than half of the inhabited census tracts of 24 states, and more than half of the tracts where a self-described member of the Tea Party sought election.
 Most of the census tracts missing belonged to states where the process of connecting voting returns with census geography was infeasible.
@@ -1486,7 +1519,7 @@ Table \ref{tab:justp} shows the results of the same model above, but applied onl
  & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-3} 
 \\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+ & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} \\ 
 \hline \\[-1.8ex] 
  NSP1 & -0.1471 & 0.1455 \\ 
   2010 forelcosure rate & -1.1257^{***} & -0.5903^{*} \\ 
@@ -1571,14 +1604,14 @@ Here, there is a clear inverse relationship framed by the bounds of the Republic
 Linear models are not built to handle bounded response variables, though I used one for the ease of computation and interpretation.
 \begin{figure}
 
-{\centering \subfloat[Residuals of full linear model.\label{fig:linearesid}\label{fig:linear1}]{\includegraphics[width=0.45\linewidth]{figure/linearesid} }\subfloat[Acutal vs. fitted quantiles of full linear model.\label{fig:linearquant}\label{fig:linear2}]{\includegraphics[width=0.45\linewidth]{figure/linearquant} }
+{\centering \subfloat[Residuals on fitted values.\label{fig:linearesid}\label{fig:linear1}]{\includegraphics[width=0.45\linewidth]{figure/linearesid} }\subfloat[Acutal vs. fitted quantiles.\label{fig:linearquant}\label{fig:linear2}]{\includegraphics[width=0.45\linewidth]{figure/linearquant} }
 
 }
 
-\caption{Diagnostic plots of the linear models.}\label{fig:linear}
+\caption{Diagnostic plots of the full linear model.}\label{fig:linear}
 \end{figure}
 In order to validate the results of these models, I also modeled Republican vote share by different distributions.
-I settled on reporting results for regressions on the Beta distribution because of its flexibility and ability to approximate the distribution of Republican voting share.
+I settled on reporting results for regressions on the Beta distribution because of its flexibility\footnote{Francisco Cribari-Neto and Achim Zeileis, ``Beta Regression in R,'' \emph{Journal of Statistical Software} 34, no. 1 (April 2010): 1--24, \url{https://doi.org/10.18637/jss.v034.i02}.} and ability to approximate the distribution of Republican voting share.
 The Beta distribution is a fundamental (but complicated) distribution used for response variables bounded between 0 and 1.
 It easily incorporates changing variance and does not assume linearity, which is helpful when considering social interactions generally, and electoral data specifically.
 \begin{figure}
@@ -1587,7 +1620,7 @@ It easily incorporates changing variance and does not assume linearity, which is
 
 }
 
-\caption{Residuals of beta regression.}\label{fig:betaresid}
+\caption{Standardized weighted residuals of full beta regression.}\label{fig:betaresid}
 \end{figure}
 Though there are still the artifacts of upper and lower bounds, the behavior of Figure \ref{fig:betaresid} conforms more closely to an ideal distribution.
 Results of the beta regressions can be seen in Table \ref{tab:beta}.
@@ -1641,7 +1674,7 @@ Log Likelihood & \multicolumn{1}{c}{9,808.0510} & \multicolumn{1}{c}{10,253.8600
 Lastly, as mentioned, these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
 Using state-level fixed effects and tract-level housing prices corrected some of this behavior, but the local nature of politics cannot be underestimated.
 I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as a lack of remote access to better hardware, quashed that opportunity.\footnote{This chapter was completed during 2020's novel coronavirus pandemic, which restricted access to University resources.}
-Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.
+Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.\footnote{Roger S. Bivand and David W. S. Wong, ``Comparing Implementations of Global and Local Indicators of Spatial Association,'' \emph{TEST} 27, no. 3 (September 2018): 716--48, \url{https://doi.org/10.1007/s11749-018-0599-x}.}
 
 I first constructed a matrix of neighboring census tracts using geographic tract files; this matrix tells \textbf{R} which tracts are neighbors by triangulating their population-weighted geographic centers.
 I then ran the residuals of each model (from a positivist interpretation, these are the unobserved variables) through Moran's I and Geary's C tests.
@@ -1849,44 +1882,56 @@ F Statistic & \multicolumn{1}{c}{946.9973$^{***}$} & \multicolumn{1}{c}{951.1001
 
 }
 
-\caption{Diagnostic plots of the regression of prices on NSP1.}\label{fig:prices}
+\caption{Diagnostic plots of the home price change estimation.}\label{fig:prices}
 \end{figure}
 \begin{figure}
 
-{\centering \includegraphics[width=0.4\linewidth]{figure/linearesid} 
+{\centering \subfloat[Full linear regression.\label{fig:resids1}]{\includegraphics[width=0.4\linewidth]{figure/linearesid} }\subfloat[Full beta regression.\label{fig:resids2}]{\includegraphics[width=0.4\linewidth]{figure/betaresid} }\newline\subfloat[Tea Party--only linear regression.\label{fig:resids3}]{\includegraphics[width=0.4\linewidth]{figure/lineartpresid} }\subfloat[Tea Party--only beta regression.\label{fig:resids4}]{\includegraphics[width=0.4\linewidth]{figure/betatpresid} }
 
 }
 
-\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids1}
+\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids}
 \end{figure}
-\begin{figure}
+\nomenclature{FHA}{Federal Housing Authority}
+\nomenclature{FHFA}{Federal Housing Finance Association}
+\nomenclature{HERA}{Housing and Economic Recovery Act of 2008}
+\nomenclature{HUD}{Department of Housing and Urban Development}
+\nomenclature{MBS}{Mortgage-Backed Security}
+\nomenclature{PVI}{Cook Partisan Voting Index}
+\nomenclature{VTD}{Voting Tabulation District}
+\nomenclature{NSP}{Neighborhood Stabilization Program}
 
-{\centering \includegraphics[width=0.4\linewidth]{figure/betaresid} 
+\hypertarget{afterword}{%
+\chapter*{Afterword}\label{afterword}}
+\addcontentsline{toc}{chapter}{Afterword}
 
-}
+\epigraph{Corey, you clearly know what you're talking about. But each of these chapters is a 400-page book.}{Alena Titova}
 
-\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids2}
-\end{figure}
-\begin{figure}
+This thesis marked the end of a procrastinating, ne'er-do-well, academic career.
+Its coming-to-be is the result of many people beside myself.
+Herman Mark Schwartz---whom I approached in the summer of 2018 while confusing all sorts of ideas---showed me that these thoughts all had their own places in politics and sociology departments.
+As I changed interests every week, it is some irony that his works wound up as the backbone of this thesis.
+Claire Szipszky endured many a boring weekend night as I toiled away.
+Knowing how much this project meant to me, she provided valuable feedback despite a long history of brusquely \emph{me} editing \emph{her} writing.
+Turns out you were the better writer.
+My classmates provided encouragement and copy edits in the weeks before our last semester together came to an unexpected, while Michael J. Smith batted cleanup to Alena Titova's immortal writing advice.
+William Lawson at the FHFA was quick to help with the particulars of the FHFA's home price indices.
+To all of you, thank you.
+Lastly, none of this would have been possible without my own hidden welfare state administered by Chris and Elaine Runkel.
 
-{\centering \includegraphics[width=0.4\linewidth]{figure/lineartpresid} 
+\hypertarget{colophon}{%
+\chapter*{Colophon}\label{colophon}}
+\addcontentsline{toc}{chapter}{Colophon}
 
-}
+This thesis was rendered in Latin Modern using \LaTeXe.
+Its template is based on the \texttt{thesisdown} package,\footnote{Chester Ismay, ``Ismayc/Thesisdown,'' April 2020.} which leveraged the ever-present YiHui Xie's \texttt{bookdown}.\footnote{Yihui Xie, \emph{Bookdown: Authoring Books and Technical Documents with R Markdown} (Chapman and Hall/CRC, 2016); Yihui Xie et al., ``Bookdown: Authoring Books and Technical Documents with R Markdown,'' March 2020.}
+The regression tables were output by \texttt{stargazer},\footnote{Marek Hlavac, ``Stargazer: Well-Formatted Regression and Summary Statistics Tables'' (Bratislava, Slovakia: Central European Labour Studies Institute (CELSI), May 2018).} with other tables by \texttt{kableExtra},\footnote{Hao Zhu et al., ``kableExtra: Construct Complex Table with 'Kable' and Pipe Syntax,'' March 2019.} and Figure \ref{fig:analysis} by \texttt{DiagrammeR}.\footnote{Richard Iannone, ``DiagrammeR: Graph/Network Visualization,'' January 2020.}
+In addition to base \textbf{R},\footnote{R Core Team, \emph{R: A Language and Environment for Statistical Computing} (Vienna, Austria: R Foundation for Statistical Computing, 2020).} the \texttt{tidyverse}\footnote{Hadley Wickham et al., ``Welcome to the Tidyverse,'' \emph{Journal of Open Source Software} 4, no. 43 (2019): 1686, \url{https://doi.org/10.21105/joss.01686}.} and \texttt{sf}\footnote{Edzer Pebesma, ``Simple Features for R: Standardized Support for Spatial Vector Data,'' \emph{The R Journal} 10, no. 1 (2018): 439--46, \url{https://doi.org/10.32614/RJ-2018-009}.} packages provided additional computational firepower.
 
-\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids3}
-\end{figure}
-\begin{figure}
-
-{\centering \includegraphics[width=0.4\linewidth]{figure/betatpresid} 
-
-}
-
-\caption{Comparison of residuals between the linear and beta regressions by subset.}\label{fig:resids4}
-\end{figure}
 \backmatter
 
-\hypertarget{references}{%
-\chapter{References}\label{references}}
+\hypertarget{bibliography}{%
+\chapter{Bibliography}\label{bibliography}}
 
 \setlength{\parindent}{-0.25in}
 \setlength{\leftskip}{0.25in}
@@ -1957,6 +2002,9 @@ Berger, David, Veronica Guerrieri, Guido Lorenzoni, and Joseph Vavra. ``House Pr
 \leavevmode\hypertarget{ref-berle1991modern}{}%
 Berle, Adolf A., and Gardiner C. Means. \emph{The Modern Corporation and Private Property}. New Brunswick, N.J., U.S.A: Transaction Publishers, 1991.
 
+\leavevmode\hypertarget{ref-bivand2018comparing}{}%
+Bivand, Roger S., and David W. S. Wong. ``Comparing Implementations of Global and Local Indicators of Spatial Association.'' \emph{TEST} 27, no. 3 (September 2018): 716--48. \url{https://doi.org/10.1007/s11749-018-0599-x}.
+
 \leavevmode\hypertarget{ref-boardofgovernorsofthefederalreservesystemus1949mortgagec}{}%
 Board of Governors of the Federal Reserve System (US). ``Mortgage Debt Outstanding, All Holders.'' \emph{FRED, Federal Reserve Bank of St. Louis}. https://fred.stlouisfed.org/series/MDOAH, October 1949.
 
@@ -2013,6 +2061,9 @@ Cody, Mirian. ``Neighborhood Stabilization Program Data.'' Research Portal. \emp
 
 \leavevmode\hypertarget{ref-collins2011state}{}%
 Collins, J. Michael, Ken Lam, and Christopher E. Herbert. ``State Mortgage Foreclosure Policies and Lender Interventions: Impacts on Borrower Behavior in Default.'' \emph{Journal of Policy Analysis and Management} 30, no. 2 (2011): 216--32. \url{https://doi.org/10.1002/pam.20559}.
+
+\leavevmode\hypertarget{ref-cribarineto2010beta}{}%
+Cribari-Neto, Francisco, and Achim Zeileis. ``Beta Regression in R.'' \emph{Journal of Statistical Software} 34, no. 1 (April 2010): 1--24. \url{https://doi.org/10.18637/jss.v034.i02}.
 
 \leavevmode\hypertarget{ref-dayenChainTitleHow2016}{}%
 Dayen, David. \emph{Chain of Title: How Three Ordinary Americans Uncovered Wall Street's Great Foreclosure Fraud}. New York: The New Press, 2016.
@@ -2080,6 +2131,9 @@ Hawley, Josh. ``Getting America Back to Work,'' April 2020.
 \leavevmode\hypertarget{ref-2019historical}{}%
 ``Historical Sources of Income and Tax Items.'' \emph{Tax Policy Center}. https://www.taxpolicycenter.org/statistics/historical-sources-income-and-tax-items, October 2019.
 
+\leavevmode\hypertarget{ref-hlavac2018stargazer}{}%
+Hlavac, Marek. ``Stargazer: Well-Formatted Regression and Summary Statistics Tables.'' Bratislava, Slovakia: Central European Labour Studies Institute (CELSI), May 2018.
+
 \leavevmode\hypertarget{ref-1934home}{}%
 ``Home Building \& Loan Assn. V. Blaisdell,'' January 1934.
 
@@ -2089,6 +2143,9 @@ Hawley, Josh. ``Getting America Back to Work,'' April 2020.
 \leavevmode\hypertarget{ref-hud2013hud}{}%
 HUD. ``HUD NSP1 Report: National Drawdowns by Activity (Q3 2013).'' Department of Housing and Urban Development, n.d.
 
+\leavevmode\hypertarget{ref-iannone2020diagrammer}{}%
+Iannone, Richard. ``DiagrammeR: Graph/Network Visualization,'' January 2020.
+
 \leavevmode\hypertarget{ref-immergluck2011foreclosed}{}%
 Immergluck, Daniel. \emph{Foreclosed: High-Risk Lending, Deregulation, and the Undermining of America's Mortgage Market}. Ithaca: Cornell University Press, 2011.
 
@@ -2097,6 +2154,9 @@ Immergluck, Daniel. \emph{Foreclosed: High-Risk Lending, Deregulation, and the U
 
 \leavevmode\hypertarget{ref-indiviglio2010housing}{}%
 Indiviglio, Daniel. ``The Housing Stabilization Program You Haven't Heard About.'' \emph{The Atlantic}. https://www.theatlantic.com/business/archive/2010/04/the-housing-stabilization-program-you-havent-heard-about/38739/, April 2010.
+
+\leavevmode\hypertarget{ref-ismay2020ismayc}{}%
+Ismay, Chester. ``Ismayc/Thesisdown,'' April 2020.
 
 \leavevmode\hypertarget{ref-jackson2008blacks}{}%
 Jackson, Brooks. ``Blacks and the Democratic Party.'' \emph{FactCheck.org}, April 2008.
@@ -2188,6 +2248,9 @@ Muro, Mark, and Christopher Hoene. ``Fiscal Challenges Facing Cities: Implicatio
 \leavevmode\hypertarget{ref-orolbreaks}{}%
 Orol, Ronald D. ``U.S. Breaks down \$9.3 Bln Robo-Signing Settlement.'' \emph{MarketWatch}. https://www.marketwatch.com/story/us-breaks-down-93-bln-robo-signing-settlement-2013-02-28, n.d.
 
+\leavevmode\hypertarget{ref-pebesma2018simple}{}%
+Pebesma, Edzer. ``Simple Features for R: Standardized Support for Spatial Vector Data.'' \emph{The R Journal} 10, no. 1 (2018): 439--46. \url{https://doi.org/10.32614/RJ-2018-009}.
+
 \leavevmode\hypertarget{ref-pelofsky2008bush}{}%
 Pelofsky, Jeremy. ``Bush Signs Housing Bill as Fannie Mae Grows.'' \emph{Reuters}, July 2008.
 
@@ -2200,9 +2263,6 @@ Perkins, Casey. ``Privatopia in Distress: The Impact of the Foreclosure Crisis o
 \leavevmode\hypertarget{ref-pollan2006omnivore}{}%
 Pollan, Michael. \emph{The Omnivore's Dilemma}. Place of publication not identified: Penguin Group US, 2006.
 
-\leavevmode\hypertarget{ref-poterba1995stock}{}%
-Poterba, James M., Andrew A. Samwick, Andrei Shleifer, and Robert J. Shiller. ``Stock Ownership Patterns, Stock Market Fluctuations, and Consumption.'' \emph{Brookings Papers on Economic Activity} 1995, no. 2 (1995): 295--372. \url{https://doi.org/10.2307/2534614}.
-
 \leavevmode\hypertarget{ref-prasad2012land}{}%
 Prasad, Monica. \emph{The Land of Too Much: American Abundance and the Paradox of Poverty}. Cambridge, Mass.: Harvard University Press, 2012.
 
@@ -2214,6 +2274,9 @@ Putnam, Robert D. \emph{Bowling Alone: The Collapse and Revival of American Comm
 
 \leavevmode\hypertarget{ref-raines1984party}{}%
 Raines, Howell. ``Party Nominates Rep. Ferraro; Mondale, in Acceptance, Vows Fair Policies and Deficit Cut.'' \emph{The New York Times}, July 1984, 1.
+
+\leavevmode\hypertarget{ref-rcoreteam2020language}{}%
+R Core Team. \emph{R: A Language and Environment for Statistical Computing}. Vienna, Austria: R Foundation for Statistical Computing, 2020.
 
 \leavevmode\hypertarget{ref-richardson2009nsp2}{}%
 Richardson, Todd. ``NSP2 Data and Methodology.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/NSP2datadesc.html, December 2009.
@@ -2232,6 +2295,9 @@ Saulny, Susan. ``Financial Crisis Takes a Toll on Already-Squeezed Cities.'' \em
 
 \leavevmode\hypertarget{ref-schwartz2009subprime}{}%
 Schwartz, Herman M. \emph{Subprime Nation: American Power, Global Capital, and the Housing Bubble}. Cornell Studies in Money. Ithaca: Cornell University Press, 2009.
+
+\leavevmode\hypertarget{ref-schwartz2018politics}{}%
+---------. ``The Politics of Housing Provision and Property Bubbles in the United States and Europe.'' Book Chapter. Charlottesville, VA, January 2018.
 
 \leavevmode\hypertarget{ref-schwartz2009politics}{}%
 Schwartz, Herman M., and Leonard Seabrooke, eds. \emph{The Politics of Housing Booms and Busts}. International Political Economy Series. Palgrave Macmillan UK, 2009. \url{https://doi.org/10.1057/9780230280441}.
@@ -2280,6 +2346,18 @@ Wheelock, David C. ``Changing the Rules: State Mortgage Foreclosure Moratoria Du
 
 \leavevmode\hypertarget{ref-1942wickard}{}%
 ``Wickard V. Filburn,'' October 1942.
+
+\leavevmode\hypertarget{ref-wickham2019welcome}{}%
+Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D'Agostino McGowan, Romain François, Garrett Grolemund, et al. ``Welcome to the Tidyverse.'' \emph{Journal of Open Source Software} 4, no. 43 (2019): 1686. \url{https://doi.org/10.21105/joss.01686}.
+
+\leavevmode\hypertarget{ref-xie2016bookdown}{}%
+Xie, Yihui. \emph{Bookdown: Authoring Books and Technical Documents with R Markdown}. Chapman and Hall/CRC, 2016.
+
+\leavevmode\hypertarget{ref-xie2020bookdown}{}%
+Xie, Yihui, cre, J. J. Allaire, Albert Kim, Alessandro Samuel-Rosa, Andrzej Oles, Atsushi Yasumoto, et al. ``Bookdown: Authoring Books and Technical Documents with R Markdown,'' March 2020.
+
+\leavevmode\hypertarget{ref-zhu2019kableextra}{}%
+Zhu, Hao, cre, Thomas Travison, Timothy Tsai, Will Beasley, Yihui Xie, GuangChuang Yu, et al. ``kableExtra: Construct Complex Table with 'Kable' and Pipe Syntax,'' March 2019.
 
 \leavevmode\hypertarget{ref-zuesse2013final}{}%
 Zuesse, Eric. ``Final Proof the Tea Party Was Founded as A Bogus AstroTurf Movement.'' \emph{HuffPost}. https://www.huffpost.com/entry/final-proof-the-tea-party\_b\_4136722, October 2013.

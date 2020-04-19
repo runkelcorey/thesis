@@ -1,7 +1,7 @@
 
 \backmatter
 
-# References
+# Bibliography
 
 \setlength{\parindent}{-0.25in}
 \setlength{\leftskip}{0.25in}

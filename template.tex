@@ -36,7 +36,10 @@
 \usepackage{amssymb,amsthm}
 \usepackage{longtable,booktabs,setspace}
 \usepackage[none]{hyphenat}
-\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks,breaklinks]{hyperref}
+%\PassOptionsToPackage{hyphens}{url}\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage[anythingbreaks]{breakurl}
 % Added by CII
 \usepackage{lmodern}
 \usepackage{float}
@@ -45,7 +48,27 @@
 % End of CII addition
 \usepackage{rotating}
 \usepackage{epigraph}
+    \renewcommand\textflush{flushright}%these lines change the epigraph style CNR
+
+    \usepackage{etoolbox}
+    \makeatletter
+    \newlength\epitextskip
+    \pretocmd{\@epitext}{\em}{}{}
+    \apptocmd{\@epitext}{\em}{}{}
+    \patchcmd{\epigraph}{\@epitext{#1}\\}{\@epitext{#1}\\[\epitextskip]}{}{}
+    \makeatother
+
+    \setlength\epigraphrule{0pt}
+    \setlength\epitextskip{2ex}
+    \setlength\epigraphwidth{.6\textwidth}
+
 \usepackage{dcolumn}
+
+% Added by CNR to create a list of abbreviations
+\usepackage{nomencl}
+%\makenomenclature %this only needs to be used once per document
+
+%\renewcommand{\nomname}{List of Abbreviations}
 
 % Next line commented out by CII
 %%% \usepackage{natbib}
@@ -155,24 +178,28 @@ $endif$
 
 $if(toc)$
   \setcounter{tocdepth}{$toc-depth$}
+  \thispagestyle{plain}
   \tableofcontents
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
 $endif$
 
 $if(lot)$
+  \thispagestyle{plain}
   \listoftables
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
+$endif$
+
+$if(loa)$
+  \thispagestyle{plain}
+  \printnomenclature
 $endif$
 
 $if(lof)$
+  \thispagestyle{plain}
   \listoffigures
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
 $endif$
 
 $if(abstract)$
+  \thispagestyle{plain}
   \begin{abstract}
-  \thispagestyle{plain} % this removes page numbers from the frontmatter
-  \doublespacing
     $abstract$
   \end{abstract}
 $endif$

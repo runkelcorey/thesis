@@ -1,6 +1,6 @@
 # The Neighborhood Stabilization Program and Voting {#outcome}
 
-\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{\textit{William Levitt}}
+\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt}
 
 ```{r libs, include=FALSE}
 library(tidyverse)
@@ -229,7 +229,7 @@ Table \@ref(tab:justp) shows the results of the same model above, but applied on
 ```{r justp, echo=FALSE, results='asis', eval=TRUE}
 mod6 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, filter(wide, RESULT != "EXTRA-TP"))
 mod7 <- lm(RPCT ~ NSP1 + ADJ_FORQ*EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, filter(wide, RESULT != "EXTRA-TP"))
-stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:justp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage")
+stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:justp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Labor risk", "Home price change `07--`10", "Unemployment change `05--`10", "Median household income (000s)", "Population density (per sq.mi.)", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Foreclosure rate $\\times$ labor risk", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less", "Price change $\\times$ foreclosures $\\times$ risk"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("6", "7"))
 ```
 
 These trials offer promising results but less statistical significance.^[The [unprinted] p-value attached to Model 6 is just above .10, nearly an academically-acceptable level of significance.]
@@ -282,7 +282,7 @@ include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
 ```
 
 In order to validate the results of these models, I also modeled Republican vote share by different distributions.
-I settled on reporting results for regressions on the Beta distribution because of its flexibility and ability to approximate the distribution of Republican voting share.
+I settled on reporting results for regressions on the Beta distribution because of its flexibility[@cribarineto2010beta] and ability to approximate the distribution of Republican voting share.
 The Beta distribution is a fundamental (but complicated) distribution used for response variables bounded between 0 and 1.
 It easily incorporates changing variance and does not assume linearity, which is helpful when considering social interactions generally, and electoral data specifically.
 
@@ -303,7 +303,7 @@ stargazer(mod8, mod9, type = "latex", title = "Beta regression of NSP1 on Voting
 Lastly, as mentioned, these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
 Using state-level fixed effects and tract-level housing prices corrected some of this behavior, but the local nature of politics cannot be underestimated.
 I had originally planned to incorporate spatial autoregressive methods to correct for this spatial dependence, but limitations inherent to my data, as well as a lack of remote access to better hardware, quashed that opportunity.^[This chapter was completed during 2020's novel coronavirus pandemic, which restricted access to University resources.]
-Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.
+Nonetheless, I can prove the presence of spatial dependence in my models to highlight future areas for exploration.[@bivand2018comparing]
 
 I first constructed a matrix of neighboring census tracts using geographic tract files; this matrix tells **R** which tracts are neighbors by triangulating their population-weighted geographic centers.
 I then ran the residuals of each model (from a positivist interpretation, these are the unobserved variables) through Moran's I and Geary's C tests.

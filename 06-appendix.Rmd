@@ -19,3 +19,13 @@ include_graphics(c("figure/priceresid.png", "figure/priceqq.png"))
 ```{r resids, echo=FALSE, message=FALSE, fig.align='center', out.width='40%', fig.cap="Comparison of residuals between the linear and beta regressions by subset.", dev='pdf', fig.ncol=2, fig.subcap=c("Full linear regression.", "Full beta regression.", "Tea Party--only linear regression.", "Tea Party--only beta regression.")}
 include_graphics(c("figure/linearesid.png", "figure/betaresid.png", "figure/lineartpresid.png", "figure/betatpresid.png"))
 ```
+
+<!-- Here is where I entered my nomenclature-->
+\nomenclature{FHA}{Federal Housing Authority}
+\nomenclature{FHFA}{Federal Housing Finance Association}
+\nomenclature{HERA}{Housing and Economic Recovery Act of 2008}
+\nomenclature{HUD}{Department of Housing and Urban Development}
+\nomenclature{MBS}{Mortgage-Backed Security}
+\nomenclature{PVI}{Cook Partisan Voting Index}
+\nomenclature{VTD}{Voting Tabulation District}
+\nomenclature{NSP}{Neighborhood Stabilization Program}

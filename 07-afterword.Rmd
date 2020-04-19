@@ -1,0 +1,21 @@
+# Afterword {-}
+
+\epigraph{Corey, you clearly know what you're talking about. But each of these chapters is a 400-page book.}{Alena Titova}
+This thesis marked the end of a procrastinating, ne'er-do-well, academic career.
+Its coming-to-be is the result of many people beside myself.
+Herman Mark Schwartz---whom I approached in the summer of 2018 while confusing all sorts of ideas---showed me that these thoughts all had their own places in politics and sociology departments.
+As I changed interests every week, it is some irony that his works wound up as the backbone of this thesis.
+Claire Szipszky endured many a boring weekend night as I toiled away.
+Knowing how much this project meant to me, she provided valuable feedback despite a long history of brusquely *me* editing *her* writing.
+Turns out you were the better writer.
+My classmates provided encouragement and copy edits in the weeks before our last semester together came to an unexpected, while Michael J. Smith batted cleanup to Alena Titova's immortal writing advice.
+William Lawson at the FHFA was quick to help with the particulars of the FHFA's home price indices.
+To all of you, thank you.
+Lastly, none of this would have been possible without my own hidden welfare state administered by Chris and Elaine Runkel.
+
+# Colophon {-}
+
+This thesis was rendered in Latin Modern using \LaTeXe.
+Its template is based on the `thesisdown` package,[@ismay2020ismayc] which leveraged the ever-present YiHui Xie's `bookdown`.[@xie2016bookdown; @xie2020bookdown]
+The regression tables were output by `stargazer`,[@hlavac2018stargazer] with other tables by `kableExtra`,[@zhu2019kableextra] and Figure \@ref(fig:analysis) by `DiagrammeR`.[@iannone2020diagrammer]
+In addition to base **R**,[@rcoreteam2020language] the `tidyverse`[@wickham2019welcome] and `sf`[@pebesma2018simple] packages provided additional computational firepower.
