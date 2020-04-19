@@ -21,13 +21,13 @@
 \contentsline {chapter}{Chapter 4: The Neighborhood Stabilization Program and Voting}{77}{chapter.4}
 \contentsline {section}{\numberline {4.1}Relationships between statistical geographies}{78}{section.4.1}
 \contentsline {section}{\numberline {4.2}Data collection and aggregation}{81}{section.4.2}
-\contentsline {section}{\numberline {4.3}Data Analysis}{86}{section.4.3}
+\contentsline {section}{\numberline {4.3}Data Analysis}{87}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}Did NSP1 increase home prices?}{87}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Voting Impacts of the NSP and Price Changes}{89}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Limitations and proposed refinements}{96}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Conclusion}{101}{section.4.4}
 \contentsline {chapter}{Chapter 5: Conclusion}{103}{chapter.5}
 \contentsline {chapter}{Appendix A: Data Quality}{112}{appendix.A}
-\contentsline {chapter}{Afterword}{115}{appendix*.32}
-\contentsline {chapter}{Colophon}{116}{appendix*.33}
-\contentsline {chapter}{Bibliography}{117}{appendix*.34}
+\contentsline {chapter}{Afterword}{115}{appendix*.33}
+\contentsline {chapter}{Colophon}{116}{appendix*.34}
+\contentsline {chapter}{Bibliography}{117}{appendix*.35}

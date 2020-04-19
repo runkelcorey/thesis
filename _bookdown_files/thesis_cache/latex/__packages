@@ -1,5 +1,6 @@
 base
 knitr
+DiagrammeR
 tidyverse
 ggplot2
 tibble
@@ -13,4 +14,3 @@ stargazer
 kableExtra
 sf
 betareg
-DiagrammeR
