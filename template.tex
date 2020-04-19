@@ -30,6 +30,7 @@
 % Chemistry (chemtex), screenplays, you name it.
 % Check out CTAN to see: http://www.ctan.org/
 %%
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{plain}}} %keep roman numerals on ToC
 \usepackage{graphicx,latexsym}
 \usepackage{subfig}
 \usepackage{amsmath}
@@ -178,28 +179,28 @@ $endif$
 
 $if(toc)$
   \setcounter{tocdepth}{$toc-depth$}
-  \thispagestyle{plain}
   \tableofcontents
+  \thispagestyle{plain}
 $endif$
 
 $if(lot)$
-  \thispagestyle{plain}
   \listoftables
+  \thispagestyle{plain}
 $endif$
 
 $if(loa)$
-  \thispagestyle{plain}
   \printnomenclature
+  \thispagestyle{plain}
 $endif$
 
 $if(lof)$
-  \thispagestyle{plain}
   \listoffigures
+  \thispagestyle{plain}
 $endif$
 
 $if(abstract)$
-  \thispagestyle{plain}
   \begin{abstract}
+  \thispagestyle{plain}
     $abstract$
   \end{abstract}
 $endif$

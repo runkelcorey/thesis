@@ -1,3 +1,4 @@
+\thispagestyle {plain}
 \contentsline {chapter}{Chapter 1: Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}An Unfurling Crisis}{4}{section.1.1}
 \contentsline {section}{\numberline {1.2}Why was federal relief needed?}{7}{section.1.2}

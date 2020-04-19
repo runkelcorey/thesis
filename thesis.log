@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.21)  19 APR 2020 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6800 64-bit) (preloaded format=pdflatex 2018.9.21)  19 APR 2020 15:44
 entering extended mode
 **./thesis.tex
 (thesis.tex
@@ -890,32 +890,32 @@ LaTeX Warning: Label `conclusion' multiply defined.
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 177.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 177.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 178.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 178.
 
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 177.
-LaTeX Font Info:    ... okay on input line 177.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 177.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 178.
+LaTeX Font Info:    ... okay on input line 178.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 178.
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \microtypecontext on input line 177.
+LaTeX Info: Redefining \microtypecontext on input line 178.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -976,7 +976,7 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring OFF on input line 177.
+Package hyperref Info: Link coloring OFF on input line 178.
 
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\hyperref\nameref.s
 ty"
@@ -988,50 +988,50 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 177.
-LaTeX Info: Redefining \pageref on input line 177.
-LaTeX Info: Redefining \nameref on input line 177.
+LaTeX Info: Redefining \ref on input line 178.
+LaTeX Info: Redefining \pageref on input line 178.
+LaTeX Info: Redefining \nameref on input line 178.
 (thesis.out) (thesis.out)
 \@outlinefile=\write4
 \openout4 = `thesis.out'.
 
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 181.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 182.
 
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 181.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 181.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 182.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 182.
 
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 181.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 182.
 
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 181
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 182
 .
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 181
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 182
 .
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14> on input line 181.
+(Font)              <14> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9.79996> on input line 181.
+(Font)              <9.79996> on input line 182.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 181.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 181.
+(Font)              <7> on input line 182.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 182.
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 181.
+LaTeX Font Info:    Try loading font information for U+msa on input line 182.
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1039,7 +1039,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 fg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 181.
+LaTeX Font Info:    Try loading font information for U+msb on input line 182.
 ("C:\Users\Corey\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1055,11 +1055,11 @@ Non-PDF special ignored!
 
 {C:/Users/Corey/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (thesis.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 1.
+(Font)              <12> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 1.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 1.
+(Font)              <6> on input line 2.
 [1
 
 
@@ -1138,7 +1138,7 @@ File: figure/wheelock.png Graphic file (type png)
 Package pdftex.def Info: figure/wheelock.png  used on input line 342.
 (pdftex.def)             Requested size: 390.25534pt x 232.9052pt.
 [9] [10 <./figure/wheelock.png>] [11]
-<figure/united-states-existing-home-sales@2x.png, id=396, 1099.10625pt x 511.91
+<figure/united-states-existing-home-sales@2x.png, id=397, 1099.10625pt x 511.91
 25pt>
 File: figure/united-states-existing-home-sales@2x.png Graphic file (type png)
 <use figure/united-states-existing-home-sales@2x.png>
@@ -1151,13 +1151,13 @@ Underfull \hbox (badness 1297) in paragraph at lines 415--415
  []
 
 [15] [16] [17]
-<figure/spending-shift.png, id=469, 1223.5311pt x 404.9529pt>
+<figure/spending-shift.png, id=470, 1223.5311pt x 404.9529pt>
 File: figure/spending-shift.png Graphic file (type png)
 <use figure/spending-shift.png>
 Package pdftex.def Info: figure/spending-shift.png  used on input line 468.
 (pdftex.def)             Requested size: 390.25534pt x 129.16121pt.
 [18] [19] [20 <./figure/spending-shift.png>] [21] [22]
-<figure/immergluck.png, id=523, 985.6825pt x 612.2875pt>
+<figure/immergluck.png, id=524, 985.6825pt x 612.2875pt>
 File: figure/immergluck.png Graphic file (type png)
 <use figure/immergluck.png>
 Package pdftex.def Info: figure/immergluck.png  used on input line 529.
@@ -1174,12 +1174,12 @@ Underfull \hbox (badness 2970) in paragraph at lines 584--584
  []
 
 [29] [30]
-<figure/ferreira_absolute.png, id=590, 1210.5225pt x 847.165pt>
+<figure/ferreira_absolute.png, id=591, 1210.5225pt x 847.165pt>
 File: figure/ferreira_absolute.png Graphic file (type png)
 <use figure/ferreira_absolute.png>
 Package pdftex.def Info: figure/ferreira_absolute.png  used on input line 625.
 (pdftex.def)             Requested size: 195.12767pt x 136.54451pt.
-<figure/ferreira_distress.png, id=591, 1225.57875pt x 846.16125pt>
+<figure/ferreira_distress.png, id=592, 1225.57875pt x 846.16125pt>
 File: figure/ferreira_distress.png Graphic file (type png)
 <use figure/ferreira_distress.png>
 Package pdftex.def Info: figure/ferreira_distress.png  used on input line 625.
@@ -1245,14 +1245,14 @@ Underfull \hbox (badness 4518) in paragraph at lines 679--679
 949); Board of Gov-er-nors of
  []
 
-<figure/residential_debt_gdp.png, id=654, 1173.38374pt x 451.6875pt>
+<figure/residential_debt_gdp.png, id=655, 1173.38374pt x 451.6875pt>
 File: figure/residential_debt_gdp.png Graphic file (type png)
 <use figure/residential_debt_gdp.png>
 Package pdftex.def Info: figure/residential_debt_gdp.png  used on input line 69
 0.
 (pdftex.def)             Requested size: 390.25534pt x 150.2221pt.
 [37] [38 <./figure/residential_debt_gdp.png>]
-<figure/minsky.png, id=671, 1003.75pt x 652.4375pt>
+<figure/minsky.png, id=672, 1003.75pt x 652.4375pt>
 File: figure/minsky.png Graphic file (type png)
 <use figure/minsky.png>
 Package pdftex.def Info: figure/minsky.png  used on input line 715.
@@ -1276,24 +1276,24 @@ ogs.archives.gov/2016/08/15/reaganomics-the-economic-recovery-tax-act-of-1981/,
 
  []
 
-<figure/campbell.png, id=732, 1650.165pt x 861.2175pt>
+<figure/campbell.png, id=733, 1650.165pt x 861.2175pt>
 File: figure/campbell.png Graphic file (type png)
 <use figure/campbell.png>
 Package pdftex.def Info: figure/campbell.png  used on input line 790.
 (pdftex.def)             Requested size: 195.12767pt x 101.83041pt.
-<figure/campbell2.png, id=733, 1395.2125pt x 816.04875pt>
+<figure/campbell2.png, id=734, 1395.2125pt x 816.04875pt>
 File: figure/campbell2.png Graphic file (type png)
 <use figure/campbell2.png>
 Package pdftex.def Info: figure/campbell2.png  used on input line 790.
 (pdftex.def)             Requested size: 195.12767pt x 114.12152pt.
 [45] [46 <./figure/campbell.png> <./figure/campbell2.png>] [47] [48]
-<figure/publicdebt.png, id=765, 1173.38374pt x 451.6875pt>
+<figure/publicdebt.png, id=766, 1173.38374pt x 451.6875pt>
 File: figure/publicdebt.png Graphic file (type png)
 <use figure/publicdebt.png>
 Package pdftex.def Info: figure/publicdebt.png  used on input line 846.
 (pdftex.def)             Requested size: 390.25534pt x 150.2221pt.
 [49]
-<figure/deficit.png, id=774, 232.61906pt x 316.93407pt>
+<figure/deficit.png, id=775, 232.61906pt x 316.93407pt>
 File: figure/deficit.png Graphic file (type png)
 <use figure/deficit.png>
 Package pdftex.def Info: figure/deficit.png  used on input line 864.
@@ -1336,18 +1336,18 @@ Underfull \hbox (badness 1490) in paragraph at lines 955--961
 e plans to pay for
  []
 
-<figure/mew.png, id=850, 1451.4225pt x 865.2325pt>
+<figure/mew.png, id=851, 1451.4225pt x 865.2325pt>
 File: figure/mew.png Graphic file (type png)
 <use figure/mew.png>
 Package pdftex.def Info: figure/mew.png  used on input line 971.
 (pdftex.def)             Requested size: 390.25534pt x 232.63892pt.
 [58] [59 <./figure/mew.png>] [60] [61] [62]
-<figure/partisan_social.png, id=907, 1529.715pt x 756.8275pt>
+<figure/partisan_social.png, id=908, 1529.715pt x 756.8275pt>
 File: figure/partisan_social.png Graphic file (type png)
 <use figure/partisan_social.png>
 Package pdftex.def Info: figure/partisan_social.png  used on input line 1025.
 (pdftex.def)             Requested size: 268.84227pt x 133.00111pt.
-<figure/ideological_social.png, id=908, 885.3075pt x 826.08624pt>
+<figure/ideological_social.png, id=909, 885.3075pt x 826.08624pt>
 File: figure/ideological_social.png Graphic file (type png)
 <use figure/ideological_social.png>
 Package pdftex.def Info: figure/ideological_social.png  used on input line 1025
@@ -1403,7 +1403,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1239--1239
 +20) LibGuides at Uni-ver-sity of Pitts-burgh
  []
 
-<figure/census_small_area_geography2.jpg, id=1039, 337.26pt x 252.945pt>
+<figure/census_small_area_geography2.jpg, id=1040, 337.26pt x 252.945pt>
 File: figure/census_small_area_geography2.jpg Graphic file (type jpg)
 <use figure/census_small_area_geography2.jpg>
 Package pdftex.def Info: figure/census_small_area_geography2.jpg  used on input
@@ -1414,39 +1414,51 @@ Underfull \hbox (badness 2065) in paragraph at lines 1242--1242
 []\T1/lmr/m/n/10 (+20) (a) |To-scale break-down of nested cen-sus
  []
 
-<figure/geo_hierarchy.png, id=1040, 357.335pt x 277.035pt>
+<figure/geo_hierarchy.png, id=1041, 357.335pt x 277.035pt>
 File: figure/geo_hierarchy.png Graphic file (type png)
 <use figure/geo_hierarchy.png>
 Package pdftex.def Info: figure/geo_hierarchy.png  used on input line 1242.
 (pdftex.def)             Requested size: 195.12767pt x 151.2791pt.
 [78] [79 <./figure/census_small_area_geography2.jpg> <./figure/geo_hierarchy.pn
 g (PNG copy)>] [80]
-<figure/wotracts.png, id=1063, 776.9025pt x 696.6025pt>
+<figure/wotracts.png, id=1064, 776.9025pt x 696.6025pt>
 File: figure/wotracts.png Graphic file (type png)
 <use figure/wotracts.png>
 Package pdftex.def Info: figure/wotracts.png  used on input line 1296.
 (pdftex.def)             Requested size: 195.12767pt x 174.95802pt.
-<figure/withtracts.png, id=1064, 776.9025pt x 696.6025pt>
+<figure/withtracts.png, id=1065, 776.9025pt x 696.6025pt>
 File: figure/withtracts.png Graphic file (type png)
 <use figure/withtracts.png>
 Package pdftex.def Info: figure/withtracts.png  used on input line 1296.
 (pdftex.def)             Requested size: 195.12767pt x 174.95802pt.
 [81] [82 <./figure/wotracts.png> <./figure/withtracts.png>] [83]
-Underfull \hbox (badness 1701) in paragraph at lines 1334--1334
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1334
 [][][]\T1/lmr/m/n/10 (+20) Shawn J Bu-choltz, ``Neigh-bor-hood Level Fore-clo-s
-ure Data'' (De-part-ment of Hous-ing
+ure Data'' (De-part-ment of
  []
 
 
-Underfull \hbox (badness 3428) in paragraph at lines 1334--1334
-\T1/lmr/m/n/10 (+20) & Ur-ban De-vel-op-ment Of-fice of Pol-icy De-vel-op-ment 
-and Re-search, Septem-ber 2008);
+Underfull \hbox (badness 1888) in paragraph at lines 1334--1334
+\T1/lmr/m/n/10 (+20) Hous-ing & Ur-ban De-vel-op-ment Of-fice of Pol-icy De-vel
+-op-ment and Re-search, Septem-ber
  []
 
 
-Underfull \hbox (badness 1831) in paragraph at lines 1334--1334
-\T1/lmr/m/n/10 (+20) Mirian Cody, ``Neigh-bor-hood Sta-bi-liza-tion Pro-gram Da
-ta,'' Re-search Por-tal, \T1/lmr/m/it/10 (+20) HUD User
+Underfull \hbox (badness 7685) in paragraph at lines 1334--1334
+\T1/lmr/m/n/10 (+20) 2008); Mirian Cody, ``Neigh-bor-hood Sta-bi-liza-tion Pro-
+gram Data,'' Re-search Por-tal,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1334
+\T1/lmr/m/it/10 (+20) HUD User \T1/lmr/m/n/10 (+20) (https://www.huduser.gov/po
+rtal/datasets/NSP.html, Oc-to-ber 2010);
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1334--1334
+\T1/lmr/m/n/10 (+20) Todd Richard-son, ``NSP2 Data and Method-ol-ogy,'' Re-sear
+ch Por-tal, \T1/lmr/m/it/10 (+20) HUD User
  []
 
 [84] [85] [86]
@@ -1467,18 +1479,18 @@ Overfull \hbox (179.25412pt too wide) in paragraph at lines 1499--1499
  []
 
 [91] [92] [93] [94] [95]
-<figure/linearesid.png, id=1191, 481.8pt x 333.49594pt>
+<figure/linearesid.png, id=1192, 481.8pt x 333.49594pt>
 File: figure/linearesid.png Graphic file (type png)
 <use figure/linearesid.png>
 Package pdftex.def Info: figure/linearesid.png  used on input line 1607.
 (pdftex.def)             Requested size: 195.12767pt x 135.06511pt.
-<figure/linearquant.png, id=1192, 752.8125pt x 451.6875pt>
+<figure/linearquant.png, id=1193, 752.8125pt x 451.6875pt>
 File: figure/linearquant.png Graphic file (type png)
 <use figure/linearquant.png>
 Package pdftex.def Info: figure/linearquant.png  used on input line 1607.
 (pdftex.def)             Requested size: 195.12767pt x 117.07758pt.
 [96]
-<figure/betaresid.png, id=1202, 484.81125pt x 322.20375pt>
+<figure/betaresid.png, id=1203, 484.81125pt x 322.20375pt>
 File: figure/betaresid.png Graphic file (type png)
 <use figure/betaresid.png>
 Package pdftex.def Info: figure/betaresid.png  used on input line 1619.
@@ -1506,12 +1518,12 @@ Overfull \hbox (31.78462pt too wide) in paragraph at lines 1832--1878
  [][] 
  []
 
-<figure/priceresid.png, id=1349, 461.47406pt x 338.76563pt>
+<figure/priceresid.png, id=1350, 461.47406pt x 338.76563pt>
 File: figure/priceresid.png Graphic file (type png)
 <use figure/priceresid.png>
 Package pdftex.def Info: figure/priceresid.png  used on input line 1881.
 (pdftex.def)             Requested size: 195.12767pt x 143.24203pt.
-<figure/priceqq.png, id=1350, 405.01312pt x 313.17pt>
+<figure/priceqq.png, id=1351, 405.01312pt x 313.17pt>
 File: figure/priceqq.png Graphic file (type png)
 <use figure/priceqq.png>
 Package pdftex.def Info: figure/priceqq.png  used on input line 1881.
@@ -1524,12 +1536,12 @@ File: figure/betaresid.png Graphic file (type png)
 <use figure/betaresid.png>
 Package pdftex.def Info: figure/betaresid.png  used on input line 1889.
 (pdftex.def)             Requested size: 173.44534pt x 115.27054pt.
-<figure/lineartpresid.png, id=1351, 434.37282pt x 326.72063pt>
+<figure/lineartpresid.png, id=1352, 434.37282pt x 326.72063pt>
 File: figure/lineartpresid.png Graphic file (type png)
 <use figure/lineartpresid.png>
 Package pdftex.def Info: figure/lineartpresid.png  used on input line 1889.
 (pdftex.def)             Requested size: 173.44534pt x 130.46158pt.
-<figure/betatpresid.png, id=1352, 457.71pt x 318.43968pt>
+<figure/betatpresid.png, id=1353, 457.71pt x 318.43968pt>
 File: figure/betatpresid.png Graphic file (type png)
 <use figure/betatpresid.png>
 Package pdftex.def Info: figure/betatpresid.png  used on input line 1889.
@@ -1624,70 +1636,64 @@ Overfull \hbox (301.27597pt too wide) in paragraph at lines 2239--2241
 -labor-markets-and-links-to-the-Mota/4092fc8ebb493a0b116f20a304bc7c9e4912f9d6,
  []
 
-
-Overfull \hbox (71.58755pt too wide) in paragraph at lines 2248--2250
- \T1/lmr/m/n/12 (-20) https://www.marketwatch.com/story/us-breaks-down-93-bln-r
-obo-signing-settlement-2013-02-28,
- []
-
 [126]
-Overfull \hbox (204.97774pt too wide) in paragraph at lines 2284--2286
+Overfull \hbox (204.97774pt too wide) in paragraph at lines 2281--2283
  \T1/lmr/m/it/12 (-20) Li-brary Ed-u-ca-tion Blog\T1/lmr/m/n/12 (-20) . https:/
 /reagan.blogs.archives.gov/2016/08/15/reaganomics-the-economic-recovery-tax-act
 -of-1981/,
  []
 
 [127]
-Underfull \hbox (badness 1072) in paragraph at lines 2308--2310
+Underfull \hbox (badness 1072) in paragraph at lines 2305--2307
  [][]\T1/lmr/m/n/12 (+20) Spader, Jonathan, Al-varo Cortes, Kim-berly Bur-nett,
  Larry Buron, Michael
  []
 
 
-Overfull \hbox (67.94502pt too wide) in paragraph at lines 2311--2313
+Overfull \hbox (67.94502pt too wide) in paragraph at lines 2308--2310
  [][]\T1/lmr/m/n/12 (-20) ``S&P/Case-Shiller U.S. Na-tional Home Price In-dex.'
 ' https://fred.stlouisfed.org/series/CSUSHPISA,
  []
 
 [128]
-Overfull \hbox (37.89148pt too wide) in paragraph at lines 2335--2337
+Overfull \hbox (37.89148pt too wide) in paragraph at lines 2332--2334
  \T1/lmr/m/n/12 (-20) https://www.attomdata.com/news/most-recent/2018-year-end-
 foreclosure-market-report/,
  []
 
 
-Overfull \hbox (0.16197pt too wide) in paragraph at lines 2350--2352
+Overfull \hbox (0.16197pt too wide) in paragraph at lines 2344--2346
  \T1/lmr/m/n/12 (-20) McGowan, Romain François, Garrett Grolemund, et al. ``Wel
 come to the Tidyverse.''
  []
 
 [129]
-Overfull \hbox (58.31183pt too wide) in paragraph at lines 2362--2364
+Overfull \hbox (58.31183pt too wide) in paragraph at lines 2356--2358
  \T1/lmr/m/n/12 (-20) Move-ment.'' \T1/lmr/m/it/12 (-20) Huff-Post\T1/lmr/m/n/1
 2 (-20) . https://www.huffpost.com/entry/final-proof-the-tea-party_-b_-4136722,
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2368.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2362.
 [130]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2368.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2362.
 (thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2368.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2368.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2362.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2362.
 
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: 2D1237B4F64646CE88A64D8A4D04CDAC;2462.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2368.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2362.
  ) 
 Here is how much of TeX's memory you used:
- 15348 strings out of 492972
- 239685 string characters out of 3126622
- 418740 words of memory out of 3000000
- 17944 multiletter control sequences out of 15000+200000
- 119309 words of font info for 239 fonts, out of 3000000 for 9000
+ 15349 strings out of 492972
+ 239683 string characters out of 3126622
+ 418785 words of memory out of 3000000
+ 17946 multiletter control sequences out of 15000+200000
+ 122304 words of font info for 240 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  47i,18n,87p,1072b,533s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
@@ -1697,25 +1703,26 @@ athex.enc}{C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
 lm-mathsy.enc}{C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
 /lm/lm-ts1.enc}{C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvip
 s/lm/lm-ec.enc}<C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmbx12.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/lm/lmex10.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/lm/lmmi10.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/lm/lmmi12.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Corey/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Corey/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Corey/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Corey/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/Corey/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Corey/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/Corey/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Corey/App
-Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Corey/
-AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/Users/Co
-rey/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on thesis.pdf (137 pages, 2811359 bytes).
+blic/lm/lmbx10.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/lm/lmbx12.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/lm/lmex10.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmmi10.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/Corey/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Users/Corey/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/Corey/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/Corey/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/Corey/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/Corey/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/Corey/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Users/Corey/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmro12.pfb><C:/Users/Corey/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/Corey
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/Users/Co
+rey/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb><C:/User
+s/Corey/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
+Output written on thesis.pdf (137 pages, 2831330 bytes).
 PDF statistics:
- 1835 PDF objects out of 2073 (max. 8388607)
- 615 named destinations out of 1000 (max. 500000)
+ 1839 PDF objects out of 2073 (max. 8388607)
+ 613 named destinations out of 1000 (max. 500000)
  22925 words of extra memory for PDF output out of 24883 (max. 10000000)
 

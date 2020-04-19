@@ -30,6 +30,7 @@
 % Chemistry (chemtex), screenplays, you name it.
 % Check out CTAN to see: http://www.ctan.org/
 %%
+\AtBeginDocument{\addtocontents{toc}{\protect\thispagestyle{plain}}} %keep roman numerals on ToC
 \usepackage{graphicx,latexsym}
 \usepackage{subfig}
 \usepackage{amsmath}
@@ -182,20 +183,19 @@ I find some evidence that the behavior theorized did occur among races featuring
 \frontmatter % this stuff will be roman-numbered
 
   \setcounter{tocdepth}{2}
-  \thispagestyle{plain}
   \tableofcontents
-
   \thispagestyle{plain}
+
   \listoftables
-
   \thispagestyle{plain}
+
   \printnomenclature
-
   \thispagestyle{plain}
-  \listoffigures
 
+  \listoffigures
   \thispagestyle{plain}
   \begin{abstract}
+  \thispagestyle{plain}
     The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
     In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
     The program operated by purchasing, repairing, and re-selling vacant homes in neighborhoods at high risk of even more foreclosures.
@@ -324,7 +324,7 @@ The Great Depression, however, saw these factors come together in the Midwest, w
 Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they relied on their land for its income.
 
 However, farmers in the Great Depression differed from early 2000s subprime borrowers in that farming did not \emph{supplement} wage income, it \emph{replaced} wage incomes.
-In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting \emph{per se} or \emph{de facto} moratoria on foreclosures.\footnote{David C Wheelock, ``Changing the Rules: State Mortgage Foreclosure Moratoria During the Great Depression,'' \emph{Federal Reserve Bank of St. Louis Review} 90, no. 6 (n.d.): 537.}
+In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting \emph{per se} or \emph{de facto} moratoria on foreclosures.\footnote{{\textbf{???}}}
 The lack of such conditions pitched the struggle for foreclosure legislation in the subprime mortgage crisis to a severe angle.
 
 The most important differences between the foreclosure crisis in the Great Depression and that which preceded the Great Recession were the complementarities of farming with organizing.
@@ -333,7 +333,7 @@ Unlike the foreclosure crisis in the 2000s, losing a home implied also losing a 
 This raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
 Of the 100,000 farmers who lost their farms each year between 1926 and 1940,\footnote{Lee J. Alston, ``Farm Foreclosures in the United States During the Interwar Period,'' \emph{The Journal of Economic History} 43, no. 4 (1983): 885--903.} the Midwest saw the highest concentrations.
 Figure \ref{fig:wheelock-farms} shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
-In 1933, by far the worst year for farm mortgages, failure rates topped 3.7\%; during the rest of 1926-1940, rates were often above 1.5\%.\footnote{Wheelock, ``Changing the Rules,'' 571.}
+In 1933, by far the worst year for farm mortgages, failure rates topped 3.7\%; during the rest of 1926-1940, rates were often above 1.5\%.\footnote{{\textbf{???}}}
 By contrast, U.S. residential foreclosures reached 2.23\% in 2010, the worst year of the foreclosure crisis.\footnote{``U.S. Foreclosure Activity Drops to 13-Year Low in 2018,'' \emph{ATTOM Data Solutions} (https://www.attomdata.com/news/most-recent/2018-year-end-foreclosure-market-report/, January 2019).}
 In part, this is a denominator effect: the 50\% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
@@ -394,7 +394,7 @@ However, evidence regarding the change of this process over time is a mixed bag.
 Cheung, Cunningham, and Meltzer\footnote{``Do Homeowners Associations Mitigate or Aggravate Negative Spillovers from Neighboring Homeowner Distress?''} argues that the rights of residents have been eroded due to the increase in states where non-judicial foreclosure is the \emph{norm}, though the actual number of states where non-judicial foreclosure is legally available has decreased.\footnote{Andra Ghent, ``The Historical Origins of America's Mortgage Laws,'' Special Report (Research Institute for Housing America, October 2012), 22--23.}
 
 Judicial foreclosure briefly entered the national news cycle in 2010, when former homeowners alleged fraud against several large mortgage servicers, termed foreclosure mills for their prolific business.
-Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,\footnote{Ronald D. Orol, ``U.S. Breaks down \$9.3 Bln Robo-Signing Settlement,'' \emph{MarketWatch} (https://www.marketwatch.com/story/us-breaks-down-93-bln-robo-signing-settlement-2013-02-28, n.d.).}
+Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,\footnote{{\textbf{???}}}
 The fraudulent documents meant that contestation in foreclosure courts was possible, against the assumptions for foreclosures.
 In fact, the New Jersey Supreme Court in 2010 ordered lower courts to stop hearing foreclosure cases due to the prevalence of fraudulent documents.\footnote{``New Jersey Courts Take Steps to Ensure Integrity of Residential Mortgage Foreclosure Process'' (New Jersey Courts, December 2010).}
 Organizers cited the political influence of foreclosure mills---particularly in hard-hit Florida, the only Sand State with mandatory judicial foreclosure---as cause for the inefficacy of activism around foreclosure fraud.
@@ -1331,7 +1331,7 @@ The Redistricting Database for the State of California, hosted at the University
 Voter registration records allow researchers to locate each address---and thus each resident voter---precisely within tracts and precincts.
 A more careful version of my analysis would implement such methods, but the time required would have exceeded my timeframe.
 
-A similar process of de/recomposition was used for the Department of Housing and Urban Development's foreclosure data,\footnote{Shawn J Bucholtz, ``Neighborhood Level Foreclosure Data'' (Department of Housing \& Urban Development Office of Policy Development and Research, September 2008); Mirian Cody, ``Neighborhood Stabilization Program Data,'' Research Portal, \emph{HUD User} (https://www.huduser.gov/portal/datasets/NSP.html, n.d.); Todd Richardson, ``NSP2 Data and Methodology,'' Research Portal, \emph{HUD User} (https://www.huduser.gov/portal/NSP2datadesc.html, December 2009).} which was tabulated at the 2000 tract- and block group--level.
+A similar process of de/recomposition was used for the Department of Housing and Urban Development's foreclosure data,\footnote{Shawn J Bucholtz, ``Neighborhood Level Foreclosure Data'' (Department of Housing \& Urban Development Office of Policy Development and Research, September 2008); Mirian Cody, ``Neighborhood Stabilization Program Data,'' Research Portal, \emph{HUD User} (https://www.huduser.gov/portal/datasets/NSP.html, October 2010); Todd Richardson, ``NSP2 Data and Methodology,'' Research Portal, \emph{HUD User} (https://www.huduser.gov/portal/NSP2datadesc.html, December 2009).} which was tabulated at the 2000 tract- and block group--level.
 While most of these tracts are the same, and almost all 2010 tracts only subdivide a single 2000 tract, updates to geographic surveying, changes in the landforms, and population fluctuations necessitate updated tracts.
 The Census Bureau publishes relationship files that precisely place the percentage of housing units within each tract and block group in their 2010 equivalents.
 Housing units were used here instead of persons since the relevant statistics concern properties, not people.
@@ -1442,7 +1442,7 @@ For the labor risk--equity model, in all trials there should be positive correla
  & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-3} 
 \\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+ & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} \\ 
 \hline \\[-1.8ex] 
  NSP1 & -0.5040^{**} & -0.2586 \\ 
   2010 forelcosure rate & -0.1057 & 0.9898^{***} \\ 
@@ -1519,7 +1519,7 @@ Table \ref{tab:justp} shows the results of the same model above, but applied onl
  & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-3} 
 \\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
- & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} \\ 
+ & \multicolumn{1}{c}{(6)} & \multicolumn{1}{c}{(7)} \\ 
 \hline \\[-1.8ex] 
  NSP1 & -0.1471 & 0.1455 \\ 
   2010 forelcosure rate & -1.1257^{***} & -0.5903^{*} \\ 
@@ -1569,8 +1569,8 @@ It seems that, since the NSP is associated with higher rates of Republican votin
 One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
 Table \ref{tab:compnsp} compares how each of the NSP rounds fared with respect to Republican votes.
 The first round saw statistically-insignificant effects on Republican voting, while rounds two and three saw decreases in Republican vote share of 3.2\% and 6.0\% respectively.
-I excluded the second and third NSP rounds in my formal analysis because, as of July 2011, respectively 20.6\% and 0.4\% of funds had been expended from NSP2 and NSP3.\footnote{18568, ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011)'' (Department of Housing and Urban Development, n.d.); 18568, ``HUD NSP2 Report: National Expenditures by Grantee (Q2 2011)'' (Department of Housing and Urban Development, n.d.).}
-Though NSP1 had expended 43.4\% of funds and fully committed its allocations to grantees by September 2010,\footnote{18568, ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report'' (Department of Housing and Urban Development, n.d.).} the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
+I excluded the second and third NSP rounds in my formal analysis because, as of July 2011, respectively 20.6\% and 0.4\% of funds had been expended from NSP2 and NSP3.\footnote{18568, ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011)'' (Department of Housing and Urban Development, July 2011); 18568, ``HUD NSP2 Report: National Expenditures by Grantee (Q2 2011)'' (Department of Housing and Urban Development, July 2011).}
+Though NSP1 had expended 43.4\% of funds and fully committed its allocations to grantees by September 2010,\footnote{18568, ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report'' (Department of Housing and Urban Development, November 2010).} the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
 This fact should imply that even later rounds had less time to deploy price-stabilization measures.
 Thus, any perceived effects could not been due to the price effects sought by the program, but rather by those factors which caused HUD to designate such tracts for funding, and I propose, by the designation itself.
 By directing funding towards these neighborhoods, administrations \emph{could} try to implement a licit form of vote buying.
@@ -1634,7 +1634,7 @@ Coefficients are altogether similar\footnote{For entirely computational reasons,
  & \multicolumn{2}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-3} 
 \\[-1.8ex] & \multicolumn{2}{c}{Republican vote percentage} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)}\\ 
+ & \multicolumn{1}{c}{(8)} & \multicolumn{1}{c}{(9)} \\ 
 \hline \\[-1.8ex] 
  NSP1 & -0.0341^{***} & -0.0238^{**} \\ 
   2010 forelcosure rate & 3.0764^{***} & 5.7922^{***} \\ 
@@ -1706,7 +1706,7 @@ In sum, 2010 prices were negatively associated with the Neighborhood Stabilizati
 Perhaps this result was due to unobserved variable bias, but, given the normalcy of regression diagnostics, and the results of later NSP rounds, it may instead result from the NSP's timeline.
 Due to the legislative mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
 My results indicate that the NSP reduced prices between 1.3\% and 2.0\%, a small reduction keeping with size of the mandated discount.
-Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.\footnote{18568, ``HUD NSP-1 Reporting: Sept 2010 Program-Wide Report'' (Department of Housing and Urban Development, n.d.); HUD, ``HUD NSP1 Report: National Drawdowns by Activity (Q3 2013)'' (Department of Housing and Urban Development, n.d.).}
+Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.\footnote{18568, ``HUD NSP-1 Reporting: Sept 2010 Program-Wide Report'' (Department of Housing and Urban Development, November 2010); HUD, ``HUD NSP1 Report: National Drawdowns by Activity (Q3 2013)'' (Department of Housing and Urban Development, n.d.).}
 
 The labor risk--equity model was evaluated in spite of this fact, and evidence suggested the theorized effects were present in the 2010 midterms, though oddly not when only Tea Party tracts were considered.
 Economic anxiety, composed of low equity and risky employment magnified the conservatizing effects of increased home prices.
@@ -1835,7 +1835,7 @@ While there is yet more work to be done towards refining and measuring these beh
  & \multicolumn{3}{c}{\textit{Dependent variable:}} \\ 
 \cline{2-4} 
 \\[-1.8ex] & \multicolumn{3}{c}{Republican vote percentage} \\ 
-\\[-1.8ex] & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)}\\ 
+ & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(10)} & \multicolumn{1}{c}{(11)} \\ 
 \hline \\[-1.8ex] 
  NSP1 & -0.2586 &  &  \\ 
   NSP2 &  & -3.2302^{***} &  \\ 
@@ -1916,8 +1916,8 @@ Knowing how much this project meant to me, she provided valuable feedback despit
 Turns out you were the better writer.
 My classmates provided encouragement and copy edits in the weeks before our last semester together came to an unexpected, while Michael J. Smith batted cleanup to Alena Titova's immortal writing advice.
 William Lawson at the FHFA was quick to help with the particulars of the FHFA's home price indices.
-To all of you, thank you.
 Lastly, none of this would have been possible without my own hidden welfare state administered by Chris and Elaine Runkel.
+To all of you, thank you.
 
 \hypertarget{colophon}{%
 \chapter*{Colophon}\label{colophon}}
@@ -1940,16 +1940,16 @@ In addition to base \textbf{R},\footnote{R Core Team, \emph{R: A Language and En
 
 \hypertarget{refs}{}
 \leavevmode\hypertarget{ref-185682010huda}{}%
-18568. ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report.'' Department of Housing and Urban Development, n.d.
+18568. ``HUD NSP-1 Reporting Sept 2010: Program-Wide Detail Report.'' Department of Housing and Urban Development, November 2010.
 
 \leavevmode\hypertarget{ref-185682010hud}{}%
----------. ``HUD NSP-1 Reporting: Sept 2010 Program-Wide Report.'' Department of Housing and Urban Development, n.d.
+---------. ``HUD NSP-1 Reporting: Sept 2010 Program-Wide Report.'' Department of Housing and Urban Development, November 2010.
 
 \leavevmode\hypertarget{ref-185682011huda}{}%
----------. ``HUD NSP2 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, n.d.
+---------. ``HUD NSP2 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, July 2011.
 
 \leavevmode\hypertarget{ref-185682011hud}{}%
----------. ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, n.d.
+---------. ``HUD NSP3 Report: National Expenditures by Grantee (Q2 2011).'' Department of Housing and Urban Development, July 2011.
 
 \leavevmode\hypertarget{ref-201120062010}{}%
 ``2006-2010 American Community Survey 5-Year Summary File.'' US Census Bureau, 2011.
@@ -2057,7 +2057,7 @@ Cheung, Ron, Chris Cunningham, and Rachel Meltzer. ``Do Homeowners Associations 
 ``CNBC's Rick Santelli's Chicago Tea Party.'' CNBC, February 2009.
 
 \leavevmode\hypertarget{ref-cody2010neighborhood}{}%
-Cody, Mirian. ``Neighborhood Stabilization Program Data.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/datasets/NSP.html, n.d.
+Cody, Mirian. ``Neighborhood Stabilization Program Data.'' Research Portal. \emph{HUD User}. https://www.huduser.gov/portal/datasets/NSP.html, October 2010.
 
 \leavevmode\hypertarget{ref-collins2011state}{}%
 Collins, J. Michael, Ken Lam, and Christopher E. Herbert. ``State Mortgage Foreclosure Policies and Lender Interventions: Impacts on Borrower Behavior in Default.'' \emph{Journal of Policy Analysis and Management} 30, no. 2 (2011): 216--32. \url{https://doi.org/10.1002/pam.20559}.
@@ -2245,9 +2245,6 @@ Muro, Mark, and Christopher Hoene. ``Fiscal Challenges Facing Cities: Implicatio
 \leavevmode\hypertarget{ref-comfort2010new}{}%
 ``New Jersey Courts Take Steps to Ensure Integrity of Residential Mortgage Foreclosure Process.'' New Jersey Courts, December 2010.
 
-\leavevmode\hypertarget{ref-orolbreaks}{}%
-Orol, Ronald D. ``U.S. Breaks down \$9.3 Bln Robo-Signing Settlement.'' \emph{MarketWatch}. https://www.marketwatch.com/story/us-breaks-down-93-bln-robo-signing-settlement-2013-02-28, n.d.
-
 \leavevmode\hypertarget{ref-pebesma2018simple}{}%
 Pebesma, Edzer. ``Simple Features for R: Standardized Support for Spatial Vector Data.'' \emph{The R Journal} 10, no. 1 (2018): 439--46. \url{https://doi.org/10.32614/RJ-2018-009}.
 
@@ -2340,9 +2337,6 @@ Walker, Kyle, Kris Eberwein, and Matt Herman. ``Tidycensus: Load US Census Bound
 
 \leavevmode\hypertarget{ref-walker2020tigris}{}%
 Walker, Kyle, and Bob Rudis. ``Tigris: Load Census TIGER/Line Shapefiles,'' February 2020.
-
-\leavevmode\hypertarget{ref-wheelockChangingRulesState2008}{}%
-Wheelock, David C. ``Changing the Rules: State Mortgage Foreclosure Moratoria During the Great Depression.'' \emph{Federal Reserve Bank of St. Louis Review} 90, no. 6 (n.d.): 569--83.
 
 \leavevmode\hypertarget{ref-1942wickard}{}%
 ``Wickard V. Filburn,'' October 1942.

@@ -1,6 +1,6 @@
 # Connecting Home Prices to Voting {#motive-opportunity}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}}
+\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}
 
 The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis with a ream of policies aimed at mitigating spillover effects of the subprime mortgage crisis.
 At first glance, these policies appear as nothing more than containment measures to halt the spread of foreclosure and dislocation.

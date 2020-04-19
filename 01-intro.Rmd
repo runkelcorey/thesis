@@ -141,7 +141,7 @@ The Great Depression, however, saw these factors come together in the Midwest, w
 Farmers were positioned similar to homeowners who adopted cash-out refinancing in that they relied on their land for its income.
 
 However, farmers in the Great Depression differed from early 2000s subprime borrowers in that farming did not *supplement* wage income, it *replaced* wage incomes.
-In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting *per se* or *de facto* moratoria on foreclosures.[@wheelockChangingRulesState2008, 537]
+In addition, access to government and stark differences in media portrayal combined with the larger impact of farm foreclosures to drive organizing that led to 27 states enacting *per se* or *de facto* moratoria on foreclosures.[@wheelock2008changing, 537]
 The lack of such conditions pitched the struggle for foreclosure legislation in the subprime mortgage crisis to a severe angle.
 
 The most important differences between the foreclosure crisis in the Great Depression and that which preceded the Great Recession were the complementarities of farming with organizing.
@@ -150,7 +150,7 @@ Unlike the foreclosure crisis in the 2000s, losing a home implied also losing a 
 This raised the stakes for farmers to plead for relief and enlarged the macroeconomic worries with which politicians were just beginning to grapple.
 Of the 100,000 farmers who lost their farms each year between 1926 and 1940,[@alston1983farm] the Midwest saw the highest concentrations.
 Figure \@ref(fig:wheelock-farms) shows the high concentration in Minnesota, Iowa, and the Dakotas, and the lesser concentration all around the Midwest.
-In 1933, by far the worst year for farm mortgages, failure rates topped 3.7%; during the rest of 1926-1940, rates were often above 1.5%.[@wheelockChangingRulesState2008, 571]
+In 1933, by far the worst year for farm mortgages, failure rates topped 3.7%; during the rest of 1926-1940, rates were often above 1.5%.[@wheelock2008changing, 571]
 By contrast, U.S. residential foreclosures reached 2.23% in 2010, the worst year of the foreclosure crisis.[@2019foreclosure]
 In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
@@ -205,7 +205,7 @@ However, evidence regarding the change of this process over time is a mixed bag.
 @cheung2014homeowners argues that the rights of residents have been eroded due to the increase in states where non-judicial foreclosure is the *norm*, though the actual number of states where non-judicial foreclosure is legally available has decreased.[@ghent2012historical, 22-23]
 
 Judicial foreclosure briefly entered the national news cycle in 2010, when former homeowners alleged fraud against several large mortgage servicers, termed foreclosure mills for their prolific business.
-Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,[@orolbreaks]
+Allied state attorneys general settled with 13 banks over their roles in using falsified titles, signatures, and documents to foreclose on 3.8 million borrowers,[@orol2013breaks]
 The fraudulent documents meant that contestation in foreclosure courts was possible, against the assumptions for foreclosures.
 In fact, the New Jersey Supreme Court in 2010 ordered lower courts to stop hearing foreclosure cases due to the prevalence of fraudulent documents.[@comfort2010new]
 Organizers cited the political influence of foreclosure mills---particularly in hard-hit Florida, the only Sand State with mandatory judicial foreclosure---as cause for the inefficacy of activism around foreclosure fraud.

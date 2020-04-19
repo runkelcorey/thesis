@@ -1,6 +1,6 @@
 # Asset Prices, Individual Preferences, and Foreclosures {#methods}
 
-\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{Milton Friedman, \textit{A Theory of the Consumption Function}}
+\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{Milton Friedman, 1957}
 
 How do asset prices affect voter decisions *in extremis*?
 Political economists have investigated the impacts of wealth and labor market risk on welfare preferences, but they have yet to investigate how such policy preferences are represented in political decision-making, or how such preferences are changed by movement along the wealth distribution.
