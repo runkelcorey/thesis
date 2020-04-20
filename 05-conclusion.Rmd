@@ -32,7 +32,7 @@ After the tax rates of top-bracket earners were cut in the 1960s from above 90%,
 These homeowners revolted, reorienting politicians on both sides of the aisle to trumpet lower taxes.[@martin2008welcome]
 
 The presidency of Ronald Reagan marked an inflection point both in the forging of a taxation-welfare connection and in housing-employment compact.
-During his campaign, Reagan focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay201613th] while simultaneously with increasing military expenditure.
+During his campaign, Reagan focused on curbing welfare spending, revitalizing Richard Nixon's successful Southern Strategy with allusions to historical Republican rhetoric,[@duvernay201613th] while simultaneously increasing military expenditure.
 In his first term, Reagan enacted broad cuts to income taxes; while until then committed to balanced budgets, the influence of his economic advisors and ensuing landslide re-election sealed the Grand Old Party's position on taxes.[@campbell2009what]
 The fight to curb inflation yielded high interest rates that effectively bankrupted the savings and loan banks supplementing federal mortgages.[@stollerHousingCrashEnd2016; @toozeCrashedHowDecade2018, 45]
 Reagan's legislative responses allowed thrifts to jettison home mortgages, with de-regulated investment banks as the primary buyer.[@lewis2010fat]
@@ -107,6 +107,6 @@ This movement has seen 2012 presidential hopeful Mitt Romney, formerly of Bain C
 It has seen 2016 hopeful Marco Rubio lay out a vision of economic re-nationalization,[@rubio2019american] which seems more and more possible as the coronavirus exposes autarkic deficiencies in American supply chains and the Small Business Association (helmed by Rubio) rolls out emergency assistance to American businesses, with multinationals like cruise lines unable to cash in on the support.
 And it has seen Missouri senator Josh Hawley emerge possibly as the trends most ideologically-articulate speaker, with proposals for more forceful antitrust and more explicitly reactionary rhetoric.[@hawley2020getting]
 
-While the sharpest political moment may have passed, he financial and political forces at work during the foreclosure crisis and its reaction continue to influence American politics.
+While the sharpest political moment may have passed, the financial and political forces at work during the foreclosure crisis and its reaction continue to influence American politics.
 I have elaborated on other scholars' theoretical and empirical work with an analysis of the 2010 midterms, concluding that economic anxiety can magnify the impacts of housing prices on political behavior.
 While there is yet more work to be done towards refining and measuring these behaviors, the general thesis that policies can alter and train preferences---a logic somewhat the obverse of what is normally said about policymaking---is reiterated in this thesis.
