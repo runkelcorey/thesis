@@ -1,8 +1,21 @@
-The mortgage crisis of 2007--2012 saw the foreclosure of some 10 million Americans.
-In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices and preventing further social discloation.
-The program operated by purchasing, repairing, and re-selling vacant homes in neighborhoods at high risk of even more foreclosures.
-Though this program resembled Democrat-supported welfare programs, there are theoretical questions about the impacts it may have had on voting.
-Broadly, political economists have predicted that increased home equity leads to preferences for less social insurance, while early 21st-century American politics consistently connected less social insurance with lower taxation.
-These features would suggest that the Neighborhood Stabilization Program pushed voters towards Republican candidates, especially towards self-avowed members of the Tea Party Caucus, which sharpened the taxation--social insurance connection and derided the subsidy of home mortgages.
-I create a novel dataset connecting NSP target areas, 2010 midterm vote returns, home prices, and a range of demographic information in order to analyze this question.
-I find some evidence that the behavior theorized did occur among races featuring a Tea Party candidate, but that the behavior stayed local to those races and was not a broader feature of Republican support.
+The mortgage crisis of 2007--2012 saw the foreclosure of more than 10 million Americans.
+In response, the federal government authorized three rounds of the Neighborhood Stabilization Program (NSP), a relief effort aimed at stabilizing prices.
+Though this program resembled Democrat-supported welfare programs, there are theoretical questions about the impacts it may have had on voting by raising prices.
+Political economists have predicted that increased home equity leads to preferences for less social insurance.
+This research would suggest that the Neighborhood Stabilization Program pushed voters towards Republican candidates, especially towards self-avowed members of the Tea Party Caucus, which sharpened the taxation--social insurance connection and derided the subsidy of home mortgages.
+Disambiguating these forces---one social, the other financial---is the object of this thesis.
+
+In Chapter \@ref(actors-motive), I examine why federal relief was needed in the first place by breaking down other possible actors into three categories.
+For homeowners, the geography of the crisis and recent history of homeownership diffused activism aimed at local and federal office-holders.
+Local office-holders, closer to those homeowners, were anyways ill-equipped to handle the crisis due to the long 20th-century shift of responsibilities to the federal government.
+Creditors, if they wanted to take action, were thwarted by the oragnization of mortgage-backed securities (MBS).
+
+In Chapter \@ref(motive-opportunity), I try to understand how the NSP fit with US politics.
+I find that, rather than sitting in a party, homeownership programs such as the NSP rested in the executive branch.
+I then chart the growth of homeownership, its underlying policies, and the simultaneous rise of a fervent anti-tax rhetoric on the right, concluding with the creation of the Tea Party, that made increasing home prices and decreasing welfare legible as Republican issues.
+
+Then, in Chapter \@ref(methods), I set out to model this behavior.
+I consider the political economy literature surrounding housing and political behavior to develop a theoretical relaltionship between Republican voting share and proxies for home equity.
+This model is then tested in Chapter \@ref(outcome).
+With a novel dataset connecting NSP target areas, 2010 midterm vote returns, home prices, and a range of demographic information, I find evidence that the behavior theorized *did* occur, but that the behavior may have been limited to races where a self-described member of the Tea Party did *not* run.
+Chapter \@ref(conclusion) summarizes these findings, and offers some indication of where debt politics and offshoots of the Great Recession may be headed for greater visibility.

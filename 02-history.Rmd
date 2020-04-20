@@ -62,12 +62,12 @@ By mitigating spillover effects, the Neighborhood Stabilization Program would co
 
 And, rather than using direct cash transfers---which would have enhanced individual freedom by loosening household budget constraints---or pass-through payments to debt holders---which would have promoted rent-seeking by those debt holders---the Neighborhood Stabilization Program advocated for indirect bumps on home equity.
 The administration took larger-than-usual measures to distance itself from political (and legal) liability.
-The necessity of these measures is questionable: while 45% of Sand State mortgages issued in 2006 were for second, third, or fourth properties,[@mian2011house, 2150] it is important to remember that the majority of those foreclosed upon were prime borrowers.[@ferreira2015new]
-Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \@ref(fig:distress).^[Though that lag was partially because there was more "fuel left to burn" in the sense that the number of subprime borrowers, already only 20% of the market, had already been slashed.]
+The necessity of these measures is questionable: while 45% of Sand State mortgages issued in 2006 were for second, third, or fourth properties,[@mian2011house, 2150] it is important to remember that the majority of those foreclosed upon were prime borrowers.
+Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \@ref(fig:distress),^[Though that lag was partially because there was more "fuel left to burn" in the sense that the number of subprime borrowers, already only 20% of the market, had already been slashed.] taken from @ferreira2015new.
 These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.[@toozeCrashedHowDecade2018; @mianPoliticalEconomyUS2010]
 Rather than prudent oversight, the Bush administration responded to the political stimulus provided by Rick Santelli (among others), who fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclosure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
 
-```{r distress, fig.cap="Measures of homeowner distress timing, taken from Ferreira & Gyourko (2015).", fig.subcap=c("Total foreclosures and short sales by owner type","Probability of home loss by owner type."), echo = FALSE, out.width='45%', fig.align='center', dev='pdf', fig.ncol=2}
+```{r distress, fig.cap="Measures of homeowner distress timing.", fig.subcap=c("Total foreclosures and short sales by owner type","Probability of home loss by owner type."), echo = FALSE, out.width='45%', fig.align='center', dev='pdf', fig.ncol=2}
 include_graphics(c("figure/ferreira_absolute.png", "figure/ferreira_distress.png"))
 ```
 

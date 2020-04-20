@@ -25,7 +25,13 @@ include_graphics(c("figure/linearesid.png", "figure/betaresid.png", "figure/line
 \nomenclature{FHFA}{Federal Housing Finance Association}
 \nomenclature{HERA}{Housing and Economic Recovery Act of 2008}
 \nomenclature{HUD}{Department of Housing and Urban Development}
-\nomenclature{MBS}{Mortgage-Backed Security}
+\nomenclature{MBS}{Mortgage-backed security}
 \nomenclature{PVI}{Cook Partisan Voting Index}
-\nomenclature{VTD}{Voting Tabulation District}
+\nomenclature{VTD}{Voting tabulation district}
 \nomenclature{NSP}{Neighborhood Stabilization Program}
+\nomenclature{HOA}{Homeowner association}
+\nomenclature{SPV}{Special-purpose vehicle}
+\nomenclature{ARRA}{American Recovery and Reinvestment Act of 2009}
+\nomenclature{MEW}{Mortgage equity withdrawal}
+\nomenclature{MPC}{Marginal propensity to consume}
+\nomenclature{HELOC}{Home equity line of credit}

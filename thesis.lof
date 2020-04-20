@@ -17,29 +17,29 @@
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Federal public debt as a percentage of gross domestic product.\relax }}{50}{figure.caption.16}
 \contentsline {figure}{\numberline {2.6}{\ignorespaces Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.\relax }}{51}{figure.caption.17}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Personal saving and mortgage equity withdrawal as a percentage of disposable income.\relax }}{59}{figure.caption.18}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Ideological and partisan divides over social insurance programs.\relax }}{63}{figure.caption.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Support for social insurance programs by party.}}}{63}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Support for social insurance programs by ideology.}}}{63}{subfigure.2.2}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Personal saving and mortgage equity withdrawal as a percentage of disposable income.\relax }}{60}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ideological and partisan divides over social insurance programs.\relax }}{65}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Support for social insurance programs by party.}}}{65}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Support for social insurance programs by ideology.}}}{65}{subfigure.2.2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Census geography relationships.\relax }}{79}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {To-scale breakdown of nested census geography, with street names.}}}{79}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Organizational hierarchy of different geographies.}}}{79}{subfigure.1.2}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Voting precincts and census tracts in Palm Beach County, Florida.\relax }}{83}{figure.caption.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Without census tracts.}}}{83}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {With census tracts.}}}{83}{subfigure.2.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagnostic plots of the full linear model.\relax }}{97}{figure.caption.26}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Residuals on fitted values.}}}{97}{subfigure.3.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Acutal vs. fitted quantiles.}}}{97}{subfigure.3.2}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Standardized weighted residuals of full beta regression.\relax }}{98}{figure.caption.27}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Census geography relationships.\relax }}{81}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {To-scale breakdown of nested census geography, with street names.}}}{81}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Organizational hierarchy of different geographies.}}}{81}{subfigure.1.2}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Voting precincts and census tracts in Palm Beach County, Florida.\relax }}{85}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Without census tracts.}}}{85}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {With census tracts.}}}{85}{subfigure.2.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Diagnostic plots of the full linear model.\relax }}{99}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Residuals on fitted values.}}}{99}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Acutal vs. fitted quantiles.}}}{99}{subfigure.3.2}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Standardized weighted residuals of full beta regression.\relax }}{100}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagnostic plots of the home price change estimation.\relax }}{112}{figure.caption.31}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Residuals on fitted.}}}{112}{subfigure.1.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Quantile-quantile distribution.}}}{112}{subfigure.1.2}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Comparison of residuals between the linear and beta regressions by subset.\relax }}{114}{figure.caption.32}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Full linear regression.}}}{114}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Full beta regression.}}}{114}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tea Party--only linear regression.}}}{114}{subfigure.2.3}
-\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Tea Party--only beta regression.}}}{114}{subfigure.2.4}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Diagnostic plots of the home price change estimation.\relax }}{114}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Residuals on fitted.}}}{114}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Quantile-quantile distribution.}}}{114}{subfigure.1.2}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Comparison of residuals between the linear and beta regressions by subset.\relax }}{116}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Full linear regression.}}}{116}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Full beta regression.}}}{116}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tea Party--only linear regression.}}}{116}{subfigure.2.3}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Tea Party--only beta regression.}}}{116}{subfigure.2.4}
 \addvspace {10\p@ }

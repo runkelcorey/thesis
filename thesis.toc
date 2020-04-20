@@ -1,7 +1,7 @@
 \thispagestyle {plain}
 \contentsline {chapter}{Chapter 1: Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}An Unfurling Crisis}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Why was federal relief needed?}{7}{section.1.2}
+\contentsline {section}{\numberline {1.2}Why federal relief was needed}{7}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Homeowners were Unable to Organize}{8}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}City \& State Administrations Could Not Handle Foreclosures}{16}{subsection.1.2.2}
 \contentsline {subsection}{\numberline {1.2.3}Investors were Unable, and Banks Unwilling, to Limit Foreclosures}{22}{subsection.1.2.3}
@@ -11,23 +11,23 @@
 \contentsline {subsection}{\numberline {2.2.1}The Centering of Tax Policy}{41}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Emergence of the Tea Party}{48}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Conclusion}{54}{section.2.3}
-\contentsline {chapter}{Chapter 3: Asset Prices, Individual Preferences, and Foreclosures}{56}{chapter.3}
-\contentsline {section}{\numberline {3.1}The Role of Home Prices}{57}{section.3.1}
-\contentsline {section}{\numberline {3.2}Control Variables}{67}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Visible Identity}{68}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Economic Identity}{72}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Cultural Identity}{73}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3}A Model of Voting}{76}{section.3.3}
-\contentsline {chapter}{Chapter 4: The Neighborhood Stabilization Program and Voting}{77}{chapter.4}
-\contentsline {section}{\numberline {4.1}Relationships between statistical geographies}{78}{section.4.1}
-\contentsline {section}{\numberline {4.2}Data collection and aggregation}{81}{section.4.2}
-\contentsline {section}{\numberline {4.3}Data Analysis}{87}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Did NSP1 increase home prices?}{87}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Voting Impacts of the NSP and Price Changes}{89}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Limitations and proposed refinements}{96}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Conclusion}{101}{section.4.4}
-\contentsline {chapter}{Chapter 5: Conclusion}{103}{chapter.5}
-\contentsline {chapter}{Appendix A: Data Quality}{112}{appendix.A}
-\contentsline {chapter}{Afterword}{115}{appendix*.33}
-\contentsline {chapter}{Colophon}{116}{appendix*.34}
-\contentsline {chapter}{Bibliography}{117}{appendix*.35}
+\contentsline {chapter}{Chapter 3: Asset Prices, Individual Preferences, and Foreclosures}{57}{chapter.3}
+\contentsline {section}{\numberline {3.1}The Role of Home Prices}{58}{section.3.1}
+\contentsline {section}{\numberline {3.2}Control Variables}{68}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Visible Identity}{69}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Economic Identity}{73}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Cultural Identity}{75}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}A Model of Voting}{78}{section.3.3}
+\contentsline {chapter}{Chapter 4: The Neighborhood Stabilization Program and Voting}{79}{chapter.4}
+\contentsline {section}{\numberline {4.1}Relationships between statistical geographies}{80}{section.4.1}
+\contentsline {section}{\numberline {4.2}Data collection and aggregation}{83}{section.4.2}
+\contentsline {section}{\numberline {4.3}Data Analysis}{89}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Did NSP1 increase home prices?}{89}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Voting Impacts of the NSP and Price Changes}{91}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Limitations and proposed refinements}{98}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Conclusion}{103}{section.4.4}
+\contentsline {chapter}{Chapter 5: Conclusion}{105}{chapter.5}
+\contentsline {chapter}{Appendix A: Data Quality}{114}{appendix.A}
+\contentsline {chapter}{Afterword}{117}{appendix*.33}
+\contentsline {chapter}{Colophon}{118}{appendix*.34}
+\contentsline {chapter}{Bibliography}{119}{appendix*.35}
