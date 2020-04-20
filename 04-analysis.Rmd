@@ -33,7 +33,7 @@ stargazer(as.data.frame(wide), type = "latex", header = F, keep = c(7:11,13,14,1
 ## Relationships between statistical geographies {#census-geography}
 
 Census geography runs as follows.
-The basic unit, blocks, were originally designed just for Census takers to walk, and were constrained by physical boundaries difficult or illogical to cross.
+The basic unit, blocks, were originally designed for Census takers to walk, and so were constrained by physical boundaries difficult or illogical to cross.
 However, since the Bureau undertook to cover the *entire* United States with census blocks, there are millions of census blocks with no inhabitants, covering lakes, parks, and barren landscapes; this fact will become important shortly.
 Blocks are then aggregated into census tracts containing between 1,200 and 8,000 people.
 Tracts are the smallest unit for which American Community Survey data---a continuously-run telephone survey that collects additional demographic data such as median household income and educational attainment---are published.
@@ -47,7 +47,7 @@ include_graphics(c("figure/census_small_area_geography2.jpg", "figure/geo_hierar
 While tracts and blocks were *designed* to be semi-permanent, acting as the basis for other, non-Census areas, in practice their shapes shift with population changes.
 These shifts mean that: (a) not all 2000 tracts and 2010 tracts are congruent (though many are); and (b) non-Census areas (such as state-designed voting precincts) can cut census blocks.
 Since these Census Bureau does not make public the responses of individual persons or homes until several decades after, placing each record in its appropriate area is impossible.
-Rather, ecological methods approximate the distribution of persons, votes, or homes among geographies.
+Rather, *ecological methods* approximate the distribution of persons, votes, or homes among geographies.
 Ecological methods assume that persons, votes, or homes are equally distributed throughout an area: ecological methods would assume, for instance, that since six percent of Americans are millionaires, then six out of every hundred persons sampled---no matter their neighborhood---would also be millionaires.
 Strictly speaking, ecological methods are logical fallacies of de-composition, of taking the whole for the part.
 However, guided by the right principles, ecological methods can be perfectly valid statistical tools.
@@ -77,13 +77,13 @@ I began by downloading precinct-level voting returns from the Harvard Election D
 Started in 2008 by political scientists, this database compiled voting returns from most states and reported results for state and national races in a standardized format.
 
 These figures were then wedded to files specifying the geographic boundaries of each voting precinct within a state.
-At this stage saw the complete loss of several states' data as some systems used to identify precincts at the state-level were inconsistent with Census Bureau naming conventions.
+This stage saw the complete loss of several states' data as some systems used to identify precincts at the state-level were inconsistent with Census Bureau naming conventions.
 For each state, I looked for an isomorphic mapping from state-level naming to the standardized naming of the Census Bureau or Harvard Election Data Archive, and only for links where the match was clear were the data used.
 Case in point was Maryland: the voting returns data clearly contained every single specified tract in Maryland, but matching algorithms could only identify a few hundred of the several thousand voting districts.
 Geographic files came primarily from the Census Bureau's TIGER/Line redistricting project, the official database for all Census geography,[@20122010] via the Election-Geodata mapping project, an open-source repository for redistricting data,[@kelso2020nvkelso] though, as alluded to above, some states' geographic files were also compiled by HEDA.
 
 Translating the voting precincts to Census geography was a complicated process of decomposition and recomposition.
-Since Census tracts often straddle two voting precincts, distributing votes to particular tracts relies on ecological methods, essentially peeling off the part of a precinct lying in one tract and stitching it together with parts of the other precincts that also coincide with a tract.
+Since tracts often straddle two voting precincts, distributing votes to particular tracts relies on ecological methods, essentially peeling off the part of a precinct lying in one tract and stitching it together with parts of the other precincts that also coincide with a tract.
 This process generates Frankenstein tracts, where 20% of one precinct's votes are summed with 100% of a second precinct's votes and 3% of a third precinct's votes, depending on how much of a precinct coincides with a tract.
 Since the voting records of these tracts are purely statistical constructions, it is perfectly fine that one have fractions of votes.
 Take again, for example, our tract 12099005947 in Palm Beach County Florida: it recorded 732.00 Republican votes out of 3114.00 total votes in the 2010 Congressional race.
@@ -173,7 +173,7 @@ mod3 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + 
 stargazer(mod1, mod2, mod3, type = "latex", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change `05--`10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010", column.sep.width = "2pt")
 ```
 
-Results (not shown) of these models for NSP2 funding, allocated competitively within at-risk tracts, are similarly sobering.
+Results (not shown) of these models using NSP2 tracts, allocated competitively within the universe of at-risk tracts, are similarly sobering.
 The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.[@spader2015evaluation]
 Further, these models appear to be good predictors of home prices, accounting for 78% to 85% of total price variation among the 11,992 tracts included.
 Diagnostic plots of the best model are available in Figures \@ref(fig:priceresid) and \@ref(fig:priceqq).
@@ -182,7 +182,7 @@ Differential effects of NSP1 in Tea Party tracts are explored in Model 3.
 These results closely align with the full model augmented by state fixed effects and potential covariates, even retaining statistical significance despite only considering a fourth of the number of observations.
 By any standard, the first round of NSP funding did not raise home prices.
 
-While this evidence drives a nail into the coffin of foreclosure relief programs directly supporting anti-relief candidates, it still leaves open questions about the validity of the labor risk--equity model of voting explored in Chapters \@ref(motive-opportunity) and \@ref(methods).
+While this evidence drives a nail into the coffin of foreclosure relief programs directly supporting anti-relief candidates, it still leaves open questions about the validity of the labor risk--equity model of voting explored in Chapter \@ref(methods).
 Continuing the approach laid out above yields answers to two questions.
 First, *could* relief programs directly aid the efforts of anti-relief candidates?
 Second, in more general terms, are the effects of housing price changes magnified by low levels of home equity or high levels of labor risk?
@@ -200,22 +200,25 @@ mod5 <- lm(RPCT ~ NSP1 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG
 stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change `07--`10", "Labor risk", "Unemployment change `05--`10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(4)", "(5)"))
 ```
 
+
 Consistent with expectations, the presence of the Neighborhood Stabilization Program is associated with a half point lower Republican voting in the model without prices and significant at the 5% level.
 When taking into account prices, the presence of the Neighborhood Stabilization Program is not statistically significant, though still points negative.
-While there are certainly reasons *not* to accept this model's validity, the consistency of the expectations with the model---and prior literature---is a good reason to believe in its capacity to describe impacts of economic and demographic variables on majoritarian voting behavior.
+While there are reasons *not* to accept this model's validity, the consistency of the expectations with the model---and prior literature---is a reason to believe its capacity to describe impacts of economic and demographic variables on majoritarian voting behavior.
 Down the line, from residential tenure through religious adherents, factors identified by prior research as impacting Republican turnout were similarly associated in my model.
 
 Moreover, key features of the labor risk--equity model of political behavior found strong evidence in Model 5.
 The interaction effects between price changes, foreclosure rates, and labor risk are of interest here (uninteracted forms are provided for completeness and their effects are not predicted by the labor risk--equity literature).
-The magnifying effects of labor risk and foreclosure rate on price changes were directly proportional.
-They were---in addition to most every other variable---statistically significant at the 1% level.
+The magnifying effects of foreclosure rate on price changes was directly proportional, and price changes themselves were associated with more Republican voting.
 For instance, in our Palm Beach County tract 12099005947, my model estimated a <!--update-->5.7-point increase in Republican vote share due to the combination of home price decline, foreclosure rate, and variance of employment.
-Both the triple interaction between prices, foreclosures, and labor risk, as well as the price change--foreclosure rate interaction hold positive coefficients, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
+The interaction between prices and low equity (represented by foreclosures) holds a positive coefficient, consistent with the model's prediction that low-equity and high-labor risk combine to decrease preferences for social insurance, tied in the United States to higher taxation.
 
-Curiously, the pairwise interaction between price change and labor risk carries an inverse relationship with Republican voting.
-In English, this result means that risky employment and increasing prices actually causes more to vote Democratic (or, technically, non-Republican) even as both labor risk and the triple interaction with prices and foreclosures are directly associated with Republican voting.
+The pairwise interaction between price change and labor risk carries an negative relationship with Republican voting.
+While an inverse relationship between labor risk and Republican voting should be expected, a negative relationship in the interaction term means that, controlling for other variables, an increase in labor risk means that risky employment actually causes more to vote Democratic (or, technically, non-Republican) as home prices increase.
+Or, to take the inverse of this statement, at low home prices (near foreclosure, for instance), people with risky employment savor their wealth and vote more Republican.
+
+But the effects on the upper end pose some threat to the literature.
 This result was robust to the addition and subtraction of several covariates and subsets of the observations (results not shown).
-I account for this with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).[@mota2015spatial, Table 1]
+I account for it with post-crisis literature which argues that individuals with risky occupations face additional barriers to securing home equity lines of credit (HELOCs).[@mota2015spatial, Table 1]
 Thus, rather than this negative association representing an inconsistency between predicted and actual effects of increased equity, it could be the case that incomplete credit markets prevented individuals with highly-risky employment from behaving as they would prefer.
 In sum, the labor risk--equity model and prior literature on Republican voting behavior broadly agree with my regression results on the full sample of observations.
 
@@ -242,15 +245,15 @@ First, the evidence that NSP1 had any effect on voting is far from conclusive, w
 Second, home price interaction terms are significant and carry the same signs as in trials run on the full slate of observations, but insignificant when uninteracted.
 Third, the foreclosure rate switches signs when combined with the effects of home prices.
 This switch means that *apart from their effects on prices* foreclosures are associated with increased Republican voting, but when those [negative] price effects are included, voters choose Democratic candidates more.
-This finding agrees with the narrative that Tea Party candidates cast foreclosed homeowners as irresponsible and blame-worthy neighbors.
+This finding agrees with the narrative that Tea Party candidates cast foreclosed homeowners as irresponsible and blame-worthy neighbors, though my principal question about differential effects of price changes did not yield conclusive results.
 
 It seems that, since the NSP is associated with higher rates of Republican voting in the face of negative price effects, cultural (rather than economic) factors may have been at play.
 One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
 Table \@ref(tab:compnsp) compares how each of the NSP rounds fared with respect to Republican votes.
-The first round saw statistically-insignificant effects on Republican voting, while rounds two and three saw decreases in Republican vote share of 3.2% and 6.0% respectively.
+The first round saw statistically-insignificant effects on Republican voting, while rounds two and three saw decreases in Republican vote share of 3.1% and 5.7% respectively.
 I excluded the second and third NSP rounds in my formal analysis because, as of July 2011, respectively 20.6% and 0.4% of funds had been expended from NSP2 and NSP3.[@185682011hud; @185682011huda]
 Though NSP1 had expended 43.4% of funds and fully committed its allocations to grantees by September 2010,[@185682010huda] the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
-This fact should imply that even later rounds had less time to deploy price-stabilization measures.
+This fact implies that even later rounds had less time to deploy price-stabilization measures.
 Thus, any perceived effects could not been due to the price effects sought by the program, but rather by those factors which caused HUD to designate such tracts for funding, and I propose, by the designation itself.
 By directing funding towards these neighborhoods, administrations *could* try to implement a licit form of vote buying.
 That these effects would be so pronounced, and that residents would not also be motivated by an anti-welfare pride, is difficult to believe, however.
@@ -275,7 +278,7 @@ Additionally, using individual-level demographics and vote results would have av
 
 The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
-On that count, the attached .45-.59 $R^{2}$ values are not concerning.
+On that count, the attached .45-.58 $R^{2}$ values are not concerning.
 However, further analysis of the residuals demonstrates weaknesses in model selection.
 Figure \@ref(fig:linearesid) shows the residuals against fitted values for the full-sample, fixed-effects model.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
@@ -326,7 +329,7 @@ kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spat
 In sum, 2010 prices were negatively associated with the Neighborhood Stabilization Program's first round of funding.
 Perhaps this result was due to unobserved variable bias, but, given the normalcy of regression diagnostics, and the results of later NSP rounds, it may instead result from the NSP's timeline.
 Due to the legislative mandate that grantees purchase homes at a slight discount, there may not have been enough time to clear, repair, and re-appraise (or fully resell) properties by the 2010 midterms.
-My results indicate that the NSP reduced prices between 1.3% and 2.0%, a small reduction keeping with size of the mandated discount.
+My results indicate that the NSP reduced prices between 1.4% and 2.0%, a small reduction keeping with size of the mandated discount.
 Further, by NSP1's maturation in 2013, the amount of funds spent on acquisitions dropped, while new construction and rehabilitation increased slightly compared to its 2010 progress.[@185682010hud; @hud2013hud]
 
 The labor risk--equity model was evaluated in spite of this fact, and evidence suggested the theorized effects were present in the 2010 midterms, though oddly not when only Tea Party tracts were considered.
