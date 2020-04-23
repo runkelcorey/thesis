@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Chapter 6 Appendix: Data Quality | Political Impacts of Residential Mortgages in Crisis" />
+<meta property="og:type" content="book" />
+
+
+
+
+
+<meta name="author" content="Corey Runkel" />
+
+<meta name="date" content="2020-04-20" />
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+
+<meta name="description" content="Chapter 6 Appendix: Data Quality | Political Impacts of Residential Mortgages in Crisis">
+
+<title>Chapter 6 Appendix: Data Quality | Political Impacts of Residential Mortgages in Crisis</title>
+
+<link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
+<link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
+
+
+
+
+
+</head>
+
+<body>
+
+
+
+<div class="row">
+<div class="col-sm-12">
+<div id="TOC">
+<ul>
+<li class="has-sub"><a href="actors-motive.html#actors-motive"><span class="toc-section-number">1</span> Introduction</a><ul>
+<li><a href="actors-motive.html#crisis"><span class="toc-section-number">1.1</span> An Unfurling Crisis</a></li>
+<li class="has-sub"><a href="actors-motive.html#why-federal-relief-was-needed"><span class="toc-section-number">1.2</span> Why federal relief was needed</a><ul>
+<li><a href="actors-motive.html#homeowners"><span class="toc-section-number">1.2.1</span> Homeowners were Unable to Organize</a></li>
+<li><a href="actors-motive.html#cities-states"><span class="toc-section-number">1.2.2</span> City &amp; State Administrations Could Not Handle Foreclosures</a></li>
+<li><a href="actors-motive.html#banks"><span class="toc-section-number">1.2.3</span> Investors were Unable, and Banks Unwilling, to Limit Foreclosures</a></li>
+</ul></li>
+</ul></li>
+<li class="has-sub"><a href="motive-opportunity.html#motive-opportunity"><span class="toc-section-number">2</span> Connecting Home Prices to Voting</a><ul>
+<li><a href="motive-opportunity.html#the-neighborhood-stabilization-program-ideologically"><span class="toc-section-number">2.1</span> The Neighborhood Stabilization Program, Ideologically</a></li>
+<li class="has-sub"><a href="motive-opportunity.html#shifting-priorities-in-the-grand-old-party"><span class="toc-section-number">2.2</span> Shifting Priorities in the Grand Old Party</a><ul>
+<li><a href="motive-opportunity.html#the-centering-of-tax-policy"><span class="toc-section-number">2.2.1</span> The Centering of Tax Policy</a></li>
+<li><a href="motive-opportunity.html#emergence-of-the-tea-party"><span class="toc-section-number">2.2.2</span> Emergence of the Tea Party</a></li>
+</ul></li>
+<li><a href="motive-opportunity.html#conclusion"><span class="toc-section-number">2.3</span> Conclusion</a></li>
+</ul></li>
+<li class="has-sub"><a href="methods.html#methods"><span class="toc-section-number">3</span> Asset Prices, Individual Preferences, and Foreclosures</a><ul>
+<li><a href="methods.html#home-prices"><span class="toc-section-number">3.1</span> The Role of Home Prices</a></li>
+<li class="has-sub"><a href="methods.html#controls"><span class="toc-section-number">3.2</span> Control Variables</a><ul>
+<li><a href="methods.html#visible-identity"><span class="toc-section-number">3.2.1</span> Visible Identity</a></li>
+<li><a href="methods.html#economic-identity"><span class="toc-section-number">3.2.2</span> Economic Identity</a></li>
+<li><a href="methods.html#cultural-identity"><span class="toc-section-number">3.2.3</span> Cultural Identity</a></li>
+</ul></li>
+<li><a href="methods.html#model"><span class="toc-section-number">3.3</span> A Model of Voting</a></li>
+</ul></li>
+<li class="has-sub"><a href="outcome.html#outcome"><span class="toc-section-number">4</span> The Neighborhood Stabilization Program and Voting</a><ul>
+<li><a href="outcome.html#census-geography"><span class="toc-section-number">4.1</span> Relationships between statistical geographies</a></li>
+<li><a href="outcome.html#aggregation"><span class="toc-section-number">4.2</span> Data collection and aggregation</a></li>
+<li class="has-sub"><a href="outcome.html#analysis"><span class="toc-section-number">4.3</span> Data Analysis</a><ul>
+<li><a href="outcome.html#did-nsp1-increase-home-prices"><span class="toc-section-number">4.3.1</span> Did NSP1 increase home prices?</a></li>
+<li><a href="outcome.html#impacts"><span class="toc-section-number">4.3.2</span> Voting Impacts of the NSP and Price Changes</a></li>
+<li><a href="outcome.html#limitations"><span class="toc-section-number">4.3.3</span> Limitations and proposed refinements</a></li>
+</ul></li>
+<li><a href="outcome.html#conclusion-1"><span class="toc-section-number">4.4</span> Conclusion</a></li>
+</ul></li>
+<li><a href="motive-opportunity.html#conclusion"><span class="toc-section-number">5</span> Conclusion</a></li>
+<li><a href="appendix-data-quality.html#appendix-data-quality"><span class="toc-section-number">6</span> Appendix: Data Quality</a></li>
+<li><a href="afterword.html#afterword">Afterword</a></li>
+<li><a href="colophon.html#colophon">Colophon</a></li>
+<li><a href="bibliography.html#bibliography"><span class="toc-section-number">7</span> Bibliography</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-12">
+<div id="appendix-data-quality" class="section level1">
+<h1><span class="header-section-number">Chapter 6</span> Appendix: Data Quality</h1>
+<table style="text-align:center">
+<caption><strong>Comparison of NSP Effects</strong></caption>
+
+
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+Republican vote percentage
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(4)
+</td>
+<td>
+(10)
+</td>
+<td>
+(11)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NSP1
+</td>
+<td>
+-0.2498
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NSP2
+</td>
+<td>
+</td>
+<td>
+-3.0834<sup>***</sup>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+NSP3
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+-5.7479<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+2010 forelcosure rate
+</td>
+<td>
+2.2186<sup>***</sup>
+</td>
+<td>
+2.2286<sup>***</sup>
+</td>
+<td>
+2.2544<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Home price change <code>07--</code>10
+</td>
+<td>
+0.0706<sup>**</sup>
+</td>
+<td>
+0.0629<sup>**</sup>
+</td>
+<td>
+0.0704<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Labor risk
+</td>
+<td>
+-0.2124<sup>***</sup>
+</td>
+<td>
+-0.2105<sup>***</sup>
+</td>
+<td>
+-0.2054<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Unemployment change <code>05--</code>10
+</td>
+<td>
+-0.3227<sup>***</sup>
+</td>
+<td>
+-0.2933<sup>***</sup>
+</td>
+<td>
+-0.3265<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Median household income (000s)
+</td>
+<td>
+0.1843<sup>***</sup>
+</td>
+<td>
+0.1834<sup>***</sup>
+</td>
+<td>
+0.1814<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Population density
+</td>
+<td>
+0.0002<sup>***</sup>
+</td>
+<td>
+0.0002<sup>***</sup>
+</td>
+<td>
+0.0002<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Tenure in home
+</td>
+<td>
+-1.6090<sup>***</sup>
+</td>
+<td>
+-1.5979<sup>***</sup>
+</td>
+<td>
+-1.5884<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Squared tenure
+</td>
+<td>
+0.0407<sup>***</sup>
+</td>
+<td>
+0.0403<sup>***</sup>
+</td>
+<td>
+0.0402<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+65-and-up %
+</td>
+<td>
+0.0999<sup>***</sup>
+</td>
+<td>
+0.0975<sup>***</sup>
+</td>
+<td>
+0.1008<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Black %
+</td>
+<td>
+-0.0505
+</td>
+<td>
+-0.0579
+</td>
+<td>
+-0.0563
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Hispanic %
+</td>
+<td>
+0.4169<sup>***</sup>
+</td>
+<td>
+0.4077<sup>***</sup>
+</td>
+<td>
+0.4101<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Hispanic % squared
+</td>
+<td>
+-0.0035<sup>***</sup>
+</td>
+<td>
+-0.0035<sup>***</sup>
+</td>
+<td>
+-0.0035<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Asian %
+</td>
+<td>
+0.1258<sup>**</sup>
+</td>
+<td>
+0.1200<sup>**</sup>
+</td>
+<td>
+0.1165<sup>**</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+White %
+</td>
+<td>
+0.2837<sup>***</sup>
+</td>
+<td>
+0.2754<sup>***</sup>
+</td>
+<td>
+0.2797<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+White: some college or less %
+</td>
+<td>
+0.1343<sup>***</sup>
+</td>
+<td>
+0.1339<sup>***</sup>
+</td>
+<td>
+0.1380<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Evangelical %
+</td>
+<td>
+0.5403<sup>***</sup>
+</td>
+<td>
+0.5323<sup>***</sup>
+</td>
+<td>
+0.5354<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+L.D.S. %
+</td>
+<td>
+0.2839<sup>***</sup>
+</td>
+<td>
+0.2796<sup>***</sup>
+</td>
+<td>
+0.2947<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Cook PVI 2008
+</td>
+<td>
+0.7049<sup>***</sup>
+</td>
+<td>
+0.7151<sup>***</sup>
+</td>
+<td>
+0.7065<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Price change foreclosure rate
+</td>
+<td>
+0.1345<sup>***</sup>
+</td>
+<td>
+0.1359<sup>***</sup>
+</td>
+<td>
+0.1313<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Price change labor risk
+</td>
+<td>
+-0.0759<sup>***</sup>
+</td>
+<td>
+-0.0753<sup>***</sup>
+</td>
+<td>
+-0.0743<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Foreclosure rate density
+</td>
+<td>
+-0.0001<sup>***</sup>
+</td>
+<td>
+-0.0001<sup>***</sup>
+</td>
+<td>
+-0.0001<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+White % some college or less
+</td>
+<td>
+0.0012<sup>***</sup>
+</td>
+<td>
+0.0013<sup>***</sup>
+</td>
+<td>
+0.0012<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+1.4107
+</td>
+<td>
+2.1849
+</td>
+<td>
+1.9728
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+27,098
+</td>
+<td>
+27,098
+</td>
+<td>
+27,098
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.4654
+</td>
+<td>
+0.4664
+</td>
+<td>
+0.4670
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.4649
+</td>
+<td>
+0.4659
+</td>
+<td>
+0.4666
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+14.7292
+</td>
+<td>
+14.7156
+</td>
+<td>
+14.7061
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+1,024.6710<sup>***</sup>
+</td>
+<td>
+1,028.7220<sup>***</sup>
+</td>
+<td>
+1,031.5750<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="3" style="text-align:right">
+<sup><em></sup>p&lt;0.1; <sup><strong></sup>p&lt;0.05; <sup></strong></em></sup>p&lt;0.01
+</td>
+</tr>
+</table>
+<div class="figure" style="text-align: center"><span id="fig:prices"></span>
+<img src="figure/priceresid.png" alt="Diagnostic plots of the home price change estimation." width="45%" /><img src="figure/priceqq.png" alt="Diagnostic plots of the home price change estimation." width="45%" />
+<p class="caption marginnote shownote">
+Figure 6.1: Diagnostic plots of the home price change estimation.
+</p>
+</div>
+<div class="figure" style="text-align: center"><span id="fig:resids"></span>
+<img src="figure/linearesid.png" alt="Comparison of residuals between the linear and beta regressions by subset." width="40%" /><img src="figure/betaresid.png" alt="Comparison of residuals between the linear and beta regressions by subset." width="40%" /><img src="figure/lineartpresid.png" alt="Comparison of residuals between the linear and beta regressions by subset." width="40%" /><img src="figure/betatpresid.png" alt="Comparison of residuals between the linear and beta regressions by subset." width="40%" />
+<p class="caption marginnote shownote">
+Figure 6.2: Comparison of residuals between the linear and beta regressions by subset.
+</p>
+</div>
+<!-- Here is where I entered my nomenclature
+\nomenclature{FHA}{Federal Housing Authority}
+\nomenclature{FHFA}{Federal Housing Finance Association}
+\nomenclature{HERA}{Housing and Economic Recovery Act of 2008}
+\nomenclature{HUD}{Department of Housing and Urban Development}
+\nomenclature{MBS}{Mortgage-backed security}
+\nomenclature{PVI}{Cook Partisan Voting Index}
+\nomenclature{VTD}{Voting tabulation district}
+\nomenclature{NSP}{Neighborhood Stabilization Program}
+\nomenclature{HOA}{Homeowner association}
+\nomenclature{SPV}{Special-purpose vehicle}
+\nomenclature{ARRA}{American Recovery and Reinvestment Act of 2009}
+\nomenclature{MEW}{Mortgage equity withdrawal}
+\nomenclature{MPC}{Marginal propensity to consume}
+\nomenclature{HELOC}{Home equity line of credit}-->
+
+</div>
+<p style="text-align: center;">
+<a href="conclusion.html"><button class="btn btn-default">Previous</button></a>
+<a href="afterword.html"><button class="btn btn-default">Next</button></a>
+</p>
+</div>
+</div>
+
+
+
+</body>
+</html>

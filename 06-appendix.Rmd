@@ -1,6 +1,5 @@
-\appendix
-
-# Data Quality
+<!--\appendix-->
+# Appendix: Data Quality
 
 ```{r compnsp, echo=FALSE, message=FALSE, results='asis'}
 library(knitr)
@@ -9,7 +8,7 @@ library(stargazer)
 mod4 <- lm(RPCT ~ NSP1 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
 mod10 <- lm(RPCT ~ NSP2 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
 mod11 <- lm(RPCT ~ NSP3 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
-stargazer(mod4, mod10, mod11, type = "latex", title = "Comparison of NSP Effects", label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "2010 forelcosure rate", "Home price change `07--`10", "Labor risk", "Unemployment change `05--`10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "1pt", model.numbers = F, column.labels = c("(4)", "(10)", "(11)"))
+stargazer(mod4, mod10, mod11, type = "html", title = "Comparison of NSP Effects", label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "2010 forelcosure rate", "Home price change `07--`10", "Labor risk", "Unemployment change `05--`10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "1pt", model.numbers = F, column.labels = c("(4)", "(10)", "(11)"))
 ```
 
 ```{r prices, echo=FALSE, message=FALSE, fig.align='center', out.width='45%', fig.cap="Diagnostic plots of the home price change estimation.", fig.subcap=c("Residuals on fitted.\\label{fig:priceresid}", "Quantile-quantile distribution.\\label{fig:priceqq}"), dev='pdf'}
@@ -20,7 +19,7 @@ include_graphics(c("figure/priceresid.png", "figure/priceqq.png"))
 include_graphics(c("figure/linearesid.png", "figure/betaresid.png", "figure/lineartpresid.png", "figure/betatpresid.png"))
 ```
 
-<!-- Here is where I entered my nomenclature-->
+<!-- Here is where I entered my nomenclature
 \nomenclature{FHA}{Federal Housing Authority}
 \nomenclature{FHFA}{Federal Housing Finance Association}
 \nomenclature{HERA}{Housing and Economic Recovery Act of 2008}
@@ -34,4 +33,4 @@ include_graphics(c("figure/linearesid.png", "figure/betaresid.png", "figure/line
 \nomenclature{ARRA}{American Recovery and Reinvestment Act of 2009}
 \nomenclature{MEW}{Mortgage equity withdrawal}
 \nomenclature{MPC}{Marginal propensity to consume}
-\nomenclature{HELOC}{Home equity line of credit}
+\nomenclature{HELOC}{Home equity line of credit}-->

@@ -1,6 +1,9 @@
 # Asset Prices, Individual Preferences, and Foreclosures {#methods}
 
-\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{Milton Friedman, 1957}
+<!--\epigraph{Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.}{Milton Friedman, 1957}-->
+
+>*Keynes took it for granted that current consumption expenditure is a highly dependable and stable function of current income.*
+`r quote_footer("Milton Friedman, 1957")`
 
 How do asset prices affect voter decisions *in extremis*?
 Political economists have investigated the impacts of wealth and labor market risk on welfare preferences, but they have yet to investigate how such policy preferences are represented in political decision-making, or how such preferences are changed by movement along the wealth distribution.
@@ -9,7 +12,7 @@ Pursuing this question lengthens the focal point from groups to individuals.
 
 ```{r, include=FALSE}
 library(knitr)
-options(knitr.graphics.auto_pdf = TRUE)
+#options(knitr.graphics.auto_pdf = TRUE)
 ```
 
 This chapter begins by reviewing the political science, sociology, and economic literature on asset-based social insurance preferences, the psychology of lost and gained wealth, and standard models of American voting behavior.
@@ -47,7 +50,7 @@ While estimates vary on the uses of extracted mortgage equity that funds persona
 In other words, understandings of housing as an asset are not foreign to homeowners, especially those who bought in the crest of that Minsky cycle.
 Homeowners who bought in between 1999 and 2005 saw median net worth jump "from $11,000 to $88,000 in real terms, driven largely by rising home equity."[@schwartz2009politics]
 
-```{r mew, fig.align='center', echo=FALSE, out.width='90%', fig.cap="Personal saving and mortgage equity withdrawal as a percentage of disposable income.", dev='pdf'}
+```{r mew, echo=FALSE, fig.cap="Personal saving and mortgage equity withdrawal as a percentage of disposable income.", dev='pdf'}
 include_graphics("figure/mew.png")
 ```
 
@@ -56,7 +59,7 @@ Mortgage equity exhibits greater wealth effects than investments in stocks: rese
 Specifically, every new dollar of housing income generated 6 cents of new consumption over the same dollar in stock market income.
 Economists disagree as to the cause and level of this wealth effect, but its primacy over other financial holdings is broadly agreed upon,[@lasky2007housing] and fits into the view that America has transitioned into a consumption- and import-oriented economy.
 Compounding the significance of housing wealth was the sheer size and volatility of housing: Ansell notes that, "between 1985 and 2006, real house price inflation was three times greater than between 1970 and 1985, with a standard deviation almost twice as large."[@ansellPoliticalEconomyOwnership2014, 383]
-And MEW increased from $300 billion annually between 1991 and 2000 to $1 trillion between 2001 and 2005.[@schwartz2009subprime, 100]
+And MEW increased from $300 billion annually between 1991 and 2000 to \$1 trillion between 2001 and 2005.[@schwartz2009subprime, 100]
 
 Subsidizing housing and home mortgages privatizes government spending otherwise recognizable as welfare.
 In doing so, the policies and implementations change how citizens view the state's role in their personal finances.
@@ -91,6 +94,10 @@ I split hairs over this behavior with Ansell (2014), who maintains it is self-id
 This position is not exactly borne out in the Pew numbers: while independent support for raising social insurance spending (middle panel) falls relative to Democratic support after 2007, independent support for maintaining (left panel) or expanding (right panel) social insurance spending when disconnected from budgetary imbalances hews closely to Democratic behavior.
 When these are combined with the polling on ideological slant, the Pew research offers a coherent picture of independent voting behavior between 2007 and 2012.
 
+```{r partisan, echo=FALSE, fig.cap="Support for social insurance programs by party."}
+include_graphics("figure/partisan_social.png")
+```
+
 Figure \@ref(fig:ideological) shows how independents who lean towards a party compare with those parties on a number of political positions.
 The larger variance in positions for both sets of "leaners" shows how independents less consistently assimilate perceptions of evolving economic realities into their political positions.
 Those who identify as Republicans or Democrats are not swayed in their support for social safety net provisions by the eruption of financial and economic turmoil.
@@ -99,8 +106,8 @@ Partisanship affects how individuals fit economic perceptions into their politic
 Therefore, my model aims at marginal voters, those independents whose picture of the world is more open to alteration.
 "But," as Schwartz notes with regard to the election of Barack Obama, "a shift in the votes of only 5--10 percent of voters can be electorally decisive, and by late 2008 one-sixth of U.S. homeowners had negative equity."[@schwartz2009subprime, 178]
 
-```{r ideological-social, fig.align='center', echo=FALSE, out.width=c('62%','31%'), fig.cap="Ideological and partisan divides over social insurance programs.", fig.subcap=c("Support for social insurance programs by party.\\label{fig:partisan}","Support for social insurance programs by ideology.\\label{fig:ideological}"), dev='pdf', fig.ncol=2}
-include_graphics(c("figure/partisan_social.png", "figure/ideological_social.png"))
+```{r ideological, echo=FALSE, fig.cap="Support for social insurance programs by ideology.", dev='pdf', fig.margin=TRUE}
+include_graphics("figure/ideological_social.png")
 ```
 
 And I expect the effects to be marginal, as the Neighborhood Stabilization Program likely enriched no one by 2010.
@@ -280,7 +287,8 @@ Since Virginia went 46.8% for McCain, its 2008 Cook PVI would be +.5; Massachuse
 The discussion above leaves me with a model of Republican voting:
 
 \begin{multline}
-rep_i = \beta_0 + \beta_1NSP_i + \beta_2(PriceChg_i \times ForeclosureRate_i) \\ + \beta_3(PriceChg_i \times LaborRisk_i) \beta_4UnemploymentChg_i + \\ \beta_5medHHI_i + \beta_6Density_i +
-\beta_7Tenure_i + \beta_8Tenure^2_i + \beta_9Old_i + \\ \beta_{10}Black_i + \beta_{11}Hispanic_i + \beta_{12}Hispanic^2_i + \beta_{13}Asian + \beta_{13}(White_i + SomeCol_i) + \\ \beta_{13}Evangelical_i + \beta_{14}LDS_i + \beta_{15}PVI_i + \epsilon_i
+rep_i = \beta_0 + \beta_1NSP_i + \beta_2(PriceChg_i \times ForeclosureRate_i) + \\
+\beta_3(PriceChg_i \times LaborRisk_i) + \beta_4UnemploymentChg_i + \beta_5medHHI_i + \\
+\beta_6Density_i + \beta_7Tenure_i + \beta_8Tenure^2_i + \beta_9Old_i + \beta_{10}Black_i + \beta_{11}Hispanic_i + \\ \beta_{12}Hispanic^2_i + \beta_{13}Asian + \beta_{13}(White_i + SomeCol_i) + \beta_{13}Evangelical_i + \beta_{14}LDS_i + \beta_{15}PVI_i + \epsilon_i
 (\#eq:model)
 \end{multline}

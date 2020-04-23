@@ -1,6 +1,8 @@
 # Connecting Home Prices to Voting {#motive-opportunity}
 
-\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}
+<!--\epigraph{We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.}{George W. Bush, October 2004}-->
+>*We're creating...an ownership society in this country, where more Americans than ever will be able to open up their door where they live and say, welcome to my house, welcome to my piece of property.*
+`r quote_footer("George W. Bush, October 2004")`
 
 The Housing and Economic Recovery Act (HERA) countered the foreclosure crisis with a ream of policies aimed at mitigating spillover effects of the subprime mortgage crisis.
 At first glance, these policies are nothing more than containment measures to halt the spread of foreclosure and dislocation.
@@ -18,7 +20,7 @@ It explains how actors responded to political stimuli with policies that created
 
 ```{r knit, include=FALSE}
 library(knitr)
-options(knitr.graphics.auto_pdf = TRUE)
+#options(knitr.graphics.auto_pdf = TRUE)
 ```
 
 In this chapter, I dive into how the Neighborhood Stabilization Program fit ideologically with the Bush administration and Republican Party between 2008 and 2010.
@@ -60,16 +62,16 @@ The opposition by the Bush administration of the $4 billion outlay, a mere 1.3% 
 Albeit brief, this opposition---the only opposition mentioned in an article awash in hundred-billion-dollar outlays---is surprising since its aim ran parallel with the Bush administration's "ownership society", a doctrine which added moral heft to the legal responsibilities associated with private property.
 By mitigating spillover effects, the Neighborhood Stabilization Program would cosset homes from the "animal spirits"[@keynes2007general] of tumultuous housing markets and ensure that the success or failure of a person's finances depended on their own actions.
 
+```{r distress, fig.cap="Probability of home loss by owner type. The lag between subprime and prime was partially because there was more 'fuel left to burn' in the sense that the number of subprime borrowers, already only 20% of the market, had already been slashed.", echo = FALSE, fig.margin=TRUE}
+include_graphics( "figure/ferreira_distress.png")
+```
+
 And, rather than using direct cash transfers---which would have enhanced individual freedom by loosening household budget constraints---or pass-through payments to debt holders---which would have promoted rent-seeking by those debt holders---the Neighborhood Stabilization Program advocated for indirect bumps on home equity.
 The administration took larger-than-usual measures to distance itself from political (and legal) liability.
 The necessity of these measures is questionable: while 45% of Sand State mortgages issued in 2006 were for second, third, or fourth properties,[@mian2011house, 2150] it is important to remember that the majority of those foreclosed upon were prime borrowers.
-Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \@ref(fig:distress),^[Though that lag was partially because there was more "fuel left to burn" in the sense that the number of subprime borrowers, already only 20% of the market, had already been slashed.] taken from @ferreira2015new.
+Further, the distress of prime borrowers came somewhat after that of subprime borrowers, as seen in Figure \@ref(fig:distress), taken from @ferreira2015new.
 These facts suggest that neighborhoods with prime borrowers contracted the foreclosure contagion from subprime borrowers, which seems, 12 years later, to be proximately true.[@toozeCrashedHowDecade2018; @mianPoliticalEconomyUS2010]
 Rather than prudent oversight, the Bush administration responded to the political stimulus provided by Rick Santelli (among others), who fingered corner-cutting subprime homeowners for forcing their responsible, well-to-do homeowners into foreclosure, rather than their collective panic, lax credit markets, or negligent mortgage brokering.
-
-```{r distress, fig.cap="Measures of homeowner distress timing.", fig.subcap=c("Total foreclosures and short sales by owner type","Probability of home loss by owner type."), echo = FALSE, out.width='45%', fig.align='center', dev='pdf', fig.ncol=2}
-include_graphics(c("figure/ferreira_absolute.png", "figure/ferreira_distress.png"))
-```
 
 The administration sought to maintain the idea of a meritocratic path to the American Dream, while trying to avoid acknowledging that, every so often, such a route must be cleared of hazards.
 The Neighborhood Stabilization Program did not aim, like its administrative superstructure does, to develop communities in any meaningful way.
@@ -129,7 +131,7 @@ This process fueled itself for a while: lower interest rates meant that buyers c
 This process played out in every country able to profitably securitize mortgages, but the Reagan administration's reconfiguration of credit enabled the United States to reap the world's largest benefits---Schwartz credits this system with driving the United States' differential growth above the rich Organization for Economic Cooperation and Development (OECD) countries between 1991 and 2005.[@schwartz2009subprime, 4]
 Adam Tooze credits Fed Chairman Alan Greenspan pushing the levers of housing most opportunistically, explaining how he plunged interest rates to 1% following 9/11 and the Dot-com crash to entice homeowners to refinance.[@toozeCrashedHowDecade2018, 55]
 
-```{r hhdebt, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Outstanding US residential mortgage debt as a percentage of US gross domestic product.", dev='pdf'}
+```{r hhdebt, out.width=10, echo=FALSE, fig.fullwidth=TRUE, fig.cap="Outstanding US residential mortgage debt as a percentage of US gross domestic product."}
 include_graphics("figure/residential_debt_gdp.png")
 ```
 
@@ -142,6 +144,10 @@ Where businesses had profited on the aggregate demand generated by collectively-
 These jobs, salaries, and benefits then acted as dragnets on profits, ultimately to be jettisoned at the behest of shareholders.
 In return, the asset-backed social contract offered cheap credit and the Minskyan promise of speculative returns to supplement, or supplant, income.
 
+```{r minsky, fig.margin=TRUE, fig.cap="A cycle of speculative finance theorized by Hyman Minsky.", echo=FALSE, dev='pdf'}
+include_graphics("figure/minsky.png")
+```
+
 By locating this process in the Reagan administration, I have obviously extended beyond my self-imposed 1991 start date for continually-increasing home prices.
 The point I make here is that the infrastructure for that incredibly-long price surge was built a decade before.
 Then, in the 1990s, the endogenous ability of speculative home buying ramped up.
@@ -150,10 +156,6 @@ I point to somewhere in the middle of the 1990s, when homeownership soared, as a
 Despite 1991's brief negative sojourn, this social contract contingent on rising home prices was leveraged by Bush the elder as well as Bill Clinton in their presidencies.
 Housing, often couched in the language of the American Dream, garnered vaguely bipartisan support at the national level: while there were differences between Republican and Democratic housing policies, their approaches were united by a vocabulary of taxation and credit, not debt.
 Despite the rich history of debt politics among American farmers, parties focused on expanding access to credit and limiting the toll to government expenditures, rather than limiting the burden of debt and expanding government revenues.
-
-```{r minsky, fig.align='center', out.width='90%', fig.cap="A cycle of speculative finance theorized by Hyman Minsky.", echo=FALSE, dev='pdf'}
-include_graphics("figure/minsky.png")
-```
 
 To be sure, this vocabulary constituted a rational response---so long as markets showed signs of growth, debt relief would be a minor issue, while tax reductions and access to credit extended individual budgets.
 But it was not uniquely rational: dependable debt relief could, if annualized, be indistinguishable from a similarly-sized mortgage tax credit; after all, with all the easy credit, there was certainly enough debt to go around---in addition to mortgage debt equaling 82% of gross domestic product, mortgage debt service payments in 2007 increased 75% over 1981 levels.[@boardofgovernorsofthefederalreservesystemus1980mortgage]
@@ -218,14 +220,19 @@ These would respond, not to the popular New Deal provisions, but to the increase
 Taxes were certainly not the only issue on Reagan's platform, but they are that for which he is remembered: the Iranian hostage situation and antidote to Jimmy Carter's "Crisis of Confidence" sermon were contingencies where taxes were a certainty.
 His signature tax cut---the Economic Recovery Tax Act of 1981 that spurred savings and loan banks to sell off mortgages---was not so popular when enacted, but it became a key feature of his popularity as the economy rebounded before the 1984 presidential election and has lingered in his public image.[@robert2016reaganomics]
 
+```{r acceptance, fig.cap="Number of tax mentions by party in presidential nomination acceptance speeches.", fig.margin=TRUE, echo=FALSE}
+include_graphics("figure/campbell.png")
+```
+
+```{r ads, fig.cap="Percentage of general election TV ads to feature taxation, by party.", echo=FALSE, fig.margin=TRUE}
+include_graphics("figure/campbell2.png")
+```
+
 After the reforms of the first term, the campaign ramped up its tax rhetoric.
-Figure \@ref(fig:taxation) shows the massive spike in tax mentions in nomination acceptance speeches (\@ref(fig:acceptance)) and general election television ads (\@ref(fig:ads)) aligning with the 1984 election.
+Figure \@ref(fig:acceptance) shows the massive spike in tax mentions in nomination acceptance speeches.
+Figure \@ref(fig:ads) meanwhile shows a similar spike of mentions in general election television ads aligning with the 1984 election.
 Bolstered by the knowledge that one could uncouple taxes from spending, Reagan was able to fend off Democratic challenger Walter Mondale's criticism that, "Reagan will raise taxes and so will I. He won't tell you."[@raines1984party]
 Ronald Reagan would go on to win every state except Minnesota, Mondale's home.
-
-```{r taxation, fig.align='center', out.width='45%', fig.cap="Taxation mentions by presidential campaigns.", fig.subcap=c("Number of tax mentions by party in presidential nomination acceptance speeches.\\label{fig:acceptance}", "Percentage of general election TV ads to feature taxation.\\label{fig:ads}"), echo=FALSE, dev='pdf', fig.ncol=2}
-include_graphics(c("figure/campbell.png", "figure/campbell2.png"))
-```
 
 After Ronald Reagan, it was the House Republicans who fueled the drive towards lower taxes.
 Isaac William Martin takes over here:
@@ -275,7 +282,7 @@ An ill-informed question about the effects of the national debt on the candidate
 This example serves only to highlight the importance of the question in 1992, and more broadly in the late 1990s and early 2000s, when concerns about America's economic power were heightened by the growth of Japanese and Chinese foreign direct investment.
 The volume of rhetoric surrounding the debt was perhaps a reason that bipartisan spending cuts were able to pass both houses of Congress.
 
-```{r publicdebt, fig.align='center', out.width='90%', fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
+```{r publicdebt, fig.fullwidth=TRUE, fig.width=10, fig.cap="Federal public debt as a percentage of gross domestic product.", echo=FALSE, dev='pdf'}
 include_graphics("figure/publicdebt.png")
 ```
 
@@ -290,7 +297,7 @@ Figure \@ref(fig:deficit) shows this trend by political party affiliation.
 Republican-affiliated respondents in 2002, who by the turn of the millennium differ little in number from Democrats and Independents, distance themselves from both affiliations, registering the smallest number of respondents who prioritize the budget deficit between 1994 and 2016.
 Priorities of the two parties reconvene in 2009, when the economic woes of Bush are inherited by Obama (Pew conducted the poll in mid-January), but diverge once again in 2011, as the new Congress is sworn in following 2010's midterm elections.
 
-```{r deficit, fig.align='center', out.width='30%', fig.cap="Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.", echo=FALSE, dev='pdf'}
+```{r deficit, fig.margin=TRUE, fig.width=2.5, fig.cap="Percentage of respondents who say that reducing the budget deifict is a top priority by party affiliation.", echo=FALSE, dev='pdf'}
 include_graphics("figure/deficit.png")
 ```
 

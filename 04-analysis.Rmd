@@ -1,15 +1,20 @@
 # The Neighborhood Stabilization Program and Voting {#outcome}
 
-\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt, 1948}
+<!--\epigraph{No man who owns his own house and lot can be a Communist. He has too much to do.}{William Levitt, 1948}-->
+>*No man who owns his own house and lot can be a Communist. He has too much to do.*
+`r quote_footer("--William Levitt, 1948")`
 
 ```{r libs, include=FALSE}
 library(tidyverse)
+library(broom)
+library(ggExtra)
+library(ggthemes)
 library(knitr)
 library(stargazer)
 library(kableExtra)
 library(sf)
 library(betareg)
-options(scipen = 9999, knitr.graphics.auto_pdf = TRUE)
+options(scipen = 9999)#, knitr.graphics.auto_pdf = TRUE)
 knit_hooks$set(inline = function(x) {
   prettyNum(x, big.mark = ",")
 })
@@ -21,16 +26,20 @@ Complete data were available for 27,098 census tracts, covering more than half o
 Most of the census tracts missing belonged to states where the process of connecting voting returns with census geography was infeasible.
 For instance, Michigan does not make clear the links between a voting tabulation district (VTD) as the Census Bureau defines it, and the county-precinct-ward system the state uses to publicize its results.
 For 15 other states, including Illinois, elections are so devolved that a state-wide election aggregation would have taken days to collect.
-Summary statistics for the complete data are available in Table \@ref(tab:summary).
+Summary statistics for the complete data are available in the following table.
+
+``` {r summary, echo=FALSE, results='asis', eval=TRUE}
+stargazer(as.data.frame(wide), type = "html", header = F, keep = c(7:11,13,14,16:18,28,35,37,41:45,47,49), summary.logical = T, summary.stat = c("mean", "sd", "min", "median", "max"), title = "Descriptive statistics", covariate.labels = c("White \\%", "Hispanic \\%", "Black \\%", "Asian \\%", "65-and-up \\%", "Some college or less \\%", "Median HHI (000s)", "Density", "Evangelical \\%", "L.D.S. \\%", "Population", "Republican voting \\%", "Miles to NSP1", "Mortgage occupancy \\%", "Foreclosure rate", "Labor variance", "Unemployment change", "Price change '07--'10", "Tenure in home", "Cook PVI"), label = "tab:summary")
+```
 
 While much of this analysis relies on data collected in 2010 census geographies, some key variables---including voting returns---were originally collected at a different geography.
 Translating these data to the census-tract level was fundamental to my analysis, so it is important that I describe the relationships between statistical geographies as well as my process of translation.
 
-``` {r summary, echo=FALSE, results='asis', eval=TRUE}
-stargazer(as.data.frame(wide), type = "latex", header = F, keep = c(7:11,13,14,16:18,28,35,37,41:45,47,49), summary.logical = T, summary.stat = c("mean", "sd", "min", "median", "max"), title = "Descriptive statistics", covariate.labels = c("White \\%", "Hispanic \\%", "Black \\%", "Asian \\%", "65-and-up \\%", "Some college or less \\%", "Median HHI (000s)", "Density", "Evangelical \\%", "L.D.S. \\%", "Population", "Republican voting \\%", "Miles to NSP1", "Mortgage occupancy \\%", "Foreclosure rate", "Labor variance", "Unemployment change", "Price change `07--`10", "Tenure in home", "Cook PVI"), label = "tab:summary")
-```
-
 ## Relationships between statistical geographies {#census-geography}
+
+```{r hierarchy, fig.margin=TRUE, fig.cap="Organizational hierarchy of different geographies.", echo=FALSE, fig.width=3.5}
+include_graphics("figure/geo_hierarchy.png")
+```
 
 Census geography runs as follows.
 The basic unit, blocks, were originally designed for Census takers to walk, and so were constrained by physical boundaries difficult or illogical to cross.
@@ -38,14 +47,15 @@ However, since the Bureau undertook to cover the *entire* United States with cen
 Blocks are then aggregated into census tracts containing between 1,200 and 8,000 people.
 Tracts are the smallest unit for which American Community Survey data---a continuously-run telephone survey that collects additional demographic data such as median household income and educational attainment---are published.
 Census tracts sit inside counties and then inside states; unlike tracts and blocks, county boundaries are also legal jurisdictions and therefore rarely change.
-See Figure \@ref(fig:geography) for the Census Bureau's graphical representation.[@lemery2020united]
+See Figure \@ref(fig:hierarchy) for a graphical representation.[@lemery2020united]
 
-```{r geography, out.width=c('50%','45%'), fig.align='center', fig.cap="Census geography relationships.", fig.subcap=c("To-scale breakdown of nested census geography, with street names.", "Organizational hierarchy of different geographies."), echo=FALSE, dev='pdf'}
-include_graphics(c("figure/census_small_area_geography2.jpg", "figure/geo_hierarchy.png"))
+``` {r geography, fig.cap="Relationships between different statistical entities", fig.margin=TRUE, echo=FALSE, fig.width=3.5}
+include_graphics("figure/census_small_area_geography2.jpg")
 ```
 
 While tracts and blocks were *designed* to be semi-permanent, acting as the basis for other, non-Census areas, in practice their shapes shift with population changes.
 These shifts mean that: (a) not all 2000 tracts and 2010 tracts are congruent (though many are); and (b) non-Census areas (such as state-designed voting precincts) can cut census blocks.
+Figure \@ref(fig:geography) shows the Census Bureau's graphical representation of geographical relationships.
 Since these Census Bureau does not make public the responses of individual persons or homes until several decades after, placing each record in its appropriate area is impossible.
 Rather, *ecological methods* approximate the distribution of persons, votes, or homes among geographies.
 Ecological methods assume that persons, votes, or homes are equally distributed throughout an area: ecological methods would assume, for instance, that since six percent of Americans are millionaires, then six out of every hundred persons sampled---no matter their neighborhood---would also be millionaires.
@@ -82,17 +92,16 @@ For each state, I looked for an isomorphic mapping from state-level naming to th
 Case in point was Maryland: the voting returns data clearly contained every single specified tract in Maryland, but matching algorithms could only identify a few hundred of the several thousand voting districts.
 Geographic files came primarily from the Census Bureau's TIGER/Line redistricting project, the official database for all Census geography,[@20122010] via the Election-Geodata mapping project, an open-source repository for redistricting data,[@kelso2020nvkelso] though, as alluded to above, some states' geographic files were also compiled by HEDA.
 
+```{r palmbeach, fig.margin=TRUE, fig.cap=c("Voting precincts and census tracts in Palm Beach County, Florida without census tracts...", "...and with census tracts."), echo=FALSE}
+include_graphics(c("figure/wotracts.png", "figure/withtracts.png"))
+```
+
 Translating the voting precincts to Census geography was a complicated process of decomposition and recomposition.
 Since tracts often straddle two voting precincts, distributing votes to particular tracts relies on ecological methods, essentially peeling off the part of a precinct lying in one tract and stitching it together with parts of the other precincts that also coincide with a tract.
 This process generates Frankenstein tracts, where 20% of one precinct's votes are summed with 100% of a second precinct's votes and 3% of a third precinct's votes, depending on how much of a precinct coincides with a tract.
 Since the voting records of these tracts are purely statistical constructions, it is perfectly fine that one have fractions of votes.
 Take again, for example, our tract 12099005947 in Palm Beach County Florida: it recorded 732.00 Republican votes out of 3114.00 total votes in the 2010 Congressional race.
 But it's neighbor, tract 12099005949, recorded 461.85 Republican votes against 1414.25 total votes.
-Figure \@ref(fig:palmbeach) shows how this geometry is possible.
-
-```{r palmbeach, out.width='45%', fig.align='center', fig.cap="Voting precincts and census tracts in Palm Beach County, Florida.", fig.subcap=c("Without census tracts.", "With census tracts."), echo=FALSE, dev='pdf'}
-include_graphics(c("figure/wotracts.png", "figure/withtracts.png"))
-```
 
 There is, however, more than one way to cut a census tract.
 The obvious way to slice census tracts is by geography: the spatial intersection forms the basis for dividing up votes.
@@ -109,17 +118,18 @@ Since these are governmental tabulations, the population counts were required to
 I drew from these data tables, comprising every block in the United States, in order to divide up census tracts.
 The advantage from data granularity is large: half of the 11,166,336 census blocks in 2010 were smaller than a tenth of a square mile[@2015fcc, 1]---Charlottesville itself contains 803 census blocks, averaging 54.14 persons.[@20112010b]
 
+``` {marginfigure vtd}
+\begin{equation}
+votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_b}{\sum_{b=1}^{B} VAP_b}
+\end{equation}
+Where *t* represents a particular tract, *p* a precinct from the set *P* of precincts intersecting with that particular tract, and *b* a block from the set *B* of blocks within that particular precinct:
+```
+
 Then, to distribute portions of voting precincts to tracts, I counted how many census blocks from each particular tract lay within each precinct.
 For computational reasons, the relevant statistic here was the block's spatial center rather than its nuanced boundaries.
 Since blocks are so small, and voting precincts are supposed to be fashioned from census blocks (known exceptions exist in a handful of states), using the entire boundaries of a block would likely have generated errors that had more to do with the resolution of downloadable mapping files than actual, in-practice boundaries.
 Summing up the voting-age population (the census does not ask about citizenship status or felonious histories) of those blocks that lay within a particular precinct, and then comparing that figure to the total voting-age population of said precinct, allocates the percentage of votes from a precinct to a tract.
-This method is represented formally in Equation \@ref(eq:vtd), where *t* represents a particular tract, *p* a precinct from the set *P* of precincts intersecting with that particular tract, and *b* a block from the set *B* of blocks within that particular precinct:
-
-\begin{equation}
-votes_{t} = \sum_{p=1}^{P \cap t} votes_p \cdot \frac{\sum_{b=1}^{B \cap t} VAP_b}{\sum_{b=1}^{B} VAP_b}
-(\#eq:vtd)
-\end{equation}
-
+This method is represented formally to the right.
 To recap, this process first decomposes precincts into blocks, and then recomposes precincts from tracts (where the block-tract connection is trivial by construction).
 Each tract is allocated votes according to its share of the total precinct population.
 
@@ -161,7 +171,7 @@ To evaluate those localized effects, trials are run that only include tracts in 
 
 ### Did NSP1 increase home prices?
 
-Table \@ref(tab:prices) lists the effects of NSP1 on prices.
+The following table lists the effects of NSP1 on prices.
 Additional models remove state-level fixed effects and variables that were included in the allocation formula for NSP1, and thus covary highly with which tracts actually received NSP1 funding.
 To avoid price spillovers from interfering with measurement, I only included tracts which were at least 1 mile away from a tract receiving NSP1 funding.
 The results are plain and robust to several possible covariates: tracts receiving NSP1 funding were associated with statistically significant home prices declines, estimated between one and two points lower, compared to tracts not receiving aid.
@@ -170,13 +180,20 @@ The results are plain and robust to several possible covariates: tracts receivin
 mod1 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ + STATE, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
 mod2 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5))
 mod3 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + FORQ3*MORTOCC + DENSITY + OLD + TENURE + TENURE2 + VAP_W + VAP_B + VAP_H + VAP_A + UNEMCHG + HICOST + SDQ + STATE, filter(wide, DISTNSP1 > 1, DISTNSP1 < 5, RESULT != "EXTRA-TP"))
-stargazer(mod1, mod2, mod3, type = "latex", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change `05--`10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010", column.sep.width = "2pt")
+stargazer(mod1, mod2, mod3, type = "html", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change '05--'10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010")
+```
+
+```{r prices, echo=FALSE, fig.margin=TRUE, fig.cap="Diagnostic plots of the effect of NSP1 on change in home prices: residuals on fitted."}
+df <- augment(mod1)
+g <- ggplot(df, aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  theme_tufte(ticks = F)
+ggMarginal(g, type = "density")
 ```
 
 Results (not shown) of these models using NSP2 tracts, allocated competitively within the universe of at-risk tracts, are similarly sobering.
 The estimated negative impacts agree with results from a HUD evaluation of the Neighborhood Stabilization Program's second round of funding, which found insignificant-to-negative changes in home prices.[@spader2015evaluation]
 Further, these models appear to be good predictors of home prices, accounting for 78% to 85% of total price variation among the 11,992 tracts included.
-Diagnostic plots of the best model are available in Figures \@ref(fig:priceresid) and \@ref(fig:priceqq).
 
 Differential effects of NSP1 in Tea Party tracts are explored in Model 3.
 These results closely align with the full model augmented by state fixed effects and potential covariates, even retaining statistical significance despite only considering a fourth of the number of observations.
@@ -189,7 +206,7 @@ Second, in more general terms, are the effects of housing price changes magnifie
 
 ### Voting Impacts of the NSP and Price Changes {#impacts}
 
-Table \@ref(tab:fullsample) lists the results of the full-sample models with and without accounting for prices.
+The next table lists the results of the full-sample models with and without accounting for prices.
 If the NSP's primary effect was lowering prices, then we should expect that tracts targeted by the first round of the Neighborhood Stabilization Program saw lower levels of Republican voting after taking into account other related factors except price changes.
 Then, in the model *including* the price data, there should be no significant impact of NSP funding, as the only targets of the program were home prices.
 For the labor risk--equity model, in all trials there should be positive correlations between price changes and Republican voting, with augmented values where price changes refract through economic anxiety, as measured by high foreclosure rates (i.e. low equity) or risky employment (a.k.a. high unemployment variance).
@@ -197,7 +214,7 @@ For the labor risk--equity model, in all trials there should be positive correla
 ```{r fullsample, echo=FALSE, results='asis', eval=TRUE}
 mod4 <- lm(RPCT ~ NSP1 + ADJ_FORQ + EMPLOYRISK + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
 mod5 <- lm(RPCT ~ NSP1 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
-stargazer(mod4, mod5, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change `07--`10", "Labor risk", "Unemployment change `05--`10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(4)", "(5)"))
+stargazer(mod4, mod5, type = "html", title = "Linear regression of NSP1 on Voting", label = "tab:fullsample", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change '07--'10", "Labor risk", "Unemployment change '05--'10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(4)", "(5)"))
 ```
 
 
@@ -231,13 +248,13 @@ Though I am worried about data quality with regards to ecological methods, the c
 
 How then did this model fare in Tea Party tracts?
 In these next trials, more pronounced home price effects should be expected, though it may also be possible that "deadbeat" homeowners are further stigmatized by Tea Party candidates, leading to more conservatizing effects of increased foreclosure rates.
-Table \@ref(tab:justp) shows the results of the same model above, but applied only to tracts in which a self-described member of the Tea Party ran for election.
+The following shows the results of the same model above, but applied only to tracts in which a self-described member of the Tea Party ran for election.
 
 
 ```{r justp, echo=FALSE, results='asis', eval=TRUE}
 mod6 <- lm(RPCT ~ NSP1 + ADJ_FORQ + EMPLOYRISK + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, filter(wide, RESULT != "EXTRA-TP"))
 mod7 <- lm(RPCT ~ NSP1 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, filter(wide, RESULT != "EXTRA-TP"))
-stargazer(mod6, mod7, type = "latex", title = "Linear regression of NSP1 on Voting", label = "tab:justp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change `07--`10", "Labor risk", "Unemployment change `05--`10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(6)", "(7)"))
+stargazer(mod6, mod7, type = "html", title = "Linear regression of NSP1 on Voting", label = "tab:justp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change '07--'10", "Labor risk", "Unemployment change '05--'10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(6)", "(7)"))
 ```
 
 These trials offer promising results but less statistical significance.^[The [unprinted] p-value attached to Model 6 is just north of .10, nearly acceptable among social scientists.]
@@ -249,7 +266,7 @@ This finding agrees with the narrative that Tea Party candidates cast foreclosed
 
 It seems that, since the NSP is associated with higher rates of Republican voting in the face of negative price effects, cultural (rather than economic) factors may have been at play.
 One explanatory theory is the patronage model of voting, otherwise known as you scratch our back, and we'll scratch yours.
-Table \@ref(tab:compnsp) compares how each of the NSP rounds fared with respect to Republican votes.
+A comparison of how each of the NSP rounds fared with respect to Republican votes is available in the following table.
 The first round saw statistically-insignificant effects on Republican voting, while rounds two and three saw decreases in Republican vote share of 3.1% and 5.7% respectively.
 I excluded the second and third NSP rounds in my formal analysis because, as of July 2011, respectively 20.6% and 0.4% of funds had been expended from NSP2 and NSP3.[@185682011hud; @185682011huda]
 Though NSP1 had expended 43.4% of funds and fully committed its allocations to grantees by September 2010,[@185682010huda] the analysis of housing prices above demonstrates that the program had not yet (if it had eventually) raised prices for recipients.
@@ -257,6 +274,14 @@ This fact implies that even later rounds had less time to deploy price-stabiliza
 Thus, any perceived effects could not been due to the price effects sought by the program, but rather by those factors which caused HUD to designate such tracts for funding, and I propose, by the designation itself.
 By directing funding towards these neighborhoods, administrations *could* try to implement a licit form of vote buying.
 That these effects would be so pronounced, and that residents would not also be motivated by an anti-welfare pride, is difficult to believe, however.
+
+```{r compnsp, results='asis', echo=FALSE}
+mod4 <- lm(RPCT ~ NSP1 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
+mod10 <- lm(RPCT ~ NSP2 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
+mod11 <- lm(RPCT ~ NSP3 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, wide)
+stargazer(mod4, mod10, mod11, type = "html", title = "Comparison of NSP Effects", label = "tab:compnsp", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, NA, NA, "2010 forelcosure rate", "Home price change '07--'10", "Labor risk", "Unemployment change '05--'10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", column.sep.width = "1pt", model.numbers = F, column.labels = c("(4)", "(10)", "(11)"))
+```
+
 
 Explaining the cultural dynamics of this phenomenon (and teasing out its existence) opens opportunities for further research, but I present one theory now.
 Eagle-eyed readers will have noted that, while the foreclosure rate and population density were included in Section \@ref(model), the interaction between them was left unexplained.
@@ -276,36 +301,36 @@ My data quality concerns are ever-present in natural-experiment methodologies.
 In short, individual voting characteristics, more granular price data, and a fuller spread of census tracts could have aided the conclusivity of this evidence.
 Additionally, using individual-level demographics and vote results would have avoided the ecological assumptions this analysis rests on.
 
+``` {r linear, echo=FALSE, fig.margin=TRUE, fig.cap="Diagnostic plots of the full linear model.", fig.show='hold'}
+include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
+```
+
 The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
 On that count, the attached .45-.58 $R^{2}$ values are not concerning.
 However, further analysis of the residuals demonstrates weaknesses in model selection.
-Figure \@ref(fig:linearesid) shows the residuals against fitted values for the full-sample, fixed-effects model.
+Figure \@ref(fig:linear) shows the residuals against fitted values for the full-sample, fixed-effects model, as well as the quantile-quantile distribution of residuals.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
 Here, there is a clear inverse relationship framed by the bounds of the Republican voting share at 0 and 100 percent.
 Linear models are not built to handle bounded response variables, though I used one for the ease of computation and interpretation.
-
-``` {r linear, echo=FALSE, out.width='45%', fig.align='center', fig.cap="Diagnostic plots of the full linear model.", fig.subcap=c("Residuals on fitted values.\\label{fig:linearesid}","Acutal vs. fitted quantiles.\\label{fig:linearquant}")}
-include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
-```
 
 In order to validate the results of these models, I also modeled Republican vote share by different distributions.
 I settled on reporting results for regressions on the Beta distribution because of its flexibility[@cribarineto2010beta] and ability to approximate the distribution of Republican voting share.
 The Beta distribution is a fundamental (but complicated) distribution used for response variables bounded between 0 and 1.
 It easily incorporates changing variance and does not assume linearity, which is helpful when considering social interactions generally, and electoral data specifically.
 
-``` {r betaresid, echo=FALSE, out.width='90%', fig.align='center', fig.cap="Standardized weighted residuals of full beta regression.", message=FALSE}
+``` {r betaresid, echo=FALSE, fig.margin=TRUE, fig.cap="Standardized weighted residuals of full beta regression.", message=FALSE}
 include_graphics("figure/betaresid.png")
 ```
 
 Though there are still the artifacts of upper and lower bounds, the behavior of Figure \@ref(fig:betaresid) conforms more closely to an ideal distribution.
-Results of the beta regressions can be seen in Table \@ref(tab:beta).
+Results of the beta regressions can be seen in the next table.
 Coefficients are altogether similar^[For entirely computational reasons, the dependent variable, Republican voting percentage, had to be scaled to fit between 0 and 1. The predictors, therefore, were also reduced by a factor of 100 in order to remain comparable to the linear models. While this adjustment worked on all independent variables, the interaction terms---which had been products of numbers between 0 and 100---were then made to be products of numbers between 0 and 1. This translation is analogous to that from 10 to 0.1: $10 \times 10 = 100$, growing in magnitude, while $.1 \times .1 = .01$, shrinking by the same number of decimal places.] to what the linear models predict, making me more secure in my belief of their validity.
 
 ```{r beta, echo=FALSE, results='asis', eval=TRUE, warning=FALSE}
 mod8 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_FORQ + EMPLOYRISK + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_A + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, mutate_at(wide, vars(ADJ_FORQ, EMPLOYRISK, UNEMCHG, MEDHHI, DENSITY, TENURE, TENURE2, OLD, VAP_B, VAP_H, VAP_H2, VAP_W, VAP_A, WHITESOMECOL, EVANRATE, LDSRATE), funs(./100)))
 mod9 <- betareg(ADJ_RPCT ~ NSP1 + ADJ_FORQ*ADJ_PRICE07 + EMPLOYRISK*ADJ_PRICE07 + UNEMCHG + MEDHHI + ADJ_FORQ*DENSITY + TENURE + TENURE2 + OLD + VAP_B + VAP_H + VAP_H2 + VAP_W*WHITESOMECOL + EVANRATE + LDSRATE + PVI08, mutate_at(wide, vars(ADJ_PRICE07, ADJ_FORQ, EMPLOYRISK, UNEMCHG, MEDHHI, DENSITY, TENURE, TENURE2, OLD, VAP_B, VAP_H, VAP_H2, VAP_A, VAP_W, WHITESOMECOL, EVANRATE, LDSRATE), funs(./100)))
-stargazer(mod8, mod9, type = "latex", title = "Beta regression of NSP1 on Voting", label = "tab:beta", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change `07--`10", "Labor risk", "Unemployment change `05--`10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(8)", "(9)"))
+stargazer(mod8, mod9, type = "html", title = "Beta regression of NSP1 on Voting", label = "tab:beta", df = F, align = T, report = "vc*", header = F, digits = 4, no.space = T, covariate.labels = c(NA, "2010 forelcosure rate", "Home price change '07--'10", "Labor risk", "Unemployment change '05--'10", "Median household income (000s)", "Population density", "Tenure in home", "Squared tenure", "65-and-up \\%", "Black \\%", "Hispanic \\%", "Hispanic \\% squared", "Asian \\%", "White \\%", "White: some college or less \\%", "Evangelical \\%", "L.D.S. \\%", "Cook PVI 2008", "Price change $\\times$ foreclosure rate", "Price change $\\times$ labor risk", "Foreclosure rate $\\times$ density", "White \\% $\\times$ some college or less"), dep.var.labels = "Republican vote percentage", model.numbers = F, column.labels = c("(8)", "(9)"))
 ```
 
 Lastly, as mentioned, these models were spatially-dependent, which biased the estimation of the home price effect on voting behavior.
@@ -321,7 +346,7 @@ Table \@ref(tab:spdep) displays the results of these tests, all of which reject 
 
 ```{r spdep, echo=FALSE, message=FALSE}
 spdep <- read_csv("data/voting/display/spdep.csv")
-kable(spdep, "latex", booktabs = T, caption = "Results of various tests for spatial dependence. In all tests, the null hypothesis is spatial independence.", align = 'c', digits = 4)
+kable(spdep, "html", booktabs = T, caption = "Results of various tests for spatial dependence. In all tests, the null hypothesis is spatial independence.", align = 'c', digits = 4)
 ```
 
 ## Conclusion

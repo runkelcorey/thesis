@@ -1,0 +1,6 @@
+# Colophon {-}
+
+This thesis was rendered in the style of Edward Tufte using `rmarkdown`.
+Its template is based on the `thesisdown` package,[@ismay2020ismayc] which leveraged the ever-present YiHui Xie's `bookdown`.[@xie2016bookdown; @xie2020bookdown]
+The regression tables were output by `stargazer`,[@hlavac2018stargazer] with other tables by `kableExtra`,[@zhu2019kableextra] and Figure \@ref(fig:analysisfig) by `DiagrammeR`.[@iannone2020diagrammer]
+In addition to base **R**,[@rcoreteam2020language] the `tidyverse`[@wickham2019welcome] and `sf`[@pebesma2018simple] packages provided additional computational firepower.

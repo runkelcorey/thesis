@@ -2,7 +2,7 @@
 
 ``` {r setup, include=FALSE}
 library(knitr)
-library(DiagrammeR)
+library(tufte)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
@@ -18,7 +18,7 @@ The historical claims are not new; they have been fashioned directly from the wo
 But they reframe my analysis in order to communicate the significance of my claims beyond their contributions to the literature.
 
 Understanding the relationship between these two lines of analysis is imperative to evaluating my argument about the impact of the Neighborhood Stabilization Program.
-To that end, I have provided Figure \@ref(fig:analysis).
+To that end, I have provided Figure \@ref(fig:analysisfig).
 A big theme here is the enduring power of anti-tax rhetoric to cast features previously invisible to politics in a political light.
 For instance, I will argue that this rhetoric politicized particular welfare programs in the 1980s (not very contentious) and then residential foreclosures a generation later (somewhat more contentious).
 Also evident in this diagram is a bifurcation of rhetoric and policy.
@@ -30,8 +30,8 @@ Here that demand is measured in votes, the product is a well-defined conservativ
 Measuring the effects of a crisis on political behavior is not predicated on the presence of such well-defined conservatism in the Tea Party, nor on the public boundaries of the Neighborhood Stabilization Program.
 Rather, their *coincidence* allowed for differences among the electorate to map on to choices at the ballot box.
 
-```{r mermaid, echo=FALSE, eval=FALSE}
-mermaid("graph TB; A[Proposition 13]-->|Tax cutting|C{Reagan<br>admin.};
+```{r analysis, echo=FALSE, eval=FALSE, fig.cap="Diagram of the argument, by chapter: gray = \\@ref(actors-motive); tan = \\@ref(motive-opportunity); orange = \\@ref(methods); red = \\@ref(outcome)."}
+DiagrammeR::mermaid("graph TB; A[Proposition 13]-->|Tax cutting|C{Reagan<br>admin.};
         C-->E(Welfare = Taxation);
         D(National debt rhetoric)-->E;
         E-->F{Tea Party};
@@ -64,10 +64,10 @@ mermaid("graph TB; A[Proposition 13]-->|Tax cutting|C{Reagan<br>admin.};
         style N fill:#DC863B
 
         style O fill:#C93312
-        ")
+        ", height = 1600, width = 800)
 ```
 
-```{r analysis, echo=FALSE, eval=TRUE, out.width='70%', fig.align='center', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
+```{r analysisfig, echo=FALSE, eval=TRUE, out.width='70%', fig.align='center', fig.cap="Diagram of the argument, by chapter: gray = \\ref{actors-motive}; tan = \\ref{motive-opportunity}; orange = \\ref{methods}; red = \\ref{outcome}."}
 include_graphics("figure/analysis.png")
 ```
 
@@ -105,7 +105,7 @@ Without the increased [apparent] home equity, refinancing served no purpose.
 Falling prices instead saddled homeowners with their current mortgage, often one whose interest rates reset after two years, climbing an interest-rate staircase for the next 28 years.
 Where previously refinancing had arrived to dig out homeowners from piles of debt, living expenses (and non-mortgage debt) continued to accumulate.
 
-``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, out.width='90%', fig.align='center', dev='pdf'}
+``` {r caseshiller, fig.cap = "Price (right axis) and growth (left axis) of the Case-Shiller Home Price Index, adjusted for seasonal price fluctuations.", echo = FALSE, fig.fullwidth = TRUE, fig.width=10}
 include_graphics("figure/caseshiller_1990_2018.png")
 ````
 
@@ -154,7 +154,7 @@ By contrast, U.S. residential foreclosures reached 2.23% in 2010, the worst year
 In part, this is a denominator effect: the 50% down payments and double-digit interest rates caused fewer mortgages to be demanded in the Great Depression.
 In large part, however, the differences between farms and homes accounted for the scale.
 
-```{r wheelock-farms, fig.cap="Spatial clustering of farm foreclosures. From Wheelock (2008).", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
+```{r wheelock-farms, fig.cap="Spatial clustering of farm foreclosures. From Wheelock (2008).", echo=FALSE, fig.margin=TRUE}
 include_graphics("figure/wheelock.png")
 ```
 
@@ -193,7 +193,7 @@ There were more than 100 recorded instances of farmers, sometimes numbering in t
 Direct action of this nature was nowhere in the subprime mortgage crisis.
 Rather than showing a spike in sympathy, Figure \@ref(fig:tradingecon) shows the spike in existing home sales after several million foreclosures had been filed.
 
-```{r tradingecon, fig.cap = "Existing Home Sales versus New Home Sales, 2000-2014.", echo=FALSE, out.width='90%', fig.align='center', dev='pdf'}
+```{r tradingecon, fig.cap = "Existing Home Sales versus New Home Sales, 2000-2014.", echo=FALSE, fig.margin=TRUE}
 include_graphics("figure/united-states-existing-home-sales@2x.png")
 ```
 
@@ -277,7 +277,7 @@ Home construction, and possibly foreclosure, given their spillover effects, cert
 Effectively, I argue that a coincidence of responsibility, and a history of the federal government taking on responsibility in times of crisis, meant that states presumed the ball was in Washington's court.
 This stands in contrast to the Contract Clause, the interpretation of which has limited state options.
 
-```{r spending-shift, fig.cap = "Government spending and revenue as a percentage of GDP. While secular growth is present at all levels of government, note the spikes during the Great Depression, Recession, and wars.", fig.align='center', out.width='90%', echo=FALSE, dev='pdf'}
+```{r spending-shift, fig.cap = "Government spending and revenue as a percentage of GDP. While secular growth is present at all levels of government, note the spikes during the Great Depression, Recession, and wars.", fig.fullwidth=TRUE, echo=FALSE}
 include_graphics("figure/spending-shift.png")
 ```
 
@@ -335,7 +335,7 @@ The special purpose vehicle took on the mortgage pool itself, thus obligating it
 SPVs, with no legal employees, designated companies in their founding documents to act as servicers, scheduling fees for particular services.
 While investors could open informal lines of communication with those tasked by securitizers to administer payments, there was no formal mechanism by which investors could exercise the kind of shareholder democracy that had become so near and dear to their hearts.
 
-```{r immergluck, fig.align='center', fig.cap="Organization of securitized mortgage lending. Taken from Immergluck (2011).", echo=FALSE, out.width="90%", dev='pdf'}
+```{r immergluck, fig.align='center', fig.cap="Organization of securitized mortgage lending. Taken from Immergluck (2011).", echo=FALSE, dev='pdf', out.width='100%'}
 include_graphics("figure/immergluck.png")
 ```
 
