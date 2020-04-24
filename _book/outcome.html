@@ -14,7 +14,7 @@
 
 <meta name="author" content="Corey Runkel" />
 
-<meta name="date" content="2020-04-23" />
+<meta name="date" content="2020-04-24" />
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -28,7 +28,6 @@ MathJax.Hub.Config({
 <title>Chapter 4 The Neighborhood Stabilization Program and Voting | Political Impacts of Residential Mortgages in Crisis</title>
 
 <link href="libs/tufte-css-2015.12.29/tufte-fonts.css" rel="stylesheet" />
-<link href="libs/tufte-css-2015.12.29/tufte-background.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte-italics.css" rel="stylesheet" />
 <link href="libs/tufte-css-2015.12.29/tufte.css" rel="stylesheet" />
 
@@ -1104,10 +1103,19 @@ F Statistic
 <p>
 <span class="marginnote shownote">
 <!--
-<div class="figure">--><span id="fig:prices"></span>
-<img src="thesis_files/figure-html/prices-1.png" alt="Diagnostic plots of the effect of NSP1 on change in home prices: residuals on fitted." width="672"  />
+<div class="figure">--><span id="fig:prices1"></span>
+<img src="thesis_files/figure-html/prices-1.png" alt="Residuals on fitted values from price estimation" width="672"  />
 <!--
-<p class="caption marginnote">-->Figure 4.5: Diagnostic plots of the effect of NSP1 on change in home prices: residuals on fitted.<!--</p>-->
+<p class="caption marginnote">-->Figure 4.5: Residuals on fitted values from price estimation<!--</p>-->
+<!--</div>--></span>
+</p>
+<p>
+<span class="marginnote shownote">
+<!--
+<div class="figure">--><span id="fig:prices2"></span>
+<img src="thesis_files/figure-html/prices-2.png" alt="Sample quantiles on theoretical quantiles." width="672"  />
+<!--
+<p class="caption marginnote">-->Figure 4.6: Sample quantiles on theoretical quantiles.<!--</p>-->
 <!--</div>--></span>
 </p>
 <p>Results (not shown) of these models using NSP2 tracts, allocated competitively within the universe of at-risk tracts, are similarly sobering.
@@ -2429,16 +2437,16 @@ Additionally, using individual-level demographics and vote results would have av
 <span class="marginnote shownote">
 <!--
 <div class="figure">--><span id="fig:linear"></span>
-<img src="figure/linearesid.png" alt="Diagnostic plots of the full linear model." width="320"  /><img src="figure/linearquant.png" alt="Diagnostic plots of the full linear model." width="500"  />
+<img src="thesis_files/figure-html/linear-1.png" alt="Diagnostic plots of the full linear model." width="672"  /><img src="thesis_files/figure-html/linear-2.png" alt="Diagnostic plots of the full linear model." width="672"  />
 <!--
-<p class="caption marginnote">-->Figure 4.6: Diagnostic plots of the full linear model.<!--</p>-->
+<p class="caption marginnote">-->Figure 4.7: Diagnostic plots of the full linear model.<!--</p>-->
 <!--</div>--></span>
 </p>
 <p>The second question, of model fitness, leaves for more ambiguous refinements.
 In inferential statistics, there is less of a need for a model to fit the data comprehensively.
 On that count, the attached .45-.58 <span class="math inline">\(R^{2}\)</span> values are not concerning.
 However, further analysis of the residuals demonstrates weaknesses in model selection.
-Figure <a href="outcome.html#fig:linear">4.6</a> shows the residuals against fitted values for the full-sample, fixed-effects model, as well as the quantile-quantile distribution of residuals.
+Figure <a href="outcome.html#fig:linear">4.7</a> shows the residuals against fitted values for the full-sample, fixed-effects model, as well as the quantile-quantile distribution of residuals.
 Ideally, residuals show no conclusive pattern, and are independent against the fitted values.
 Here, there is a clear inverse relationship framed by the bounds of the Republican voting share at 0 and 100 percent.
 Linear models are not built to handle bounded response variables, though I used one for the ease of computation and interpretation.</p>
@@ -2452,10 +2460,10 @@ It easily incorporates changing variance and does not assume linearity, which is
 <div class="figure">--><span id="fig:betaresid"></span>
 <img src="figure/betaresid.png" alt="Standardized weighted residuals of full beta regression." width="322"  />
 <!--
-<p class="caption marginnote">-->Figure 4.7: Standardized weighted residuals of full beta regression.<!--</p>-->
+<p class="caption marginnote">-->Figure 4.8: Standardized weighted residuals of full beta regression.<!--</p>-->
 <!--</div>--></span>
 </p>
-<p>Though there are still the artifacts of upper and lower bounds, the behavior of Figure <a href="outcome.html#fig:betaresid">4.7</a> conforms more closely to an ideal distribution.
+<p>Though there are still the artifacts of upper and lower bounds, the behavior of Figure <a href="outcome.html#fig:betaresid">4.8</a> conforms more closely to an ideal distribution.
 Results of the beta regressions can be seen in the next table.
 Coefficients are altogether similar<label for="tufte-sn-182" class="margin-toggle sidenote-number">182</label><input type="checkbox" id="tufte-sn-182" class="margin-toggle"><span class="sidenote"><span class="sidenote-number">182</span> For entirely computational reasons, the dependent variable, Republican voting percentage, had to be scaled to fit between 0 and 1. The predictors, therefore, were also reduced by a factor of 100 in order to remain comparable to the linear models. While this adjustment worked on all independent variables, the interaction terms—which had been products of numbers between 0 and 100—were then made to be products of numbers between 0 and 1. This translation is analogous to that from 10 to 0.1: <span class="math inline">\(10 \times 10 = 100\)</span>, growing in magnitude, while <span class="math inline">\(.1 \times .1 = .01\)</span>, shrinking by the same number of decimal places.</span> to what the linear models predict, making me more secure in my belief of their validity.</p>
 <table style="text-align:center">

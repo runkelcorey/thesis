@@ -18,6 +18,7 @@ output:
 #  thesisdown::thesis_epub: default
   bookdown::tufte_html_book:
     split_by: chapter
+    tufte_features: ["fonts", "italics"]
 # If you are creating a PDF you'll need to write your preliminary content (e.g., abstract, acknowledgements) here or
 # use code similar to line 22-23 for the .RMD files. If you are NOT producing a PDF, you can delete or silence lines 21-32 in this YAML header.
 abstract: |

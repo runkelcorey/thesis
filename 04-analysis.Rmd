@@ -183,12 +183,18 @@ mod3 <- lm(PRICECHG0710 ~ NSP1 + EMPLOYRISK + UNEM10 + MEDHHI + FORQ2*MORTOCC + 
 stargazer(mod1, mod2, mod3, type = "html", title = "Effect of NSP1 on Prices", omit = c("^STATE", "FORQ2:MORTOCC", "MORTOCC:FORQ3"), label = "tab:prices", df = F, align = T, report = "vc*", header = F, add.lines = list(c("State fixed Effects?", "Y", "N", "Y")), digits = 4, no.space = T, covariate.labels = c(NA, "Labor risk", "2010 unemployment rate", "Median household income", "2009 foreclosure rate", "Mortgaged occupancy rate", "2010 forelcosure rate", "Population density", "65-and-up \\%", "Tenure in home", "Squared tenure", "White \\%", "Black \\%", "Hispanic \\%", "Asian \\%", "Unemployment change '05--'10", "High-cost mortgage rate", "Seriously delinquent rate"), dep.var.labels = "Home price index change, 2007-2010")
 ```
 
-```{r prices, echo=FALSE, fig.margin=TRUE, fig.cap="Diagnostic plots of the effect of NSP1 on change in home prices: residuals on fitted."}
+```{r prices, echo=FALSE, fig.margin=TRUE, fig.cap=c("Residuals on fitted values from price estimation", "Sample quantiles on theoretical quantiles.")}
 df <- augment(mod1)
-g <- ggplot(df, aes(x = .fitted, y = .resid)) +
+d <- ggplot(df, aes(x = .fitted, y = .resid)) +
   geom_point() +
-  theme_tufte(ticks = F)
-ggMarginal(g, type = "density")
+  theme_tufte(ticks = F) +
+  theme(axis.title=element_blank(), axis.text=element_blank())
+ggMarginal(d, type = "density")
+ggplot(df, aes(sample = .resid)) +
+  geom_qq() +
+  geom_qq_line() +
+  theme_tufte(ticks = F) +
+  theme(axis.title = element_blank(), axis.text = element_blank())
 ```
 
 Results (not shown) of these models using NSP2 tracts, allocated competitively within the universe of at-risk tracts, are similarly sobering.
@@ -302,7 +308,17 @@ In short, individual voting characteristics, more granular price data, and a ful
 Additionally, using individual-level demographics and vote results would have avoided the ecological assumptions this analysis rests on.
 
 ``` {r linear, echo=FALSE, fig.margin=TRUE, fig.cap="Diagnostic plots of the full linear model.", fig.show='hold'}
-include_graphics(c("figure/linearesid.png", "figure/linearquant.png"))
+df <- augment(mod5)
+d <- ggplot(df, aes(x = .fitted, y = .resid)) +
+  geom_point() +
+  theme_tufte(ticks = F) +
+  theme(axis.title=element_blank(), axis.text=element_blank())
+ggMarginal(d, type = "density")
+ggplot(df, aes(sample = .resid)) +
+  geom_qq() +
+  geom_qq_line() +
+  theme_tufte(ticks = F) +
+  theme(axis.title = element_blank(), axis.text = element_blank())
 ```
 
 The second question, of model fitness, leaves for more ambiguous refinements.
