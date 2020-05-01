@@ -6,6 +6,11 @@ library(tufte)
 options(knitr.graphics.auto_pdf = TRUE)
 ```
 
+```{r cc, echo=FALSE, fig.margin=TRUE, fig.show='hold'}
+include_graphics(c("https://mirrors.creativecommons.org/presskit/icons/cc.xlarge.png", "https://mirrors.creativecommons.org/presskit/icons/by.xlarge.png", "https://mirrors.creativecommons.org/presskit/icons/sa.xlarge.png"))
+```
+
+
 This thesis takes up two different kinds of questions that converge with the Neighborhood Stabilization Program (NSP) amid the rise of the Tea Party.
 The first asks, how can the political effects of housing policy and labor risk be measured?
 The second asks, why was it the case that housing policy was in a position to affect millions of votes?
